@@ -1,0 +1,29 @@
+#+TITLE: Lisp的开发相关
+* Slime的配置相关
+* Quicklisp的配置
+** 下载
+在shell下进入某目录,运行:
+$curl -O https://beta.quicklisp.org/quicklisp.lisp
+$sbcl --load /curl下来的当前目录/quicklisp.lisp \  --后面的可在sbcl里交互执行！
+      --eval '(quicklisp-quickstart:install)' \  --创建了"~/quicklisp",quicklisp的工作目录,等等!
+      --eval '(ql:add-to-init-file)'   \         --配置sbcl,启动时自动加载quicklisp的配置
+      --eval '(quit)'
+** 使用
+看来这个需要积累!
+许多概念还不清楚! Distribution System Package
+以下命令都在SLIME或sbcl的环境下执行:
+*** 安装
+加载某个系统: (ql:quickload system-name)
+卸载某个系统: (ql:uninstall (ql-dist:release system-name))
+注册本地项目:(ql:register-local-projects) --要清楚什么是"local-projects","~/quicklisp/"中”有个"local-projects"目录
+*** 查找
+在 Quicklisp中查找某个系统:(ql:system-apropos substring-of-system-name)
+在 Quicklisp中查找某个系统所处的位置:(ql:where-is-system system-name)
+查询依赖关系:(ql:who-depends-on system-name)
+*** 更新
+升级來至所有dist的所安装的系统:(ql:update-all-dists)
+升级來至quicklisp dist的所安装的系统(ql:update-dist "quicklisp")
+升级quicklisp程序本身:(ql:update-client)
+* CL-Project - Generate modern project skeletons
+** 
+

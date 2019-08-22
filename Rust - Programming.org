@@ -1,0 +1,102 @@
+#+STARTUP:indent
+#+TITLE: Rust Programming
+#+AUTHOR: Reader
+
+* Rust 要解决什么问题
+** 系统编程语言面临的两个困难：
+- It’s difficult to write secure code.
+- It’s very difficult to write multithreaded code,
+  which is the only way to exploit the abilities of modern machines.
+
+The key to meeting all these promises is Rust’s novel system of *ownership*, *moves*, and *borrows*,
+checked at compile time and carefully designed to complement Rust’s flexible static type system.
+- *Ownership*
+- *Moves*
+- *Borrows*
+
+** Rust is not:
+Rust is not really an object-oriented language,
+ although it has some object-oriented characteristics.
+Rust is not a functional language,
+ although it does tend to make the influences on a computation’s result more explicit,
+ as functional languages do.
+
+** Rust is:
+Rust is a type-safe language.
+Some concepts:
+- *Undefined Behavior* -- defined in C99
+  Behavior, upon use of a nonportable or erroneous program construct or of erroneous data,
+  for which this International Standard imposes no requirements.
+- *Well Defined*
+  If a program has been written so that no possible execution can exhibit undefined behavior,
+  we say that program is well defined.
+- *Type Safe*
+  If a language’s safety checks ensure that every program is well defined,
+  we say that language is type safe.
+
+* Basic types
+类型,关键看分类的方法.
+还有一些概念需要澄清.
+* Meomory Model
+了解这个语言,或许应当从内存模型了解他的特色.由其当你有各种范式的开发经验时.
+没见过那个语言如此严格精致地利用Momeory Model.
+** Memory:
+- a static set of *Items :* 编译时确定下来的一切东西.
+- stack : Allocations in the stack consist of *Variables*
+  Stack上的数据,在编译时就可以确定的.虽然底层也是根据地址来访问的,但语言理论中根本不会用什么概念来抽象这些地址,常见的Pointer概念也不会去抽象这种栈内地址.
+  想想确实如此！
+- heap  : Allocations in the heap  consist of *Boxes*
+  Heap上的数据,其他不说,单说一点,Pointer是访问Heap数据的唯一途径.
+  这使得问题复杂了,高级语言都会以各种方式避免Pointer成为直接的概念.
+  Rust中有什么独特之道呢？
+** Ownership是理解Rust用意的关键.
+Ownership有三条规则：
+1. Each value in Rust has a variable that’s called its owner.
+2. There can only be one owner for the value at a time.
+3. When the owner goes out of scope, the value will be dropped.
+** Variable这个概念是用Ownership对Identifier、Memeory、Value进行的统一！
+*** Identifier、Memoery、Value and Variable:
+针对Rust可以这样说,Variable是绑定了存有Value的Memory的Identifier.这种绑定是不可变的,但是有Liftime,有Scope,而且是在此意义上,称之为变量.
+
+不可变的变量，是指他绑定的内存区域里存放的值,不能变.
+可变的变量,是指他绑定的内存区域里存放的值,可以变.
+Value,值,这个概念也就相应地要澄清一下,value是指放在内存区域中的有特定类型的数据.
+说变量拥有值,在理解上会引起诸多误解,需要注意.
+*** 说变量拥有内存,可能更严谨!
+如果用<Identifier of Variable,Memory of Variable,Value of Variable>来表示Variable,看起来复杂,实际上清晰了很多东西,也有很多概念被统一了,那么有很多事情需要思考一下:
+运行时,Identifier存在于何处?
+*** Borrow,Move,Reference,and Shadowing
+Movement of Ownership or Binding.
+
+* 模块系统
+** 模块系统所牵涉的一些内容:
+- /Modules/, a way to organize code and control the privacy of paths
+- /Paths/, a way to name items
+- /use/, a keyword to bring a path into scope
+- /pub/, a keyword to make items public
+- Renaming items when bringing them into scope with the /as/ keyword
+- Using external packages
+- Nested paths to clean up large use lists
+- Using the glob operator to bring everything in a module into scope
+- How to split modules into individual files
+** 其他不论,理解一下最后一条,模块的层次关系和文件目录的层次关系
+模块系统有两个特有的概念:Crate和Modules.
+A *crate* is a unit of compilation and linking, as well as versioning, distribution and runtime loading.
+A crate contains a tree of nested *module* _scopes_.
+从crate内部来看,这棵树的顶层,其实是个叫crate的模块.
+- 这个叫crate的模块所对应的文件就是(src/lib.rs , src/main.rs).
+- 这棵树和文件系统其实是解耦的, _模块的层次关系必须有显示的定义、声明_ ,不能单纯靠文件系统的层次关系来确定.
+  - 模块的层次关系必须有显示的定义,什么意思？这是关键问题!
+    如果模块y中有mod x {.....}语句,则y定义了一个模块x，但x的内容在{}中.
+    如果模块y中有mod x; 则y定义了一个模块x,但x的内容在外部文件中.要么在x.rs,要么在x/mod.rs中
+- 一个Rust文件定义了一个模块,但此模块的名字在外部定义,要么由引用文件的mod_item定义,要么就是Crate的名字.
+  所以在开发时,采用如下的方式,用文件系统来实现crate中的模块结构:
+  - crate模块就是(src/lib.rs , src/main.rs).
+  - (src/lib.rs , src/main.rs)中若出现mod Y;语句,Y只能用src/Y.rs或src/Y/mod.rs文件来实现.
+  - 模块X用.../X.rs文件来实现时,则其中不应出现mod Y;语句.
+  - 模块X用.../X/mod.rs文件来实现时,若其中出现mod Y;语句.则Y只能用.../X/Y.rs或.../X/Y/mod.rs文件来实现.
+  - 仔细想想,mod.rs文件的运用,完全是画蛇添足.好像从1.30版后,鼓励更简洁的模块和目录结构的对应关系.
+    如果模块X用.../X.rs来实现,而且Y是X中定义的无体模块,则Y的内容就在文件.../X/Y.rs中来实现.这样就避免了过多的mod.rs文件.实际上可以完全不需要mod.rs文件了.
+** 待补充
+
+

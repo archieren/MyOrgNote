@@ -1,0 +1,54 @@
+* 注意:
+注意:在Gnome中运行Xmonad并不是一个好主意.
+    如果想要Kde、Gnome中的程序具有原有的Theme,只须
+    - 对于Kde程序,"export XDG_CURRENT_DESKTOP=KDE"就行.
+    - 对于Gnome程序,在".config/gkt-{3.0,4.0}/settings.ini"中设置就是了.
+
+确实要在Gnome中运行Xmonad，须安装gnome-flashback包.
+* 我是从startx中，用exec启动会话的.
+
+exec gnome-session --session=xmonad
+
+此命令的条件要求为gnome-session添加一个xmonad.session文件.
+要么为所有用户配置 “/usr/share/gnome-session/sessions/xmonad.session”
+要么为当前用户配置 "~/.config/gnome-session/sessions/xmonad.session"
+----------------------------------
+[GNOME Session]
+Name=Xmonad session
+RequiredComponents=gnome-flashback-init;gnome-flashback;gnome-panel;xmonad;
+----------------------------------
+
+* xmonad.session文件中指向的应用,都须以desktop应用方式注册.
+故须配置applications/xmonad.desktop文件
+要么为所有用户配置 “/usr/share/applications/xmonad.session”
+要么为当前用户配置"~/.local/share/applications/xmonad.desktop"
+------------------------
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Xmonad
+Exec=xmonad
+NoDisplay=true
+X-GNOME-WMName=Xmonad
+X-GNOME-Autostart-Phase=WindowManager
+X-GNOME-Provides=windowmanager
+X-GNOME-Autostart-Notify=false
+-------------------------
+* 如果以图形方式登陆,应当为GDM创建一个desktop文件
+注:Archlinux xmonad包自带了一个xmonad.desktop
+网上介绍的是,编辑一个(/usr/share/xsessions/xmonad-gnome-session.desktop)
+------------------------------------
+[Desktop Entry]
+Name=Xmonad GNOME
+Comment=Tiling window manager
+TryExec=/usr/bin/gnome-session       -- 如果想清了,这里可以做文章.让他们指向较复杂的脚本文件.
+Exec=gnome-session --session=xmonad  -- 比如这里就和从startx里启用的方法一样了!!!
+Type=XSession                        -- XSession还是Application?
+-------------------------------------
+* 为了更好的体验, 有些额外的工作
+最好查看xmonad-contrib中的源码(有关XMonad.Config.Desktop的部分).
+下面这个似乎最应当关注.
+** Logging out of the Gnome session vs. quitting Xmonad
+上述方式中,xmonad是由Gnome Session启动的,xmonad的退出，不会引起session的退出.
+最好重新绑定modm+shift+q
+((modm .|. shiftMask, xK_q     ), spawn "gnome-session-quit --logout")

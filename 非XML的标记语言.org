@@ -1,0 +1,88 @@
+* YAML
+** 简介
+YAML 语言（发音 /ˈjæməl/ ）的设计目标，就是方便人类读写。它实质上是一种通用的数据串行化格式。
+它的基本语法规则如下。
+- 使用缩进层级关系(空间语法)将文档分割成块层次结构,进而有数据结构.
+  数据结构也很单纯,sequence and mapping.
+  他们互嵌套,则复杂对象生.
+- 其他略.
+
+
+YAML 支持的数据结构有三种
+- 对象：键值对的集合，又称为映射（mapping）/ 哈希（hashes） / 字典（dictionary）
+- 数组：一组按次序排列的值，又称为序列（sequence） / 列表（list）
+- 纯量（scalars）：单个的、不可再分的值
+
+** 纯量
+纯量是最基本的、不可再分的值。
+- 字符串
+- 布尔值
+- 整数
+- 浮点数
+- Null
+- 时间
+- 日期
+** 数组
+All members of a list are lines beginning at the same indentation level starting with a "- " (a dash and a space).
+#+BEGIN_EXAMPLE
+- Cat
+- Dog
+- Goldfish
+#+END_EXAMPLE
+对应JavaScript代码:
+#+BEGIN_SRC  js
+[ 'Cat', 'Dog', 'Goldfish' ]
+#+END_SRC
+
+数据结构的子成员是一个数组，则可以在该项下面缩进一个空格
+#+BEGIN_EXAMPLE
+-
+ - Cat
+ - Dog
+ - Goldfish
+#+END_EXAMPLE
+对应JavaScript代码:
+#+BEGIN_SRC js
+[[ 'Cat', 'Dog', 'Goldfish' ]]
+#+END_SRC
+** 对象
+A dictionary is represented in a group simple key: value form (the colon must be followed by a space).
+#+BEGIN_EXAMPLE
+# An employee record
+martin:
+    name: Martin
+    job: Developer
+    skill: Elite
+#+END_EXAMPLE
+对应JavaScript代码:
+#+BEGIN_SRC js
+{martin:{name:'Matin',job:'Developer',skill:'Elite'}}
+#+END_SRC
+
+复杂对象:
+#+BEGIN_EXAMPLE
+foo: whatever
+bar:
+ -
+   fruit: apple
+   name: steve
+   sport: baseball
+ - more
+ -
+   python: rocks
+   perl: papers
+   ruby: scissorses
+#+END_EXAMPLE
+对应JavaScript代码:
+#+BEGIN_SRC js
+{ foo: 'whatever',
+  bar:
+   [ { fruit: 'apple', name: 'steve', sport: 'baseball' },
+     'more',
+     { python: 'rocks', perl: 'papers', ruby: 'scissorses' } ] }
+
+#+END_SRC
+** 文档结构
+* Protobuf
+** Introduction
+

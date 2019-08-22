@@ -1,0 +1,217 @@
+#+STARTUP:indent
+#+TITLE: Emacs Lisp Reference Manual
+#+AUTHOR: Reader
+
+* Lisp Data Types
+** 概念:
+*** A lisp object: The one manipulated by Lisp programs.
+      + self typing
+      + the printed representation and the read syntax
+      + In Lisp,an expression
+        + is primarily a lisp object
+        + is only secondarily the text of the read syntax of the object
+        + 以上强调了和其他语言的不同。！！！
+*** the reader + the interpreter = what?
+*** Two general categories of types in Emacs Lisp
+      + One to do with general Lisp Programming
+      + One to do with Emacs editing
+      + Type Predicates
+** 批注：须回顾性地,读原始的Lisp 1.5的手册，可能更能明白一些内涵,以及被这么多年来的变迁所掩盖的东西。
+以及一些概念易混淆的根源。
+*** The Pure Lisp consists of four parts.
++ A set of symols of S-expression
++ A functional notation called M-expression.
++ A formal mapping of M-Expressions into S-Expressions.
++ A universal function (written as an M-expression),
+  for interpreting the application of any function written as an S-expression to its arguments.
+
+*** The Data Language: () commas/blanck 不是语法符号。大写。
+    1. <LETTER>::= A|B|C|...|Z
+    2. <number>::= 0|1|...|9
+    3. <atomic-symbol>::=<LETTER><atom-part>
+    4. <atom-part>::=<empty>|<LETTER ><atom-part>|<number><atom-part>
+    5. <S-expression>::=<atom-symbol>|
+                        (<S-expression> . <S-expression>)|
+                        (<S-expression> ... <S-expression>)
+-- 之所以称之为数据语言，在于他抽象描述了内部数据结构：List。
+*** The Meta Language: [] semicolons 不是语法符号。小写。
+    1. <letter>    ::=a|b|c|...|z
+    2. <identifier>::=<letter ><id-part>
+    3. <id-part>   ::=<empty>|
+                      <letter><id-part>|
+                      <number><id-part>
+
+    4. <form>      ::=<constant>|
+                      <variable>|
+                      <function>[<argument>;...;<argument>]|
+                      [<form> -> <form>;...;<form> -> <form>]
+    5. <constant>   ::= <S-expression>
+    6. <variable>   ::= <identifier>
+    7. <argument>   ::= <form>
+
+    8. <function>   ::= <identifier>|
+                        lambda [<var-list>;<form>]|
+                        label [<identifier>;<function>]
+    9. <var-list>   ::= [<variable>;...;<variable>]
+-- 注意：变量是函数定义中的事，参数是函数调用中的事。
+*** The Pure Lisp Interpreter System：
+**** 在现代的Lisp中，看不到元语言的身影。在Mathematica中，倒是元语言的天下。
+**** 在纯粹的Lisp语言的理论中，Interpreter(a universal function)处理对象是S-Expression。
+  而Meta-Language表达的就是如何处理S-Expression。
+  故Interpreter可以用Meta-Language来表达。
+**** 根据Lambda-Calculus理论，所有的“函数”都可以由几个基本符号处理函数来表示。
+  cons，car，cdr，eq，atom，null等
+  而Data-Language本身可以”指示“Interpreter如何处理自己，
+  故可将Meta Language被翻译成Data Language。
+  如函数调用 cons[X;Y] => (CONS X Y)
+    函数定义 cons[x,y]=lambda
+***** 使得：
+  process[<form>] = interpret[translate[<form>]]
+  如：
+  process[<function-call>]= interpret[translate[<function-call>]]   -- 我加的.
+                          = evalquote[<translated-function>;<translated-arg-s>]
+                          = apply[<translated-function>;<translated-arg-s>;Nil]
+                          = eval...
+  translate : M-Expression -> S-Expression  --细节就略掉了。
+  evalquote : S-Expression S-Expresion-> S-Expression
+  例如：用"..." 表示代码文本。（可以看做符号）
+  假设  translate["cons"] : (LAMBDA (X , Y) (CONS X Y))
+       translate["[A;B]"] : (A B)
+       A B : atomic-symbols
+  process["cons[A;B]"]=interpret[translate["cons[A;B]"]]
+                      =evalquote[translate["cons"];translate["[A;B]"]]
+                      =evalquote[(LAMBDA (X , Y) (CONS X Y));(A B)]
+                      =appy[(LAMBDA (X , Y) (CONS X Y))
+                            ;(A B)
+                            ;()
+                           ]   -- 看apply的定义
+                      =eval[caddr[(LAMBDA (X , Y) (CONS X Y))]
+                            ;pairlis[cadr[(LAMBDA (X , Y) (CONS X Y))]
+                                     ;(A B)
+                                     ;()
+                                    ]
+                           ]  --需要完成变量和参数的绑定
+                      =eval[(CONS X Y);pairlis[(X Y);(A B);()]]
+                      =eval[(CONS X Y);((X A)(Y A))] -- 看eval的定义
+                      =apply[car[(CONS X Y)]
+                             ;evlis[cdr[(CONS X Y)];((X A)(Y A))]
+                             ;((X A)(Y A))]
+                      =apply[CONS;(A B);((X A)(Y A))]
+                      =cons[car[(A B)];cdr[(A B)]]
+                      =cons[A;B]
+  这里的process,translate,function-call是我加的，示意性的。
+  其实，evalquote[fn;x]=apply[fn;x;a] :
+             a为associa-list,表示各种binding，这是理解Symbol用意的门户.
+  where
+  + apply[fn;x;a]=
+      [atom[fn] -> [eq[fn;CAR] -> caar[x];
+                    eq[fn;CDR] -> cdar[x];
+                    eq[fn;CONS] -> cons[car[x];cadr[x]];
+                    eq[fn;ATOM] -> atom[car[x]];
+                    eq[fn;EQ] -> eq[car[x];cdr[x]];
+                    T -> apply[eval[fn;a];x;a]  --要找到函数符号的绑定！
+                    ]
+       ;eq[car[fn];LAMBDA] -> eval[caddr[fn]
+                                  ;pairlis[cadr[fn];x;a]
+                                 ]
+       ;eq[car[fn];LABEL] -> apply[caddr[fn]
+                                  ;x
+                                  ;cons[cons[cadr[fn]
+                                             ;caddr[fn]
+                                            ]
+                                        ;a
+                                        ]  -- 添加了一个什么绑定,变量和参数的绑定？
+                                    ]
+      ]
+  + eval[e;a] = [atom[e] -> cdr[assoc[e;a]]  -- e为atom 则找他的binding。
+                 ;atom[car[e]] ->     -- e为S-expression，第一项为function symbol。
+                          [ eq[car[e];QUOTE]->cadr[e];  -- 但 QUOTE、COND等 、、、
+                            eq[car[e];COND] -> evcon[cdr[e];a];
+                            T -> apply[car[e]
+                                       ;evlis[cdr[e];a]
+                                       ;a]
+                          ]
+                 ;T -> apply[car[e]  -- e为S-expression，第一项为function的S-expression
+                            ; evlis[cdr[e];a]
+                            ; a]
+                 ]
+  + 解释器用到的其他辅助元函数：
+    p-list：property-list
+    a-list association-list
+    equal[x;y] 判断两个S-expressions是否等同。
+    subst[x;y;z] 将z中y的出现，替换为x. x，y，z都是S-expression.
+    null[x]
+    append[x;y]
+    member[x;y]
+    pairlis[x;y;a] x,y配对,然后和a(ssocia)-list a拼接,得到新的a-list.
+    assoc[x;a]  在a中查找到对应x的a(ssocia)-item.
+    evcon[c;a] = [eval[caar[c];a] -> eval[cadar[c];a]
+                  ;T -> evcon[cdr[c];a]
+                 ]
+    evlis[m;a] = [null[m] -> Nil
+                  ;T -> cons[eval[car[m];a];evlis[cdr[m];a]]]
+    caar[x]=car[car[x]] cadr[x]=car[cdr[x]] caddr[x]=car[cdr[cdr[x]]]
+    cdar[x]=cdr[car[x]]
+*** 由于Meta Language没被真正实现，导致直接用Data Language写”Meta Language“的现象。
+  即programmer 还要充当 ”translate“的角色。
+  而这直接导致某些清晰的概念，在实际Lisp中，变得难以琢磨。
+  如，纯粹Lisp中，没有eval[sym]这一机制，而实际Lisp中，Symbol，按我的形象理解，就是a name-indexed pointer，
+     或者更进一步，是a name-indexd list,这样才会有eval[sym]的运用
+  那么要牢记的是，我们写的Lisp Programs是"要被处理的对象"。
+  但要区分的是，Symbol和Symbol-Expression的根是Data。
+  而Variables，Arguments，Functions，Forms等的根是Meta-Language中的概念,它们是用来处理Data的。
+
+* Numbers
+* Strings and Characters
+* Lists
+* Sequences,Arrays and Vectors
+* Hash Tables
+* Symbols
+A symbol is an object with a unique name.
+关于符号，必须理解name的深意.
+如果技术一点的话，我理解为：
+A symbol is a pointer hashed by name in an obarray to a p-list.
+And the name is the symbol's read-syntax
+** Each symbol has four components(or cells):
+  + Print name : The symbol's name
+  + Value : The symbol's current value as a variable
+  + Function : The symbol's function definition.
+  + Properties list : The symbol's property list.
+** Creating and Interning Symbols
+Finding or adding a symbol with a certain name is called interning it, and the
+symbol is then called an interned symbol.
+Interned and Uninterned symbol
+
+** Definition :
+  + A special kind of Lisp expression
+    + defvar,defconst,setq
+    + defun,defsubst,defalias
+    + defmacro
+  + Announce the intention to use a symbol in a particular way.
+    + As variable
+    + As function
+    + As macro
+
+* Evaluation
+A form or expression :
+  A Lisp object that is intended for evaluation is called a form or expression.
+Interpreter = Reader + Evaluator:
+Kinds of Forms:
+  + Self-evaluating Forms
+  + Symbol Forms
+  + List Forms : List的第一元素，决定了它是 a function-call,a macro call还是 a special form。
+* Control Structure
+* Variables
+* Functions
+* Macros
+* 杂项
+
+
+#+BEGIN_SRC emacs-lisp
+(char-table-extra-slot char-script-table 0)
+(+ 1 2 2)
+#+END_SRC
+
+#+RESULTS:
+: 5
+

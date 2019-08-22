@@ -1,0 +1,941 @@
+#+STARTUP:indent
+#+TITLE: Haskell TypeClass
+
+* Haskell Template
+类型安全的,编译时的元编程.
+
+** 基础:
+TH Object Programs采用Absract Syntax Tree形式.这样很容易，用代数数据类型来表示.
+  - Exp(Expression)
+  - Pat(Paterns)
+  - Dec(Declarations)
+  - Type(Type)
+  - 还要注意Name这个语法概念.
+对象语言采用AST形式,那么Haskell就成了元语言.
+注意: newName :: String -> Q Name 用于生成唯一的标识符.
+** 实用:
+TH object programs are built inside the quotation monad Q.
+用<-->表示对应，则
+  - Exp   <--> Q Exp or ExpQ
+  - Pat   <--> Q Pat or PatQ
+  - Dec   <--> Q Dec or DecQ
+  - Type  <--> Q Type or TypeQ
+Synatx constructors  <-->  Syntax construction functions
+用Syntax Construction构造出的AST的ADT,不便于访问控制.
+故用Syntax construction function 将ADT包在Q monad中.
+
+在Syntax construction function之上，又提供了简洁的Quotation Bracket语法.
+Quotation Bracket([|..|])实际上将Haskell concrete syntax提升为Q monad中的Object Program.
+-Expression quotations:         [e|..|] :: Q Exp
+-Declaration quotations:        [d|..|] :: Q [Dec]
+-Type quotations:               [t|..|] :: Q Type
+-Pattern quotations:            [p|..|] :: Q Pat
+-Quasi-quaotations
+
+** 运用:
+Evaluating meta haskell program at compiling time and splicing in the generated object program.
+(不正规的说法，类似宏调用)
+*** Splice  ($id $() $$id $$())
+*** (Typed) Quotation
+*** Quasi-Quotation
+*** (Typed) Splicing in the quotation
+*** Name Quotations
+- 'f具有类型Name，命名了函数f
+- 'C具有类型Name，命名了数据构造算子C
+- ''T具有类型Name，命名了类型构造算子T
+这些Names，可用于构造TH的表达式、声明、模式等，也可作为reify的参数。
+*** Reify(具体化？)
+
+* Haskell TypeClass
+** A Graph
+*** Typeclass Graph
+#+BEGIN_SRC dot :file ./typeClassGraph.png
+digraph {
+  node [shape=box];
+  Functor -> Applicative -> Monad;
+  Apply -> Applicative;
+  Semigroup -> Apply [constraint=false; style=dotted; arrowhead=none];
+  Apply [color=grey];
+  Applicative -> Alternative;
+  Monad -> MonadPlus;
+  Monad -> MonadFix;
+  Semigroup -> Monoid;
+  Monoid -> Applicative [constraint=false; style=dotted; arrowhead=none];
+  Monoid -> Category [constraint=false; style=dotted; arrowhead=none];
+  Monoid -> Alternative [style=dotted; arrowhead=none];
+  Monoid -> MonadPlus [style=dotted; arrowhead=none];
+  Category -> Arrow -> ArrowChoice;
+  Arrow -> ArrowApply;
+  Arrow -> ArrowLoop;
+  Arrow -> ArrowZero -> ArrowPlus;
+  {rank = same; Arrow; ArrowZero; ArrowPlus}
+  Monoid -> ArrowPlus [style=dotted; arrowhead=none];
+  Monad -> ArrowApply [style=bold, arrowhead=none];
+  Monoid -> Foldable [style=dotted; arrowhead=none];
+  Monoid -> Monad [style=dotted; arrowhead=none];
+  Applicative -> Traversable [style=dotted; arrowhead=none];
+  Foldable -> Traversable;
+  Functor -> Traversable;
+  Comonad [color=grey];
+  Functor -> Comonad;
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:./typeClassGraph.png]]
+*** What's in the Prelude?
+包、库、类的层次，总是有些模糊。看看吧。
+#+BEGIN_SRC haskell
+{-# LANGUAGE Trustworthy #-}
+{-# LANGUAGE NoImplicitPrelude #-}
+
+module Prelude (
+    -- * Standard types, classes and related functions
+    -- ** Basic data types
+    Bool(False, True),
+    (&&), (||), not, otherwise,
+
+    Maybe(Nothing, Just),
+    maybe,
+
+    Either(Left, Right),
+    either,
+
+    Ordering(LT, EQ, GT),
+    Char, String,
+
+    -- *** Tuples
+    fst, snd, curry, uncurry,
+
+    -- ** Basic type classes
+    Eq((==), (/=)),
+    Ord(compare, (<), (<=), (>=), (>), max, min),
+    Enum(succ, pred, toEnum, fromEnum, enumFrom, enumFromThen,
+         enumFromTo, enumFromThenTo),
+    Bounded(minBound, maxBound),
+
+    -- ** Numbers
+    -- *** Numeric types
+    Int, Integer, Float, Double,
+    Rational, Word,
+    -- *** Numeric type classes
+    Num((+), (-), (*), negate, abs, signum, fromInteger),
+    Real(toRational),
+    Integral(quot, rem, div, mod, quotRem, divMod, toInteger),
+    Fractional((/), recip, fromRational),
+    Floating(pi, exp, log, sqrt, (**), logBase, sin, cos, tan,
+             asin, acos, atan, sinh, cosh, tanh, asinh, acosh, atanh),
+    RealFrac(properFraction, truncate, round, ceiling, floor),
+    RealFloat(floatRadix, floatDigits, floatRange, decodeFloat,
+              encodeFloat, exponent, significand, scaleFloat, isNaN,
+              isInfinite, isDenormalized, isIEEE, isNegativeZero, atan2),
+    -- *** Numeric functions
+    subtract, even, odd, gcd, lcm, (^), (^^),
+    fromIntegral, realToFrac,
+    -- ** Semigroups and Monoids
+    Semigroup((<>)),
+    Monoid(mempty, mappend, mconcat),
+    -- ** Monads and functors
+    Functor(fmap, (<$)), (<$>),
+    Applicative(pure, (<*>), (*>), (<*)),
+    Monad((>>=), (>>), return, fail),
+    mapM_, sequence_, (=<<),
+    -- ** Folds and traversals
+    Foldable(elem,      -- :: (Foldable t, Eq a) => a -> t a -> Bool
+             -- fold,   -- :: Monoid m => t m -> m
+             foldMap,   -- :: Monoid m => (a -> m) -> t a -> m
+             foldr,     -- :: (a -> b -> b) -> b -> t a -> b
+             -- foldr', -- :: (a -> b -> b) -> b -> t a -> b
+             foldl,     -- :: (b -> a -> b) -> b -> t a -> b
+             -- foldl', -- :: (b -> a -> b) -> b -> t a -> b
+             foldr1,    -- :: (a -> a -> a) -> t a -> a
+             foldl1,    -- :: (a -> a -> a) -> t a -> a
+             maximum,   -- :: (Foldable t, Ord a) => t a -> a
+             minimum,   -- :: (Foldable t, Ord a) => t a -> a
+             product,   -- :: (Foldable t, Num a) => t a -> a
+             sum),      -- :: Num a => t a -> a
+             -- toList) -- :: Foldable t => t a -> [a]
+
+    Traversable(traverse, sequenceA, mapM, sequence),
+    -- ** Miscellaneous functions
+    id, const, (.), flip, ($), until,
+    asTypeOf, error, errorWithoutStackTrace, undefined,
+    seq, ($!),
+    -- * List operations
+    map, (++), filter,
+    head, last, tail, init, null, length, (!!),
+    reverse,
+    -- *** Special folds
+    and, or, any, all,
+    concat, concatMap,
+    -- ** Building lists
+    -- *** Scans
+    scanl, scanl1, scanr, scanr1,
+    -- *** Infinite lists
+    iterate, repeat, replicate, cycle,
+    -- ** Sublists
+    take, drop, splitAt, takeWhile, dropWhile, span, break,
+    -- ** Searching lists
+    notElem, lookup,
+    -- ** Zipping and unzipping lists
+    zip, zip3, zipWith, zipWith3, unzip, unzip3,
+    -- ** Functions on strings
+    lines, words, unlines, unwords,
+
+    -- * Converting to and from @String@
+    -- ** Converting to @String@
+    ShowS,
+    Show(showsPrec, showList, show),
+    shows,
+    showChar, showString, showParen,
+    -- ** Converting from @String@
+    ReadS,
+    Read(readsPrec, readList),
+    reads, readParen, read, lex,
+
+    -- * Basic Input and output
+    IO,
+    -- ** Simple I\/O operations
+    -- All I/O functions defined here are character oriented.  The
+    -- treatment of the newline character will vary on different systems.
+    -- For example, two characters of input, return and linefeed, may
+    -- read as a single newline character.  These functions cannot be
+    -- used portably for binary I/O.
+    -- *** Output functions
+    putChar,
+    putStr, putStrLn, print,
+    -- *** Input functions
+    getChar,
+    getLine, getContents, interact,
+    -- *** Files
+    FilePath,
+    readFile, writeFile, appendFile, readIO, readLn,
+    -- ** Exception handling in the I\/O monad
+    IOError, ioError, userError,
+
+  ) where
+
+import Control.Monad
+import System.IO
+import System.IO.Error
+import Data.List
+import Data.Either
+import Data.Foldable    ( Foldable(..) )
+import Data.Functor     ( (<$>) )
+import Data.Maybe
+import Data.Traversable ( Traversable(..) )
+import Data.Tuple
+
+import GHC.Base hiding ( foldr, mapM, sequence )
+import Text.Read
+import GHC.Enum
+import GHC.Num
+import GHC.Real
+import GHC.Float
+import GHC.Show
+
+#+END_SRC
+** Operator Precedence
+#+BEGIN_SRC haskell
+infixr 9  .
+infixr 6  <>
+infixr 5  ++ ,  <+>
+infixl 4  <$>,  <$  , $> , <*>,  <*  , *> , <**>
+infixl 3 <|>
+infixr 3 *** ,  &&&
+infixr 2 +++, |||
+infixl 1  >> ,  >>=
+infixr 1  =<<,  >>>, <<<, ^>>, >>^, ^<<, <<^
+infixr 0  $  ,  $!  , ->
+-- infixl 4  <*>,  <*  , *> , <**>
+#+END_SRC
+** Fuction Composition:
+In Haskell the precedence of an ordinary function call  is of 10.
+While the composition operator has a precedence of 9.
+When we want to compose functions then apply it to some parameter,
+we have to parenthesize the composition so as to keep the application in right order.
+But, with the help of ($) operator, the syntax can be much neater:
+注意: (.) f g x = (f . g) x = (f .) g x = (. g) f x = f (g x)= f . g $ x
+
+** Semigroup, Monoid
+*** Definition
+#+BEGIN_SRC haskell
+class Semigroup a where
+        -- An associative operation.
+        (<>) :: a -> a -> a
+
+        -- Reduce a non-empty list with <>
+        -- The default definition should be sufficient, but this can be
+        -- overridden for efficiency.
+        sconcat :: NonEmpty a -> a
+        sconcat (a :| as) = go a as where
+          go b (c:cs) = b <> go c cs
+          go b []     = b
+
+        -- Repeat a value n times.
+        stimes :: Integral b => b -> a -> a
+        stimes = stimesDefault
+
+        -- 将sconcat、stimes放到class的定义中,方便继承者容易修改.
+        -- 问题：辅助函数涉及到的具体类型: Nonempty a 、满足Integral类的类型
+
+-- Monoid中的方法名，都不是好名字，以为和List有关.和Haskell的历史有关.
+class Semigroup a => Monoid a where
+        -- 'mappend'的幺元
+        mempty  :: a
+
+        -- An associative operation
+        -- 从base-4.11开始，这个方法是多余的，就是(<>).
+        -- It has the default implementation mappend = (<>)
+        mappend :: a -> a -> a
+        mappend = (<>)
+        {-# INLINE mappend #-}
+
+        -- For most types, the default definition for 'mconcat' will be
+        -- used, but the function is included in the class definition so
+        -- that an optimized version can be provided for specific types.
+        -- 本意就是mappend多个元素.
+        mconcat :: [a] -> a
+        mconcat = foldr mappend mempty
+
+        -- 同样，Monoid的辅助函数有依赖具体类型的情况。
+#+END_SRC
+
+*** Laws
+1. (x <> y) <> z = x <> (y <> z)
+2. mempty `mappend` x = x
+3. x `mappend` mempty = x
+4. (x `mappend` y) `mappend` z = x `mappend` (y `mappend` z)
+5. mconcat = foldr (<>) mempty
+
+*** 注
+Smeigroup,Monoid都是抽象代数里的内容，相当好理解。但在Haskel里，起什么基本作用呢？
+sconcat、mconcat
+
+** Category,Arrow
+*** Def
+#+BEGIN_SRC haskell
+-- in Control.Category
+class Category cat where
+    -- the identity morphism
+    id :: cat a a
+
+    -- morphism composition
+    (.) :: cat b c -> cat a b -> cat a c
+
+-- Right-to left composition of morphism
+(<<<) :: Category cat => cat b c -> cat a b -> cat a c
+(<<<) = (.)
+
+-- Left-to-right composition of morphism
+(>>>) :: Category cat => cat a b -> cat b c -> cat a c
+f >>> g = g . f
+
+-- in Control.Arrow
+class Category a => Arrow a where
+    --  Lift a function to an arrow.
+    arr :: (b -> c) -> a b c
+
+    first :: a b c -> a (b,d) (c,d)
+    first = (*** id)
+
+    second :: a b c -> a (d,b) (d,c)
+    second = (id ***)
+
+    --   Split the input between the two argument arrows and combine
+    --   their output.  Note that this is in general not a functor.
+    --
+    --   The default definition may be overridden with a more efficient
+    --   version if desired.
+    (***) :: a b c -> a b' c' -> a (b,b') (c,c')
+    f *** g = first f >>> arr swap >>> first g >>> arr swap
+      where swap ~(x,y) = (y,x)
+
+    --   Fanout: send the input to both argument arrows and combine
+    --   their output.
+    --
+    --   The default definition may be overridden with a more efficient
+    --   version if desired.
+    (&&&) :: a b c -> a b c' -> a b (c,c')
+    f &&& g = arr (\b -> (b,b)) >>> f *** g
+
+-- The identity arrow, which plays the role of 'return' in arrow notation.
+returnA :: Arrow a => a b b
+returnA = arr id
+
+-- Precomposition with a pure function.
+(^>>) :: Arrow a => (b -> c) -> a c d -> a b d
+f ^>> a = arr f >>> a
+
+-- Postcomposition with a pure function.
+(>>^) :: Arrow a => a b c -> (c -> d) -> a b d
+a >>^ f = a >>> arr f
+
+-- Precomposition with a pure function (right-to-left variant).
+(<<^) :: Arrow a => a c d -> (b -> c) -> a b d
+a <<^ f = a <<< arr f
+
+-- Postcomposition with a pure function (right-to-left variant).
+(^<<) :: Arrow a => (c -> d) -> a b c -> a b d
+f ^<< a = arr f <<< a
+
+class Arrow arr => ArrowChoice arr where
+  left  :: (b `arr` c) -> (Either b d `arr` Either c d)
+  right :: (b `arr` c) -> (Either d b `arr` Either d c)
+  (+++) :: (b `arr` c) -> (b' `arr` c') -> (Either b b' `arr` Either c c')
+  (|||) :: (b `arr` d) -> (c `arr` d) -> (Either b c `arr` d)
+
+class Arrow arr => ArrowApply arr where
+  app :: (b `arr` c, b) `arr` c
+
+class Arrow a => ArrowLoop a where
+    loop :: a (b,d) (c,d) -> a b c
+
+#+END_SRC
+*** Laws
+arr      id                             =  id
+arr      (h . g)                        =  arr g >>> arr h
+first    (arr g)                        =  arr (g *** id)
+first    (g >>> h)                      =  first g >>> first h
+first     g        >>>    arr (id *** h)  =  arr (id *** h) >>> first g
+first     g        >>>    arr fst       =  arr fst      >>> g
+first    (first g) >>>    arr assoc     =  arr assoc    >>> first g
+** Functor,Applicative,Monad
+*** Functor
+**** Def
+#+BEGIN_SRC  haskell
+class Functor f where
+  fmap :: (a -> b) -> f a -> f b
+  (<$) :: a        -> f b -> f a
+  (<$) = fmap . const
+#+END_SRC
+
+#+BEGIN_SRC haskell
+-- Some utility functions
+infixl 4 <$>, <$, $>
+(<$>) :: Functor f => (a -> b) -> f a -> f b
+(<$>) = fmap
+($>) :: f a      -> b   -> f b
+($>) = flip (<$)
+void :: Functor f => f a -> f ()
+void x = () <$ x
+#+END_SRC
+**** Laws
+- fmap id = id
+- fmap (g . h) = (fmap g) . (fmap h)
+**** 注意
+f1 <$ f2 = (fmap . const) f1      f2
+         =  fmap  (const  f1)     f2
+         =          const f1  <$> f2
+f1 $> f2 = ($>)           f1      f2
+         = (flip <$)      f1      f2
+         = (<$)           f2      f1
+         =          const f2  <$> f1
+<$, $>可用"替换"来作直观理解.但这样很容易忽略"effect".
+**** Examples:
+-- >>> "foo" <$ [1,2,3]
+-- ["foo","foo","foo"]
+-- >>> [1,2,3] $> "foo"
+-- ["foo","foo","foo"]
+-- >>> void [1,2,3]
+-- [(),(),()]
+
+*** Applicative
+**** Def
+#+BEGIN_SRC haskell
+class Functor f => Applicative f where
+  pure  :: a -> f a
+  infixl 4 <*>, *>, <*
+  liftA2 :: (a -> b -> c) -> f a -> f b -> f c
+  liftA2 f x = (<*>) (fmap f x)
+  --   liftA2 f     x     y
+  -- = liftA  f     x <*> y
+  -- = pure   f <*> x <*> y
+  -- =        f <$> x <*> y
+  -- = fmap   f     x <*> y
+
+  (<*>) :: f (a -> b) -> f a -> f b
+  (<*>) = liftA2 id
+
+  -- 一个Applicative的实例,必须实现
+  -- pure
+  -- liftA2,<*>中的一个
+
+  (*>) :: f a -> f b -> f b
+  a1 *> a2 = (id <$ a1) <*> a2
+
+  (<*) :: f a -> f b -> f a
+  (<*) = liftA2 const
+#+END_SRC
+**** Utility Functions
+***** <**>: A variant of '<*>' with the arguments reversed.
+(<**>) :: Applicative f => f a -> f (a -> b) -> f b
+(<**>) = liftA2 (\a f -> f a)
+***** liftA
+liftA::Applicative f => (a -> b) -> f a -> f b
+liftA f x = pure f <*> x
+-- liftA = fmap
+***** liftA3
+liftA3:: Applicative f => (a -> b -> c -> d) -> f a -> f b -> f c -> f d
+liftA3 f a b c = liftA2 f a b <*> c
+--  liftA3  f         a     b     c
+-- =liftA2  f         a     b <*> c
+-- =liftA   f         a <*> b <*> c
+-- =pure    f     <*> a <*> b <*> c
+-- =        f     <$> a <*> b <*> c
+-- =fmap    f         a <*> b <*> c
+**** 注意
+1. ($) f x = f x = f $ x = (f $) x =($ x) y
+2. ...
+
+  a1 <* a2 = (liftA2  const)     a1      a2
+           = (liftA2  const      a1)     a2
+           = (<*>  (fmap  const  a1))    a2
+           = (<*>  (const <$>    a1))    a2
+           = const        <$>    a1  <*> a2 =const       <$> a1 <*> a2
+           = pure const   <*>    a1  <*> a2
+
+  a1 *> a2 = (id      <$         a1) <*> a2
+           = ((fmap . const) id  a1) <*> a2
+           = ( fmap   (consy id) a1) <*> a2
+           = const id        <$> a1  <*> a2 =const  id   <$>  a1  <*> a2
+           = pure (const id) <*> a1  <*> a2
+  <*,*>可用"替换，再应用"来做直观理解.
+**** Laws
+1. Identity: pure id <*> v = v
+2. Homomorphism: pure f <*> pure x = pure (f x)
+3. Interchange: u <*> pure y = pure ($ y) <*> u
+4. Composition: u <*> (v <*> w) = pure (.) <*> u <*> v <*> w
+5. u *> v = (id <$ u) <*> v    = const id  <$> u <*> v
+6. u <* v = (liftA2 const) u v = const     <$> u <*> v
+7. fmap g x = pure g <*> x   或  g <$> x = pure g <*> x
+
+**** Examples:
+-- >>> [1,2] *> [4 , 5]
+-- [4,5,4,5]
+-- >>> [1,2] <* [4 , 5]
+-- [1,1,2,2]
+-- >>> (+) <$> [1,2,3] <*> [4,5]
+-- [5,6,6,7,7,8]
+
+*** Monad
+**** Def
+#+BEGIN_SRC haskell
+class Applicative m => Monad m where
+    -- Sequentially compose two actions, passing any value produced
+    -- by the first as an argument to the second.
+    (>>=)       :: forall a b. m a -> (a -> m b) -> m b
+
+    -- Sequentially compose two actions, discarding any value produced
+    -- by the first, like sequencing operators (such as the semicolon)
+    -- in imperative languages.
+    (>>)        :: forall a b. m a -> m b -> m b
+    m >> k = m >>= \_ -> k
+    {-# INLINE (>>) #-}
+
+    -- Inject a value into the monadic type.
+    return      :: a -> m a
+    return      = pure
+
+    -- Fail with a message.  This operation is not part of the
+    -- mathematical definition of a monad, but is invoked on pattern-match
+    -- failure in a @do@ expression.
+    --
+    -- As part of the MonadFail proposal (MFP), this function is moved
+    -- to its own class 'MonadFail' (see "Control.Monad.Fail" for more
+    -- details). The definition here will be removed in a future
+    -- release.
+    fail        :: String -> m a
+    fail s      = errorWithoutStackTrace s
+#+END_SRC
+**** Uitility Functions
+***** liftM,ap
+liftM :: (Monad m) =>   (a -> b) -> m a -> m b
+ap    :: (Monad m) => m (a -> b) -> m a -> m b
+-- 关系
+--       Monad f <= Applicative f <= Functor f 并不是Haskell一开始就建立的,
+-- 故名相
+--       liftM   =  liftA         = fmap
+--       ap      =  (<*>)
+--       return  =  pure
+-- 丛生. 实际上,要明白逻辑上继承关系就行了。
+-- 故有等价关系
+#+BEGIN_SRC haskell
+  liftMn  f        a1         a2         ...         an
+= liftM   f        a1   `ap`  a2   `ap`  ...   `ap`  an
+= return  f  `ap`  a1   `ap`  a2   `ap`  ...   `ap`  an
+= pure    f  <*>   a1   <*>   a2   <*>   ...   <*>   an
+=         f  <$>   a1   <*>   a2   <*>   ...   <*>   an
+= fmap    f        a1   <*>   a2   <*>   ...   <*>   an
+= liftA   f        a1   <*>   a2   <*>   ...   <*>   an
+= liftAn  f        a1         a2         ...         an
+#+END_SRC
+***** 有很多实用函数，其实是在Data.Foldable、Data.Traversalbale中引入.
+**** Laws
+return a >>= k           =  k a
+m >>= return             =  m
+m >>= (\x -> k x >>= h)  =  (m >>= k) >>= h
+*** A sliding scale of power
+乍看这三个:
+
+1. fmap   :: Functor     f     =>     (a -> b) ->            f a  -> f b
+2. (<*>)  :: Applicative f     =>   f (a -> b) ->            f a  -> f b
+3. (>>=)  :: Monad       f     =>          f a ->     (a -> f b)  -> f b
+
+还看不出什么.但换下面这种方式来看
+
+1. (<$>)  :: Functor     f     =>   (a ->   b) ->     (f a -> f b)
+2. (<*>)  :: Applicative f     => f (a ->   b) ->     (f a -> f b)
+3. (=<<)  :: Monad       f     =>   (a -> f b) ->     (f a -> f b)
+
+All are mapping functions over Functors.
+The deferences between them are in what is being mapped over in each case
+
+1. fmap maps arbitory functions over Functors
+2. <*>  maps f (a -> b) morphisms over (applicative) Functors
+3. =<<  maps (a -> f b) functions over (monadic) Functors
+
+As you move from fmap to (<*>) and then to (>>=),
+you gain in power, versatility and control, at the cost of guarantees about the results.
+
+|-------------+----------+--------+----+-----+--------+-----|
+| Functor     | fmap,<$> |        |    |     |        |     |
+|-------------+----------+--------+----+-----+--------+-----|
+| Applicative | liftA    | liftAn | *> | <*> | pure   |     |
+|-------------+----------+--------+----+-----+--------+-----|
+| Monad       | liftM    | liftMn | >> | ap  | return | >>= |
+|-------------+----------+--------+----+-----+--------+-----|
+
+** About failure and choice
+有几个类（Alternative、MonadPlus、ArrowPlus）
+*** Def
+**** Alernative,MonadPlus
+#+BEGIN_SRC haskell
+class Applicative f => Alternative f where
+  empty :: f a
+  (<|>) :: f a -> f a -> f a
+
+  some :: f a -> f [a]
+  some v = some_v
+      where
+        many_v = some_v <|> pure []
+        some_v = liftA2 (:) v many_v
+
+  many :: f a -> f [a]
+  many v = many_v
+      where
+        many_v = some_v <|> pure []
+        some_v = liftA2 (:) v many_v
+
+class Monad m => MonadPlus m where
+  mzero :: m a
+  mplus :: m a -> m a -> m a
+
+class Arrow a => ArrowZero a where
+  zeroArrow :: a b c
+
+class ArrowZero arr => ArrowPlus arr where
+  (<+>) :: (b `arr` c) -> (b `arr` c) -> (b `arr` c)
+#+END_SRC
+*** 比较理解
+
+|             | Monoid       | Alternative | MonadPlus | ArrowPlus |
+|-------------+--------------+-------------+-----------+-----------|
+| zero        | mempty       | empty       | mzero     | zeroArrow |
+| composition | mappend (<>) | (</>)       | mplus     | (<+>)     |
+注意:(</>)应当是(<|>).我没法正确输入.
+
+在许多场合，需要将多个计算的结果融合成一个计算的结果.
+Alternative 专门对此作了抽象。
+MonadPlus的定义和Alternative雷同.
+那么毫无意外,Alternative、MonadPlus的共同实例中
+须:
+    empty = mzero
+    (<|>) = mplus
+制定ArrowPlus,估计也是同样的动机.(文档上这样说明: A monoid on arrows.)
+*** Laws
+关于他们应当满足什法则,争论很多，但共同点是要像monoid.
+**** Alternative's laws
+empty <|> m                   = m
+m     <|> empty               = m
+(x    <|> y    )    <|>     z = x    <|>    (y    <|>    z)
+
+重要的问题是, {empty,<|>}和{<*>}的关系
+**** MonadPlus's laws
+mzero `mplus` m              =  m
+m     `mplus` mzero          =  m
+m     `mplus` (n `mplus` o)  =  (m `mplus` n) `mplus` o
+
+重要的问题是, {mzero,mplus}和{>>=}的关系
+*** 估计:
+这几个类,有无可能，进一步抽象到Monoid中去呢？
+** Foldable,Traversable
+实践编程中,很重要的.
+
+*** Definition of Foldable
+#+BEGIN_SRC haskell
+-- 看起来复杂，实现一个Foldable类，只需实现foldmap或foldr，其他均有缺省实现
+class Foldable t where
+  fold    :: Monoid m => t m -> m
+  foldMap :: Monoid m => (a -> m) -> t a -> m
+  foldr   :: (a -> b -> b) -> b -> t a -> b
+  foldr'  :: (a -> b -> b) -> b -> t a -> b
+  foldl   :: (b -> a -> b) -> b -> t a -> b
+  foldl'  :: (b -> a -> b) -> b -> t a -> b
+  foldr1  :: (a -> a -> a) -> t a -> a
+  foldl1  :: (a -> a -> a) -> t a -> a
+  toList  :: t a -> [a]
+  null    :: t a -> Bool
+  length  :: t a -> Int
+  elem    :: Eq a => a -> t a -> Bool
+  maximum :: Ord a => t a -> a
+  minimum :: Ord a => t a -> a
+  sum     :: Num a => t a -> a
+  product :: Num a => t a -> a
+
+--Special biased folds
+foldrM :: (Foldable t, Monad m) => (a -> b -> m b) -> b -> t a -> m b
+foldlM :: (Foldable t, Monad m) => (b -> a -> m b) -> b -> t a -> m b
+
+--Folding Actions
+---Applicative actions
+traverse_  :: (Foldable t, Applicative f) => (a -> f b) ->       t a  -> f ()
+for_       :: (Foldable t, Applicative f) =>       t a  -> (a -> f b) -> f ()
+sequenceA_ :: (Foldable t, Applicative f) =>                  t (f a) -> f ()
+asum       :: (Foldable t, Alternative f) =>                  t (f a) -> f a
+---Monadic actions
+mapM_      :: (Foldable t, Monad m) => (a -> m b) ->        t a -> m ()
+forM_      :: (Foldable t, Monad m) =>        t a -> (a -> m b) -> m ()
+sequence_  :: (Foldable t, Monad m) =>                  t (m a) -> m ()
+msum       :: (Foldable t, MonadPlus m) =>              t (m a) -> m a
+
+--specialized folds
+concat     :: Foldable t => t [a] -> [a]
+concatMap  :: Foldable t => (a -> [b]) -> t a -> [b]
+and        :: Foldable t => t Bool -> Bool
+or         :: Foldable t => t Bool -> Bool
+any        :: Foldable t => (a -> Bool) -> t a -> Bool
+all        :: Foldable t => (a -> Bool) -> t a -> Bool
+maximumBy  :: Foldable t => (a -> a -> Ordering) -> t a -> a
+minimumBy  :: Foldable t => (a -> a -> Ordering) -> t a -> a
+
+--Searchs
+notElem :: (Foldable t, Eq a) => a -> t a -> Bool
+find :: Foldable t => (a -> Bool) -> t a -> Maybe a
+#+END_SRC
+
+*** Traversable
+
+**** Definition
+#+BEGIN_SRC haskell
+class (Functor t, Foldable t) => Traversable t where
+  traverse   :: Applicative f => (a -> f b) -> t a -> f (t b)
+  traverse f =  sequenceA . fmap f
+
+  sequenceA  :: Applicative f => t (f a) -> f (t a)
+  sequenceA  =  traverse id
+
+  mapM       :: Monad m => (a -> m b) -> t a -> m (t b)
+  mapM       =  traverse
+
+  sequence   :: Monad m => t (m a) -> m (t a)
+  sequence   =  sequenceA
+--我看到了太多的Haskell历史痕迹,起先有些混乱,后来发现，原来答案在建议Foldable Traversable In Prelude中.
+--将Foldable,Traversable引入Prelude，导致大量的函数方法的变动和重定义.
+--mapM,sequence的出现,只是历史的原因.他们只是traverse,sequenceA的复制,而只不过类型要严格一些了.
+#+END_SRC
+
+**** 直觉解释:
+- 类 Traversable 的关键方法是traverse.可将它看作"Effectful fmap".它可以遍历结构Traversable t中的每个元素.
+- 遍历时施用函数产生的副效用，则用Applicative Functor f 来封装.
+......
+
+**** Laws
+
+***** A definition of traverse must satisfy the following laws:
+函子所表示的数据结构,可从左至右被遍历.
+Functors representing data structures that can be traversed from left to right.
+
+A definition of traverse must satisfy the following laws:
+Naturality
+t . traverse f = traverse (t . f) for every applicative transformation t
+Identity
+traverse Identity = Identity
+Composition
+traverse (Compose . fmap g . f) = Compose . fmap (traverse g) . traverse f
+
+***** A definition of sequenceA must satisfy the following laws:
+Naturality
+t . sequenceA = sequenceA . fmap t for every applicative transformation t
+Identity
+sequenceA . fmap Identity = Identity
+Composition
+sequenceA . fmap Compose = Compose . fmap sequenceA . sequenceA
+
+***** 附:An applicative transformation is a function
+#+BEGIN_SRC haskell
+t :: (Applicative f, Applicative g) => f a -> g a -- preserving the Applicative operations, i.e.
+t (pure x)  = pure x
+t (x <*> y) = t x <*> t y
+#+END_SRC
+
+***** 附:The identity functor Identity and composition of functors Compose are defined as
+#+BEGIN_SRC haskell
+-- 这个有些过时了,和目前的版本不一样.
+newtype  Identity a = Identity a
+
+instance Functor Identity where
+  fmap f (Identity x) = Identity (f x)
+
+instance Applicative Identity where
+  pure x = Identity x
+  Identity f <*> Identity x = Identity (f x)
+
+newtype  Compose f g a = Compose (f (g a))
+
+instance (Functor f, Functor g) => Functor (Compose f g) where
+  fmap f (Compose x) = Compose (fmap (fmap f) x)
+
+instance (Applicative f, Applicative g) => Applicative (Compose f g) where
+  pure x = Compose (pure (pure x))
+  Compose f <*> Compose x = Compose ((<*>) <$> f <*> x)
+#+END_SRC
+
+* Haskell Lens
+Costate Comonad Coalgebra is an equivalent of Java's member variable update techology for haskell.
+
+** An short introduction of Named Fields(Record Syntax Sugar)
+对于下述数据类型
+#+BEGIN_SRC haskell
+data Configuration = Configuration
+    String   -- User name
+    String   -- Local host
+    String   -- Remote host
+    Bool     -- Is guest?
+    Bool     -- Is superuser?
+    String   -- Current directory
+    String   -- Home directory
+    Integer  -- Time connected
+  deriving (Eq, Show)
+#+END_SRC
+人们通常要定义下述访问函数:
+#+BEGIN_SRC haskell
+getUserName   (Configuration un _  _  _  _ _ _ _) = un
+getLocalHost  (Configuration _  lh _  _  _ _ _ _) = lh
+getRemoteHost (Configuration _  _  rh _  _ _ _ _) = rh
+getIsGuest    (Configuration _  _  _  ig _ _ _ _) = ig
+-- And so on...
+#+END_SRC
+
+为了方便,Haskell 提供了Record Syntax Sugar.
+使得看起来要清晰些.
+#+BEGIN_SRC haskell
+data Configuration = Configuration
+    { username      :: String
+    , localHost     :: String
+    , remoteHost    :: String
+    , isGuest       :: Bool
+    , isSuperuser   :: Bool
+    , currentDir    :: String
+    , homeDir       :: String
+    , timeConnected :: Integer
+    }
+#+END_SRC
+这将自动生成下列函数
+#+BEGIN_SRC haskell
+username      :: Configuration -> String
+localHost     :: Configuration -> String
+-- etc.
+#+END_SRC
+之所以称之为Syntax Sugar,原因在于,人们仍然还可以按以前的方式使用它.
+#+BEGIN_SRC haskell
+-- # In old way,it's shorter.
+getUserName   (Configuration un _  _  _  _ _ _ _) = un
+-- # And so on.
+initCFG = Configuration "nobody" "nowhere" "nowhere" False False "/" "/" 0
+
+-- # In new way,it's clearer.
+getUserName'  (Configuration {username = un} )   = un
+-- # And so on.
+initCFG' = Configuration
+    { username      = "nobody"
+    , localHost     = "nowhere"
+    , remoteHost    = "nowhere"
+    , isguest       = False
+    , issuperuser   = False
+    , currentdir    = "/"
+    , homedir       = "/"
+    , timeConnected = 0
+    }
+
+#+END_SRC
+
+** Derivation of Lens
+*** The Power of (.)
+(.)有什么威力?
+#+BEGIN_SRC haskell
+(.)                     :: (a -> b) -> (c           -> a) -> c           -> b
+(.).(.)                 :: (a -> b) -> (c -> d      -> a) -> c -> d      -> b
+(.).(.).(.)             :: (a -> b) -> (c -> d -> e -> a) -> c -> d -> e -> b
+-- 如果了解系统预定义的Functor实例 ((->) r),就知道他的fmap就是 (.)
+-- 而
+--   (c ->           a) 可看成 ((->) c) a
+--   (c -> d      -> a) 可看成 ((->) c) ((->) d) a
+--   (c -> d -> e -> a) 可看成 ((->) c) ((->) d) ((->) e) a
+
+-- 其实
+(.)           f g x     = f(g(x))                   = f $ g x
+((.).(.))     f g x y   = ((.) (.) (.)) f g x y
+                        = ((.) ((.) f))   g x y
+                        = (.) (f.) g x y
+                        = (f.)(g x) y
+                        = f ((g x) y)
+                        = f (g x y)                 = f $ g x y
+((.).(.).(.)) f g x y z = (.) (.) (.).(.) f g x y z = f $ g x y z
+
+-- 用 λ-演算,可能看得更明白些.
+(.)         = \ f g x -> f(g(x))
+
+(.).(.)     = (.) (.) (.)
+            = (\ f g x -> f(g(x))) (\ f g x -> f(g(x))) (\ f g x -> f(g(x)))
+            = \ x -> (\ f g x -> f(g(x))) ((\ f g x -> f(g(x)))(x))
+            = \ x -> (\ f g x -> f(g(x))) (\ g x1 -> x(g(x1)))
+            = \ x -> (\ g y1 -> (\ g x1 -> x(g(x1)))(g(y1)))
+            = \ x -> (\ g y1 -> (\ x1 -> x((g(y1))(x1))))
+            = \ x g y1 x1 -> x((g(y1))(x1))
+            = \ f g x y -> f((g(x))(y))
+            = \ f g x y -> f $ g x y
+
+(.).(.).(.) = (.).((.).(.))
+            = (.) (.) (.).(.)
+            = (\ f g x -> f(g(x))) (\ f g x -> f(g(x))) (\ f g x y -> f((g(x))(y)))
+            = \ x -> (\ f g x -> f(g(x))) ((\ f g x y -> f((g(x))(y)))(x))
+            = \ x -> (\ f g x -> f(g(x))) (\ g x1 y -> x((g(x1))(y)))
+            = \ x -> \ g y1 -> (\ g x1 y -> x((g(x1))(y)))(g(y1))
+            = \ x -> \ g y1 -> \ x1 y -> x(((g(y1))(x1))(y))
+            = \ x g y1 x1 y -> x(((g(y1))(x1))(y))
+            = \ f g x y z -> f(((g(x))(y))(z))
+            = \ f g x y z -> f $ g x y z
+#+END_SRC
+*** Some Hints
+#+BEGIN_SRC haskell
+fmap                    :: Functor f                         => (a -> b) -> f a         -> f b
+fmap.fmap               :: (Functor f, Functor g)            => (a -> b) -> f (g a)     -> f (g b)
+fmap.fmap.fmap          :: (Functor f, Functor g, Functor h) => (a -> b) -> f (g (h a)) -> f (g (h b))
+
+foldMap                 :: (Foldable f, Monoid m)                          => (a -> m) -> f a         -> m
+foldMap.foldMap         :: (Foldable f, Foldable g, Monoid m)              => (a -> m) -> f (g a)     -> m
+foldMap.foldMap.foldMap :: (Foldable f, Foldable g, Foldable h, Monoid m)  => (a -> m) -> f (g (h a)) -> m
+
+traverse                   :: (Traversable f, Applicative m)                               => (a -> m b) -> f a         -> m (f b)
+traverse.traverse          :: (Traversable f, Traversable g, Applicative m)                => (a -> m b) -> f (g a)     -> m (f (g b))
+traverse.traverse.traverse :: (Traversable f, Traversable g, Traversable h, Applicative m) => (a -> m b) -> f (g (h a)) -> m (f (g (h b)))
+#+END_SRC
+These functions are similar, but slightly different in signature, and provide very different capabilities.
+从Functor,Foldable升级到Traversable,能力也在提升.
+这从fmap,foldmap可用trverse来定义就可以看出来.
+*** Hierarch Graph
+#+CAPTION: Hierarchy
+#+NAME: Hierarchy Graph of Lens
+[[file:Hierarchy.png]]
+*** m
