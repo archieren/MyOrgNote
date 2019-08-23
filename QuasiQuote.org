@@ -1,1 +1,27 @@
+#+STARTUP: ident
 #+TITLE: 关于quote和quasiquote
+#+AUTHOR: Reader
+
+* Concepts of quasiquote.
+Quasiquotation is a parameterized version of ordinary quotation,where instead of specifying a value exactly, some holes are left to be filled in later.
+A quasiquotation is a template.
+** Program-Generating Programing!
+How to genenerate a program in any of the programming languages?
+** The goal of QuasiQuote!
++ Quasiquotation should enable the programmer to write down what she wants the output to look like, modied only slightly in order to parameterize it.
++ The parameter expressions should appear inside the template, in the positions where their values will be inserted.
++ The underlying data structures manipulated by quasiquotation should be rich enough to represent recursively defined structures such as expressions.
+
+The achievement of the last goal is where Lisp will really shine!
+* Synergy: Combining Quasiquote with S-expression
+** From: String-Substitution based quasiquotation, it's too low-level.
+- It has no understanding of the syntactic structure of the programming language being generated!
+- And it didn't respect the intended recursive structure of expressions represented as strings!
+** And: List( or any other abstract structure)-substitution based quasiquotation, it's still too low-level.
+The introduction of additional data types, and the procedures to manipulate them, would certainly bring additional complexity!
+** To: S-expression based quasiquotation, it satisfies all the three goal of quasiquote.
+* Embellishment.
+** Splicing
+** Nesting
+
+
