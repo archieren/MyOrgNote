@@ -1,0 +1,17 @@
+#+TITLE: AboutTensorFlowServing
+* Install
+** Install the nvidia-container-toolkit
+# Three Package will be installed! nvidia-container-toolkit libnvidia-container libnvidia-container-tools
+yay -Sy nvidia-container-toolkit
+
+** Install tensorflow/serving Images
+docker pull tensorflow/serving:1.14.0-gpu
+docker pull tensorflow/serving:latest-gpu
+
+mkdir -p /tmp/tfserving
+cd /tmp/tfserving
+git clone https://github.com/tensorflow/serving
+
+docker run --runtime=nvidia -p 8501:8501 \
+  --mount type=bind,source=/tmp/tfserving/serving/tensorflow_serving/servables/tensorflow/testdata/saved_model_half_plus_two_gpu,target=/models/half_plus_two \
+  -e MODEL_NAME=half_plus_two -t tensorflow/serving:latest-gpu &
