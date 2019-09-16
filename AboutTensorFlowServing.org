@@ -1,13 +1,49 @@
 #+TITLE: AboutTensorFlowServing
 * Install
+** Cuda and Docker Install
+As usually!
+
+Cite:Add the user to docker group!
+#+BEGIN_SRC bash
+sudo gpasswd -a $USER docker
+#+END_SRC
+Or follow the rootless mode of the docker >=19.03
+
 ** Install the nvidia-container-toolkit
-# Three Package will be installed! nvidia-container-toolkit libnvidia-container libnvidia-container-tools
+Cite: Docker >=19.03 must be used!
+Two Package will be installed!
+- nvidia-container-toolkit
+- nvidia-container-runtime
+- libnvidia-container and libnvidia-container-tools are installed by dependencies!
+
+#+BEGIN_SRC bash
+
+# yay -Sy libnvidia-container
+# yay -Sy libnvidia-container-tools
 yay -Sy nvidia-container-toolkit
+yay -Sy nvidia-container-runtime
+
+sudo tee /etc/docker/daemon.json <<EOF
+{
+    "runtimes": {
+        "nvidia": {
+            "path": "/usr/bin/nvidia-container-runtime",
+            "runtimeArgs": []
+        }
+    }
+}
+EOF
+
+sudo systemctl restart docker
+
+#+END_SRC
+
 
 ** Install tensorflow/serving Images
 docker pull tensorflow/serving:1.14.0-gpu
 docker pull tensorflow/serving:latest-gpu
 
+** Run An Example
 mkdir -p /tmp/tfserving
 cd /tmp/tfserving
 git clone https://github.com/tensorflow/serving
@@ -15,3 +51,15 @@ git clone https://github.com/tensorflow/serving
 docker run --runtime=nvidia -p 8501:8501 \
   --mount type=bind,source=/tmp/tfserving/serving/tensorflow_serving/servables/tensorflow/testdata/saved_model_half_plus_two_gpu,target=/models/half_plus_two \
   -e MODEL_NAME=half_plus_two -t tensorflow/serving:latest-gpu &
+
+** Enter the docker
+Use the command:
+- sudo docker exec [Options] container command [args]
+
+For Example:
+#+BEGIN_SRC bash
+docker ps
+docker exec -it <id from ps> /bin/bash
+#+END_SRC
+
+* Serve A Tensorflow Model
