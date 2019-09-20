@@ -56,7 +56,8 @@ Ownership有三条规则：
 3. When the owner goes out of scope, the value will be dropped.
 ** Variable这个概念是用Ownership对Identifier、Memeory、Value进行的统一！
 *** Identifier、Memoery、Value and Variable:
-针对Rust可以这样说,Variable是绑定了存有Value的Memory的Identifier.这种绑定是不可变的,但是有Liftime,有Scope,而且是在此意义上,称之为变量.
+针对Rust可以这样说,Variable是绑定了存有Value的Memory的Identifier.
+这种绑定是不可变的,但是有Liftime,有Scope,而且是在此意义上,称之为变量.
 
 不可变的变量，是指他绑定的内存区域里存放的值,不能变.
 可变的变量,是指他绑定的内存区域里存放的值,可以变.
@@ -66,6 +67,7 @@ Value,值,这个概念也就相应地要澄清一下,value是指放在内存区�
 如果用<Identifier of Variable,Memory of Variable,Value of Variable>来表示Variable,看起来复杂,实际上清晰了很多东西,也有很多概念被统一了,那么有很多事情需要思考一下:
 运行时,Identifier存在于何处?
 *** Borrow,Move,Reference,and Shadowing
+
 Movement of Ownership or Binding.
 
 * 模块系统
