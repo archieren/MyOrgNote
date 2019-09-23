@@ -62,4 +62,16 @@ docker ps
 docker exec -it <id from ps> /bin/bash
 #+END_SRC
 
+* Tensorflow Extension
+** Core Concepts
+*** TFX Pipelines and Pipeline Components
+*** Artifacts
+- Artifact:In a pipeline, an _artifact_ is a unit of data that is passed between components.All artifacts must have associated _metadata_, which defines the _type_ and _properties_ of the artifact.
+- Artifact Type:
+- Artifact Properties
+In summary, artifact types define the ontology of artifacts in the entire TFX pipeline system, whereas artifact properties define the ontology specific to an artifact type.
+** TFX Pipeline Components , TFX Libraries and Supporting Technologies
+(Ommitted)
+** Model,SavedModel,Schema and So On
+(Ommitted)
 * Serve A Tensorflow Model
