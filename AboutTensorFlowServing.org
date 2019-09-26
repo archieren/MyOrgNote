@@ -65,13 +65,30 @@ docker exec -it <id from ps> /bin/bash
 * Tensorflow Extension
 ** Core Concepts
 *** TFX Pipelines and Pipeline Components
+A TFX pipeline is a sequence of components that implement an ML pipeline which is specifically designed for scalable, high-performance machine learning tasks. 
 *** Artifacts
 - Artifact:In a pipeline, an _artifact_ is a unit of data that is passed between components.All artifacts must have associated _metadata_, which defines the _type_ and _properties_ of the artifact.
 - Artifact Type:
-- Artifact Properties
+- Artifact Properties:
 In summary, artifact types define the ontology of artifacts in the entire TFX pipeline system, whereas artifact properties define the ontology specific to an artifact type.
 ** TFX Pipeline Components , TFX Libraries and Supporting Technologies
-(Ommitted)
+*** TFX Pipeline Components:
+(Need A Graph)
+*** Anatomy of a Component:
+(Need A Graph)
+- TFX components consist of three main pieces: Driver, Excutor, Publisher.
+- The driver supplies metadata to the executor by querying the metadata store, while the publisher accepts the results of the executor and stores them in metadata.
+- The executor is where a component performs its processing.
+*** TFX Libraries:
+(Need A Graph)
+TFX provides several Python packages that are the libraries which are used to create pipeline components.
+
 ** Model,SavedModel,Schema and So On
 (Ommitted)
+
+** Developing with TFX:
+- Data Exploration, Visualization, and Cleaning.
+- Developing and Training Models.
+- Analyzing and Understanding Model Performance.
+- Deployment Targets.
 * Serve A Tensorflow Model

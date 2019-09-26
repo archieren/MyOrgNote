@@ -57,9 +57,16 @@ Ownership有三条规则：
 
 *** Copy or Ownership Moving
 Assignment
-Passing a value to Function
+Passing a value to a Function
+Return a value out of a Function
 
 *** Reference => Borrowing
+Reference:
+- Reference
+- Mutable Reference
+- In Rust, References will never be dangling refernces!
+
+Rules:
 - At any given time, you can have either one mutable reference or any number of immutable references.
 - References must always be valid.
 
