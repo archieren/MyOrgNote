@@ -1,4 +1,8 @@
 #+Title TensorFlow的笔记摘抄
 * TensorFlow全新的数据读取方式：Dataset API入门教程
 ** 基本概念：Dataset与Iterator
+* FCN 中的FC是什么含义？
+* Siamese and Triplet Net 在 Image Ebedding 中的作用
+https://github.com/adambielski/siamese-triplet
 
+* FPN 的目的是什么？
