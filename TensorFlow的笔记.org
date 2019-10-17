@@ -3,6 +3,7 @@
 ** 基本概念：Dataset与Iterator
 * FCN 中的FC是什么含义？
 Fully Convolution意味着什么？
+FCN 一开始就和语义分割扯上关系，怎么回事？
 * Siamese and Triplet Net 在 Image Ebedding 中的作用
 https://github.com/adambielski/siamese-triplet
 
