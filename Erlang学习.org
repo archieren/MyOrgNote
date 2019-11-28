@@ -1,0 +1,4 @@
+#+STARTUP:ident
+#+TITLE: Erlang的学习笔记
+#+AUTHOR: Reader
+
