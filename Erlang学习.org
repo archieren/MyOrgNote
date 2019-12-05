@@ -1,19 +1,7 @@
 #+STARTUP:ident
 #+TITLE: Erlang的学习笔记
 #+AUTHOR: Reader
-
-* Comparations
-** Basic DataTypes
-| Type                    | Erlang                                       | Elixir                                                           |
-|-------------------------+----------------------------------------------+------------------------------------------------------------------|
-| Atom                    | 'Other than a _ @' a_b@c                     | :"Other than a _ @" :a_b@c true false nil                        |
-| Boolean                 | true false                                   | true false                                                       |
-| List                    |                                              |                                                                  |
-| CharList                | List of Code-Point integers.                 | 'UTF-8 coded string',Implemented in List of Code-Point Integers. |
-| Strings                 | "LATIN coded string",Implemented in CharList | "UTF-8 coded string",Implemented in Binaries                     |
-| Intergers               | With special notations: $char base#value     |                                                                  |
-| BitStrings and Binaries |                                              |                                                                  |
-
-* rebar3和Erlang的工程环境
+                                                                      |
+* Erlang和Rebar3
 * Elixir和Mix
 
