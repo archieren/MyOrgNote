@@ -4,9 +4,10 @@
 ** 下载
 在shell下进入某目录,运行:
 $curl -O https://beta.quicklisp.org/quicklisp.lisp
-$sbcl --load /curl下来的当前目录/quicklisp.lisp \  --后面的可在sbcl里交互执行！
-      --eval '(quicklisp-quickstart:install)' \  --创建了"~/quicklisp",quicklisp的工作目录,等等!
-      --eval '(ql:add-to-init-file)'   \         --配置sbcl,启动时自动加载quicklisp的配置
+$sbcl --load  curl下来的当前目录/quicklisp.lisp                    \  --后面的可在sbcl里交互执行！
+      --eval '(quicklisp-quickstart:install :path "~/.quicklisp)' \ --创建了"~/.quicklisp",quicklisp的工作目录,等等!
+                                                                  \ -- 如果不用 :path 参数,则缺省地创建 "~/quicklisp"
+      --eval '(ql:add-to-init-file)'                              \ --配置sbcl,启动时自动加载quicklisp的配置
       --eval '(quit)'
 ** 使用
 看来这个需要积累!
@@ -24,6 +25,25 @@ $sbcl --load /curl下来的当前目录/quicklisp.lisp \  --后面的可在sbcl�
 升级來至所有dist的所安装的系统:(ql:update-all-dists)
 升级來至quicklisp dist的所安装的系统(ql:update-dist "quicklisp")
 升级quicklisp程序本身:(ql:update-client)
+*** 高级依赖管理
+这要看asdf的相关内容!
+You can drop Common Lisp projects into any of those folders:
+- ~/common-lisp,
+- ~/.local/share/common-lisp/source,
+- /quicklisp的安装目录/local-projects
+- 等等
+For a complete list, see
+CL-USER> (asdf/source-registry:default-user-source-registry)
+CL-USER> asdf:*central-registry*
 * CL-Project - Generate modern project skeletons
-** 
+** 安装,加载 CL-Project
+(ql:quickload "cl-project")
+** 创建 项目
+(cl-project:make-project #P"./path-to-project/root/")  -- 这是相对SLIME的当前目录来建立项目的.
+将项目建在何处,是值得考虑的事情!
+上述命令是以SLIME的当前目录为基准的.
+因此再次进入Emacs时,让应用处于加载路径中,方法有:
+- 用 M-x slime-cd 命令来改变slime当前目录为应用所处的目录! --开发App时,推荐用这个!
+- 把你的应用移动到 /quicklisp的安装目录/local-projects下,它将总是有用的. --开发Lib时,推荐用这个!
+- 这个还没试过,按道理是对的,用asdf向加载路径里添加项目.
 

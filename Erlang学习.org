@@ -1,7 +1,7 @@
 #+STARTUP:ident
 #+TITLE: Erlang的学习笔记
 #+AUTHOR: Reader
-                                                                      |
+
 * Erlang和Rebar3
 * Elixir和Mix
 
