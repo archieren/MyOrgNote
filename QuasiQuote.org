@@ -1,3 +1,4 @@
+
 #+STARTUP: ident
 #+TITLE: 关于quote和quasiquote
 #+AUTHOR: Reader
@@ -20,7 +21,9 @@ The achievement of the last goal is where Lisp will really shine!
 ** And: List( or any other abstract structure)-substitution based quasiquotation, it's still too low-level.
 The introduction of additional data types, and the procedures to manipulate them, would certainly bring additional complexity!
 ** To: S-expression based quasiquotation, it satisfies all the three goal of quasiquote.
-* Embellishment.
+这使得将"程序当作数据"来对待成为现实！
+- 如果了解Lisp的Reader机制,就能更好地了解S-expression based quasiquotation.
+* Embellishment.(此单词的字典含义是装饰、润色等等)
 ** Splicing
 ** Nesting
 
