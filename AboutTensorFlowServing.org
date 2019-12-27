@@ -62,6 +62,21 @@ docker ps
 docker exec -it <id from ps> /bin/bash
 #+END_SRC
 
+* tfds: tensorflow_dataset
+*tensorflow_datasets* (tfds) defines a collection of datasets ready-to-use with TensorFlow.
+Each dataset is defined as a *tfds.core.DatasetBuilder* :
+ - *encapsulates* the logic to download the dataset
+ - *construct* an input pipeline
+   - contains the dataset documentation (version, splits, number of examples, etc.).
+
+The main library entrypoints are:
+- tfds.builder: fetch a tfds.core.DatasetBuilder by name
+- tfds.load: convenience method to
+  - construct a builder,
+  - download the data,
+  - and create an input pipeline,
+  - returning a tf.data.Dataset.
+
 * Tensorflow Extension
 ** Core Concepts
 *** TFX Pipelines and Pipeline Components
