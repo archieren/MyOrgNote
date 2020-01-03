@@ -62,6 +62,10 @@ docker ps
 docker exec -it <id from ps> /bin/bash
 #+END_SRC
 
+
+* TensorFlow全新的数据读取方式：Dataset API入门教程
+** 基本概念：Dataset与Iterator
+
 * tfds: tensorflow_dataset
 *tensorflow_datasets* (tfds) defines a collection of datasets ready-to-use with TensorFlow.
 Each dataset is defined as a *tfds.core.DatasetBuilder* :

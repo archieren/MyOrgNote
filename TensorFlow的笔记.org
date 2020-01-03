@@ -1,6 +1,5 @@
-#+Title TensorFlow的笔记摘抄
-* TensorFlow全新的数据读取方式：Dataset API入门教程
-** 基本概念：Dataset与Iterator
+#+Title 深度学习论文的笔记摘抄
+
 * FCN 中的FC是什么含义？
 Fully Convolution意味着什么？
 FCN 一开始就和语义分割扯上关系，怎么回事？
@@ -8,3 +7,13 @@ FCN 一开始就和语义分割扯上关系，怎么回事？
 https://github.com/adambielski/siamese-triplet
 
 * FPN 的目的是什么？
+* Convolutional Activition Map 是个什么概念？
+CAM: Learning Deep Features for Discriminative Localization
+Grad-cam: Visual explanations from deep networks via gradient-based localization
+各自说了什么事？
+
+* Wieland Brendel and Matthias Bethge 想说什么?
+** 文章ImageNet-Trained CNNs are biased towards texture; Increasing shape bias improves accuracy and robustness.
+用标题将他的内容全部说出来了.
+** 文章BagNet
+进一步将上面的事说明白了!
