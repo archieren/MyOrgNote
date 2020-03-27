@@ -2,6 +2,20 @@
 #+TITLE: Erlang的学习笔记
 #+AUTHOR: Reader
 
+* 配置
+** 镜像配置
+例如在.bash_profile里配置
+#+BEGIN_EXAMPLE
+
+# hex.pm 国内镜像
+export HEX_MIRROR="https://hexpm.upyun.com"
+export HEX_CDN="https://hexpm.upyun.com"
+
+#+END_EXAMPLE
+** Emacs的配置
+- Erlang: lsp-mode + (git clone https://github.com/erlang-ls/erlang_ls.git and ...)
+- Elixir: lsp-mode + (git clone https://github.com/elixir-lsp/elixir-ls.git and ...)
+
 * Erlang和Rebar3
 * Elixir和Mix
 
