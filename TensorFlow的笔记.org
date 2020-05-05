@@ -7,6 +7,12 @@ FCN 一开始就和语义分割扯上关系，怎么回事？
 https://github.com/adambielski/siamese-triplet
 
 * FPN 的目的是什么？
+源自文章 "Feature pyramid networks for object detection"
+各种尺度的Feature Map的来源,及相互关系,利用方式! 那么下面的术语:
+- Featurized Image Pyramid: Image Pyramid 产生 Feature Map堆栈
+- Single/Top Feature map: 只利用DNN的顶层Fetaure Map
+- Pyramidical Feature Hierarchy: 独立利用DNN的各层Feature Map
+- Feature Pyramid Networks: 按我的理解,具有"生成"的味道?
 * Convolutional Activition Map 是个什么概念？
 CAM: Learning Deep Features for Discriminative Localization
 Grad-cam: Visual explanations from deep networks via gradient-based localization
