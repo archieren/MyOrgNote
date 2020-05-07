@@ -24,3 +24,8 @@ Grad-cam: Visual explanations from deep networks via gradient-based localization
 ** 文章BagNet
 进一步将上面的事说明白了!
 * CAM和Grad-CAM的涵义:
+* Graph Neural Network:
+- Graph Embeding
+- Graph Convolution:
+  - Spatial Convolution
+  - Spectral Convolution
