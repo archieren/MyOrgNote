@@ -1,4 +1,4 @@
-#+Title 深度学习论文的笔记摘抄
+#+TITLE: 深度学习论文的笔记摘抄
 
 * FCN 中的FC是什么含义？
 Fully Convolution意味着什么？
