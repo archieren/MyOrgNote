@@ -20,7 +20,8 @@ export HEX_CDN="https://hexpm.upyun.com"
 * Elixir和Mix
 * Phoenix 教程
 ** Install
-注意的是，用 mix archive.install hex phx_new [VERSION]来安装。其他依赖项，略。
+依赖项的安装：erlang and rebar3, elixir, nodejs，postgresql/mysql/mariadb，inotify-tools
+安装Phoenix：网上的教程有些滞后，用 mix archive.install hex phx_new [VERSION]来安装。
 之后，例如，我干了这样的事：
 
 #+BEGIN_SRC bash
