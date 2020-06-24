@@ -18,4 +18,27 @@ export HEX_CDN="https://hexpm.upyun.com"
 
 * Erlang和Rebar3
 * Elixir和Mix
+* Phoenix 教程
+** Install
+注意的是，用 mix archive.install hex phx_new [VERSION]来安装。其他依赖项，略。
+之后，例如，我干了这样的事：
+
+#+BEGIN_SRC bash
+cd ~/Projects
+mix phx.new menu --database mysql
+
+cd menu
+mix deps.get
+cd assets && npm install && node node_modules/webpack/bin/webpack.js --mode development
+cd ..
+
+# Then configure your database in config/dev.exs and run:
+mix ecto.create
+
+# Startup Phoenix app with
+mix phx.server
+# Or run your app in IEx as:
+# iex -S mix phx.server
+
+#+END_SRC
 

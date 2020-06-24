@@ -3,6 +3,34 @@
 
 * A Computational Model of Visual Recognition Memory via Grid Cells
 
+* Grid Cells and Spatial Maps in Entorhinal Cortex and Hippocampus
+It's a review!
+** Place Cells and Grid Cells神经生理发现
+- Place Cells:  ... Tolmanian cognitive maps
+- Grid Cells: ...
+** Grid-to-Place Transformation中的神经生理
+Grid Map的组织方式: 沿着 MEC 的 DorsalVentral Axis 的 Modular Organization. See "Discretization of the Entorhinal Grid Map"
+** Computational Models Of Grid-to-Place Transformation
+一堆的猜想，留待慢慢阅读吧？
+
+* Biological and Machine Intelligence: HTM(Hierarchical Temporal Memory)的介绍 - 这里面可能真有戏！
+(目前,有这种理论变化 HTM => The Thousand Brains Theory of Intelligence)
+** HTM Principles
+神经生理学上的那些内容，启发了作者的基本原理？
+- Common Algorithms
+- Sparse Distributed Representations(SDR)
+- Sensory Encoders
+- HTM Systems are embeded within sensory-motor Systems
+- HTM relies on streaming data and sequence memory
+- On-Line learning
+** Sparse Distributed Representations
+- Capacity of SDRs and the probability of mismatches
+- Robustness of SDRs and the probability of error with noise
+- Reliable classification of a list of SDR vectors
+- Unions of SDRs
+- Robustness of unions in the presence of noise
+** Encoding Data for HTM Systems
+
 
 
 

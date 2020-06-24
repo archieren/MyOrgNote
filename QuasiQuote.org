@@ -1,5 +1,5 @@
 
-#+STARTUP: ident
+#+STARTUP: indent
 #+TITLE: 关于quote和quasiquote
 #+AUTHOR: Reader
 
