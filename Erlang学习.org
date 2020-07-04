@@ -20,8 +20,16 @@ export HEX_CDN="https://hexpm.upyun.com"
 * Elixir和Mix
 * Phoenix 教程
 ** Install
-依赖项的安装：erlang and rebar3, elixir, nodejs，postgresql/mysql/mariadb，inotify-tools
-安装Phoenix：网上的教程有些滞后，用 mix archive.install hex phx_new [VERSION]来安装。
+依赖项的安装：erlang and rebar3, elixir, nodejs，postgresql/mysql/mariadb，inotify-tools.
+注：postgresql 里有两个用户 postgres, archie(手工创建的). mariadb 里有两个用户 root, mysql.
+   至于为什么,看Archlinux上的指南.
+安装Phoenix：网上的教程有些滞后，用下法来安装
+
+#+BEGIN_SRC bash
+mix local.hex
+mix archive.install hex phx_new [VERSION]
+#+END_SRC
+
 之后，例如，我干了这样的事：
 
 #+BEGIN_SRC bash

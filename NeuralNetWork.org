@@ -1,3 +1,4 @@
+
 #+STARTUP: indent
 #+TITLE: NeuralNetwork 阅读纪要
 
@@ -30,6 +31,10 @@ Grid Map的组织方式: 沿着 MEC 的 DorsalVentral Axis 的 Modular Organizat
 - Unions of SDRs
 - Robustness of unions in the presence of noise
 ** Encoding Data for HTM Systems
+** Spatial Pooling algorithms
+** Tempory Memory Algorithms
+** Voting across columns
+** Location Layers in Grid Cells
 
 
 
