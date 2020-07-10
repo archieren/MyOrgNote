@@ -34,6 +34,7 @@ mix archive.install hex phx_new [VERSION]
 
 #+BEGIN_SRC bash
 cd ~/Projects
+# Use the MariaDB.
 mix phx.new menu --database mysql
 
 cd menu
