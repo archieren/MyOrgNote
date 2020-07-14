@@ -13,13 +13,54 @@ It's a review!
 Grid Map的组织方式: 沿着 MEC 的 DorsalVentral Axis 的 Modular Organization. See "Discretization of the Entorhinal Grid Map"
 ** Computational Models Of Grid-to-Place Transformation
 一堆的猜想，留待慢慢阅读吧？
+* New approaches to Deep Networks
+这是一篇评论，议及四种网络
+- CapsuleNet  (Hinton  @ ??)
+- HTM         (Hawkins @ Numenta)
+- Sparsey     (Rinkus  @ Neurithmic Systems)
+- RCN         (George  @ Vicarious)
 
-* Biological and Machine Intelligence: HTM(Hierarchical Temporal Memory)的介绍 - 这里面可能真有戏！
+References
+- Sabour, S., Frosst, N. & Hinton, G.            Dynamic Routing between Capsules. (2017).
+- Hawkins, J., Ahmad, S. & Cui, Y.               Why Does the Neocortex Have Layers and Columns, A Theory of Learning the 3D Structure of the World.(2017).
+- George, D. & Hawkins, J.                       A hierarchical Bayesian model of invariant pattern recognition in the visual cortex.(2005).
+- Hawkins, J. & George, D.                       Hierarchical temporal memory: Concepts, theory and terminology.(2006).
+- George, D. & Hawkins, J.                       Towards a mathematical theory of cortical micro-circuits.(2009).
+- Hawkins, J., Ahmad, S. & Dubinsky, D.          HTM Cortical Learning Algorithms.(2011).
+- Hawkins, J. & Ahmad, S.                        Why neurons have thousands of synapses, a theory of sequence memory in neocortex.(2016).
+- George, D. et al.                              A Generative Vision Model that Trains with High Data Efficiency and breaks text-based CAPTCHAs.(2017).
+- Rinkus, G. J.                                  A cortical sparse distributed coding model linking mini- and macrocolumn-scale functionality.(2010).
+- Rinkus, R. & Leveille, J.                      Superposed Episodic and Semantic Memory via Sparse Distributed Representation. (2017).
+
+* Sparsey - Event Recognition Via Deep Hierarchical Sparse Distributed Code
+A macro/mini-column model of cortical computation
+* RCN - Recursive Cortical NetWork
+RCN integrates and builds upon various ideas from Compostional Models - ... - into a structured probabilistic graphical model such that Belief-Propagation can be used as the primary approximate inference engine.
+
+* HTM(Hierarchical Temporal Memory) - Biological and Machine Intelligence: - 这里面可能真有戏！
 (目前,有这种理论变化 HTM => The Thousand Brains Theory of Intelligence)
 ** HTM Principles
 神经生理学上的那些内容，启发了作者的基本原理？
 - Common Algorithms
+  + Neurons are Sparsely Activated!
 - Sparse Distributed Representations(SDR)
+  + Mathematical Properties
+    1. Capacity of SDRs and the probability of mismatches
+    2. Robustness of SDRs and the probability of error with noise
+    3. Reliable classification of a list of SDR vectors
+    4. Unions of SDRs
+    5. Robustness of unions in the presence of noise
+  + SDRs in the Brain and in HTM systems
+    1. Neuron Activations are SDRs
+       ......
+       HTM theory says that a neuron can be in one of several states:
+       - Active(Spiking)
+       - Inactive (not spiking or very slowly spiking)
+       - Predicted (depolarized but not spiking)
+       - Active after predicted (a mini-burst followed by spiking)
+    2. Neural Predictions as Unions of SDRs
+    3. Synapses as a means for storing SDRs
+       对Synapses的研究,似乎越來越倾向与它有记忆功能!
 - Sensory Encoders
 - HTM Systems are embeded within sensory-motor Systems
 - HTM relies on streaming data and sequence memory
@@ -35,26 +76,6 @@ Grid Map的组织方式: 沿着 MEC 的 DorsalVentral Axis 的 Modular Organizat
 ** Tempory Memory Algorithms
 ** Voting across columns
 ** Location Layers in Grid Cells
-* New approaches to Deep Networks
-看到一片评论，议及四种网络
-- CapsuleNet
-- HTM     (Hawkins @ Numenta)
-- Sparsey (Rinkus  @ Neurithmic Systems)
-- RCN     (George  @ Vicarious)
-
-References
-- Sabour, S., Frosst, N. & Hinton, G.            Dynamic Routing between Capsules. (2017).
-- Hawkins, J., Ahmad, S. & Cui, Y.               Why Does the Neocortex Have Layers and Columns, A Theory of Learning the 3D Structure of the World.(2017).
-- George, D. & Hawkins, J.                       A hierarchical Bayesian model of invariant pattern recognition in the visual cortex.(2005).
-- Hawkins, J. & George, D.                       Hierarchical temporal memory: Concepts, theory and terminology.(2006).
-- George, D. & Hawkins, J.                       Towards a mathematical theory of cortical micro-circuits.(2009).
-- Hawkins, J., Ahmad, S. & Dubinsky, D.          HTM Cortical Learning Algorithms.(2011).
-- Hawkins, J. & Ahmad, S.                        Why neurons have thousands of synapses, a theory of sequence memory in neocortex.(2016).
-- George, D. et al.                              A Generative Vision Model that Trains with High Data Efficiency and breaks text-based CAPTCHAs.(2017).
-- Rinkus, G. J.                                  A cortical sparse distributed coding model linking mini- and macrocolumn-scale functionality.(2010).
-- Rinkus, R. & Leveille, J.                      Superposed Episodic and Semantic Memory via Sparse Distributed Representation. (2017).
-
-
 
 
 
