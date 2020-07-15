@@ -18,6 +18,9 @@ Two Package will be installed!
 
 #+BEGIN_SRC bash
 
+# Set the goproxy if you are in china?
+export GOPROXY=https://goproxy.cn
+
 # yay -Sy libnvidia-container
 # yay -Sy libnvidia-container-tools
 yay -Sy nvidia-container-toolkit

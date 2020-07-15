@@ -1,5 +1,13 @@
 #+TITLE: Lisp的开发相关
 * Slime的配置相关
+* ASDF and Quicklisp
+** ASDF
+  ASDF is the build system.
+  It lets you define projects – called systems – along with their metadata, dependencies, their source code files, and the order in which those files are loaded.
+** Quicklisp
+  Quicklisp is the package manager.
+  It uses ASDF to extract package’s dependencies and downloads them from a central repository.
+  Unlike most package managers, Quicklisp isn’t a command-line application: you run it from the REPL like every other Lisp tool, so you can get up and running very easily.
 * Quicklisp的配置
 ** 下载
 在shell下进入某目录,运行:
@@ -7,7 +15,7 @@ $curl -O https://beta.quicklisp.org/quicklisp.lisp
 $sbcl --load  curl下来的当前目录/quicklisp.lisp                    \  --后面的可在sbcl里交互执行！
       --eval '(quicklisp-quickstart:install :path "~/.quicklisp)' \ --创建了"~/.quicklisp",quicklisp的工作目录,等等!
                                                                   \ -- 如果不用 :path 参数,则缺省地创建 "~/quicklisp"
-      --eval '(ql:add-to-init-file)'                              \ --配置sbcl,启动时自动加载quicklisp的配置
+      --eval '(ql:add-to-init-file)'                              \ -- 在~/.sbclrc里配置sbcl,启动时自动加载quicklisp的配置
       --eval '(quit)'
 ** 使用
 看来这个需要积累!

@@ -34,6 +34,7 @@ References
 
 * Sparsey - Event Recognition Via Deep Hierarchical Sparse Distributed Code
 A macro/mini-column model of cortical computation
+mini-column <-> competitive modular
 * RCN - Recursive Cortical NetWork
 RCN integrates and builds upon various ideas from Compostional Models - ... - into a structured probabilistic graphical model such that Belief-Propagation can be used as the primary approximate inference engine.
 
