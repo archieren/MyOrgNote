@@ -32,9 +32,33 @@ References
 - Rinkus, G. J.                                  A cortical sparse distributed coding model linking mini- and macrocolumn-scale functionality.(2010).
 - Rinkus, R. & Leveille, J.                      Superposed Episodic and Semantic Memory via Sparse Distributed Representation. (2017).
 
-* Sparsey - Event Recognition Via Deep Hierarchical Sparse Distributed Code
+* Sparsey - Event Recognition Via Deep Hierarchical Sparse Distributed Code - 2014
+注：在《Radically New Theory of how the Brain Represents and Computes with Probabilities》里又总结了他的那些激进理论。
 A macro/mini-column model of cortical computation
-mini-column <-> competitive modular
+cells -> mini-columns (competitive modulars) -> macro-columns
+
+作者反思群编码的问题：
+Most previous probabilistic population coding (PPC) theories share basic properties:
+1) continuous-valued units;
+2) fully/densely-distributed codes;
+3) graded synapses;
+4) rate coding;
+5) units have innate unimodal tuning functions (TFs);
+6) units are intrinsically noisy;
+7) noise/correlation is generally considered harmful.
+
+They present a radically different theory that assumes:
+1) binary units;
+2) only a small subset of units, i.e., a sparse distributed representation (SDR) (a.k.a. cell assembly, ensemble),comprises any individual code;
+3) functionally binary synapses;
+4) signaling formally requires only single(i.e., first) spikes;
+5) units initially have completely flat TFs (all weights zero);
+6) units are far less intrinsically noisy than traditionally thought;
+7) rather noise is
+   - a resource generated/used to cause similar inputs to map to similar codes,
+   - controlling a tradeoff between storage capacity and embedding the input space statistics in the pattern of intersections over stored codes,
+   - epiphenomenally determining correlation patterns across neurons.
+
 * RCN - Recursive Cortical NetWork
 RCN integrates and builds upon various ideas from Compostional Models - ... - into a structured probabilistic graphical model such that Belief-Propagation can be used as the primary approximate inference engine.
 
