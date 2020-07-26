@@ -48,6 +48,7 @@ Some concepts:
 - heap  : Allocations in the heap  consist of *Boxes*
   Heap上的数据,其他不说,单说一点,Pointer是访问Heap数据的唯一途径.
   这使得问题复杂了,高级语言都会以各种方式避免Pointer成为直接的概念.
+- 这就衍生出真正的问题: Variable and Value的概念内涵
   Rust中有什么独特之道呢？
 ** Ownership是理解Rust用意的关键.
 Ownership有三条规则：
@@ -83,6 +84,7 @@ Movement of Ownership or Binding.
 - Nested paths to clean up large use lists
 - Using the glob operator to bring everything in a module into scope
 - How to split modules into individual files
+  这个要注意一下.Rust的演化中,这一块的变动其实还是挺大的.现在没那么麻烦了!
 ** 其他不论,理解一下最后一条,模块的层次关系和文件目录的层次关系
 模块系统有两个特有的概念:Crate和Modules.
 A *crate* is a unit of compilation and linking, as well as versioning, distribution and runtime loading.
@@ -90,17 +92,10 @@ A crate contains a tree of nested *module* _scopes_.
 从crate内部来看,这棵树的顶层,其实是个叫crate的模块.
 - 这个叫crate的模块所对应的文件就是(src/lib.rs , src/main.rs).
 - 这棵树和文件系统其实是解耦的, _模块的层次关系必须有显示的定义、声明_ ,不能单纯靠文件系统的层次关系来确定.
-  - 模块的层次关系必须有显示的定义,什么意思？这是关键问题!
-    如果模块y中有mod x {.....}语句,则y定义了一个模块x，但x的内容在{}中.
-    如果模块y中有mod x; 则y定义了一个模块x,但x的内容在外部文件中.要么在x.rs,要么在x/mod.rs中
 - 一个Rust文件定义了一个模块,但此模块的名字在外部定义,要么由引用文件的mod_item定义,要么就是Crate的名字.
-  所以在开发时,采用如下的方式,用文件系统来实现crate中的模块结构:
-  - crate模块就是(src/lib.rs , src/main.rs).
-  - (src/lib.rs , src/main.rs)中若出现mod Y;语句,Y只能用src/Y.rs或src/Y/mod.rs文件来实现.
-  - 模块X用.../X.rs文件来实现时,则其中不应出现mod Y;语句.
-  - 模块X用.../X/mod.rs文件来实现时,若其中出现mod Y;语句.则Y只能用.../X/Y.rs或.../X/Y/mod.rs文件来实现.
-  - 仔细想想,mod.rs文件的运用,完全是画蛇添足.好像从1.30版后,鼓励更简洁的模块和目录结构的对应关系.
-    如果模块X用.../X.rs来实现,而且Y是X中定义的无体模块,则Y的内容就在文件.../X/Y.rs中来实现.这样就避免了过多的mod.rs文件.实际上可以完全不需要mod.rs文件了.
+  - 模块路径 crate 对应 src/lib.rs 或 src/main.rs
+  - 模块路径 crate::X::Y::Z 对应 src/X/Y/Z.rs
+  这样事情就简单多了.其他细节就不多说了.也不管以前的搞法了.
 ** 待补充
 
 

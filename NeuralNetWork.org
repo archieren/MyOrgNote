@@ -62,9 +62,10 @@ They present a radically different theory that assumes:
 * RCN - Recursive Cortical NetWork
 RCN integrates and builds upon various ideas from Compostional Models - ... - into a structured probabilistic graphical model such that Belief-Propagation can be used as the primary approximate inference engine.
 
-* HTM(Hierarchical Temporal Memory) - Biological and Machine Intelligence: - 这里面可能真有戏！
+* HTM(Hierarchical Temporal Memory)
 (目前,有这种理论变化 HTM => The Thousand Brains Theory of Intelligence)
-** HTM Principles
+** Biological and Machine Intelligence: - 这里面可能真有戏！
+*** HTM Principles
 神经生理学上的那些内容，启发了作者的基本原理？
 - Common Algorithms
   + Neurons are Sparsely Activated!
@@ -90,17 +91,17 @@ RCN integrates and builds upon various ideas from Compostional Models - ... - in
 - HTM Systems are embeded within sensory-motor Systems
 - HTM relies on streaming data and sequence memory
 - On-Line learning
-** Sparse Distributed Representations
+*** Sparse Distributed Representations
 - Capacity of SDRs and the probability of mismatches
 - Robustness of SDRs and the probability of error with noise
 - Reliable classification of a list of SDR vectors
 - Unions of SDRs
 - Robustness of unions in the presence of noise
-** Encoding Data for HTM Systems
-** Spatial Pooling algorithms
-** Tempory Memory Algorithms
-** Voting across columns
-** Location Layers in Grid Cells
+*** Encoding Data for HTM Systems
+*** Spatial Pooling algorithms
+*** Tempory Memory Algorithms
+*** Voting across columns
+*** Location Layers in Grid Cells
 
 
 
