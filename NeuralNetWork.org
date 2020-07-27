@@ -64,7 +64,8 @@ RCN integrates and builds upon various ideas from Compostional Models - ... - in
 
 * HTM(Hierarchical Temporal Memory)
 (目前,有这种理论变化 HTM => The Thousand Brains Theory of Intelligence)
-** Biological and Machine Intelligence: - 这里面可能真有戏！
+** Biological and Machine Intelligence: - A digital book that documents Hierarchical Temporal Memory (HTM) - 这里面可能真有戏!
+这是关于HTM的技术文档。
 *** HTM Principles
 神经生理学上的那些内容，启发了作者的基本原理？
 - Common Algorithms
@@ -102,6 +103,13 @@ RCN integrates and builds upon various ideas from Compostional Models - ... - in
 *** Tempory Memory Algorithms
 *** Voting across columns
 *** Location Layers in Grid Cells
-
-
-
+** 几篇论文：
+*** Why neurons have thousands synapses - a Theory of Sequence Memory in Neocortex [Hawkins J]2015
+建立了 HTM model neurons.
+*** The HTM Spatial Pooler — A Neocortical Algorithm for Online Sparse Distributed Coding [YuWei Cui]2017
+*** 关于Location Based FrameWork的思想的形成，目前看三篇文章:
+- =A Theory of How Columns in the Neocortex Enable Learning the Structure of the World [Hawkins J.]2017=
+  Columns and Layers 是个通用结构,这意味着什么?
+- =Locations in the Neocortex - A Theory of Sensorimotor Object Recognition Using Cortical Grid Cells [Lewis M.]2019=
+- =A Framework for Intelligence and Cortical Function Based on Grid Cells in the Neocortex [Hawkins J.]2019=
+  这篇文章提出了Location Based Framwork的思想.

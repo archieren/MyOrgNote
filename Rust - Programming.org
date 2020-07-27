@@ -89,8 +89,7 @@ Movement of Ownership or Binding.
 模块系统有两个特有的概念:Crate和Modules.
 A *crate* is a unit of compilation and linking, as well as versioning, distribution and runtime loading.
 A crate contains a tree of nested *module* _scopes_.
-从crate内部来看,这棵树的顶层,其实是个叫crate的模块.
-- 这个叫crate的模块所对应的文件就是(src/lib.rs , src/main.rs).
+- 从crate内部来看, 这棵树的顶层, 其实是个叫crate的模块. =这个叫crate的模块所对应的文件就是(src/lib.rs , src/main.rs)=.
 - 这棵树和文件系统其实是解耦的, _模块的层次关系必须有显示的定义、声明_ ,不能单纯靠文件系统的层次关系来确定.
 - 一个Rust文件定义了一个模块,但此模块的名字在外部定义,要么由引用文件的mod_item定义,要么就是Crate的名字.
   - 模块路径 crate 对应 src/lib.rs 或 src/main.rs
