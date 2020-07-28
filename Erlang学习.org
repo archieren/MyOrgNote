@@ -1,3 +1,131 @@
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+pip list
+ip
+ip address
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+exit
+which python 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+pip list
+conda install opencv
+conda list
+python --version
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python tryCenterNet.py 
+python try.py
+pip install skimage
+pip install scikit-image
+pip install scikit-image
+python try.py
+python try.py
+python try.py
+pip list
+conda list
+conda install py-opencv
+conda update py-opencv
+conda update py-opencv
+conda update py-opencv
+conda update py-opencv
+conda list
+conda uninstall py-opencv
+conda uninstall py-opencv
+conda remove py-opencv
+conda update py-opencv
+conda list
+conda remove opencv
+conda search opencv
+conda search opencv
+conda update opencv
+conda list
+pip install opencv-python
+pip install opencv-contrib-python
+pip install opencv-contrib-python
+conda list
+python try.py
+exit
+exit
+conda list
+conda list
+python try.py
+cd ..
+iex
+iex
+cd ..
+iex
+iex
+iex -S mix
+exit
+cd ~
+pacman -Ss pandoc
+sudo pacman -S python-pypandoc
+which python 
+pip list
+pip install jedi
+exit
+which python 
+pip list
+python try.py
+python try.py
+pacman -Ss svm
+python try.py
+ghci
+ghci
+python try.py
+python try.py
+exit
+python try.py
+python try.py
+iex -S mix
+iex -S mix
+iex -S mix
+exit
+rustup docs
+pacman -Ss mime
+rustup docs
+rustup docs
+exit
 #+STARTUP: indent
 #+TITLE: Erlang的学习笔记
 #+AUTHOR: Reader
@@ -18,6 +146,52 @@ export HEX_CDN="https://hexpm.upyun.com"
 
 * Erlang和Rebar3
 * Elixir和Mix
+** Naming Conventions
+*** Casing
+variables          => snake_case
+function names     => snake_case
+module attributes  => @snake_case
+alias              => CamlCase
+atoms              => :snake_case or :CamlCase
+file names         => *snake_case* follows the module *SnakeCase* defined in the file
+*** UnderScore(_foo)
+Elixir relies on underscores in different situations.
+*** Trailing Bang(!)
+A trailing bang (exclamation mark) signifies a function or macro where failure cases raise an exception.
+*** Trailing question mark(?)
+Functions that return a boolean are named with a trailing question mark.
+*** "is_" prefix
+Type checks and other boolean checks that are allowed =in guard clauses= are named with an is_ prefix.
+*** Special names
+- "size" and "length" in function names have different means.
+** Syntax References
+*** Reserved words
+- true, false, nil - used as atoms
+- when, and, or, not, in - used as operators
+- fn - used for anonymous function definitions
+- do, end, catch, rescue, after, else - used in do/end blocks
+*** Data Types
+- Numbers
+- Atoms
+- Strings: "..."
+- Charlist: '...'
+- Lists,Tuples,Binaries: [] {} <<>>
+- Maps,Keyword Lists: %{}
+- Structs: %StructName{}
+*** Expressions
+- Variables
+- Non-qualified calls(local calls)
+- Operators
+- Qualified calls
+- Alias
+- Blocks
+- Left to right Arrows
+- Sigils
+*** The Elixir AST:
+Elixir syntax was designed to have a straightforward conversion to an abstract syntax tree (AST).
+Elixir's AST is a *regular Elixir data structure*.
+We can retrieve the AST for any Elixir expression by calling *quote*.
+
 * Phoenix 教程
 ** Install
 依赖项的安装：erlang and rebar3, elixir, nodejs，postgresql/mysql/mariadb，inotify-tools.

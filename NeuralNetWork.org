@@ -68,30 +68,17 @@ RCN integrates and builds upon various ideas from Compostional Models - ... - in
 这是关于HTM的技术文档。
 *** HTM Principles
 神经生理学上的那些内容，启发了作者的基本原理？
-- Common Algorithms
-  + Neurons are Sparsely Activated!
-- Sparse Distributed Representations(SDR)
-  + Mathematical Properties
-    1. Capacity of SDRs and the probability of mismatches
-    2. Robustness of SDRs and the probability of error with noise
-    3. Reliable classification of a list of SDR vectors
-    4. Unions of SDRs
-    5. Robustness of unions in the presence of noise
-  + SDRs in the Brain and in HTM systems
-    1. Neuron Activations are SDRs
-       ......
-       HTM theory says that a neuron can be in one of several states:
-       - Active(Spiking)
-       - Inactive (not spiking or very slowly spiking)
-       - Predicted (depolarized but not spiking)
-       - Active after predicted (a mini-burst followed by spiking)
-    2. Neural Predictions as Unions of SDRs
-    3. Synapses as a means for storing SDRs
-       对Synapses的研究,似乎越來越倾向与它有记忆功能!
-- Sensory Encoders
-- HTM Systems are embeded within sensory-motor Systems
-- HTM relies on streaming data and sequence memory
-- On-Line learning
+- Biological Observation: The Structure of the Neocortex
+  => HTM principle: Common Algorithms
+  =Cellunar layers - Mini-Columns - Columns=
+- Biological Observation: Neurons are Sparsely Activated
+  => HTM principle: Sparse Distributed Representations(SDR)
+- Biological Observation: The Inputs and Outputs of the Neocortex
+  => HTM principles:
+  1. Sensory Encoders
+  2. HTM Systems are embeded within sensory-motor Systems
+  3. HTM relies on streaming data and sequence memory
+  4. On-Line learning
 *** Sparse Distributed Representations
 - Capacity of SDRs and the probability of mismatches
 - Robustness of SDRs and the probability of error with noise
