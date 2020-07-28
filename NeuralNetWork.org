@@ -68,13 +68,12 @@ RCN integrates and builds upon various ideas from Compostional Models - ... - in
 这是关于HTM的技术文档。
 *** HTM Principles
 神经生理学上的那些内容，启发了作者的基本原理？
-- Biological Observation: The Structure of the Neocortex
-  => HTM principle: Common Algorithms
-  =Cellunar layers - Mini-Columns - Columns=
-- Biological Observation: Neurons are Sparsely Activated
-  => HTM principle: Sparse Distributed Representations(SDR)
-- Biological Observation: The Inputs and Outputs of the Neocortex
-  => HTM principles:
+- Biological Observation: =The Structure of the Neocortex=
+  HTM principle:          =Common Algorithms [Cellunar layers - Mini-Columns - Columns]=
+- Biological Observation: =Neurons are Sparsely Activated=
+  HTM principle:          =Sparse Distributed Representations(SDR)=
+- Biological Observation: =The Inputs and Outputs of the Neocortex=
+  HTM principles:
   1. Sensory Encoders
   2. HTM Systems are embeded within sensory-motor Systems
   3. HTM relies on streaming data and sequence memory
