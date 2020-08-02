@@ -15,7 +15,7 @@
       + DRAGAN :  Local Gradient Penality
   + SNGAN : Spectral Normalization
     出发点：线性函数的Lipschitz范数和矩阵的普范数有关系,故等等!
-    本想将之划归WGAN下的，但很奇怪的是，它的Loss还是最标准的Gan-Loss,即JS-Distance家族.
+    本想将之划归WGAN下的，但很奇怪的是，它的Loss还是最标准的Gan-Loss,即JS-Distance(Jesson-Shannon Distance)家族.
   + LSGAN : Loss Sensitive GAN
   + LSGAN : Least Square Gan
 - D的Weights
