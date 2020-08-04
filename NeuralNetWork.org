@@ -2,8 +2,10 @@
 #+STARTUP: indent
 #+TITLE: NeuralNetwork 阅读纪要
 
+* 概要
+** Retina
+** Visual Neocortex
 * Place Cells/Grid Cells/Head Cells/Border Cells/Speed Cells/Trace Cells/Object Cells/Object vector Cells, and so on
-How many classes of neuron cells exist?
 观看视频"Grid Cells, Object Representations, and Memory" & "Grid Cells and the Brain's Spatial Mapping System"
 Memory is a process reproduce/reconstruction!? (David Marr)
 Navigation is the core!?
