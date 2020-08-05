@@ -3,7 +3,53 @@
 #+TITLE: NeuralNetwork 阅读纪要
 
 * 概要
-** Retina
+对于这些年的盲目阅读，很难给出一个合乎逻辑的条理来。
+但一直以来，围绕着Retinotopy（Tonotopy 从没关注过），隐含地关注着一下几个主题方面：
+- Retina-LGN的感受野的非线性结构。以Saccade/Microsaccade为线索，引出来的一系列问题！
+- LGN-Cortex的稀疏问题。LGN供给Coretex的输入是非常稀疏的！这意味着什么？
+- Cortex的Column/Microcolumn结构的一般化问题。
+- Perceptual Grouping下，思考association问题为主。对NeuralGeometry这个小众的数学模型很着迷。
+
+** Microsaccade and saccade.
+*** [Shah N.P.;Simoncelli E.;Chichilnisky E.J.]2020 - Inference of nonlinear receptive field subunits with spike-triggered clustering
+*** [Real E.;Asari H.;Golish T.;Meister M.]2016 - Neural Circuit Inference from Function to Structure
+*** [Martinez-Conde S.]2013 - NRN - The impact of microsaccades on vision
+*** [Gollisch T.;...]2013 - Features and functions of nonlinear spatial integration by retinal ganglion cells
+*** [Schwartz G.W.]2012 - The spatial structure of a nonlinear receptive field
+*** [Schwartz G.W.]2011 - Nonlinear spatial encoding by retinal ganglion cells_ when 1 + 1 ≠ 2
+*** [Rolfs M.]2009 - Microsaccade - Small steps on a long way
+*** [Field G.D. ;Chichilnisky E.J. ]2007-Information Processing in the Primate Retina
+总结了视网膜在神经生理学、解剖学上的新认知。
+**** Many distinct pathways of visual information emanate from the retina.
+***** 最早开端
+猫视网膜上的RGC(Retina ganglion cell)研究。
+生理学上发现了X/Y cell。解剖学上发现了alpha/beta cell。
+由是而有Two PathWay的研究主线。
+如，在灵长类的研究中，Midget（侏儒）/Parasol（伞状）cell投射到LGN的Parvocellular（小细胞的）/Magocellular（大细胞的）层，继而投射到视觉新皮层。
+这两条路径，占据了各项研究的主角。
+***** Small Bistratified RGC的发现。
+Small Bistratified Cell投射到LGN的Koniocellular（粒状细胞的）层，继而投射到视觉新皮层的路径又多了一条。
+至此，这三条路径，构成了目前教科书的主要内容。太简化问题了！
+***** 但近来，还发现更多的新RGC类型,及更多的投射路径。
+按形态来划分，并合并On/Off子类，如：
+- Momostratified: Midget/Parasol/Sparse/GiantSparse/Recursive/Smooth/Recursive/BroadThomy/Thomy
+- Bistratified: Recursive/Large/Small
+等RGC类型，共产生了11条到LGN的路径。
+此外，还有些RGC，产生了到Superior colliculus（上丘）及其他Nonthalamic structure的投射路径。
+许多RGC还会投射到至少两个中央结构的投射路径。
+***** 不寻常的视觉信号（Novel visual signals）
+令人惊讶的是，这些新发现的RGC的生理特性并不是很清楚。
+***** 视觉路径的多样性，发端于视网膜内。（Intra-retina origins of diversive visual pathways）
+=在视网膜内的线路中解释多样性。（Interpretation of diversity in rentina circuits）=
+***** 影响（Implication）：
+对视网膜的研究：
+对视觉系统的研究：The visual signals emanating from multiple distinct RGC types may remain segregated in the cortex!
+对大脑的研究：
+
+**** Precesion OF Retinal Spike Trains And Models Of The Neural Code.
+
+At the photoreceptor synapse, multiple distinct visual signals begin to emerge.
+These signals are processed by a diverse collection of bipolar and amacrine cell types that converge on at least 17 distinct types of RGCs, each of which covers the visual field with striking regularity.
 ** Visual Neocortex
 * Place Cells/Grid Cells/Head Cells/Border Cells/Speed Cells/Trace Cells/Object Cells/Object vector Cells, and so on
 观看视频"Grid Cells, Object Representations, and Memory" & "Grid Cells and the Brain's Spatial Mapping System"
