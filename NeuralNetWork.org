@@ -11,13 +11,6 @@
 - Perceptual Grouping下，思考association问题为主。对NeuralGeometry这个小众的数学模型很着迷。
 
 ** Microsaccade and saccade.
-*** [Shah N.P.;Simoncelli E.;Chichilnisky E.J.]2020 - Inference of nonlinear receptive field subunits with spike-triggered clustering
-*** [Real E.;Asari H.;Golish T.;Meister M.]2016 - Neural Circuit Inference from Function to Structure
-*** [Martinez-Conde S.]2013 - NRN - The impact of microsaccades on vision
-*** [Gollisch T.;...]2013 - Features and functions of nonlinear spatial integration by retinal ganglion cells
-*** [Schwartz G.W.]2012 - The spatial structure of a nonlinear receptive field
-*** [Schwartz G.W.]2011 - Nonlinear spatial encoding by retinal ganglion cells_ when 1 + 1 ≠ 2
-*** [Rolfs M.]2009 - Microsaccade - Small steps on a long way
 *** [Field G.D. ;Chichilnisky E.J. ]2007-Information Processing in the Primate Retina
 总结了视网膜在神经生理学、解剖学上的新认知。
 **** Many distinct pathways of visual information emanate from the retina.
@@ -43,13 +36,24 @@ Small Bistratified Cell投射到LGN的Koniocellular（粒状细胞的）层，�
 =在视网膜内的线路中解释多样性。（Interpretation of diversity in rentina circuits）=
 ***** 影响（Implication）：
 对视网膜的研究：
-对视觉系统的研究：The visual signals emanating from multiple distinct RGC types may remain segregated in the cortex!
-对大脑的研究：
+对视觉系统的研究：The visual signals emanating from multiple distinct RGC types may remain segregated in the cortex!也就是有多种信号进入新皮层!
+对大脑的研究：脑皮层里Cell-Type diversity可能有待大发现!
 
 **** Precesion OF Retinal Spike Trains And Models Of The Neural Code.
 
+**** Synchronized firing and consequences for visual signaling
+
+**** Decoding the visual signal from retina spike trains
+
 At the photoreceptor synapse, multiple distinct visual signals begin to emerge.
 These signals are processed by a diverse collection of bipolar and amacrine cell types that converge on at least 17 distinct types of RGCs, each of which covers the visual field with striking regularity.
+*** [Shah N.P.;Simoncelli E.;Chichilnisky E.J.]2020 - Inference of nonlinear receptive field subunits with spike-triggered clustering
+*** [Real E.;Asari H.;Golish T.;Meister M.]2016 - Neural Circuit Inference from Function to Structure
+*** [Martinez-Conde S.]2013 - NRN - The impact of microsaccades on vision
+*** [Gollisch T.;...]2013 - Features and functions of nonlinear spatial integration by retinal ganglion cells
+*** [Schwartz G.W.]2012 - The spatial structure of a nonlinear receptive field
+*** [Schwartz G.W.]2011 - Nonlinear spatial encoding by retinal ganglion cells_ when 1 + 1 ≠ 2
+*** [Rolfs M.]2009 - Microsaccade - Small steps on a long way
 ** Visual Neocortex
 * Place Cells/Grid Cells/Head Cells/Border Cells/Speed Cells/Trace Cells/Object Cells/Object vector Cells, and so on
 观看视频"Grid Cells, Object Representations, and Memory" & "Grid Cells and the Brain's Spatial Mapping System"
