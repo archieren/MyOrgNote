@@ -10,7 +10,7 @@
 - Cortex的Column/Microcolumn结构的一般化问题。
 - Perceptual Grouping下，思考association问题为主。对NeuralGeometry这个小众的数学模型很着迷。
 
-** Microsaccade and saccade.
+** Retina:Microsaccade and saccade.
 1. [Field G.D. ;Chichilnisky E.J. ]2007-Information Processing in the Primate Retina
    总结了视网膜在神经生理学、解剖学上的新认知。
    - Many distinct pathways of visual information emanate from the retina.
@@ -72,6 +72,8 @@
    [Freeman J.;....]2014 - Mapping nonlinear receptive field structure in primate retina at single cone resolution
    ......
    这其实Simoncelli E. Chichilnisky E.J.宗派的系列文章。
+
+视网膜的故事,最终引向这句话:Subunits appear to be a common computational motif in the brain.
 ** Visual Neocortex
 * Place Cells/Grid Cells/Head Cells/Border Cells/Speed Cells/Trace Cells/Object Cells/Object vector Cells, and so on
 观看视频"Grid Cells, Object Representations, and Memory" & "Grid Cells and the Brain's Spatial Mapping System"
