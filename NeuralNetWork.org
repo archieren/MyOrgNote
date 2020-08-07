@@ -55,26 +55,31 @@
 2. [Rolfs M.]2009 - Microsaccade - Small steps on a long way
    Mircrosaccade对visual signaling究竟有什么本质的影响？
 3. 可以细读[Gollish T.;...]2010 - Eye Smarter Than Scientist Believed。
-4. [Schwartz G.W.]2011 - Nonlinear spatial encoding by retinal ganglion cells_ when 1 + 1 ≠ 2
-5. [Schwartz G.W.]2012 - The spatial structure of a nonlinear receptive field
+4. [Schwartz G.W.]2012 - The spatial structure of a nonlinear receptive field
    *Anatomically based model* vs *Spike-tiggered average based model*
    Their *anatomically* based model captured the response profiles of individual RGCs more closely than previous receptive-field models based on linear spatial integration or a Gaussian weighting of nonlinear subunits.
-   附注：Schwartz G.W.的后期工作，尽管不是retina方面的，也还值得关注。Fred Rieke就是写Spike那本书的作者，其实验室的工作更值得关注。
-6. [Gollisch T.;...]2013 - Features and functions of nonlinear spatial integration by retinal ganglion cells
+   附注：Schwartz G.W.的后期工作，尽管不是retina方面的，也还值得关注。他基于图论，一直在作Anatomically based model的工作。
+   Fred Rieke就是写Spike那本书的作者，其实验室的工作更值得关注。
+   1. [Schwartz G.W.]2011 - Nonlinear spatial encoding by retinal ganglion cells_ when 1 + 1 ≠ 2
+5. [Gollisch T.;...]2013 - Features and functions of nonlinear spatial integration by retinal ganglion cells
    概述了鉴别Nonlinear signal integration的各类方法、途径。
    最后回到他们自己的ISO-Reponse方法。
-   不需要太深的解剖细节，就能评价非线性集成的方式！（注意，和上面(5.)的方法对比一下，就知道怎么回事）
+   不需要太深的解剖细节，就能评价非线性集成的方式！（注意，了解(4.)，就知道怎么回事）
    *Iso-response measurements represent an alternative, as they provide a way to assess nonlinear stimulus integration without the need of an a priori parameterization of the nonlinearities.*
-7. [Martinez-Conde S.]2013 - NRN - The impact of microsaccades on vision
-8. [Real E.;Asari H.;Golish T.;Meister M.]2016 - Neural Circuit Inference from Function to Structure
-   有趣的话题，将Circuits推断出来！
+6. [Martinez-Conde S.]2013 - NRN - The impact of microsaccades on vision
+7. [Real E.;Asari H.;Golish T.;Meister M.]2016 - Neural Circuit Inference from Function to Structure
+   有趣的话题，基于模型，将Circuits推断出来！
+8. Tuturial - Statistical Models for Neural Data: from Regression / GLMs to Latent Variables - Pillow J.W. - 2016
+   [Pillow J.W.]2008 - Spatio-temporal correlation and vision signalling in a complete neuronal population
+   事实上，从2008这篇文章开始，Pillow的工作，就集中在 *How does the spiking activity of a neural population represent the sensory environment?*
 9. [Shah N.P.;Simoncelli E.;Chichilnisky E.J.]2020 - Inference of nonlinear receptive field subunits with spike-triggered clustering
    [Freeman J.;....]2014 - Mapping nonlinear receptive field structure in primate retina at single cone resolution
    ......
    这其实Simoncelli E. Chichilnisky E.J.宗派的系列文章。
-
+信号的多样性、信号激励的非线性整合的多样性，是这些故事的内容。
 视网膜的故事,最终引向这句话:Subunits appear to be a common computational motif in the brain.
 ** Visual Neocortex
+[Markram H.]2015 - Reconstruction and Simulation of Neocortical Microcircuitry
 * Place Cells/Grid Cells/Head Cells/Border Cells/Speed Cells/Trace Cells/Object Cells/Object vector Cells, and so on
 观看视频"Grid Cells, Object Representations, and Memory" & "Grid Cells and the Brain's Spatial Mapping System"
 Memory is a process reproduce/reconstruction!? (David Marr)
