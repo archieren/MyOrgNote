@@ -16,7 +16,7 @@
    - Many distinct pathways of visual information emanate from the retina.
      - 最早开端
        猫视网膜上的RGC(Retina ganglion cell)研究。
-       生理学上发现了X/Y cell。解剖学上发现了alpha/beta cell。
+       生理学上发现了X(linear)/Y(nolinear) cell。解剖学上发现了alpha/beta cell。
        由是而有Two PathWay的研究主线。
        如，在灵长类的研究中，Midget（侏儒）/Parasol（伞状）cell投射到LGN的Parvocellular（小细胞的）/Magocellular（大细胞的）层，继而投射到视觉新皮层。
        这两条路径，占据了各项研究的主角。
