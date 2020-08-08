@@ -56,7 +56,8 @@
    Mircrosaccade对visual signaling究竟有什么本质的影响？
 3. 可以细读[Gollish T.;...]2010 - Eye Smarter Than Scientist Believed。
 4. [Schwartz G.W.]2012 - The spatial structure of a nonlinear receptive field
-   *Anatomically based model* vs *Spike-tiggered average based model*
+   =Two features= of spatial integration in RGCs presents major obstacles for a predictive model: nolinearity and fine-scale heterogeneity.
+   =Model based on anatomical and physiological mechanisms=
    Their *anatomically* based model captured the response profiles of individual RGCs more closely than previous receptive-field models based on linear spatial integration or a Gaussian weighting of nonlinear subunits.
    附注：Schwartz G.W.的后期工作，尽管不是retina方面的，也还值得关注。他基于图论，一直在作Anatomically based model的工作。
    Fred Rieke就是写Spike那本书的作者，其实验室的工作更值得关注。
