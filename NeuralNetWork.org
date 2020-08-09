@@ -79,6 +79,7 @@
    这其实Simoncelli E. Chichilnisky E.J.宗派的系列文章。
 信号的多样性、信号激励的非线性整合的多样性，是这些故事的内容。
 视网膜的故事,最终引向这句话:Subunits appear to be a common computational motif in the brain.
+但带来的问题: Encoding and decoding in a heterogeneous population!
 ** Visual Neocortex
 [Markram H.]2015 - Reconstruction and Simulation of Neocortical Microcircuitry
 * Place Cells/Grid Cells/Head Cells/Border Cells/Speed Cells/Trace Cells/Object Cells/Object vector Cells, and so on
