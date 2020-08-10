@@ -74,6 +74,7 @@
    [Pillow J.W.]2008 - Spatio-temporal correlation and vision signalling in a complete neuronal population
    事实上，从2008这篇文章开始，Pillow的工作，就集中在 *How does the spiking activity of a neural population represent the sensory environment?*
 9. [Shah N.P.;Simoncelli E.;Chichilnisky E.J.]2020 - Inference of nonlinear receptive field subunits with spike-triggered clustering
+   [Liu J.K.;...]2017 - Inference of neuronal functional circuitry with spike-triggered non-negative matrix factorization
    [Freeman J.;....]2014 - Mapping nonlinear receptive field structure in primate retina at single cone resolution
    ......
    这其实Simoncelli E. Chichilnisky E.J.宗派的系列文章。
