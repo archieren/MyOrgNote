@@ -53,6 +53,7 @@
      - At the photoreceptor synapse, multiple distinct visual signals begin to emerge.
      - These signals are processed by a diverse collection of bipolar and amacrine cell types that converge on at least 17 distinct types of RGCs, each of which covers the visual field with striking regularity.
 2. [Rolfs M.]2009 - Microsaccade - Small steps on a long way
+   [Rucci M.;Ahissar E.;Burr D.]2018 - Temporal Coding of Visual Space
    Mircrosaccade对visual signaling究竟有什么本质的影响？
 3. 可以细读[Gollish T.;...]2010 - Eye Smarter Than Scientist Believed。
 4. [Schwartz G.W.]2012 - The spatial structure of a nonlinear receptive field
@@ -65,7 +66,8 @@
 5. [Gollisch T.;...]2013 - Features and functions of nonlinear spatial integration by retinal ganglion cells
    概述了鉴别Nonlinear signal integration的各类方法、途径。
    最后回到他们自己的ISO-Reponse方法。
-   不需要太深的解剖细节，就能评价非线性集成的方式！（注意，了解(4.)，就知道怎么回事）
+   不需要太深的解剖细节，就能评价非线性集成的方式!
+   4和5两篇，对subfields/subunits LN的推动比较大。
    *Iso-response measurements represent an alternative, as they provide a way to assess nonlinear stimulus integration without the need of an a priori parameterization of the nonlinearities.*
 6. [Martinez-Conde S.]2013 - NRN - The impact of microsaccades on vision
 7. [Real E.;Asari H.;Golish T.;Meister M.]2016 - Neural Circuit Inference from Function to Structure
@@ -76,6 +78,7 @@
 9. [Shah N.P.;Simoncelli E.;Chichilnisky E.J.]2020 - Inference of nonlinear receptive field subunits with spike-triggered clustering
    [Liu J.K.;...]2017 - Inference of neuronal functional circuitry with spike-triggered non-negative matrix factorization
    [Freeman J.;....]2014 - Mapping nonlinear receptive field structure in primate retina at single cone resolution
+   [Field G.D.;Chichilnisky E.J.]2010 - Functional connectivity in the retina at the resolution of photoreceptors
    ......
    这其实Simoncelli E. Chichilnisky E.J.宗派的系列文章。
 信号的多样性、信号激励的非线性整合的多样性，是这些故事的内容。
