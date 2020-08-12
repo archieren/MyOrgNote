@@ -22,5 +22,9 @@
   + Weights-Clipping
   + Gradient Penality
   + Spectral-Normalization
-
+* GAN的四个层面
+Level 0: Definition of GANs
+Level 1: Improvements of GANs training
+Level 2: Implementation skill
+Level 3: GANs Applications in CV
 
