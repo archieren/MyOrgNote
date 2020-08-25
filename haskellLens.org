@@ -83,6 +83,7 @@ digraph {
 
 #+RESULTS:
 [[file:./images/typeClassGraph.png]]
+
 *** What's in the Prelude?
 包、库、类的层次，总是有些模糊。看看吧。
 #+BEGIN_SRC haskell
