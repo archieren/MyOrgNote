@@ -49,7 +49,7 @@ Evaluating meta haskell program at compiling time and splicing in the generated 
 * Haskell TypeClass
 ** A Graph
 *** Typeclass Graph
-#+BEGIN_SRC dot :file ./typeClassGraph.png
+#+BEGIN_SRC dot :file ./images/typeClassGraph.png
 digraph {
   node [shape=box];
   Functor -> Applicative -> Monad;
@@ -82,7 +82,7 @@ digraph {
 #+END_SRC
 
 #+RESULTS:
-[[file:./typeClassGraph.png]]
+[[file:./images/typeClassGraph.png]]
 *** What's in the Prelude?
 包、库、类的层次，总是有些模糊。看看吧。
 #+BEGIN_SRC haskell
