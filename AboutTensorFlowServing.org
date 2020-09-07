@@ -1,5 +1,5 @@
 #+TITLE: AboutTensorFlowServing
-* Install
+* Install tensorflow/serving docker
 ** Cuda and Docker Install
 As usually!
 
@@ -19,6 +19,7 @@ Two Package will be installed!
 #+BEGIN_SRC bash
 
 # Set the goproxy if you are in china?
+export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
 
 # yay -Sy libnvidia-container
@@ -43,10 +44,13 @@ sudo systemctl restart docker
 
 
 ** Install tensorflow/serving Images
+#+BEGIN_SRC  bash
 docker pull tensorflow/serving:1.14.0-gpu
 docker pull tensorflow/serving:latest-gpu
+#+END_SRC
 
 ** Run An Example
+#+BEGIN_SRC  bash
 mkdir -p /tmp/tfserving
 cd /tmp/tfserving
 git clone https://github.com/tensorflow/serving
@@ -54,7 +58,7 @@ git clone https://github.com/tensorflow/serving
 docker run --runtime=nvidia -p 8501:8501 \
   --mount type=bind,source=/tmp/tfserving/serving/tensorflow_serving/servables/tensorflow/testdata/saved_model_half_plus_two_gpu,target=/models/half_plus_two \
   -e MODEL_NAME=half_plus_two -t tensorflow/serving:latest-gpu &
-
+#+END_SRC
 ** Enter the docker
 Use the command:
 - sudo docker exec [Options] container command [args]
@@ -87,7 +91,7 @@ The main library entrypoints are:
 * Tensorflow Extension
 ** Core Concepts
 *** TFX Pipelines and Pipeline Components
-A TFX pipeline is a sequence of components that implement an ML pipeline which is specifically designed for scalable, high-performance machine learning tasks. 
+A TFX pipeline is a sequence of components that implement an ML pipeline which is specifically designed for scalable, high-performance machine learning tasks.
 *** Artifacts
 - Artifact:In a pipeline, an _artifact_ is a unit of data that is passed between components.All artifacts must have associated _metadata_, which defines the _type_ and _properties_ of the artifact.
 - Artifact Type:

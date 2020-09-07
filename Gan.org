@@ -5,7 +5,14 @@
 * Gan
 - Loss
   + Gan
-    - DCAGAN : 建立了一个模式.
+    - DCAGAN : 它提出了一种生成器和判别器的架构，这个架构能极大地稳定GAN的训练，以至于它在相当长的一段时间内都成为了GAN的标准架构。
+      [[file:images/dcgan_architecture.png]]
+    - ResNet : 目前GAN上主流的生成器和判别器架构确实已经变成了ResNet。出自那篇文章呢？
+      [[file:images/resnet_architecture.png]]
+  + Self-Mod : 这牵涉到一个实质性的话题。BN/cBN/Self-Mod/AdaIn的内在联系！
+    - cBN：即BN中所谓的center/beta、scale/gamma依赖某条件。
+    - Self-Mod: 将那个条件设定为z~noise.
+    - AdaIn: 
   + WGAN :
     用Wasserstein Distance替代Jesson-Shannon Distance.考虑了D网的Lipschitz条件,但没实现.
     为进一步实现Lipschitz条件正则项，而出现下述改进
