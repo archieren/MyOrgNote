@@ -2,33 +2,39 @@
 #+TITLE: Generative Adversarial NetWork
 #+AUTHOR: Reader
 
-* Gan
+* Gan LandScape
+2018 - The GAN Landscape:Losses, Architectures, Regularization,and Normalization
+2019 - A Large-Scale Study on Regularization and Normalization in GANs
+- Architecture Base: Generator and Discriminator Architecture
+  - DCAGAN : 它提出了一种生成器和判别器的架构，这个架构能极大地稳定GAN的训练，以至于它在相当长的一段时间内都成为了GAN的标准架构。
+    - [[file:images/dcgan_architecture.png]]
+  - ResNet : 目前GAN上主流的生成器和判别器架构确实已经变成了ResNet。出自那篇文章呢？
+    - [[file:images/resnet_architecture.png]]
+- Regularization and Normalization
+  - Discriminator Normalization
+    - 深度学习中，ICS(Internal Covariance Shift)问题，引发了BN/LN/WN等研究及运用。
+      - 常规，暂略。
+    - 在GAN领域，进而因Wasserstein Loss的原因，要求Discriminator具有Lipschitz continuity性质，引发了GP、SN的研究。
+      - GP(Gradient Penality): 2017 - Improved Training of Wasserstein GANs
+      - SN(Spectral Normalization): 2018 - Spectral normalization for generative adversarial networks
+  - Generator Normalization
+    - 先验信息、条件信息的引入
+    - cBN: 2018 - cGAN with projection discriminator
+    - AdaIn: 2017 - Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization
+    - Self-Mod: 2018 - On Self Modulation For Generative Adversarial NetWorks
+      - Self-Mod考虑到cGAN训练的稳定性更好，但是一般情况下GAN并没有标签c可用，干脆以噪声z自身为条件标签好了！
+      - BN、cBN、AdaIn、Self-Mod具有统一的形式，所以要看到这背后的理论蕴涵。
+      - StyleGan可以看成Self-Mod的变种。StyleGAN是必须关注的。
 - Loss
-  + Gan
-    - DCAGAN : 它提出了一种生成器和判别器的架构，这个架构能极大地稳定GAN的训练，以至于它在相当长的一段时间内都成为了GAN的标准架构。
-      [[file:images/dcgan_architecture.png]]
-    - ResNet : 目前GAN上主流的生成器和判别器架构确实已经变成了ResNet。出自那篇文章呢？
-      [[file:images/resnet_architecture.png]]
-  + Self-Mod : 这牵涉到一个实质性的话题。BN/cBN/Self-Mod/AdaIn的内在联系！
-    - cBN：即BN中所谓的center/beta、scale/gamma依赖某条件。
-    - Self-Mod: 将那个条件设定为z~noise.
-    - AdaIn: 
-  + WGAN :
+  - WGAN :
     用Wasserstein Distance替代Jesson-Shannon Distance.考虑了D网的Lipschitz条件,但没实现.
     为进一步实现Lipschitz条件正则项，而出现下述改进
     - WGAN-GP : Gradient Penality
       进一步思考，选择什么样的样本来做梯度惩罚
       + WGAN-LP : Local Lipschitz Penality
       + DRAGAN :  Local Gradient Penality
-  + SNGAN : Spectral Normalization
-    出发点：线性函数的Lipschitz范数和矩阵的普范数有关系,故等等!
-    本想将之划归WGAN下的，但很奇怪的是，它的Loss还是最标准的Gan-Loss,即JS-Distance(Jesson-Shannon Distance)家族.
-  + LSGAN : Loss Sensitive GAN
-  + LSGAN : Least Square Gan
-- D的Weights
-  + Weights-Clipping
-  + Gradient Penality
-  + Spectral-Normalization
+  - LSGAN : Loss Sensitive GAN
+  - LSGAN : Least Square Gan
 * GAN的四个层面
 ** Level 0: Definition of GANs
 [[./images/ganmodule.png]]
