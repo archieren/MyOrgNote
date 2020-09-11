@@ -26,6 +26,10 @@
       - BN、cBN、AdaIn、Self-Mod具有统一的形式，所以要看到这背后的统一理论蕴涵。
       - StyleGan可以看成Self-Mod的变种。StyleGAN是必须关注的。
 - GAN's Objective: How to design GANs
+  - GAN's objective.
+    这里更多的是理论成果。对抗的目的，是为了得到复合某种期望的一个生成分布。
+    + See "2016 - f-GAN - Training Generative Neural Samplers using Variational Divergence Minimization"
+    + See "2020 - Designing GANs - A Likelihood Ratio Approach"
   - WGAN :
     用Wasserstein Distance替代Jesson-Shannon Distance.考虑了D网的Lipschitz条件,但没实现.
     为进一步实现Lipschitz条件正则项，而出现下述改进
@@ -33,10 +37,6 @@
       进一步思考，选择什么样的样本来做梯度惩罚
       + WGAN-LP : Local Lipschitz Penality
       + DRAGAN :  Local Gradient Penality
-  - GAN's objective.
-    这里更多的是理论成果。对抗的目的，是为了得到复合某种期望的一个生成分布。
-    + See "2016 - f-GAN - Training Generative Neural Samplers using Variational Divergence Minimization"
-    + See "2020 - Designing GANs - A Likelihood Ratio Approach"
   - LSGAN : Loss Sensitive GAN
   - LSGAN : Least Square Gan
 * GAN的四个层面
