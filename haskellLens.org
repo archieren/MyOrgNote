@@ -938,5 +938,5 @@ These functions are similar, but slightly different in signature, and provide ve
 *** Hierarch Graph
 #+CAPTION: Hierarchy
 #+NAME: Hierarchy Graph of Lens
-[[file:Hierarchy.png]]
+[[file:./images/Hierarchy.png]]
 *** m
