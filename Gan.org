@@ -45,4 +45,26 @@
 ** Level 1: Improvements of GANs training
 ** Level 2: Implementation skill
 ** Level 3: GANs Applications in CV
-
+* 基于AnoGan思路的异常检测 - 这可能是有方向性误导的坑
+** 2017 AnoGAN: Unsupervised Anomaly Detection with Generative Adversarial Networks to Guide Marker Discovery
+[[./images/gan_anomaly/AnoGan.png]]
+这篇论文是始作用者。
+基本论点：用正常的数据训练出的GAN，针对异常者，在隐空间难有隐变量能很好地生成异常者。
+** 2018-02 Efficient Gan-Based Anomaly Detection
+[[./images/gan_anomaly/EfficientAnomalyGan.png]]
+基于BiGAN，解决AnoGAN推理阶段的迭代方法的低效性问题。
+** 2018-12 Adversarially Learned Anomaly Detection
+[[./images/gan_anomaly/ALAD.jpeg]]
+基于BiGAN，是上文的加强版。
+** 2018-11 GANomaly: Semi-Supervised Anomaly Detection via Adversarial Training
+[[./images/gan_anomaly/GANomaly.png]]
+重构放到核心位子。
+** 2019-01 Skip-GANomaly: Skip Connected and Adversarially Trained Encoder-Decoder Anomaly Detection
+[[./images/gan_anomaly/SkipGANomaly.png]]
+重构更精确。
+** 2018 A Surface Defect Detection Method Based on Positive Samples
+[[./images/gan_anomaly/PositiveSamplesGANomaly.png]]
+人工缺陷样本生成。采用LBP进行输入与重构的逐像素比较。LBP意味着往知觉意义上进行比较。
+** 2018 Unsupervised Detection of Lesions in Brain MRI using constrained adversarial auto-encoders
+[[./images/gan_anomaly/CAAE.jpeg]]
+讨论图像空间、隐空间的拓扑结构对距离的影响。
