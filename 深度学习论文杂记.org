@@ -12,7 +12,7 @@ https://github.com/adambielski/siamese-triplet
 - Featurized Image Pyramid: Image Pyramid 产生 Feature Map堆栈
 - Single/Top Feature map: 只利用DNN的顶层Fetaure Map
 - Pyramidical Feature Hierarchy: 独立利用DNN的各层Feature Map
-- Feature Pyramid Networks: 按我的理解,具有"生成"的味道?
+- Feature Pyramid Networks: 是种DNN范式。按我的理解,具有"生成"的味道?
 * Convolutional Activition Map 是个什么概念？
 CAM: Learning Deep Features for Discriminative Localization
 Grad-cam: Visual explanations from deep networks via gradient-based localization
@@ -23,6 +23,43 @@ Grad-cam: Visual explanations from deep networks via gradient-based localization
 用标题将他的内容全部说出来了.
 ** 文章BagNet
 进一步将上面的事说明白了!
+但这篇文章，我总觉得造做！
+* Anchor Free Object Detection
+** Paper List
+- 2020
+  - Any More?
+  - AutoAssign: Differentiable Label Assignment for Dense Object Detection.
+  - RepPoints V2: Verification Meets Regression for Object Detection.
+  - Corner Proposal Network for Anchor-free, Two-stage Object Detection.
+  - HoughNet: Integrating near and long-range evidence for bottom-up object detection.
+  - Bridging the Gap Between Anchor-based and Anchor-free Detection via Adaptive Training Sample Selection.
+  - Soft Anchor-Point Object Detection.
+  - CentripetalNet: Pursuing High-quality Keypoint Pairs for Object Detection.
+  - SaccadeNet: A Fast and Accurate Object Detector.
+  - Localization Uncertainty Estimation for Anchor-Free Object Detection.
+  - Dense RepPoints: Representing Visual Objects with Dense Point Sets.
+  - BorderDet: Border Feature for Dense Object Detection.
+  - Generalized Focal Loss: Learning Qualified and Distributed Bounding Boxes for Dense Object Detection.
+- 2019
+  - RepPoints: Point Set Representation for Object Detection.
+  - Segmentation is All You Need.
+  - FCOS: Fully Convolutional One-Stage Object Detection.
+  - CenterNet: Detecting Objects as Paired Points
+  - CenterNet: Keypoint Triplets for Object Detection.
+  - CenterNet: Objects as Points.
+  - FoveaBox: Beyond Anchor-based Object Detector.
+  - Feature Selective Anchor-Free Module for Single-Shot Object Detection.
+  - ExtremeNet: Bottom-up Object Detection by Grouping Extreme and Center Points.
+- 2018
+  - CornerNet: Detecting Objects as Paired Keypoints.
+  - An Anchor-Free Region Proposal Network for Faster R-CNN based Text Detection Approaches.
+- 2016
+  - You Only Look Once: Unified, Real-Time Object Detection.
+  - UnitBox: An Advanced Object Detection Network.
+- 2015
+  - DenseBox: Unifying Landmark Localization with End to End Object Detection.
+** Arguments
+
 * CAM和Grad-CAM的涵义:
 * Graph Neural Network:
 - Graph Embeding

@@ -5,12 +5,12 @@
 * Gan LandScape
 2018 - The GAN Landscape:Losses, Architectures, Regularization,and Normalization
 2019 - A Large-Scale Study on Regularization and Normalization in GANs
-- Architecture Base: Generator and Discriminator Architecture
+** Architecture Base: Generator and Discriminator Architecture
   - DCAGAN : 它提出了一种生成器和判别器的架构，这个架构能极大地稳定GAN的训练，以至于它在相当长的一段时间内都成为了GAN的标准架构。
     - [[file:images/dcgan_architecture.png]]
   - ResNet : 目前GAN上主流的生成器和判别器架构确实已经变成了ResNet。出自那篇文章呢？未有明确的参考文章。
     - [[file:images/resnet_architecture.png]]
-- Regularization and Normalization
+** Regularization and Normalization
   - Discriminator Normalization
     - 深度学习中，ICS(Internal Covariance Shift)问题，引发了BN/LN/WN等研究及运用。
       - 常规，暂略。
@@ -25,7 +25,7 @@
       - Self-Mod考虑到cGAN训练的稳定性更好，但是一般情况下GAN并没有标签c可用，干脆以噪声z自身为条件标签好了！
       - BN、cBN、AdaIn、Self-Mod具有统一的形式，所以要看到这背后的统一理论蕴涵。
       - StyleGan可以看成Self-Mod的变种。StyleGAN是必须关注的。
-- GAN's Objective: How to design GANs
+** GAN's Objective: How to design GANs
   - GAN's objective.
     这里更多的是理论成果。对抗的目的，是为了得到复合某种期望的一个生成分布。
     + See "2016 - f-GAN - Training Generative Neural Samplers using Variational Divergence Minimization"
@@ -50,6 +50,7 @@
 [[./images/gan_anomaly/AnoGan.png]]
 这篇论文是始作用者。
 基本论点：用正常的数据训练出的GAN，针对异常者，在隐空间难有隐变量能很好地生成异常者。
+         缺点：推理时，采用迭代的方法，找到输入的“最佳”隐变量。
 ** 2018-02 Efficient Gan-Based Anomaly Detection
 [[./images/gan_anomaly/EfficientAnomalyGan.png]]
 基于BiGAN，解决AnoGAN推理阶段的迭代方法的低效性问题。
@@ -68,3 +69,4 @@
 ** 2018 Unsupervised Detection of Lesions in Brain MRI using constrained adversarial auto-encoders
 [[./images/gan_anomaly/CAAE.jpeg]]
 讨论图像空间、隐空间的拓扑结构对距离的影响。
+在这篇论文中，基本接近对AnoGAN这个思路的反思了。
