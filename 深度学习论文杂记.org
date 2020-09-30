@@ -25,11 +25,14 @@ Grad-cam: Visual explanations from deep networks via gradient-based localization
 进一步将上面的事说明白了!
 但这篇文章，我总觉得造做！
 * Anchor Free Object Detection
+这中间的理论问题是什么？最终追溯到“对象的表示”问题。
+边界框是目前最通用的，但它提供的信息实在是太粗旷了。
+什么叫合理的对象表示？
 ** Paper List
 - 2020
   - Any More?
-  - AutoAssign: Differentiable Label Assignment for Dense Object Detection.
-  - RepPoints V2: Verification Meets Regression for Object Detection.
+  - AutoAssign: Differentiable Label Assignment for Dense Object Detection.(Rejected?)
+  - RepPoints V2: Verification Meets Regression for Object Detection.(*Pay Attention!*)
   - Corner Proposal Network for Anchor-free, Two-stage Object Detection.
   - HoughNet: Integrating near and long-range evidence for bottom-up object detection.
   - Bridging the Gap Between Anchor-based and Anchor-free Detection via Adaptive Training Sample Selection.
@@ -37,11 +40,11 @@ Grad-cam: Visual explanations from deep networks via gradient-based localization
   - CentripetalNet: Pursuing High-quality Keypoint Pairs for Object Detection.
   - SaccadeNet: A Fast and Accurate Object Detector.
   - Localization Uncertainty Estimation for Anchor-Free Object Detection.
-  - Dense RepPoints: Representing Visual Objects with Dense Point Sets.
+  - Dense RepPoints: Representing Visual Objects with Dense Point Sets.(*Pay Attention!*)
   - BorderDet: Border Feature for Dense Object Detection.
   - Generalized Focal Loss: Learning Qualified and Distributed Bounding Boxes for Dense Object Detection.
 - 2019
-  - RepPoints: Point Set Representation for Object Detection.
+  - RepPoints: Point Set Representation for Object Detection.(*Pay Attention*)
   - Segmentation is All You Need.
   - FCOS: Fully Convolutional One-Stage Object Detection.
   - CenterNet: Detecting Objects as Paired Points
