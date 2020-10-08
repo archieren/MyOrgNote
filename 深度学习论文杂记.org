@@ -23,11 +23,38 @@ Grad-cam: Visual explanations from deep networks via gradient-based localization
 用标题将他的内容全部说出来了.
 ** 文章BagNet
 进一步将上面的事说明白了!
-但这篇文章，我总觉得造做！
+但我将他们的代码从头实现一遍,总觉得:造做！
+* Fine Grained Image Analysis 刚要
+** Fine-grained image recognition
+*** Fine-grained recognition by localization-classification subnetworks
+**** Employing detection or segmentation techniques
+**** Utilizing deep filters / activations
+**** Leveraging attention mechanisms
+**** Other methods
+*** Fine-grained recognition by end-to-end feature encoding
+**** High-order feature interactions
+**** Specific loss functions
+**** Other methods
+*** Fine-grained recognition with external information
+**** Fine-grained recognition with web data
+**** Fine-grained recognition with multi-modality data
+**** Fine-grained recognition with humans in the loop
+** Fine-grained image retrieval
+*** Content-based fine-grained image retrieval
+*** Sketch-based fine-grained image retrieval
+** Fine-grained image generation
+*** Generating from fine-grained image distributions
+*** Generating from text descriptions
+** Future directions of FGIA
+*** Fine-grained few shot learning
+*** Fine-grained hashing
+*** Fine-grained domain adaptation
+*** FGIA within more realistic settings
+
 * Anchor Free Object Detection
 这中间的理论问题是什么？最终追溯到“对象的表示”问题。
 边界框是目前最通用的，但它提供的信息实在是太粗旷了。
-什么叫合理的对象表示？
+什么叫合理或合适的对象表示？
 ** Paper List
 - 2020
   - Any More?
