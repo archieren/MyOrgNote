@@ -37,7 +37,7 @@ Some concepts:
 * Basic types
 类型,关键看分类的方法.
 还有一些概念需要澄清.
-* Meomory Model
+* Meomory Model 和数据类型
 了解这个语言,或许应当从内存模型了解他的特色.由其当你有各种范式的开发经验时.
 没见过那个语言如此严格精致地利用Momeory Model.
 ** Memory:
@@ -72,6 +72,10 @@ Rules:
 - References must always be valid.
 
 Movement of Ownership or Binding.
+
+** DataTypes 重点思考Ownership问题
+Scalar Types: Integer Types, Float-Point Type, Boolean Type, Character Type
+Compound Types: Tuples and Arrays
 
 * 模块系统
 ** 模块系统所牵涉的一些内容:

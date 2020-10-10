@@ -24,33 +24,36 @@ Grad-cam: Visual explanations from deep networks via gradient-based localization
 ** 文章BagNet
 进一步将上面的事说明白了!
 但我将他们的代码从头实现一遍,总觉得:造做！
-* Fine Grained Image Analysis 刚要
-** Fine-grained image recognition
-*** Fine-grained recognition by localization-classification subnetworks
-**** Employing detection or segmentation techniques
-**** Utilizing deep filters / activations
-**** Leveraging attention mechanisms
-**** Other methods
-*** Fine-grained recognition by end-to-end feature encoding
-**** High-order feature interactions
-**** Specific loss functions
-**** Other methods
-*** Fine-grained recognition with external information
-**** Fine-grained recognition with web data
-**** Fine-grained recognition with multi-modality data
-**** Fine-grained recognition with humans in the loop
-** Fine-grained image retrieval
-*** Content-based fine-grained image retrieval
-*** Sketch-based fine-grained image retrieval
-** Fine-grained image generation
-*** Generating from fine-grained image distributions
-*** Generating from text descriptions
-** Future directions of FGIA
-*** Fine-grained few shot learning
-*** Fine-grained hashing
-*** Fine-grained domain adaptation
-*** FGIA within more realistic settings
-
+* Fine Grained Image Analysis
+** 纲要
+*** Fine-grained image recognition
+**** Fine-grained recognition by localization-classification subnetworks
+***** Employing detection or segmentation techniques
+***** Utilizing deep filters / activations
+***** Leveraging attention mechanisms
+***** Other methods
+**** Fine-grained recognition by end-to-end feature encoding
+***** High-order feature interactions
+***** Specific loss functions
+***** Other methods
+**** Fine-grained recognition with external information
+***** Fine-grained recognition with web data
+***** Fine-grained recognition with multi-modality data
+***** Fine-grained recognition with humans in the loop
+*** Fine-grained image retrieval
+**** Content-based fine-grained image retrieval
+**** Sketch-based fine-grained image retrieval
+*** Fine-grained image generation
+**** Generating from fine-grained image distributions
+**** Generating from text descriptions
+*** Future directions of FGIA
+**** Fine-grained few shot learning
+**** Fine-grained hashing
+**** Fine-grained domain adaptation
+**** FGIA within more realistic settings
+** 论文阅读一：视觉对象的图表示及可解释性
+2020 - Interpretable and Accurate Fine-grained Recognition via Region Grouping
+2018 - Beyond Grids: Learning Graph Representations for Visual Recognition
 * Anchor Free Object Detection
 这中间的理论问题是什么？最终追溯到“对象的表示”问题。
 边界框是目前最通用的，但它提供的信息实在是太粗旷了。
