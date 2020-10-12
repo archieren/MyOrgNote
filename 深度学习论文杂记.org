@@ -54,6 +54,7 @@ Grad-cam: Visual explanations from deep networks via gradient-based localization
 ** 论文阅读一：视觉对象的图表示及可解释性
 2020 - Interpretable and Accurate Fine-grained Recognition via Region Grouping
 2018 - Beyond Grids: Learning Graph Representations for Visual Recognition
+2018年的文章应是这条路线的基础。基于Perceptual Grouping的观点，运用Graph Representation方法，去研究视觉对象的认知问题。
 * Anchor Free Object Detection
 这中间的理论问题是什么？最终追溯到“对象的表示”问题。
 边界框是目前最通用的，但它提供的信息实在是太粗旷了。
