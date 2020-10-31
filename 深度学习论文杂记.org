@@ -97,7 +97,6 @@ Grad-cam: Visual explanations from deep networks via gradient-based localization
 * CAM和Grad-CAM的涵义:
 * Graph Neural Network:
 ** The Concept of GNN:
-
 ** Graph Embeding
 ** Graph Convolution:
   - Spatial Convolution
