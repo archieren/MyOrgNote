@@ -74,7 +74,7 @@ input | Name        |  Phone | sub1 | sub2 | total |
 
 [[link address][link sample]]
 
-[[[http://orgmode.org/orgguide.pdf][grgguid.pdf]]] 
+[[http://orgmode.org/orgguide.pdf][grgguid.pdf]]
 
 [[file:/home/maple/图片/test.jpg][a picture]]
 
