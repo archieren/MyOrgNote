@@ -86,17 +86,18 @@
 视网膜的故事,最终引向这句话:Subunits appear to be a common computational motif in the brain.
 但带来的问题: Encoding and decoding in a heterogeneous population!
 ** Visual Neocortex
-[Paik S.;Ringach D.]2011 - Retinal origin of orientation maps in the visual cortex
-[Paik S.;Ringach D.]2012 - Link between orientation and retinotopic maps in primary visual cortex
-[Markram H.]2015 - Reconstruction and Simulation of Neocortical Microcircuitry
-[Schottdorf M.;...]2015 - Random Wiring, Ganglion Cell Mosaics, and the Functional Architecture of the Visual Cortex
-[Jang J.]2020 - Retino-Cortical Mapping Ratio Predicts Columnar and Salt-and-Pepper Organization in Mammalian Visual Cortex
+*** Retina - Cortex
+1. [Paik S.;Ringach D.]2011 - Retinal origin of orientation maps in the visual cortex
+2. [Paik S.;Ringach D.]2012 - Link between orientation and retinotopic maps in primary visual cortex
+3. [Markram H.]2015 - Reconstruction and Simulation of Neocortical Microcircuitry
+4. [Schottdorf M.;...]2015 - Random Wiring, Ganglion Cell Mosaics, and the Functional Architecture of the Visual Cortex
+5. [Jang J.]2020 - Retino-Cortical Mapping Ratio Predicts Columnar and Salt-and-Pepper Organization in Mammalian Visual Cortex
 * Place Cells/Grid Cells/Head Cells/Border Cells/Speed Cells/Trace Cells/Object Cells/Object vector Cells, and so on
 观看视频"Grid Cells, Object Representations, and Memory" & "Grid Cells and the Brain's Spatial Mapping System"
 Memory is a process reproduce/reconstruction!? (David Marr)
 Navigation is the core!?
 
-* A Computational Model of Visual Recognition Memory via Grid Cells
+* [Bicanski A.;Burgess N.]2019 - A Computational Model of Visual Recognition Memory via Grid Cells
 
 * Grid Cells and Spatial Maps in Entorhinal Cortex and Hippocampus
 It's a review!
