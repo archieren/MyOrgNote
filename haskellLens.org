@@ -236,6 +236,12 @@ import GHC.Float
 import GHC.Show
 
 #+END_SRC
+** Data and NewType
+这是个小的技术问题.
+#+BEGIN_SRC haskell
+⊥
+#+END_SRC
+
 ** Operator Precedence
 #+BEGIN_SRC haskell
 infixr 9  .
@@ -803,6 +809,7 @@ instance (Applicative f, Applicative g) => Applicative (Compose f g) where
 #+END_SRC
 
 * Haskell Lens
+See [[https://github.com/ekmett/lens/wiki/Derivation][About Derivation]]
 Costate Comonad Coalgebra is an equivalent of Java's member variable update techology for haskell.
 
 ** An short introduction of Named Fields(Record Syntax Sugar)
@@ -934,7 +941,7 @@ traverse.traverse.traverse :: (Traversable f, Traversable g, Traversable h, Appl
 #+END_SRC
 These functions are similar, but slightly different in signature, and provide very different capabilities.
 从Functor,Foldable升级到Traversable,能力也在提升.
-这从fmap,foldmap可用trverse来定义就可以看出来.
+这从fmap,foldmap可用traverse来定义就可以看出来.
 *** Hierarch Graph
 #+CAPTION: Hierarchy
 #+NAME: Hierarchy Graph of Lens
