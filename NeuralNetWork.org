@@ -99,7 +99,7 @@ Navigation is the core!?
 
 * [Bicanski A.;Burgess N.]2019 - A Computational Model of Visual Recognition Memory via Grid Cells
 
-* Grid Cells and Spatial Maps in Entorhinal Cortex and Hippocampus
+* [Stensola T.;Moser E.I.]2016 - Grid Cells and Spatial Maps in Entorhinal Cortex and Hippocampus
 It's a review!
 ** Place Cells and Grid Cells神经生理发现
 - Place Cells:  ... Tolmanian cognitive maps
