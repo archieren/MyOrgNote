@@ -4,12 +4,12 @@
 
 * 概要
 对于这些年的盲目阅读，很难给出一个合乎逻辑的条理来。
-但一直以来，围绕着Retinotopy（Tonotopy 从没关注过），隐含地关注着一下几个主题方面：
+但一直以来，围绕着Retinotopy（Tonotopy 从没关注过）的Functional Architecture, Computational Model, Biology Origin等，隐含地关注着一下几个主题方面：
 - Retina-LGN的感受野的非线性结构。以Saccade/Microsaccade为线索，引出来的一系列问题！
 - LGN-Cortex的稀疏问题。LGN供给Coretex的输入是非常稀疏的，却能产生极其复杂的。。。！这意味着什么？
 - The Functional Architecture of The Visual Cortex的形成机理？和Orientation Maps的起源！
 - Cortex的Column/Microcolumn结构的一般化问题。
-- Perceptual Grouping下，思考association问题为主。对NeuralGeometry这个小众的数学模型很着迷。
+- 在Perceptual Grouping问题下，思考association问题。对NeuralGeometry这个小众的数学模型很着迷。
 
 ** Retina:Microsaccade and saccade.
 1. [Field G.D. ;Chichilnisky E.J. ]2007-Information Processing in the Primate Retina
