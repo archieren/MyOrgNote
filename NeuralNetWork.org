@@ -190,8 +190,10 @@ RCN integrates and builds upon various ideas from Compostional Models - ... - in
   这篇文章提出了Location Based Framwork的思想.
 * Orientation Maps
 The orientation map is a hallmark of primary visual cortex in higher mammals.
-** Retina - Cortex
+** Retina - Thalamus - Cortex
+The Orientation map的形成机理,......
 1. [Paik S.;Ringach D.]2011 - Retinal origin of orientation maps in the visual cortex
+   Moire Interference机理猜想的提出.
 2. [Paik S.;Ringach D.]2012 - Link between orientation and retinotopic maps in primary visual cortex
 3. [Markram H.]2015 - Reconstruction and Simulation of Neocortical Microcircuitry
 4. [Schottdorf M.;...]2015 - Random Wiring, Ganglion Cell Mosaics, and the Functional Architecture of the Visual Cortex
