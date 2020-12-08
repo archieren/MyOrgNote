@@ -197,4 +197,5 @@ The Orientation map的形成机理,......
 2. [Paik S.;Ringach D.]2012 - Link between orientation and retinotopic maps in primary visual cortex
 3. [Markram H.]2015 - Reconstruction and Simulation of Neocortical Microcircuitry
 4. [Schottdorf M.;...]2015 - Random Wiring, Ganglion Cell Mosaics, and the Functional Architecture of the Visual Cortex
+   讨论了随机投射的作用.
 5. [Jang J.]2020 - Retino-Cortical Mapping Ratio Predicts Columnar and Salt-and-Pepper Organization in Mammalian Visual Cortex
