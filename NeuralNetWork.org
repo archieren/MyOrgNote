@@ -188,14 +188,19 @@ RCN integrates and builds upon various ideas from Compostional Models - ... - in
 - =Locations in the Neocortex - A Theory of Sensorimotor Object Recognition Using Cortical Grid Cells [Lewis M.]2019=
 - =A Framework for Intelligence and Cortical Function Based on Grid Cells in the Neocortex [Hawkins J.]2019=
   这篇文章提出了Location Based Framwork的思想.
-* Orientation Maps
+* The Origins of Orientation Maps in V1
 The orientation map is a hallmark of primary visual cortex in higher mammals.
 ** Retina - Thalamus - Cortex
 The Orientation map的形成机理,......
-1. [Paik S.;Ringach D.]2011 - Retinal origin of orientation maps in the visual cortex
+1. [Schottdorf M.;...]2015 - Random Wiring, Ganglion Cell Mosaics, and the Functional Architecture of the Visual Cortex
+   这篇文章用实验作比较研究，值得看完。可了解对V1 functional architecture的形成机理进行解释的各种假说，以及它们之间的争论！
+   但此文似乎是在用数据，质疑最新的Statistics wiring model（如Moire Interference Model），因为它还是不能满足‘common design’的试验结果。
+   'Common Design'这一概念来至"[Kaschube M.;...]2010 - Universality in the evolution of orientation columns in the Visual Cortex"。
+   有两种相对立的形成机理假设模型
+   1) Statistics wiring model
+   2) Long-Range interaction model
+2. [Paik S.;Ringach D.]2011 - Retinal origin of orientation maps in the visual cortex
    Moire Interference机理猜想的提出.
-2. [Paik S.;Ringach D.]2012 - Link between orientation and retinotopic maps in primary visual cortex
-3. [Markram H.]2015 - Reconstruction and Simulation of Neocortical Microcircuitry
-4. [Schottdorf M.;...]2015 - Random Wiring, Ganglion Cell Mosaics, and the Functional Architecture of the Visual Cortex
-   讨论了随机投射的作用.
+3. [Paik S.;Ringach D.]2012 - Link between orientation and retinotopic maps in primary visual cortex
+4. [Markram H.]2015 - Reconstruction and Simulation of Neocortical Microcircuitry
 5. [Jang J.]2020 - Retino-Cortical Mapping Ratio Predicts Columnar and Salt-and-Pepper Organization in Mammalian Visual Cortex
