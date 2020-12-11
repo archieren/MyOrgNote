@@ -189,18 +189,31 @@ RCN integrates and builds upon various ideas from Compostional Models - ... - in
 - =A Framework for Intelligence and Cortical Function Based on Grid Cells in the Neocortex [Hawkins J.]2019=
   这篇文章提出了Location Based Framwork的思想.
 * The Origins of Orientation Maps in V1
+Neural tuning to visual stimulus orientation is one of the hall-marks of the primary visual cortex (V1) in mammals.
 The orientation map is a hallmark of primary visual cortex in higher mammals.
 ** Retina - Thalamus - Cortex
 The Orientation map的形成机理,......
+A key assumption of the current model is that neighboring V1 neurons receive feedforward inputs from a similar population of nearby RGCs, as suggested by the statistical wiring model.
+见[Ringach D.]的2004，2007的文章。
+但这个模型没有直接的实验数据来作支撑，故引出些许争议。
 1. [Schottdorf M.;...]2015 - Random Wiring, Ganglion Cell Mosaics, and the Functional Architecture of the Visual Cortex
    这篇文章用实验作比较研究，值得看完。可了解对V1 functional architecture的形成机理进行解释的各种假说，以及它们之间的争论！
    但此文似乎是在用数据，质疑最新的Statistics wiring model（如Moire Interference Model），因为它还是不能满足‘common design’的试验结果。
    'Common Design'这一概念来至"[Kaschube M.;...]2010 - Universality in the evolution of orientation columns in the Visual Cortex"。
    有两种相对立的形成机理假设模型
-   1) Statistics wiring model
-   2) Long-Range interaction model
-2. [Paik S.;Ringach D.]2011 - Retinal origin of orientation maps in the visual cortex
-   Moire Interference机理猜想的提出.
-3. [Paik S.;Ringach D.]2012 - Link between orientation and retinotopic maps in primary visual cortex
+   1) Statistics wiring model。 Moire Interference Model是目前较简洁有效的模型。但是受到此文的温柔质疑。
+   2) Long-Range interaction model。 Kaschube M.用这类模型中的SOM来解释他发现的Universality，即所谓的‘common design’。
+   此二者也代表了Forward和Recurent的争论。
+   至于结论，我们细看。
+2. [Paik SB.;Ringach D.]2011 - Retinal origin of orientation maps in the visual cortex
+3. [Paik SB.;Ringach D.]2012 - Link between orientation and retinotopic maps in primary visual cortex
+   此二文，给出了 Origin of orientation maps 的 Moire Interference机理猜想。这个值得注意。
+   同时将Origin问题，延伸到Retina。Retina Mosaics 近乎可确定 Orientation Map。
 4. [Markram H.]2015 - Reconstruction and Simulation of Neocortical Microcircuitry
 5. [Jang J.]2020 - Retino-Cortical Mapping Ratio Predicts Columnar and Salt-and-Pepper Organization in Mammalian Visual Cortex
+   实验验证了V1面积/R面积，这样一个参数，可以推断 V1 Orientation Map的类型，连续的还是椒盐的。
+   讨论出这样的观点：
+   1) Firstly, seeded by forward afferents.
+   2) Secondly, fine-tuned by various types of synaptic plasticity in feedfor-ward and recurrent circuits
+* Neural Geometry and Group-CNN
+Neural Geometry源自对 Visual Cortex Columns结构的理论解释。我看它现在发展出Group-CNN路线，和Manifold learning、Geometric deeplearning、Graph deeplearning相结合。
