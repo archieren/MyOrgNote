@@ -190,7 +190,7 @@ RCN integrates and builds upon various ideas from Compostional Models - ... - in
   这篇文章提出了Location Based Framwork的思想.
 * The Origins of Orientation Maps in V1
 Neural tuning to visual stimulus orientation is one of the hall-marks of the primary visual cortex (V1) in mammals.
-The orientation map is a hallmark of primary visual cortex in higher mammals.
+= The orientation map is a hallmark of primary visual cortex in higher mammals.
 ** Retina - Thalamus - Cortex
 The Orientation map的形成机理,......
 A key assumption of the current model is that neighboring V1 neurons receive feedforward inputs from a similar population of nearby RGCs, as suggested by the statistical wiring model.
