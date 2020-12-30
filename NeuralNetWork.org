@@ -216,4 +216,5 @@ A key assumption of the current model is that neighboring V1 neurons receive fee
    1) Firstly, seeded by forward afferents.
    2) Secondly, fine-tuned by various types of synaptic plasticity in feedfor-ward and recurrent circuits
 * Neural Geometry and Group-CNN
-Neural Geometry源自对 Visual Cortex Columns结构的理论解释。我看它现在发展出Group-CNN路线，和Manifold learning、Geometric deeplearning、Graph deeplearning相结合。
+Neural Geometry源自对 Visual Cortex Columns结构的理论解释。
+我看它现在发展出Group-CNN路线，和Manifold learning、Geometric deeplearning、Graph deeplearning相结合。
