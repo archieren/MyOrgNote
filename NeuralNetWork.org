@@ -173,6 +173,7 @@ RCN integrates and builds upon various ideas from Compostional Models - ... - in
 - Reliable classification of a list of SDR vectors
 - Unions of SDRs
 - Robustness of unions in the presence of noise
+需要注意的是,SDR应当是Distributed Vector Representation(DVR)这一庞大议题下的子议题.!
 *** Encoding Data for HTM Systems
 *** Spatial Pooling algorithms
 *** Tempory Memory Algorithms
@@ -215,6 +216,89 @@ A key assumption of the current model is that neighboring V1 neurons receive fee
    讨论出这样的观点：
    1) Firstly, seeded by forward afferents.
    2) Secondly, fine-tuned by various types of synaptic plasticity in feedfor-ward and recurrent circuits
+* Cognitive Map
+** Cognitive Map的概念
+*** Tolman et al.在上世纪上半页, 在研究Rats在Maze中的行为时,提出的一个抽象概念.
+"...referring to a rich internal model of the world that accounts for the relationships between events and predicts the consequences of actions."
+这个概念,首先在认知神经科学的"spatial behavior"中,产生了重大影响.
+引导了一系列的发现:
+- Place cells (O’Keefe and Nadel, 1978)
+- Grid cells (Hafting et al., 2005)
+- Social place cells (Danjo et al., 2018; Omer et al., 2018)
+- Head-direction cells (Taube et al., 1990)
+- Object-vector cells (Høydal et al., 2018)
+- Reward cells (Gauthier and Tank, 2018)
+- Boundary vector cells (Lever et al., 2009)
+- Goal direction cells (Sarel et al., 2017)
+这些空间细胞似乎具有特定的功能表示,
+但,容纳这些细胞的大脑组织结构,却同时,在generalization, inference, imagination, social cognition, and memory等神经处理任务中起着重要作用.
+这些神经活动或处理任务, 是和广义的认知图有关的.
+因此,这些类细胞在复杂的,高维的,非空间的认知图中,如何组织知识,是即将面临的挑战.
+一个抽象的认知图,如何能数学地描述呢?这些描述或表示,又如何编码进网络中,进行运算?
+** Learning set
+Harlow et al.在上世纪上半页,在研究" Discriminating a rewarding from two or more stimulus"学习行为时,
+发现了一些有趣的现象,学习者可能学到了一些抽象知识,因此,他猜测有"a learning set"的机制存在, 用以表示抽象知识.
+抽象知识的学习和表示,如何数学地描述?这一路线,我还没有基础知识面,待深入!
+** [Behrens T.E.J.;...]2018 - What Is a Cognitive Map
+这篇文章提供了不错的概述!
+Cognitive Map 和 Leaning Set又能怎样地发生关系呢?
+* Semantic Pointer Architecture(SPA) and Spatial Semantic Pointer(SSP)
+认知科学, 科学地研究诸如"attention, language use, memory, perception, problem solving, creativity, and thinking"等心智过程(mental process).
+- “most cognitive scientists agree that knowledge in the human mind consists of mental representations”
+- “cognitive science asserts: that people have mental procedures that operate by means of mental representations for the implementation of thinking and action"
+
+有各种证据表明,有多类 Mental Representation(MR)存在.
+可以看到,在Recognitive Model,或更大的目标, Brain Model中, Mental Representation 处于关键位置.
+在神经网络的架构下,它需要满足:
+- Implementable(? Encoderbale and Decoderbale).
+  将信号,特征空间等,以神经编码的方式,得到心智表示. 反过来,有相应的过程!
+- Transformable or Composable or Operatable.
+  在心智表征上,施以各式心智处理过程.
+- Structured Organization or Grouping.
+  心智表征,是层次的,结构化的.
+- Dynamics.
+
+近来,我看到很多有关表示或表征的文章,各有巨大差异,但似乎均有共同的猜想出处, 即 Cognitive Map.而且,似乎都在想攻克"Spatial Behavior"这个具体的认知领域, 以论证自己的设想的现实性.
+
+** Neural Engineering FrameWork(NEF)
+The Neural Engineering Framework (NEF) provides a set of principles for performing computations with spiking neural networks.
+这是一套SNN的设计原则或方法学.
+- Neural representations are defined by the combination of nonlinear encoding (exemplified by neuron tuning curves) and weighted linear decoding.
+- Transformations of neural representations are functions of variables that are represented by neural populations.
+  Transformations are determined using an alternately weighted linear decoding,..
+- Neural dynamics are characterized by considering neural representations as control theoretic state variables.
+  Thus, the dynamics of neurobiological systems can be analyzed using control theory.
+** Vector Symbolic Architecture (VSA)
+Vector Symbolic Architecture(VSA)是离散表征的一支,在高维矢量空间建立某种代数结构,并用代数来编码这些离散的MR结构.
+VSAs have been used to characterize a variety of cognitive behaviours,......
+When VSAs are used to model cognitive behaviours, they essentially define methods for characterizing continuous vectors as both slots and fillers and define a method of binding fillers to slots.
+
+VSA的关键基础在于那个代数结构如何定义.(参考: [Gosmann Jan]2018 - PhD_Thesis -  An Integrated Model of Context, Short-Term, and Long-Term Memory)
+Three types of operators are considered essential in a VSA.
+- A measure of similarity: s
+- A superposition operator: S
+- A binding operator(with an approximate inverse or unbinding operation ): B
+
+** SPA理论构想,在一本书"How to build a brain"系统地提出来.
+概括说来, 语义指针(Semantic Pointer)假设认为:
+- Higher-level cognitive functions in biological systems are made possible by semantic pointers.
+- Semantic pointers are neural representations that carry partial semantic content.
+- Semantic pointers are composable into the representational structures necessary to support complex cognition.
+
+用术语语义指针,在于:
+- 架构里的(语义)表示,有些类似计算机科学里的指针,能够获取大量的信息,而这些信息并未在语义表示中,直接承载或表示.
+- 但它又是语义性的,因为这些表示的距离,如同联结主义设想的,能够扑捉语义矢量空间的关系.
+
+Semantic Pointer Architecture (SPA; Eliasmith, 2013), which proposes a means of neurally implementing VSAs for explaining cognitive behaviour in biologically plausible spiking networks.
+也可参考: [Gosmann Jan]2018 - PhD_Thesis -  An Integrated Model of Context, Short-Term, and Long-Term Memory
+SPA是VSA的一个实例,易于在具有生物合理性的Spiking Neural Network中实现VSA,并可解释诸多认知行为!
+** Spatial Semantic Pointer
+目前,前述内容知道大概就行.
+令人奇怪的是, SPA中涌现出SSP,能够很好地描述Grid Cells的相关内容!
+SSP 在 [Komer Berent]2019 - A neural representation of continuous space using fractional binding 一文中提出.
+
+
 * Neural Geometry and Group-CNN
 Neural Geometry源自对 Visual Cortex Columns结构的理论解释。
 我看它现在发展出Group-CNN路线，和Manifold learning、Geometric deeplearning、Graph deeplearning相结合。
+Group convolutional neural networks (G-CNNs) are a class of neural networks that are equipped with the geometry of groups
