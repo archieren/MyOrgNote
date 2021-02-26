@@ -93,7 +93,7 @@ Navigation is the core!?
 ** 网格细胞的基本性质
 *** Oritention, WaveLength, Phase
 [[file:./images/GridCells/Attributes.jpg]]
-*** Changing with Enviroment Changing
+*** Changing as Enviroment Changing
 - 网格细胞锚定于外界的地标
   网格细胞会锚定于外界的感觉地标，当地标旋转时，网格细胞的网格结构也会跟着旋转。
   [[file:./images/GridCells/ChangeWithAnchor.jpg]]
