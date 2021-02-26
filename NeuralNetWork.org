@@ -90,7 +90,38 @@
 观看视频"Grid Cells, Object Representations, and Memory" & "Grid Cells and the Brain's Spatial Mapping System"
 Memory is a process reproduce/reconstruction!? (David Marr)
 Navigation is the core!?
+** 网格细胞的基本性质
+*** Oritention, WaveLength, Phase
+[[file:./images/GridCells/Attributes.jpg]]
+*** Changing with Enviroment Changing
+- 网格细胞锚定于外界的地标
+  网格细胞会锚定于外界的感觉地标，当地标旋转时，网格细胞的网格结构也会跟着旋转。
+  [[file:./images/GridCells/ChangeWithAnchor.jpg]]
+- 网格细胞的网格会被外界空间压缩和拉伸
+  当改变大鼠所处笼子的尺寸时，网格细胞的网格会发生相应的改变。
+  外界空间变大时，网格细胞的网格被扩展，间距变大。
+  相反，外界空间变小时，网格细胞的网格会被压缩，间距变小。
+  [[file:./images/GridCells/ChangeWithScale.jpg]]
+- 网格细胞的网格会受到来自空间边界的切力，继而重排列。
+  在一个方形的笼子里，大鼠网格细胞发放野的朝向并不是垂直于笼子边界的。
+  这是因为笼子的边界墙壁会对网格细胞的网格产生一种切力，使网格轴发生一定角度的偏转。
+  [[file:./images/GridCells/ChangeWithBoundary.jpg]]
 
+  切力（Shear force）的轴为空间边界，切力的方向沿着空间边界这条轴，切力的大小随着离边界轴距离的增加而衰减。
+  因此，距离边界越近的位置，切变形越严重。
+  [[file:./images/GridCells/ChangeWithBoundary_I.jpg]]
+- 当视觉参照物位置不变，但空间旋转时，网格细胞的网格也会重排列。
+  [[file:./images/GridCells/ChangeWithSpaceRotation.jpg]]
+- 网格细胞的网格会随着对空间的熟悉程度而发生变化
+  空间边界的切力会让网格轴向偏移一定角度。
+  但科学家发现，当大鼠刚进入一个陌生空间时，网格细胞的网格轴并没有偏移，而是垂直边界。
+  等到大鼠完全熟悉该空间以后，偏移才会发生。
+  网格细胞在一个空间内的放电模式，是对该空间适应的结果。
+  [[file:./images/GridCells/ChangeWithFamilarity.jpg]]
+  大鼠身处两个连通的隔间之中。
+  最开始，大鼠并不熟悉两个房间的空间位置结构，此时每个网格细胞会为每个房间生成一张独立的“网格地图”。
+  待大鼠完全熟悉这两个空间后，两个独立的网格结构会融合成一体。
+  [[file:./images/GridCells/ChangeWithFamilarity_I.jpg]]
 * [Bicanski A.;Burgess N.]2019 - A Computational Model of Visual Recognition Memory via Grid Cells
 
 * [Stensola T.;Moser E.I.]2016 - Grid Cells and Spatial Maps in Entorhinal Cortex and Hippocampus
