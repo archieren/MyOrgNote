@@ -90,6 +90,9 @@
 观看视频"Grid Cells, Object Representations, and Memory" & "Grid Cells and the Brain's Spatial Mapping System"
 Memory is a process reproduce/reconstruction!? (David Marr)
 Navigation is the core!?
+** Brain Regions Involved in Spatial Cognition
+下图來至 "Roddy M Grieves and Kate J Jeffery. The representation of space in the brain. Behavioural Processes, 135:113–131, 2017."
+[[file:./images/GridCells/SpatialRecognition.jpg]]
 ** 网格细胞的基本性质
 *** Oritention, WaveLength, Phase
 [[file:./images/GridCells/Attributes.jpg]]
