@@ -125,7 +125,9 @@ Navigation is the core!?
   最开始，大鼠并不熟悉两个房间的空间位置结构，此时每个网格细胞会为每个房间生成一张独立的“网格地图”。
   待大鼠完全熟悉这两个空间后，两个独立的网格结构会融合成一体。
   [[file:./images/GridCells/ChangeWithFamilarity_I.jpg]]
-* [Bicanski A.;Burgess N.]2019 - A Computational Model of Visual Recognition Memory via Grid Cells
+* [Sorscher B.]2019 - A unified theory for the origin of grid cells through the lens of pattern formations
+这篇文章，可能会是一片重要的文章！
+而[Dumont N.S.Y.;...]2020 - Accurate representation for spatial cognition using grid cells 一文中,也据此来论证SSP的生物合理性.
 
 * [Stensola T.;Moser E.I.]2016 - Grid Cells and Spatial Maps in Entorhinal Cortex and Hippocampus
 It's a review!
