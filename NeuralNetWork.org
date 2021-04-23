@@ -210,6 +210,7 @@ RCN integrates and builds upon various ideas from Compostional Models - ... - in
 - Unions of SDRs
 - Robustness of unions in the presence of noise
 需要注意的是,SDR应当是Distributed Vector Representation(DVR)这一庞大议题下的子议题.!
+需要反思的是，“稀疏表示”路线有多少种。这个在"HTM Spatial Pooler"里总结一下！
 *** Encoding Data for HTM Systems
 *** Spatial Pooling algorithms
 *** Tempory Memory Algorithms
@@ -219,6 +220,13 @@ RCN integrates and builds upon various ideas from Compostional Models - ... - in
 *** Why neurons have thousands synapses - a Theory of Sequence Memory in Neocortex [Hawkins J]2015
 建立了 HTM model neurons.
 *** The HTM Spatial Pooler — A Neocortical Algorithm for Online Sparse Distributed Coding [YuWei Cui]2017
+Sparse Coding技术中存在的问题：
+- 着重表示，没搞清计算本质。
+  重构误差最小+“某条优化原则: 能耗最小，稀疏表示反映客观世界的稀疏结构等等”
+  Most previous studies propose the goal of sparse coding is to avoid information loss, reduce energy consumption, form associative memory with minimum cross talk, and so on.
+  但问题是，它们没考虑Sparse Coding的计算特性。即稀疏码，适用于什么样的计算体系，如何用于计算，等等一系列问题。
+- HTM Spatial Pooler中考虑的因素
+  Sparseless, Entropy, Noise Robustness, Stablity.
 *** 关于Location Based FrameWork的思想的形成，目前看三篇文章:
 - =A Theory of How Columns in the Neocortex Enable Learning the Structure of the World [Hawkins J.]2017=
   Columns and Layers 是个通用结构,这意味着什么?
