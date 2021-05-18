@@ -349,5 +349,8 @@ SPA是VSA的一个实例,易于在具有生物合理性的Spiking Neural Network
 
 * Neural Geometry and Group-CNN
 Neural Geometry源自对 Visual Cortex Columns结构的理论解释。
-我看它现在发展出Group-CNN路线，和Manifold learning、Geometric deeplearning、Graph deeplearning相结合。
-Group convolutional neural networks (G-CNNs) are a class of neural networks that are equipped with the geometry of groups
+我看它现在发展出Group-CNN路线，和Manifold learning、Geometric deeplearning、Graph deeplearning相结合.
+** [Sarti A.;Citti G.]2019 - NeuroGeometry of Perception - isotropic and anisotropic aspects
+这算是对Neural Geometry一个阶段的总结.
+** G-CNN
+Group convolutional neural networks (G-CNNs) are a class of neural networks that are equipped with the geometry of groups.
