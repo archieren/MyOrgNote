@@ -127,6 +127,14 @@ Navigation is the core!?
   最开始，大鼠并不熟悉两个房间的空间位置结构，此时每个网格细胞会为每个房间生成一张独立的“网格地图”。
   待大鼠完全熟悉这两个空间后，两个独立的网格结构会融合成一体。
   [[file:./images/GridCells/ChangeWithFamilarity_I.jpg]]
+*** Visual Grid Cells在人脑EC区域中的发现
+在[Nathaniel J.K.; Elizabeth A.B.]2018 - Grid cells map the visual world一文中，
+对2018年的发现:
+  - [Julian J.B.;Keinath A.T.;Frazzetta G.;Epstein R.A.]2018 - Human entorhinal cortex represents visual space using a boundary-anchored grid
+  - [Nau M.;Schröder T.N.;Bellmund J.L.S.;Doeller C.F.]2018 - Hexadirectional coding of visual space in human entorhinal cortex
+作了一个概述和总结。同时也坐实了他们在[Nathaniel J.K.;Michael J.J.;Elizabeth A.B.]2012 - A map of visual space in the primate entorhinal cortex中的猜想.
+Visual Exploration, Locomotion等广泛的生物行为都能对空间采样及编码,这意味着类似Grid Cell这样的结构,具有更基础的认知功能!
+
 * [Sorscher B.]2019 - A unified theory for the origin of grid cells through the lens of pattern formations
 这篇文章，可能会是一片重要的文章！
 而[Dumont N.S.Y.;...]2020 - Accurate representation for spatial cognition using grid cells 一文中,也据此来论证SSP的生物合理性.
