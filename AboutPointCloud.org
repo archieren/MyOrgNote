@@ -1,0 +1,10 @@
+#+STARTUP: indent
+#+TITLE: 有关点云的一些内容
+#+AUTHOR: Reader
+
+* 一些传统的几何特征
+** PFH - Point Feature Histogram
+** FPFH - Fast Point Feature Histogram
+** SDF - Shape Diameter Function
+** AC - Ambient Occlusion
+** AGD - Average Geodesic Distance
