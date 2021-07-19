@@ -8,3 +8,7 @@
 ** SDF - Shape Diameter Function
 ** AC - Ambient Occlusion
 ** AGD - Average Geodesic Distance
+* 3DSmoothNet
+利用的基础技术
+LRF - Local Reference Frame
+SDV - Smoothed Density Value Voxelization
