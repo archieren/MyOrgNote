@@ -8,6 +8,7 @@
 ** SHOT - Signature of Histograms of OrienTations
 在其论文里，明确了Local Reference Frame的关键作用及标准处理方式。
 ** ISS - Intrinsic Shape Signatures
+** TOLDI - Triple Orthogonal Local Depth Images
 ** SDF - Shape Diameter Function
 ** AC - Ambient Occlusion
 ** AGD - Average Geodesic Distance
