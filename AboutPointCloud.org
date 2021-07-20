@@ -5,10 +5,22 @@
 * 一些传统的几何特征
 ** PFH - Point Feature Histogram
 ** FPFH - Fast Point Feature Histogram
+** SHOT - Signature of Histograms of OrienTations
+在其论文里，明确了Local Reference Frame的关键作用及标准处理方式。
+** ISS - Intrinsic Shape Signatures
 ** SDF - Shape Diameter Function
 ** AC - Ambient Occlusion
 ** AGD - Average Geodesic Distance
-* 3DSmoothNet
+* 基于深度学习的特征点学习
+** 3DSmoothNet
 利用的基础技术
-LRF - Local Reference Frame
-SDV - Smoothed Density Value Voxelization
+- LRF - Local Reference Frame
+  局部参考标架,这是必备的预处理了。
+- SDV - Smoothed Density Value Voxelization
+  这是较特殊的局部统计方式。
+- Batch Hard(BH)
+  这要参考[In Defense of the Triplet Loss for Person Re-Identification]中的内容了。
+  此文在Siamese/Triplet架构里,算是名文了。
+** SpinNet
+** GeDi
+
