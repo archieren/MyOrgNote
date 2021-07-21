@@ -9,6 +9,7 @@
 在其论文里，明确了Local Reference Frame的关键作用及标准处理方式。
 ** ISS - Intrinsic Shape Signatures
 ** TOLDI - Triple Orthogonal Local Depth Images
+改进了Local Reference Frame的处理方式。
 ** SDF - Shape Diameter Function
 ** AC - Ambient Occlusion
 ** AGD - Average Geodesic Distance
@@ -24,4 +25,7 @@
   此文在Siamese/Triplet架构里,算是名文了。
 ** SpinNet
 ** GeDi
+* 配准
+** Teaser[++] 值得研究一下
+
 
