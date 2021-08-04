@@ -13,6 +13,20 @@
 ** SDF - Shape Diameter Function
 ** AC - Ambient Occlusion
 ** AGD - Average Geodesic Distance
+* PointNet &. PointNet++奠定了什么基础
+** PointNet
+针对Spatial Point Set的几个特性:
+- Unordered
+- Interaction Among Points(例: with a distance metric)
+- Invariant under transformation
+提出解决方案:
+- Symmetric Function For Unordered Points:
+  如何理解他那个数学函数呢？
+  - Universal approximate. 欧式空间幂集上的函数是对称函数,但要解决的理论问题是,在欧式空间幂集上如何定义度规?
+  - To summarize a shape by a sparse set of critical point. 这倒是要理解一下.
+- Local And Global Information Aggregation
+- Joint Alignment Networks
+
 * 基于深度学习的特征点学习
 ** 3DSmoothNet
 利用的基础技术
