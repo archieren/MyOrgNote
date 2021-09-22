@@ -363,8 +363,8 @@ Neural Geometry源自对 Visual Cortex Columns结构的理论解释。
 ** G-CNN
 Group convolutional neural networks (G-CNNs) are a class of neural networks that are equipped with the geometry of groups.
 
-* FEP and EBM
-我想还是以两篇Review来展开吧!
+* FEP, VAE and EBM
+我想还是以几篇Review来展开吧!
 ** [Buckley C.L.]2017 - The free energy principle for action and perception: A mathematical review
-
 ** [Clark A.]2013 - Whatever next? Predictive brains, situated agents, and the future of cognitive science
+** [Now]2019 - An Introduction to Variational Autoencoders
