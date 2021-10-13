@@ -196,6 +196,44 @@ They present a radically different theory that assumes:
 
 * RCN - Recursive Cortical NetWork
 RCN integrates and builds upon various ideas from Compostional Models - ... - into a structured probabilistic graphical model such that Belief-Propagation can be used as the primary approximate inference engine.
+* Capsulenet
+对这个网络,不能用纯粹的数学或技术眼光看.要看他们二十年来在坚持什么！它那背后简单而又完美的理念！
+** 从"Transforming auto encoder"开始,提出Capsules这个比喻！"Capsules encapsulate all important information about the state of the feature they are detecting in vector form."
+下面是那篇文章中最重要的话:
+Instead of aiming for viewpoint invariance in the activities of “neurons”
+that use a single scalar output to summarize the activities of a local pool of replicated feature detectors,
+
+artificial neural networks should use local “capsules”
+that perform some quite complicated internal computations on their inputs
+and then encapsulate the results of these computations into a small vector of highly informative outputs.
+
+
+Each capsule learns to recognize an implicitly defined visual entity
+over a limited domain of viewing conditions and deformations
+and
+it outputs
+both
+the probability that the entity is present within its limited domain
+and
+a set of “instantiation parameters”
+that may include the precise pose, lighting and deformation of the visual entity relative to an implicitly defined canonical version of that entity.
+
+When the capsule is working properly,
+the probability of the visual entity being present is locally invariant
+— it does not change as the entity moves over the manifold of possible appearances within the limited domain covered by the capsule.
+The instantiation parameters, however, are “equivariant”
+— as the viewing conditions change and the entity moves over the appearance manifold,
+the instantiation parameters change by a corresponding amount because they are representing the intrinsic coordinates of the entity on the appearance manifold.
+
+理解起来的话，就是:
+"Capsules encapsulate all important information about the state of the feature they are detecting in vector form."
+CNN丢失了feature的状态信息."胶囊"不仅要提供feature出现的概率,还要提供feature的状态信息！
+
+** "Dynamic Routing Between Capsules"
+*** "Routing by agreement"
+From bottom to up, to construct Parse Tree or Hierarchical Representation!
+Lower level capsule will send its input to the higher level capsule that “agrees” with its input.
+
 
 * HTM(Hierarchical Temporal Memory)
 (目前,有这种理论变化 HTM => The Thousand Brains Theory of Intelligence)
