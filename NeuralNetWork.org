@@ -227,12 +227,21 @@ the instantiation parameters change by a corresponding amount because they are r
 
 理解起来的话，就是:
 "Capsules encapsulate all important information about the state of the feature they are detecting in vector form."
-CNN丢失了feature的状态信息."胶囊"不仅要提供feature出现的概率,还要提供feature的状态信息！
+CNN丢失了feature的状态信息.
+"胶囊"不仅要提供feature出现的概率,还要提供feature的状态信息！
+!!但这样看来,和其他的"column"新理念,还是有差异的!
+
 
 ** "Dynamic Routing Between Capsules"
-*** "Routing by agreement"
+这篇文章是"Capsules"理念的又一技术上的探索.
+*** 技术一: "Routing by agreement"
 From bottom to up, to construct Parse Tree or Hierarchical Representation!
 Lower level capsule will send its input to the higher level capsule that “agrees” with its input.
+表面看来有点逻辑玄奥
+*** 技术二: "Squashing"
+"We want the length of the output vector of a capsule to represent the probability that the entity represented by the capsule is present in the current input."
+*** 技术三: 其实是个假设,"At each location in the image, there is at most one instance of the type of entity that a capsule represents."
+
 
 
 * HTM(Hierarchical Temporal Memory)
