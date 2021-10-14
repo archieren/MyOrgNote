@@ -197,7 +197,7 @@ They present a radically different theory that assumes:
 * RCN - Recursive Cortical NetWork
 RCN integrates and builds upon various ideas from Compostional Models - ... - into a structured probabilistic graphical model such that Belief-Propagation can be used as the primary approximate inference engine.
 * Capsulenet
-对这个网络,不能用纯粹的数学或技术眼光看.要看他们二十年来在坚持什么！它那背后简单而又完美的理念！
+对这个网络,不能用纯粹的数学或技术眼光看.要看他们二十年来在坚持什么！它那背后简单的哲学！
 ** 从"Transforming auto encoder"开始,提出Capsules这个比喻！"Capsules encapsulate all important information about the state of the feature they are detecting in vector form."
 下面是那篇文章中最重要的话:
 Instead of aiming for viewpoint invariance in the activities of “neurons”
@@ -235,9 +235,10 @@ CNN丢失了feature的状态信息.
 ** "Dynamic Routing Between Capsules"
 这篇文章是"Capsules"理念的又一技术上的探索.
 *** 技术一: "Routing by agreement"
-From bottom to up, to construct Parse Tree or Hierarchical Representation!
+Compositional Gramar, Hierarchical Representation, Parse Tree 等等,是脑内知识表示的比喻,这似乎是"所期望"的共识！但如何达成这样的表示呢？
+动态路由要解决的问题是:自底向上,构造层次表示！ -- From bottom to up, to construct Parse Tree or Hierarchical Representation!
 Lower level capsule will send its input to the higher level capsule that “agrees” with its input.
-表面看来有点逻辑玄奥
+表面看来有点逻辑玄奥.
 *** 技术二: "Squashing"
 "We want the length of the output vector of a capsule to represent the probability that the entity represented by the capsule is present in the current input."
 *** 技术三: 其实是个假设,"At each location in the image, there is at most one instance of the type of entity that a capsule represents."
