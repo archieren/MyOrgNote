@@ -208,7 +208,8 @@ that perform some quite complicated internal computations on their inputs
 and then encapsulate the results of these computations into a small vector of highly informative outputs.
 
 
-Each capsule learns to recognize an implicitly defined visual entity
+Each capsule
+learns to recognize an implicitly defined visual entity
 over a limited domain of viewing conditions and deformations
 and
 it outputs
