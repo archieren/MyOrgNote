@@ -412,6 +412,14 @@ Neural Geometry源自对 Visual Cortex Columns结构的理论解释。
 ** G-CNN
 Group convolutional neural networks (G-CNNs) are a class of neural networks that are equipped with the geometry of groups.
 
+* Neural ODE/PDE
+** Deep Implicit Layers
+*** Neural ODEs
+*** Deep Equilibrium Models
+*** Differentiable optimization
+** Graph Neural Diffusion(Neural PDEs)
+Beltrami Flow, Ricci Flow and So On!
+
 * FEP, VAE and EBM
 我想还是以几篇Review来展开吧!
 ** [Buckley C.L.]2017 - The free energy principle for action and perception: A mathematical review
