@@ -410,6 +410,7 @@ Neural Geometry源自对 Visual Cortex Columns结构的理论解释。
 ** [Sarti A.;Citti G.]2019 - NeuroGeometry of Perception - isotropic and anisotropic aspects
 这算是对Neural Geometry一个阶段的总结.
 ** G-CNN
+我也不清楚为什么将Max Welling指导的一系列工作,和Neuro Geometry的工作放在一起,也许是Group Equivariant这个主题在起作用吧.
 Group convolutional neural networks (G-CNNs) are a class of neural networks that are equipped with the geometry of groups.
 
 * Neural ODE/PDE
