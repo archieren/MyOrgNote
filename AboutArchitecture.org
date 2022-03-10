@@ -1,0 +1,11 @@
+#+STARTUP: indent
+#+TITLE: 关于架构这个话题下的某些摘抄
+#+AUTHOR: Reader
+
+* Explicit Architecture
+这是"The Software Architecture Chronicles"系列文章中的内容。其实有必要真的好好读一下这一系列。
+比较宏大。
+#+CAPTION: DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together
+#+NAME:   fig:Explicit Architecture
+[[./images/Architecture/ExplicitArchitecture.svg]]
+[[./images/Architecture/ExplicitArchitecture.jpeg]]
