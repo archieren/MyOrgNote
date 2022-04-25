@@ -413,12 +413,12 @@ Neural Geometry源自对 Visual Cortex Columns结构的理论解释。
 我也不清楚为什么将Max Welling指导的一系列工作,和Neuro Geometry的工作放在一起,也许是Group Equivariant这个主题在起作用吧.
 Group convolutional neural networks (G-CNNs) are a class of neural networks that are equipped with the geometry of groups.
 
-* Neural ODE/PDE
-** Deep Implicit Layers
-*** Neural ODEs
-*** Deep Equilibrium Models
-*** Differentiable optimization
-** Graph Neural Diffusion(Neural PDEs)
+* Deep Implicit Layers
+隐含层的概念， 有点类似隐函数的概念。
+** Neural ODEs
+** Deep Equilibrium Models
+** Differentiable optimization
+* Graph Neural Diffusion(Neural PDEs)
 Beltrami Flow, Ricci Flow and So On!
 
 * FEP, VAE and EBM
