@@ -401,7 +401,8 @@ SPA是VSA的一个实例,易于在具有生物合理性的Spiking Neural Network
 - 令人奇怪的是, SPA中涌现出SSP,能够很好地描述Grid Cells的相关内容!
   SSP 在 [Komer Berent]2019 - A neural representation of continuous space using fractional binding 一文中提出.
   将本是表征离散结构的SP，提升为表征连续结构的SP。（这是个按常规思路进行的创造活动）
-- 
+- SSP 在动力学方面的表现,值得关注!
+  [Voelker A.R.]2021 - Simulating and Predicting Dynamical Systems With Spatial Semantic Pointers
 
 
 * Neural Geometry and Group-CNN
@@ -420,7 +421,16 @@ Group convolutional neural networks (G-CNNs) are a class of neural networks that
 ** Differentiable optimization
 * Graph Neural Diffusion(Neural PDEs)
 Beltrami Flow, Ricci Flow and So On!
+* Geometric deep learning
+Michael M. Bronstein这个人,学习Klein Erlangen Programme的精神,搞了个纲领,叫做“Geometric Deep Learning”.
+参考[Bronstein M.M.]2021 - Geometric Deep Learning - Grids, Groups, Graphs, Geodesics, and Gauges
 
+
+** Geometric Priors
+- Symmetry
+- Scale Separation
+** Geometric Domains
+** Geometric Deep Learning Models
 * FEP, VAE and EBM
 我想还是以几篇Review来展开吧!
 ** [Buckley C.L.]2017 - The free energy principle for action and perception: A mathematical review
