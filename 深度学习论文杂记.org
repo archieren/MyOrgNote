@@ -102,3 +102,8 @@ Grad-cam: Visual explanations from deep networks via gradient-based localization
 ** Graph Convolution:
   - Spatial Convolution
   - Spectral Convolution
+* DETR 带来的新范式
+Detection Transformer(DeTr): 将目标检测看作一种Set Prediction问题.
+Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks
+Generative Adversarial Set Transformers
+Conditional Set Generation with Transformers
