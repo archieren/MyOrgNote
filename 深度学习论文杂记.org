@@ -103,7 +103,14 @@ Grad-cam: Visual explanations from deep networks via gradient-based localization
   - Spatial Convolution
   - Spectral Convolution
 * DETR 带来的新范式
-Detection Transformer(DeTr): 将目标检测看作一种Set Prediction问题.
+Detection Transformer(DeTr): End-To-End by Transformers.
+Anchor Based --> Anchor Free --> End-to-End!!
+How does DeTr do it?
+** Viewing object detection as set-prediction task.
+** Replacing Anchors with learned object query.
+这是值得仔细思考的内容!
+** Considering label assignment from a global view.(?What's the meaning)
+* 关于Set-Prediction Problem 还可看看下述文章
 Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks
 Generative Adversarial Set Transformers
 Conditional Set Generation with Transformers
