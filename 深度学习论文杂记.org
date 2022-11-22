@@ -114,12 +114,12 @@ Anchor Based --> Anchor Free --> End-to-End!!
 *** Effective Transformer.
 *** Sparse Object Detection Methods.
 *** New label-assignment methods.
+**** Considering label assignment from a global view.(?What's the meaning)
 *** What makes for a end-to-end object detection?
 *** How to segment objects by learning queries?
 *** Viewing object detection as set-prediction task.
 *** Replacing Anchors with learned object query.
 这是值得仔细思考的内容!
-** Considering label assignment from a global view.(?What's the meaning)
 * 关于Set-Prediction Problem 还可看看下述文章
 Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks
 Generative Adversarial Set Transformers
