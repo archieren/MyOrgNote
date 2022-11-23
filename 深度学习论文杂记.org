@@ -102,31 +102,44 @@ Grad-cam: Visual explanations from deep networks via gradient-based localization
 ** Graph Convolution:
   - Spatial Convolution
   - Spectral Convolution
-* DETR 带来的新范式
+* DETR 给Object Detection带来的新范式
 Detection Transformer(DeTr): End-To-End by Transformers.
 Anchor Based --> Anchor Free --> End-to-End!!
 ** How does DeTr do it?
 *** Transformer
-*** Object Queries
+*** Learnable Object Queries
 *** Set-Prediction
 
 ** Some Rethinking
 *** Effective Transformer.
-*** Sparse Object Detection Methods.
+Deformable-DeTr(重点看看,打开DeTr的正确方式?),UP-DeTr等等
+**** What makes for an effective attention mechanisms?
+**** How to aggregate multi-scale features into attention mechanisms?
+**** How to train the transformer effectively?
+这方面的研究,和在ViT上的很多研究是一致的.
+
+*** What makes for a sparse object detection methods.
+Sparse R-CNN等
 *** New label-assignment methods.
-**** Considering label assignment from a global view.(?What's the meaning)
+OTA等,
+**** Considering label assignment from a global view.
 *** What makes for a end-to-end object detection?
-*** How to segment objects by learning queries?
-*** Viewing object detection as set-prediction task.
-*** Replacing Anchors with learned object query.
-这是值得仔细思考的内容!
+OneNet等
+主要还是和label-assignment有关.具体的说,还要考虑什么因素?
+*** How to extends to segmentation task?
+SOLQ等
+*** How to apply for transfer learning or domain adaption task?
+** DINO家族(此DINO非彼DiNo,不道德的取名方式)
+DINO means "Detr with Improved deNoising anchOr boxes"
+DAB-DeTr --> DN-DeTr --> DiNo --> Mask DiNo
 * 关于Set-Prediction Problem 还可看看下述文章
+Deep Sets
 Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks
 Generative Adversarial Set Transformers
 Conditional Set Generation with Transformers
-* DINO 给ViT的带来的新范式
+* DiNo 给ViT的带来的新范式
 文章2020 - DINO: Emerging Properties in Self-Supervised Vision Transformers
-DINO means "Self-distillation with no labels"
+DiNo means "self-Distillation with No labels"
 关键问题:学习方法对ViT架构为什么有如此大的影响?导致自监督学习在目前是个研究热点!
 ** 回顾一下Self-Supervised的历史
 (有必要的话,可以考虑一下KD(Knowledge Distillation), 和Self-Supervised之间的碰撞)
