@@ -13,6 +13,7 @@
 ** SDF - Shape Diameter Function
 ** AC - Ambient Occlusion
 ** AGD - Average Geodesic Distance
+** SuperPoint,尽管是Image上的工作,其基于Homograhic Adaption的Self-Supervised Learning是值得思考的.
 * PointNet &. PointNet++奠定了什么基础
 ** PointNet
 针对Spatial Point Set的几个特性:
