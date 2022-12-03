@@ -146,5 +146,19 @@ DiNo means "self-Distillation with No labels"
 *** Pretext Task : "Relative Location","Colorization","Context Encoder","Rotation Prediction"等主题文章.
 "Pretext Task":所谓的"前置任务".
 *** Contrastive Learning :
-*** Masked Image(Data) Modeling :
+**** "MoCo(v1,v2,v3)":MoCo 这系列论文，将之前的对比学习,总结成字典查找的框架,再基于此提出 MoCo(Moment Contrast).
+
+**** "SimCLR":
+**** "BYOL(Boot your own latent)":
+**** "SwAV(Swapping Assignments between multiple Views )":
+**** "SimSiam": SimSiam 这篇论文则是对上述多篇论文进行了总结,并且化繁为简.
+**** "BarlowTwins":
+**** "DiNo":
+
+*** Masked Image(Data) Modeling:
+ViT, 为NLP中的掩码学习机制，应用到视觉学习中， 打开了一扇大门！
+**** BEiT(Bidirectional Encoder representation from Image Transformers):
+**** MAE(Masked Autoencoders):
+**** SimMIM:
+**** MaskFeat:
 
