@@ -127,7 +127,12 @@ OTA等,
 OneNet等
 主要还是和label-assignment有关.具体的说,还要考虑什么因素?
 *** How to extends to segmentation task?
-SOLQ等
+**** SOLQ等,还有对Box的考虑
+**** MaX-DeepLab则开启了基于Mask Transformer的分割框架.(MaX指Mask XFormers).
+MaX-DeepLab --> kMaX-DeepLab
+SegFormer --> Panoptic SegFormer
+MaskFormer --> Mask2Former
+**** DiNo --> Mask DiNo 将两者结合起来了?
 *** How to apply for transfer learning or domain adaption task?
 ** DINO家族(此DINO非彼DiNo,不道德的取名方式)
 DINO means "Detr with Improved deNoising anchOr boxes"
