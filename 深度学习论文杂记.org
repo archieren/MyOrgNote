@@ -127,13 +127,13 @@ OTA等,
 OneNet等
 主要还是和label-assignment有关.具体的说,还要考虑什么因素?
 *** How to extends to segmentation task?
-**** SOLQ等,还有对Box的考虑
+**** SOLQ(Segmenting Object As Queries)等,还有对Box的考虑
 **** MaX-DeepLab则开启了基于Mask Transformer的端到端(全景)分割框架.(MaX指Mask XFormers).
 MaX-DeepLab --> kMaX-DeepLab
-MaskFormer --> Mask2Former
-(MaX-DeepLab 和 MaxFormer的对比,很有意思,在争论. pixel classification --> mask classification)
-SegFormer --> Panoptic SegFormer
-DiNo --> Mask DiNo
+MaskFormer --> Mask2Former --> OneFormer
+(MaX-DeepLab 和 MaxFormer的对比,很有意思,在争论谁先落实 pixel classification 到 mask classification的转变)
+SegFormer (For semantic segmentation)--> Panoptic SegFormer (For panoptic segmentation)
+DiNo --> Mask DiNo (Can Detection and Segmentation be unified)
 
 *** How to apply for transfer learning or domain adaption task?
 ** DINO家族(此DINO非彼DiNo,不道德的取名方式)
