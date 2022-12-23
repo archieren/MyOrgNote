@@ -129,11 +129,15 @@ OneNet等
 *** How to extends to segmentation task?
 **** SOLQ(Segmenting Object As Queries)等,还有对Box的考虑
 **** MaX-DeepLab则开启了基于Mask Transformer的端到端(全景)分割框架.(MaX指Mask XFormers).
-MaX-DeepLab --> kMaX-DeepLab
-MaskFormer --> Mask2Former --> OneFormer
-(MaX-DeepLab 和 MaxFormer的对比,很有意思,在争论谁先落实 pixel classification 到 mask classification的转变)
-SegFormer (For semantic segmentation)--> Panoptic SegFormer (For panoptic segmentation)
-DiNo --> Mask DiNo (Can Detection and Segmentation be unified)
+似乎有这样一条线索: *Box Based + Pixel Classification* --> *Box Free + Pixel Classification* --> *Mask Classification*
+- MaX-DeepLab --> kMaX-DeepLab
+- MaskFormer(For Semantic segmentation) --> Mask2Former (For panoptic segmentation) --> OneFormer (Universe image segmentation)
+  + MaX-DeepLab 和 MaxFormer,
+  + 很有意思,在争论谁先落实 pixel classification 到 mask classification的转变.
+  + Mask Classification 理论上,可以将各种分割任务进行统一.
+- SegFormer (For semantic segmentation)--> Panoptic SegFormer (For panoptic segmentation)
+- DiNo (For object detetction) --> Mask DiNo (Can object detection and segmentation be unified)
+  + 这是在找话题吗?还是真见地?
 
 *** How to apply for transfer learning or domain adaption task?
 ** DINO家族(此DINO非彼DiNo,不道德的取名方式)
