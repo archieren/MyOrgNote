@@ -78,4 +78,4 @@ Generative Models + Deep Neural Network = Deep Generative Models
 VAE(Variational AutoEncoder),ARM(AutoRegressive Models),GAN(Generative Adversarial Network),EBM(Energy Based Models),FBM(Flow Based Models),等等.
 但近来,SBGM(Score Based Generative Model), SDE(Stochastic Differential Equation), DBM(Diffusion Probabilistic Models)似乎比较热闹.
 而且它们三者有着深刻得联系.
-
+** 
