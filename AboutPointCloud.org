@@ -42,6 +42,9 @@
 ** GeDi
 * 配准
 ** Teaser[++] 值得研究一下
-       
+* Space is sequences
+这是一个有意思的话题.应当从感知的角度,来看待此问题!
+** MeshWalker
+** CurveNet
 
 
