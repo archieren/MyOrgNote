@@ -38,10 +38,11 @@
 - Batch Hard(BH)
   这要参考[In Defense of the Triplet Loss for Person Re-Identification]中的内容了。
   此文在Siamese/Triplet架构里,算是名文了。
-** SpinNet
-** GeDi
+** SpinNet vs. DIP vs. GeDi 可能要比对看一下, Descriptor如何获取.
 * 配准
-** Teaser[++] 值得研究一下
+** Teaser[++] 值得研究一下.
+** GeoTransformer
+** Greed Grid Search
 * Space is sequences
 这是一个有意思的话题.应当从感知的角度,来看待此问题!
 ** MeshWalker
