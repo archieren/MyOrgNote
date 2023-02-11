@@ -43,6 +43,12 @@
 ** Teaser[++] 值得研究一下.
 ** GeoTransformer
 ** Greed Grid Search
+* Point Cloud Transformer 哪家强?
+按时间次序,依次为:
+- [Nico Engel]2021 - Point Transformer  --(1)
+- [Guo M.H.]2021 - PCT - Point Cloud Transformer  --(2)
+- [Zhao H.S.]2021 - Point Transformer  --(3)
+
 * Space is sequences
 这是一个有意思的话题.应当从感知的角度,来看待此问题!
 ** MeshWalker
