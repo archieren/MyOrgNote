@@ -172,4 +172,21 @@ ViT, 为NLP中的掩码学习机制，应用到视觉学习中， 打开了一�
 **** MAE(Masked Autoencoders):
 **** SimMIM:
 **** MaskFeat:
+* CSSP: Column Subset Selection Problem
+文章Select to Better Learn: Fast and Accurate Deep Learning using Data Selection from Nonlinear Manifolds
+* Variants of Transformer
+我认为这可能是个重要的话题.
+[[file:./images/VariantsOfTransformer.jpg]]
+Sparse transformer, LongFprmer, Switch Transformers, Switch Transformers :
+- *Explicit Sparse Transformer: : Concentrated Attention Through Explicit Selection*
+- *Longformer: The Long-Document Transformer*
+- *Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity*
+Transformer-XL, Star-Transformer:
+- *Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context*
+Routing Transformer, Linformer, Big Bird:(其实还是稀疏路线)
+- *Efficient Content-Based Sparse Attention with RoutingTransformers*
+- *Linformer: Self-Attention with Linear Complexity*
+- *Big Bird: Transformers for Longer Sequences*
+
+
 
