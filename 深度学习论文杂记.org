@@ -189,6 +189,15 @@ Routing Transformer, Linformer, Big Bird:(其实还是稀疏路线)
 - *Big Bird: Transformers for Longer Sequences*
 
 * 理解大语言模型的一些文章
+** 2018年, Sebastian Ruder做了一个回顾,比较权威.
+- 2001 - 神经语言模型
+- 2008 - 多任务学习
+- 2013 - 词嵌入
+- 2013 - NLP 神经网络
+- 2014 - sequence-to-sequence 模型
+- 2015 - 注意力机制
+- 2015 - 基于记忆的网络
+- 2018 - 预训练语言模型
 ** 理解大语言模型的结构和任务
 - Neural Machine Translation by Jointly Learning to Align and Translate (2014)
 - Attention Is All You Need (2017)
