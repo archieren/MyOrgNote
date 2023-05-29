@@ -189,7 +189,8 @@ Routing Transformer, Linformer, Big Bird:(其实还是稀疏路线)
 - *Big Bird: Transformers for Longer Sequences*
 
 * 理解大语言模型的一些文章
-** 2018年, Sebastian Ruder做了一个回顾,比较权威.
+** Sebastian Ruder这几年老作评论:
+*** 2018年, Sebastian Ruder做了一个回顾,比较权威.
 - 2001 - 神经语言模型
 - 2008 - 多任务学习
 - 2013 - 词嵌入
@@ -198,22 +199,39 @@ Routing Transformer, Linformer, Big Bird:(其实还是稀疏路线)
 - 2015 - 注意力机制
 - 2015 - 基于记忆的网络
 - 2018 - 预训练语言模型
-** 理解大语言模型的结构和任务
+*** 2021年, Sebastian Ruder提到的NLP热点
+- Universal Models
+- Massive Multi-task Learning
+- Beyond the Transformer: (Perceiver..)
+- Prompting
+- Efficient Methods
+- Benchmarking
+- Conditional Image Generation
+- ML for Science
+- Program Synthesis
+- Bias
+- Retrieval Augmentation
+- Token-free Models
+- Temporal Adaptation
+- The Importance of Data
+- Meta-learning
+** NLP的10片主干文章
+*** 理解大语言模型的结构和任务
 - Neural Machine Translation by Jointly Learning to Align and Translate (2014)
 - Attention Is All You Need (2017)
 - BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (2018)
 - Improving Language Understanding by Generative Pre-Training (2018)
 - BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension (2019)
-** 规模法则和模型效率提升
+*** 规模法则和模型效率提升
 - Flash Attention: Fast and Memory-Efficient Exact Attention with IO-Awareness (2022)
 - Cramming: Training a Language Model on a Single GPU in One Day (2022)
 - Training Compute-Optimal Large Language Models (2022)
-** 对齐——引导大语言模型完成训练目标
+*** 对齐——引导大语言模型完成训练目标
 - Training Language Models to Follow Instructions with Human Feedback (2022)
 - Constitutional AI: Harmlessness from AI Feedback (2022)
 
-** 关于人类反馈的强化学习(RLHF)
-Asynchronous Methods for Deep Reinforcement Learning (2016)
-Proximal Policy Optimization Algorithms (2017)
-Learning to Summarize from Human Feedback (2022)
+*** 关于人类反馈的强化学习(RLHF)
+- Asynchronous Methods for Deep Reinforcement Learning (2016)
+- Proximal Policy Optimization Algorithms (2017)
+- Learning to Summarize from Human Feedback (2022)
 
