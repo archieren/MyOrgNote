@@ -403,7 +403,8 @@ SPA是VSA的一个实例,易于在具有生物合理性的Spiking Neural Network
   将本是表征离散结构的SP，提升为表征连续结构的SP。（这是个按常规思路进行的创造活动）
 - SSP 在动力学方面的表现,值得关注!
   [Voelker A.R.]2021 - Simulating and Predicting Dynamical Systems With Spatial Semantic Pointers
-
+* Neural ODE这篇文章到底有什么可以高看的地方？
+为什么“Mit的评审意见认为这是一个可以和Ian Goodfellow的GAN相媲美的‘a radical new design’”
 
 * Neural Geometry and Group-CNN
 Neural Geometry源自对 Visual Cortex Columns结构作几何解释。
