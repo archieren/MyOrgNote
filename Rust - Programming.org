@@ -101,4 +101,6 @@ A crate contains a tree of nested *module* _scopes_.
   这样事情就简单多了.其他细节就不多说了.也不管以前的搞法了.
 ** 待补充
 
-
+* struct, trait 透露出的是组合的味道
+impl <trait> for <struct>
+impl <struct>
