@@ -229,9 +229,11 @@ Routing Transformer, Linformer, Big Bird:(其实还是稀疏路线)
 *** 对齐——引导大语言模型完成训练目标
 - Training Language Models to Follow Instructions with Human Feedback (2022)
 - Constitutional AI: Harmlessness from AI Feedback (2022)
-
 *** 关于人类反馈的强化学习(RLHF)
 - Asynchronous Methods for Deep Reinforcement Learning (2016)
 - Proximal Policy Optimization Algorithms (2017)
 - Learning to Summarize from Human Feedback (2022)
-
+** NLP中在PTMs思想下的一般性的神经网络架构
+Pre-trained Models for Natural Language Processing: A Survey(2020)
+See [[./images/NLP/Embedding.jpg]]
+应当说,这篇文章把PTM总结得比较好!
