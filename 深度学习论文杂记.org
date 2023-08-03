@@ -218,16 +218,23 @@ Routing Transformer, Linformer, Big Bird:(其实还是稀疏路线)
 ** NLP的10片主干文章
 *** 理解大语言模型的结构和任务
 - Neural Machine Translation by Jointly Learning to Align and Translate (2014)
+  此文,引入了Attention Mechanisms,成为引入Transformer的动机!
 - Attention Is All You Need (2017)
+  See [[./images/NLP/Attention.jpg]]
+  在原始的 Transformer 模型之后，大语言模型研究开始向两个方向分化:
+  - 基于编码器结构的Transformer模型用于预测建模任务,例如文本分类;
+  - 而基于解码器结构的Transformer模型用于生成建模任务,例如翻译、摘要和其他形式的文本内容生成。
 - BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (2018)
-- Improving Language Understanding by Generative Pre-Training (2018)
+  BERT是基于解码器的模型结构!
+- Improving Language Understanding by Generative Pre-Training (2018) -- GPT
+  GPT是基于解码器的模型结构!
 - BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension (2019)
 *** 规模法则和模型效率提升
 - Flash Attention: Fast and Memory-Efficient Exact Attention with IO-Awareness (2022)
 - Cramming: Training a Language Model on a Single GPU in One Day (2022)
 - Training Compute-Optimal Large Language Models (2022)
 *** 对齐——引导大语言模型完成训练目标
-- Training Language Models to Follow Instructions with Human Feedback (2022)
+- Training Language Models to Follow Instructions with Human Feedback (2022) -- InstructGPT!
 - Constitutional AI: Harmlessness from AI Feedback (2022)
 *** 关于人类反馈的强化学习(RLHF)
 - Asynchronous Methods for Deep Reinforcement Learning (2016)
