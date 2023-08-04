@@ -244,3 +244,17 @@ Routing Transformer, Linformer, Big Bird:(其实还是稀疏路线)
 Pre-trained Models for Natural Language Processing: A Survey(2020)
 See [[./images/NLP/Embedding.jpg]]
 应当说,这篇文章把PTM总结得比较好!
+** Prompting的花样年华
+Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing(2021)
+四个NLP的范式,See: [[./images/NLP/prompting.jpeg]]
+这篇综述,让Prompting红得发紫.其实这篇文章,应当是个典范.一片综述,让一个模糊概念有了清楚的正式定义,并指明了这个领域的研究范畴.
+形式化地讲,在Prompt范式下,需要通过以下三个步骤建立从输入到输出的PipeLine.
+- Prompt addition:
+- Answer search:
+- Answer mapping:
+由是而有下面五方面的工作.
+- Pre-trained Model Choice
+- Prompt Engineering
+- Answer Engineering
+- Expanding the Paradigm
+- Prompt-Based Training Strategies
