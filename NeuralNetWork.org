@@ -136,7 +136,7 @@ Navigation is the core!?
 Visual Exploration, Locomotion等广泛的生物行为都能对空间采样及编码,这意味着类似Grid Cell这样的结构,具有更基础的认知功能!
 
 * [Sorscher B.]2019 - A unified theory for the origin of grid cells through the lens of pattern formations
-这篇文章，可能会是一片重要的文章！
+这篇文章，可能会是一片重要的文章! - 最终,2022年,修改了一下后,在Neuron期刊上发表!
 而[Dumont N.S.Y.;...]2020 - Accurate representation for spatial cognition using grid cells 一文中,也据此来论证SSP的生物合理性.
 
 * [Stensola T.;Moser E.I.]2016 - Grid Cells and Spatial Maps in Entorhinal Cortex and Hippocampus
