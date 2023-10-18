@@ -135,10 +135,6 @@ Navigation is the core!?
 作了一个概述和总结。同时也坐实了他们在[Nathaniel J.K.;Michael J.J.;Elizabeth A.B.]2012 - A map of visual space in the primate entorhinal cortex中的猜想.
 Visual Exploration, Locomotion等广泛的生物行为都能对空间采样及编码,这意味着类似Grid Cell这样的结构,具有更基础的认知功能!
 
-* [Sorscher B.]2019 - A unified theory for the origin of grid cells through the lens of pattern formations
-这篇文章，可能会是一片重要的文章! - 最终,2022年,修改了一下后,在Neuron期刊上发表!
-而[Dumont N.S.Y.;...]2020 - Accurate representation for spatial cognition using grid cells 一文中,也据此来论证SSP的生物合理性.
-
 * [Stensola T.;Moser E.I.]2016 - Grid Cells and Spatial Maps in Entorhinal Cortex and Hippocampus
 It's a review!
 ** Place Cells and Grid Cells神经生理发现
@@ -148,6 +144,10 @@ It's a review!
 Grid Map的组织方式: 沿着 MEC 的 DorsalVentral Axis 的 Modular Organization. See "Discretization of the Entorhinal Grid Map"
 ** Computational Models Of Grid-to-Place Transformation
 一堆的猜想，留待慢慢阅读吧？
+* [Sorscher B.]2019 - A unified theory for the origin of grid cells through the lens of pattern formations
+这篇文章，可能会是一片重要的文章! - 最终,2022年,修改了一下后,在Neuron期刊上发表!
+而[Dumont N.S.Y.;...]2020 - Accurate representation for spatial cognition using grid cells 一文中,也据此来论证SSP的生物合理性.
+
 * New approaches to Deep Networks
 这是一篇评论，议及四种网络
 - CapsuleNet  (Hinton  @ ??)
@@ -345,7 +345,7 @@ Harlow et al.在上世纪上半页,在研究" Discriminating a rewarding from tw
 ** [Behrens T.E.J.;...]2018 - What Is a Cognitive Map
 这篇文章提供了不错的概述!
 Cognitive Map 和 Leaning Set又能怎样地发生关系呢?
-* Semantic Pointer Architecture(SPA) and Spatial Semantic Pointer(SSP)
+* Semantic Pointer Architecture(SPA), Vector Symbolic Architecture and Spatial Semantic Pointer(SSP)
 认知科学, 科学地研究诸如"attention, language use, memory, perception, problem solving, creativity, and thinking"等心智过程(mental process).
 - “most cognitive scientists agree that knowledge in the human mind consists of mental representations”
 - “cognitive science asserts: that people have mental procedures that operate by means of mental representations for the implementation of thinking and action"
@@ -371,18 +371,6 @@ The Neural Engineering Framework (NEF) provides a set of principles for performi
   Transformations are determined using an alternately weighted linear decoding,..
 - Neural dynamics are characterized by considering neural representations as control theoretic state variables.
   Thus, the dynamics of neurobiological systems can be analyzed using control theory.
-** Vector Symbolic Architecture (VSA)
-Vector Symbolic Architecture(VSA)是离散表征的一支,在高维矢量空间建立某种代数结构,并用代数来编码这些离散的MR结构.
-？Architecture指的是基于Vector Symbol构建Mental Representation的方法学
-VSAs have been used to characterize a variety of cognitive behaviours,......
-When VSAs are used to model cognitive behaviours, they essentially define methods for characterizing continuous vectors as both slots and fillers and define a method of binding fillers to slots.
-
-VSA的关键基础在于那个代数结构如何定义.(参考: [Gosmann Jan]2018 - PhD_Thesis -  An Integrated Model of Context, Short-Term, and Long-Term Memory)
-Three types of operators are considered essential in a VSA.
-- A measure of similarity: s
-- A superposition operator: S
-- A binding operator(with an approximate inverse or unbinding operation ): B
-
 ** SPA理论构想,在一本书"How to build a brain"系统地提出来.
 概括说来, 语义指针(Semantic Pointer)假设认为:
 - Higher-level cognitive functions in biological systems are made possible by semantic pointers.
@@ -395,12 +383,30 @@ Three types of operators are considered essential in a VSA.
 
 Semantic Pointer Architecture (SPA; Eliasmith, 2013), which proposes a means of neurally implementing VSAs for explaining cognitive behaviour in biologically plausible spiking networks.
 也可参考: [Gosmann Jan]2018 - PhD_Thesis -  An Integrated Model of Context, Short-Term, and Long-Term Memory
-SPA是VSA的一个实例,易于在具有生物合理性的Spiking Neural Network中实现VSA,并可解释诸多认知行为!
+VSA是SPA的一个实例,易于在具有生物合理性的Spiking Neural Network中实现VSA,并可解释诸多认知行为!
+** Vector Symbolic Architecture (VSA)
+Vector Symbolic Architecture(VSA)是离散表征的一支,在高维矢量空间建立某种代数结构,并用代数来编码这些离散的MR结构.
+？Architecture指的是基于Vector Symbol构建Mental Representation的方法学
+VSAs have been used to characterize a variety of cognitive behaviours,......
+When VSAs are used to model cognitive behaviours, they essentially define methods for characterizing continuous vectors as both slots and fillers and define a method of binding fillers to slots.
+
+VSA的关键基础在于那个代数结构如何定义.(参考: [Gosmann Jan]2018 - PhD_Thesis -  An Integrated Model of Context, Short-Term, and Long-Term Memory)
+Three types of operators are considered essential in a VSA.
+- A measure of similarity: s
+- A superposition operator: S
+- A binding operator(with an approximate inverse or unbinding operation ): B
+
 ** Spatial Semantic Pointer
 目前,前述内容知道大概就行.
 - 令人奇怪的是, SPA中涌现出SSP,能够很好地描述Grid Cells的相关内容!
-  SSP 在 [Komer Berent]2019 - A neural representation of continuous space using fractional binding 一文中提出.
-  将本是表征离散结构的SP，提升为表征连续结构的SP。（这是个按常规思路进行的创造活动）
+  三个层面: Vector Space + SPA + SSP
+  - Vector Space(大家都知道)
+  - VSA(Vector Symbolic Architecture)是SPA(Semantic Pointer Architecture)的一个特例!(看Gosmann J.的博士论文)
+    矢量空间: Semantic Pointers构成了Vector Space!
+    语义算子: 相似, 叠加, 绑定. 特殊元素: Identity vector, Absorbing Element, Unitary Vector
+    重点研究或猜测这些代数对象怎么实现!
+  - 当绑定算子是循环卷积运算时, 可定义"fractional binding",由是有了空间语义指针SSP的概念!
+    SSP 在 [Komer Berent]2019 - A neural representation of continuous space using fractional binding 一文中提出.
 - SSP 在动力学方面的表现,值得关注!
   [Voelker A.R.]2021 - Simulating and Predicting Dynamical Systems With Spatial Semantic Pointers
 * Neural ODE这篇文章到底有什么可以高看的地方？
