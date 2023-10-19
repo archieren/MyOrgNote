@@ -404,7 +404,7 @@ Three types of operators are considered essential in a VSA.
   - VSA(Vector Symbolic Architecture)是SPA(Semantic Pointer Architecture)的一个特例!(看Gosmann J.的博士论文)
     矢量空间: Semantic Pointers构成了Vector Space!
     语义算子: 相似, 叠加, 绑定. 特殊元素: Identity vector, Absorbing Element, Unitary Vector
-    重点研究或猜测这些代数对象怎么实现!
+    重点研究或猜测这些代数对象怎么实现! 其中, Unitary Vector构成的流型空间, 值得研究一下.
   - 当绑定算子是循环卷积运算时, 可定义"fractional binding",由是有了空间语义指针SSP的概念!
     SSP 在 [Komer Berent]2019 - A neural representation of continuous space using fractional binding 一文中提出.
 - SSP 在动力学方面的表现,值得关注!
