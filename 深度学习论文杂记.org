@@ -117,7 +117,8 @@ Deformable-DeTr(重点看看,打开DeTr的正确方式?),UP-DeTr等等
 **** How to aggregate multi-scale features into attention mechanisms?
 **** How to train the transformer effectively?
 这方面的研究,和在ViT上的很多研究是一致的.
-
+*** Deformable Convolution NetWork 和 Transformer之间的深沉关系.(?都在解决"long-range dependencies and adaptive spatial aggregation"问题?)
+InternImage, 按照ViTs的架构,来设计基于DCN的架构, 居然也取得了SOTA.
 *** What makes for a sparse object detection methods.
 Sparse R-CNN等
 *** New label-assignment methods.
@@ -142,7 +143,8 @@ OneNet等
 *** How to apply for transfer learning or domain adaption task?
 ** DINO家族(此DINO非彼DiNo,不道德的取名方式)
 DINO means "Detr with Improved deNoising anchOr boxes"
-DAB-DeTr --> DN-DeTr --> DiNo --> Mask DiNo
+DAB-DeTr --> DN-DeTr --> DiNo --> Mask DiNo --> OpenSeeD
+
 * 关于Set-Prediction Problem 还可看看下述文章
 Deep Sets
 Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks
