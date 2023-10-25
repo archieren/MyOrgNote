@@ -53,5 +53,6 @@
 这是一个有意思的话题.应当从感知的角度,来看待此问题!
 ** MeshWalker
 ** CurveNet
+* "Image as Set of Points" 是不是提出了一个有前途的范式呢?
 
 
