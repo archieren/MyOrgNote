@@ -260,3 +260,6 @@ Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natu
 - Answer Engineering
 - Expanding the Paradigm
 - Prompt-Based Training Strategies
+** Prompting 可能意味一些更深刻的思想内涵!
+!!!怎么说呢?
+
