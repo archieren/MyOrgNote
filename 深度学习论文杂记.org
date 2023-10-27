@@ -263,3 +263,6 @@ Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natu
 ** Prompting 可能意味一些更深刻的思想内涵!
 !!!怎么说呢?
 
+* Deformable Convolution 和 Transformer的一个局部较量!
+商汤的2023 - InternImage: Exploring Large-Scale Vision Foundation Models with Deformable Convolutions.
+看来这篇文章将DCN推到一个可理论探索的地步!
