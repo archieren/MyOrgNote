@@ -151,7 +151,10 @@ Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Ne
 Generative Adversarial Set Transformers
 Conditional Set Generation with Transformers
 * DiNo 给ViT的带来的新范式
-文章2020 - DINO: Emerging Properties in Self-Supervised Vision Transformers
+看来FaceBook或MetaAI在这个方向,有不错的努力.前面还有项工作,DeiT,也作了不少努力!
+文章2021 - DINO: Emerging Properties in Self-Supervised Vision Transformers
+文章2023 - DINOv2: Learning Robust Visual Features without Supervision (附加 文章2023 - Vision Transformers Need Registers)
+
 DiNo means "self-Distillation with No labels"
 关键问题:学习方法对ViT架构为什么有如此大的影响?导致自监督学习在目前是个研究热点!
 ** 回顾一下Self-Supervised的历史
@@ -160,13 +163,13 @@ DiNo means "self-Distillation with No labels"
 "Pretext Task":所谓的"前置任务".
 *** Contrastive Learning :
 **** "MoCo(v1,v2,v3)":MoCo 这系列论文，将之前的对比学习,总结成字典查找的框架,再基于此提出 MoCo(Moment Contrast).
-
 **** "SimCLR":
 **** "BYOL(Boot your own latent)":
 **** "SwAV(Swapping Assignments between multiple Views )":
 **** "SimSiam": SimSiam 这篇论文则是对上述多篇论文进行了总结,并且化繁为简.
 **** "BarlowTwins":
-**** "DiNo":
+**** "DiNo": "self-supervised learning as a form of Mean Teacher self-distillation with no labels."
+这句话怎么理解?
 
 *** Masked Image(Data) Modeling:
 ViT, 为NLP中的掩码学习机制，应用到视觉学习中， 打开了一扇大门！
