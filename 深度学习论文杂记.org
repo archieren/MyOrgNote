@@ -156,6 +156,8 @@ Conditional Set Generation with Transformers
 文章2023 - DINOv2: Learning Robust Visual Features without Supervision (附加 文章2023 - Vision Transformers Need Registers)
 
 DiNo means "self-Distillation with No labels"
+Dino是第一个在ViT架构上作自监督学习的!
+之前,都是在CNN架构的网络上作自监督学习的.
 关键问题:学习方法对ViT架构为什么有如此大的影响?导致自监督学习在目前是个研究热点!
 ** 回顾一下Self-Supervised的历史
 (有必要的话,可以考虑一下KD(Knowledge Distillation), 和Self-Supervised之间的碰撞)
@@ -177,6 +179,43 @@ ViT, 为NLP中的掩码学习机制，应用到视觉学习中， 打开了一�
 **** MAE(Masked Autoencoders):
 **** SimMIM:
 **** MaskFeat:
+** Dino
+*** 网络架构: Self Distillation Architecture
+采用Momentum Tearcher模型.思想来自"Momentum Contrast for Unsupervised Visual Representation Learning".
+据说,可有效解决Mode Collapse 问题!
+*** 数据增强
+DINO 中最核心的数据采样策略便是图像裁剪，这也是自监督学习领域应用非常广泛的主策略之一.
+一般来说，我们可以将裁剪后的图像分为两种:
+- Local views: 即局部视角，也称为 small crops，指的是抠图面积小于原始图像的 50%.
+- Global views: 即全局视角，也称为 large crops，指的是抠图面积大于原始图像的 50%.
+在 DINO 中，学生模型接收所有预处理过的crops图，而教师模型仅接收来自global views的crops图。
+*** Loss函数
+教师和学生得分的Cross Entropy!
+*** Centering and Sharpening (可以研究一下,处理模式崩塌的技术)
+在自监督学习中，mode collapse 是指网络的学习过程中出现了多样性减少的现象.
+具体来说，当网络学习到一组特征表示时，往往会出现多个输入数据映射到相同的特征表示的情况，这就是所谓的模式崩塌.
+
+这种现象通常是由于网络在优化过程中陷入了局部最优解.
+只能考虑到一部分数据的特征表示,而忽略了其它数据样本的模式和特征,从而导致了多样性缺失的现象,因此会对模型的鲁棒性产生很大的负面影响.
+** DinoV2(偏现有技术的灵活综合运用!)
+改善内容:
+*** 数据集处理:
+去燥(不合格的数据),去重(参考:A self-supervised descriptor for image copy detection) 得到数据集LVD-142M.
+*** 方法
+**** Discriminative Self-Supervised Method: 可认为是下述(DINO, iBOT, SwAV)三种方法的综合/组合?
+- DINO: <==> Image Level Objective
+- iBOT: <==> Patch Level Objective
+- Sinkhorn-Knopp centering(SwAV):这个方法的核心思想是通过正则化来使学生和教师网络在特征表示上更加接近.
+  (出自Dino作者早期的一些工作(其实,我发现DiNoS的工作都和他在Contrastive Learning,Deep Clustering方面的工作有关):
+   "2020 - Unsupervised learning of visual features by contrasting cluster assignments",
+   "2018 - Deep Clustering for Unsupervised Learning of Visual Features"
+  )
+- Untying head weights between both image and patch objectives. DiNo易过拟合,iBot易欠拟合.
+- KoLeo regularizer:
+- Adapting the resolution:
+**** Efficient Implementation
+这得学习源代码了!
+
 * CSSP: Column Subset Selection Problem
 文章Select to Better Learn: Fast and Accurate Deep Learning using Data Selection from Nonlinear Manifolds
 * Variants of Transformer
