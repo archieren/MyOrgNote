@@ -130,11 +130,17 @@ OneNet等
 *** How to extends to segmentation task?
 **** SOLQ(Segmenting Object As Queries)等,还有对Box的考虑
 **** MaX-DeepLab则开启了基于Mask Transformer的端到端(全景)分割框架.(MaX指Mask XFormers).
-似乎有这样一条线索: *Box Based + Pixel Classification* --> *Box Free + Pixel Classification* --> *Mask Classification*
+似乎有这样一条线索: *Box Based + Mask Classification --> *Box Free + *Mask Classification*
+MaX是mask xformer的缩写! 可以写成一个公式!  SoftMax(Features x ObjectQueries.T) [维度为 (HW, D) x (D, N) --> (HW, N)].想想!
 - MaX-DeepLab --> kMaX-DeepLab
+  MaX-DeepLab的主要贡献是, 在做Mask Classification时,去掉了对Box(如Mask R-CNN)的依赖.
+  这样作的好处,我猜,在于Segmentation 不再是 Detection的后继步骤.如同Faster R-CNN 与 Mask R-CNN的关系!
+  但其Loss函数还是依赖很多.
+  kMaX-DeepLab在MaX-DeepLab的基础上,讨论了cross-attention和cluster之间的关系.
 - MaskFormer(For Semantic segmentation) --> Mask2Former (For panoptic segmentation) --> OneFormer (Universe image segmentation)
-  + MaX-DeepLab 和 MaxFormer,
-  + 很有意思,在争论谁先落实 pixel classification 到 mask classification的转变.
+  + MaX(Mask XFormer)
+    MaX垫定了理论形式.
+    MaskFormer应当是后继工作!
   + Mask Classification 理论上,可以将各种分割任务进行统一.
 - SegFormer (For semantic segmentation)--> Panoptic SegFormer (For panoptic segmentation)
 - DiNo (For object detetction) --> Mask DiNo (Can object detection and segmentation be unified)
