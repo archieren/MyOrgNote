@@ -444,7 +444,7 @@ Michael M. Bronstein这个人,学习Klein Erlangen Programme的精神,搞了个�
 ** [Buckley C.L.]2017 - The free energy principle for action and perception: A mathematical review
 ** [Clark A.]2013 - Whatever next? Predictive brains, situated agents, and the future of cognitive science
 ** [Now]2019 - An Introduction to Variational Autoencoders
-* Self-Attention is not Attention!
+* Self-Attention in transformers is not Attention!
 ** [John K. Tsotsos]2023 - Self-attention in Vision Transformers Performs Perceptual Grouping, Not Attention
 没怎么读这篇文章.但Tsotsos出来发话,可能还是有不少意图的.
 * Mamba代表State Space Model(SSM)走入和Transformer竞争的行列!
