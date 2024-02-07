@@ -448,8 +448,20 @@ Michael M. Bronstein这个人,学习Klein Erlangen Programme的精神,搞了个�
 ** [John K. Tsotsos]2023 - Self-attention in Vision Transformers Performs Perceptual Grouping, Not Attention
 没怎么读这篇文章.但Tsotsos出来发话,可能还是有不少意图的.
 * Mamba代表State Space Model(SSM)走入和Transformer竞争的行列!
+但前景如何?
 Hippo -> S4 -> H3 -> Mamba
 ** [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
 ** [Gu A.;...]2021 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
 ** [Dao T.]2023 - Hungry Hungry Hippos - Towards Language Modeling with State Space Models
 ** [CMU]2023 - Mamba - Linear-Time Sequence Modeling with Selective State Spaces
+* Modern Hopfield Network这条线路又意味者什么?
+Hopfield网络是联想记忆,记忆Patterns就定义了能量地势,地势的梯度下降给出「回忆」的结果.
+** Modern Hopfield Network 开始于Binary States的Dense Associative Memory(DAM:[Krotov D.]2016 - Dense Associative Memory for Pattern Recognition.)
+** 继之以Continuous States的进展!([Demircigil, M;...]2017 -  On a model of associative memory with a huge storage capacity)
+** 发现Modern Hopfield Network和Transformers的关系!
+Attention is all you need! && Hopfield is all you need!
+** Krotov和Hopfield出来澄清一些事!!!([Krotov D.]2020 - Large Associative Memory Problem in Neurobiology and Machine Learning)
+[Demircigil, M.;]定义的能量函数,不符合生理学或生物学道理!从微观生物学的角度,也可以给出新的能量函数,等等!
+** [Krotov D.]在IBM在搞名堂! Hiearchical Associative Memory && Energy Transformers
+*** [Krotov D.]2021 - Hierarchical Associative Memory
+*** [Krotov D.]2022 - Energy Transformers
