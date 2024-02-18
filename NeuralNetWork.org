@@ -455,6 +455,13 @@ Hippo -> S4 -> H3 -> Mamba
 ** [Dao T.]2023 - Hungry Hungry Hippos - Towards Language Modeling with State Space Models
 ** [CMU]2023 - Mamba - Linear-Time Sequence Modeling with Selective State Spaces
 * Modern Hopfield Network这条线路又意味者什么?
+Energy-Based-Model(EBM)的要点:
+ - "Capture Dependencies through an energy function"
+ - "but, the energy is used for inference, not for learning"
+ - "Probabilistic models are a special case of EBM.","but, EBM is more flexible!"
+   - "EBM gives more flexibility in the choice of the scoring function."
+   - "More flexibility in the choice of objective function for learning."
+   - "From energy to probability: Gibbs-Boltzmann distribution"
 Hopfield网络是联想记忆,记忆Patterns就定义了能量地势,地势的梯度下降给出「回忆」的结果.
 ** Modern Hopfield Network 开始于Binary States的Dense Associative Memory(DAM:[Krotov D.]2016 - Dense Associative Memory for Pattern Recognition.)
 ** 继之以Continuous States的进展!([Demircigil, M;...]2017 -  On a model of associative memory with a huge storage capacity)
