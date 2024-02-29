@@ -458,9 +458,9 @@ Hippo -> S4 -> H3 -> Mamba
 Energy-Based-Model(EBM)的要点:
  - "Capture Dependencies through an energy function"
  - "but, the energy is used for inference, not for learning"
- - "Probabilistic models are a special case of EBM.","but, EBM is more flexible!"
+ - "Probabilistic models are a special case of EBM.","but, EBM is more"
    - "EBM gives more flexibility in the choice of the scoring function."
-   - "More flexibility in the choice of objective function for learning."
+   - "More flexibility in the choice of objective function for learning"
    - "From energy to probability: Gibbs-Boltzmann distribution"
 Hopfield网络是联想记忆,记忆Patterns就定义了能量地势,地势的梯度下降给出「回忆」的结果.
 ** Modern Hopfield Network 开始于Binary States的Dense Associative Memory(DAM:[Krotov D.]2016 - Dense Associative Memory for Pattern Recognition.)
@@ -472,3 +472,39 @@ Attention is all you need! && Hopfield is all you need!
 ** [Krotov D.]在IBM在搞名堂! Hiearchical Associative Memory && Energy Transformers
 *** [Krotov D.]2021 - Hierarchical Associative Memory
 *** [Krotov D.]2022 - Energy Transformers
+* E-Patient/Digital-Patient & E-Medicine/Digital-Medicine ~~> Computational Anatomy(计算解剖学) & Computational Physiology(计算生理学)
+** Computational Anatomy
+The objective of Computational Anatomy (CA) is the modeling and analysis of biological variability of the human anatomy.
+Typical applications cover
+- the simulation of average anatomies and normal variations,
+- the discovery of structural differences between healthy and diseased populations,
+- and the detection and classification of pathologies from structural anomalies.
+
+Studying the variability of biological shapes is an old problem (cf. the remarkable book “On Shape and Growth” by D’Arcy Thompson).
+Significant efforts have been made since that time to develop a theory for statistical shape analysis(统计形状分析).
+Despite all these efforts, there is a number of challenging mathematical issues which remain largely unsolved in general.
+A particular issue is the computation of statistics on manifolds which can be of infinite dimension (e.g the group of diffeomorphisms).
+
+There is a classical stratification(分层) of the problems into the following 3 levels:
+- construction from medical images of anatomical manifolds of points, curves, surfaces and volumes;
+- assignment of a point to point correspondence between these manifolds using a specified class of transformations (e.g. rigid, affine, diffeomorphism);
+- generation of probability laws of anatomical variation from these correspondences.
+** Computational Physiology
+The objective of Computational Physiology (CP) is to provide models of the major functions of the human body and numerical methods to simulate them.
+The main applications are in medicine and biology,
+where CP can be used,for instance,
+- to better understand the basic processes leading to the apparition of a pathology,
+- to model its probable evolution
+- and to plan, simulate, and monitor its therapy.
+
+
+There is a hierarchy of modeling levels for CP models of the human body:
+- the ﬁrst level is mainly geometrical, and addresses the construction of a digital description of the anatomy, essentially acquired from medical imagery;
+- the second level is physical, involving mainly the biomechanical modeling of various tissues, organs, vessels, muscles or bone structures;
+- the third level is physiological, involving a modeling of the functions of the major biological systems
+  (e.g. cardiovascular, respiratory, digestive, central or peripheral nervous, muscular, reproductive, hormonal, etc.)
+  or some pathological metabolism (e.g. evolution of cancerous or inﬂammatory lesions, formation of vessel stenoses, etc.);
+- a fourth level would be cognitive, modeling the higher functions of the human brain.
+
+这个分层,是从Visible Human 到Physioloical Human的分层!!
+** 从现在情况来看,深度学习神经网络在这些方面,有很多应用!
