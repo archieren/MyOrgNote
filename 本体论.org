@@ -1,1 +1,13 @@
 #+Title: 本体论相关的内容,涉及逻辑和计算相关等理论
+
+* 一些杂小概念!
+** URL,URI,IRI, URN, PURL等等
+它们的混淆是历史造成的,现在基本都统一在URI/IRI的观点下了.
+问题的实质是, Name要承担什么样的功能,或语义,参看"https://www.w3.org/DesignIssues/"
+- url的通用语法,一般有九个部分: <scheme>://[<user>:<password>@]<host>[:<port>]/<path>[?<query>][#<fragment>]
+  url是有"物理"含义的,强调访问功能!
+- URN, URI/IRI是URL的扩展,去掉了"物理"含义,强调Identifier的功能.通用语法是: <scheme name>:<hierarchical part>[?<query>][#<fragment>]
+  URI只支持Ascii,IRI可以理解为URI的国际化版本.
+  URN基本被淡化了!
+- PURL(Persistent URL)是用URL实现URN功能的例子.
+  由于PURL加了一层映射,PURL会导致现有的互联网架构发生变化，做这种改动需要进行大量的工作.因此目前还是URL的天下.
