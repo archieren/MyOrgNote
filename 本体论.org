@@ -6,14 +6,17 @@
 #+CAPTION: 知识建模方法回顾
 [[file:./images/KG/知识图谱相关工作.png]]
 *** 关系型数据库-知识工程-语义网-知识图谱-事理图谱-常识概念图谱-知识超图
-*** "建模"中,究竟面临什么问题?在各个实践领域,碰到的具体问题
+*** "建模"中,究竟面临什么问题?在各个实践领域,碰到的具体问题,略.
 ** OpenSPG认为的原则：(关键是，概念、实体、事件三种类型，在OpenSPG理论是什么？)
-!! 我感觉他背后有一套元理论(本体).EntityType,EventType,ConceptType,STDType构成了其本体的主要内容!
+*** 我的看法!
+!! 我感觉他背后有一套元理论(本体).EntityType,EventType,ConceptType,STDType之间的关系,构成了其本体的主要内容!
+"EntityType,EventType,ConceptType,STDType"后来又有人写成"EntityClass,EventClass,ConceptClass,STDClass",是要配合OWL?
 但未找到它们的Formal Description!
+事实上,应当看看 *"Heather Hedden的Taxonomy-Driven Ontology Design"* 里面的观点!
 *** 类型选择原则
 - 原则 1：复杂多元结构用实体类型或事件类型
 - 原则 2：扁平化的分类标签用概念类型
-- 原则 3：实体/事件多类型使用动态分类原则(这个要看一下! EntityType/EventType -> belongsTo -> ConeptType)
+- 原则 3：实体/事件多类型使用动态分类原则(理解 Entity/Event -> belongsTo -> Concept 就行了)
 - 原则 4：概念类型不继承
 *** 属性/关系选择原则
 - 原则 5：关系的指向遵守由动到静原则，反之被禁止
