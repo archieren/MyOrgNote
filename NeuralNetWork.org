@@ -472,6 +472,8 @@ Attention is all you need! && Hopfield is all you need!
 ** [Krotov D.]在IBM在搞名堂! Hiearchical Associative Memory && Energy Transformers
 *** [Krotov D.]2021 - Hierarchical Associative Memory
 *** [Krotov D.]2022 - Energy Transformers
+** 能量函数,是否在Associative Memory和Probabilistic Modeling之间建立了桥梁？（2024 - Bridging Associative Memory and Probabilistic Modeling）
+人工智能的两个基础领域,是否有融通的可能？
 * E-Patient/Digital-Patient & E-Medicine/Digital-Medicine ~~> Computational Anatomy(计算解剖学) & Computational Physiology(计算生理学)
 ** Computational Anatomy
 The objective of Computational Anatomy (CA) is the modeling and analysis of biological variability of the human anatomy.
