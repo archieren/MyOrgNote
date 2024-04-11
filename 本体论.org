@@ -1,5 +1,27 @@
 #+Title: 本体论相关的内容,涉及逻辑和计算相关等理论
 
+* 知识表示的深层理由是什么?[来自Blog(作者应当是NeoSemantics的主力开发人员): Ontologies in Neo4j: Semantics and Knowledge Graphs]
+** Ontologies is AI.
+#+CAPTION: Context:Ontologies is AI(AI /= ML)
+#+NAME: fig:知识表示和推理
+[[file:./images/KG/Knowledge-representation-and-reasoning.png]]
+** What's the rationale behind knowledge representation?
+#+CAPTION: A Simple View! Smart Data!
+#+NAME: fig:一个简单的观点.智能数据!!!
+[[file:./images/KG/Knowledge-representation-and-reasoning.png]]
+** 从用途来看本体
+A Ontology is a form of representing is a domain model!!!
+#+CAPTION: It has three characteristics.
+#+NAME: 三个特征
+[[file:./images/KG/Ontologies.png]]
+** Ontologies and Neo4j
+在Neo4j中,建立本体有两个用途:
+- Interoperability: Defininitions of shared vocabularies!
+  Exposing your Neo4j data as RDF using standard vocabularies!
+- Inferencing: Actionable knowledge fragments!
+  Deriving new knowledge from existing one!
+
+  NeoSemantics!!!
 * "摆脱复杂图谱术语，7个原则搞定Schema建模"一文的摘要
 对OpenSPG Schema建模的总结
 ** 对历史上相关工作的简评
