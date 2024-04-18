@@ -450,10 +450,12 @@ Michael M. Bronstein这个人,学习Klein Erlangen Programme的精神,搞了个�
 * Mamba代表State Space Model(SSM)走入和Transformer竞争的行列!
 但前景如何?
 Hippo -> S4 -> H3 -> Mamba
-** [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
-** [Gu A.;...]2021 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
-** [Dao T.]2023 - Hungry Hungry Hippos - Towards Language Modeling with State Space Models
-** [CMU]2023 - Mamba - Linear-Time Sequence Modeling with Selective State Spaces
+ - [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
+ - [Gu A.;...]2021 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
+ - [Dao T.]2023 - Hungry Hungry Hippos - Towards Language Modeling with State Space Models
+ - [CMU]2023 - Mamba - Linear-Time Sequence Modeling with Selective State Spaces
+** Gu A.在他的博士论文里,对基本概念讲得更清楚!
+Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问题,这是开窍点吗?
 * Modern Hopfield Network这条线路又意味者什么?
 Energy-Based-Model(EBM)的要点:
  - "Capture Dependencies through an energy function"
