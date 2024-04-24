@@ -2,7 +2,8 @@
 #+STARTUP: indent
 #+TITLE: NeuralNetwork 阅读纪要
 
-* 概要
+* 理部
+** 概要
 对于这些年的盲目阅读，很难给出一个合乎逻辑的条理来。
 但一直以来，围绕着Retinotopy（Tonotopy 从没关注过）的Functional Architecture, Computational Model, Biology Origin等，隐含地关注着一下几个主题方面：
 - Retina-LGN的感受野的非线性结构。以Saccade/Microsaccade为线索，引出来的一系列问题！
@@ -12,7 +13,7 @@
 - Cortex的Column/Microcolumn结构的一般化问题。
 - 在Perceptual Grouping问题下，思考association问题。对NeuralGeometry这个小众的数学模型很着迷。
 
-** Retina:Microsaccade and saccade.
+*** Retina:Microsaccade and saccade.
 1. [Field G.D. ;Chichilnisky E.J. ]2007-Information Processing in the Primate Retina
    总结了视网膜在神经生理学、解剖学上的新认知。
    - Many distinct pathways of visual information emanate from the retina.
@@ -86,19 +87,19 @@
 信号的多样性、信号激励的非线性整合的多样性，是这些故事的内容。
 视网膜的故事,最终引向这句话:Subunits appear to be a common computational motif in the brain.
 但带来的问题: Encoding and decoding in a heterogeneous population!
-** Visual Neocortex
-* Place Cells/Grid Cells/Head Cells/Border Cells/Speed Cells/Trace Cells/Object Cells/Object vector Cells, and so on
+*** Visual Neocortex
+** Place Cells/Grid Cells/Head Cells/Border Cells/Speed Cells/Trace Cells/Object Cells/Object vector Cells, and so on
 观看视频"Grid Cells, Object Representations, and Memory" & "Grid Cells and the Brain's Spatial Mapping System"
 Memory is a process reproduce/reconstruction!? (David Marr)
 Navigation is the core!?
-** Brain Regions Involved in Spatial Cognition
+*** Brain Regions Involved in Spatial Cognition
 涉及空间认知的脑区域,下图示意.("Roddy M Grieves and Kate J Jeffery. The representation of space in the brain. Behavioural Processes, 135:113–131, 2017.")
 [[file:./images/GridCells/SpatialRecognition.jpg]]
-** 网格细胞的基本性质
-*** Oritention, WaveLength, Phase
+*** 网格细胞的基本性质
+**** Oritention, WaveLength, Phase
 确切地说,其感受野的特性:具有格子性状!
 [[file:./images/GridCells/Attributes.jpg]]
-*** Changing as Enviroment Changing
+**** Changing as Enviroment Changing
 - 网格细胞锚定于外界的地标
   网格细胞会锚定于外界的感觉地标，当地标旋转时，网格细胞的网格结构也会跟着旋转。
   [[file:./images/GridCells/ChangeWithAnchor.jpg]]
@@ -127,7 +128,7 @@ Navigation is the core!?
   最开始，大鼠并不熟悉两个房间的空间位置结构，此时每个网格细胞会为每个房间生成一张独立的“网格地图”。
   待大鼠完全熟悉这两个空间后，两个独立的网格结构会融合成一体。
   [[file:./images/GridCells/ChangeWithFamilarity_I.jpg]]
-*** Visual Grid Cells在人脑EC区域中的发现
+**** Visual Grid Cells在人脑EC区域中的发现
 在[Nathaniel J.K.; Elizabeth A.B.]2018 - Grid cells map the visual world一文中，
 对2018年的发现:
   - [Julian J.B.;Keinath A.T.;Frazzetta G.;Epstein R.A.]2018 - Human entorhinal cortex represents visual space using a boundary-anchored grid
@@ -135,20 +136,20 @@ Navigation is the core!?
 作了一个概述和总结。同时也坐实了他们在[Nathaniel J.K.;Michael J.J.;Elizabeth A.B.]2012 - A map of visual space in the primate entorhinal cortex中的猜想.
 Visual Exploration, Locomotion等广泛的生物行为都能对空间采样及编码,这意味着类似Grid Cell这样的结构,具有更基础的认知功能!
 
-* [Stensola T.;Moser E.I.]2016 - Grid Cells and Spatial Maps in Entorhinal Cortex and Hippocampus
+** [Stensola T.;Moser E.I.]2016 - Grid Cells and Spatial Maps in Entorhinal Cortex and Hippocampus
 It's a review!
-** Place Cells and Grid Cells神经生理发现
+*** Place Cells and Grid Cells神经生理发现
 - Place Cells:  ... Tolmanian cognitive maps
 - Grid Cells: ...
-** Grid-to-Place Transformation中的神经生理
+*** Grid-to-Place Transformation中的神经生理
 Grid Map的组织方式: 沿着 MEC 的 DorsalVentral Axis 的 Modular Organization. See "Discretization of the Entorhinal Grid Map"
-** Computational Models Of Grid-to-Place Transformation
+*** Computational Models Of Grid-to-Place Transformation
 一堆的猜想，留待慢慢阅读吧？
-* [Sorscher B.]2019 - A unified theory for the origin of grid cells through the lens of pattern formations
+** [Sorscher B.]2019 - A unified theory for the origin of grid cells through the lens of pattern formations
 这篇文章，可能会是一片重要的文章! - 最终,2022年,修改了一下后,在Neuron期刊上发表!
 而[Dumont N.S.Y.;...]2020 - Accurate representation for spatial cognition using grid cells 一文中,也据此来论证SSP的生物合理性.
 
-* New approaches to Deep Networks
+** New approaches to Deep Networks
 这是一篇评论，议及四种网络
 - CapsuleNet  (Hinton  @ ??)
 - HTM         (Hawkins @ Numenta)
@@ -167,7 +168,7 @@ References
 - Rinkus, G. J.                                  A cortical sparse distributed coding model linking mini- and macrocolumn-scale functionality.(2010).
 - Rinkus, R. & Leveille, J.                      Superposed Episodic and Semantic Memory via Sparse Distributed Representation. (2017).
 
-* Sparsey - Event Recognition Via Deep Hierarchical Sparse Distributed Code - 2014
+** Sparsey - Event Recognition Via Deep Hierarchical Sparse Distributed Code - 2014
 注：在《Radically New Theory of how the Brain Represents and Computes with Probabilities》里又总结了他的那些激进理论。
 A macro/mini-column model of cortical computation
 cells -> mini-columns (competitive modulars) -> macro-columns
@@ -194,11 +195,11 @@ They present a radically different theory that assumes:
    - controlling a tradeoff between storage capacity and embedding the input space statistics in the pattern of intersections over stored codes,
    - epiphenomenally determining correlation patterns across neurons.
 
-* RCN - Recursive Cortical NetWork
+** RCN - Recursive Cortical NetWork
 RCN integrates and builds upon various ideas from Compostional Models - ... - into a structured probabilistic graphical model such that Belief-Propagation can be used as the primary approximate inference engine.
-* Capsulenet
+** Capsulenet
 对这个网络,不能用纯粹的数学或技术眼光看.要看他们二十年来在坚持什么！它那背后简单的哲学！
-** 从"Transforming auto encoder"开始,提出Capsules这个比喻！"Capsules encapsulate all important information about the state of the feature they are detecting in vector form."
+*** 从"Transforming auto encoder"开始,提出Capsules这个比喻！"Capsules encapsulate all important information about the state of the feature they are detecting in vector form."
 下面是那篇文章中最重要的话:
 Instead of aiming for viewpoint invariance in the activities of “neurons”
 that use a single scalar output to summarize the activities of a local pool of replicated feature detectors,
@@ -233,24 +234,23 @@ CNN丢失了feature的状态信息.
 !!但这样看来,和其他的"column"新理念,还是有差异的!
 
 
-** "Dynamic Routing Between Capsules"
+*** "Dynamic Routing Between Capsules"
 这篇文章是"Capsules"理念的又一技术上的探索.
-*** 技术一: "Routing by agreement"
+**** 技术一: "Routing by agreement"
 Compositional Gramar, Hierarchical Representation, Parse Tree 等等,是脑内知识表示的比喻,这似乎是"所期望"的共识！但如何达成这样的表示呢？
 动态路由要解决的问题是:自底向上,构造层次表示！ -- From bottom to up, to construct Parse Tree or Hierarchical Representation!
 Lower level capsule will send its input to the higher level capsule that “agrees” with its input.
 表面看来有点逻辑玄奥.
-*** 技术二: "Squashing"
+**** 技术二: "Squashing"
 "We want the length of the output vector of a capsule to represent the probability that the entity represented by the capsule is present in the current input."
-*** 技术三: 其实是个假设,"At each location in the image, there is at most one instance of the type of entity that a capsule represents."
+**** 技术三: 其实是个假设,"At each location in the image, there is at most one instance of the type of entity that a capsule represents."
 
 
-
-* HTM(Hierarchical Temporal Memory)
+** HTM(Hierarchical Temporal Memory)
 (目前,有这种理论变化 HTM => The Thousand Brains Theory of Intelligence)
-** Biological and Machine Intelligence: - A digital book that documents Hierarchical Temporal Memory (HTM) - 这里面可能真有戏!
+*** Biological and Machine Intelligence: - A digital book that documents Hierarchical Temporal Memory (HTM) - 这里面可能真有戏!
 这是关于HTM的技术文档。
-*** HTM Principles
+**** HTM Principles
 神经生理学上的那些内容，启发了作者的基本原理？
 - Biological Observation: =The Structure of the Neocortex=
   HTM principle:          =Common Algorithms [Cellunar layers - Mini-Columns - Columns]=
@@ -262,7 +262,7 @@ Lower level capsule will send its input to the higher level capsule that “agre
   2. HTM Systems are embeded within sensory-motor Systems
   3. HTM relies on streaming data and sequence memory
   4. On-Line learning
-*** Sparse Distributed Representations
+**** Sparse Distributed Representations
 - Capacity of SDRs and the probability of mismatches
 - Robustness of SDRs and the probability of error with noise
 - Reliable classification of a list of SDR vectors
@@ -270,15 +270,15 @@ Lower level capsule will send its input to the higher level capsule that “agre
 - Robustness of unions in the presence of noise
 需要注意的是,SDR应当是Distributed Vector Representation(DVR)这一庞大议题下的子议题.!
 需要反思的是，“稀疏表示”路线有多少种。这个在"HTM Spatial Pooler"里总结一下！
-*** Encoding Data for HTM Systems
-*** Spatial Pooling algorithms
-*** Tempory Memory Algorithms
-*** Voting across columns
-*** Location Layers in Grid Cells
-** 几篇论文：
-*** Why neurons have thousands synapses - a Theory of Sequence Memory in Neocortex [Hawkins J]2015
+**** Encoding Data for HTM Systems
+**** Spatial Pooling algorithms
+**** Tempory Memory Algorithms
+**** Voting across columns
+**** Location Layers in Grid Cells
+*** 几篇论文：
+**** Why neurons have thousands synapses - a Theory of Sequence Memory in Neocortex [Hawkins J]2015
 建立了 HTM model neurons.
-*** The HTM Spatial Pooler — A Neocortical Algorithm for Online Sparse Distributed Coding [YuWei Cui]2017
+**** The HTM Spatial Pooler — A Neocortical Algorithm for Online Sparse Distributed Coding [YuWei Cui]2017
 Sparse Coding技术中存在的问题：
 - 着重表示，没搞清计算本质。
   重构误差最小+“某条优化原则: 能耗最小，稀疏表示反映客观世界的稀疏结构等等”
@@ -286,16 +286,16 @@ Sparse Coding技术中存在的问题：
   但问题是，它们没考虑Sparse Coding的计算特性。即稀疏码，适用于什么样的计算体系，如何用于计算，等等一系列问题。
 - HTM Spatial Pooler中考虑的因素
   Sparseless, Entropy, Noise Robustness, Stablity.
-*** 关于Location Based FrameWork的思想的形成，目前看三篇文章:
+**** 关于Location Based FrameWork的思想的形成，目前看三篇文章:
 - =A Theory of How Columns in the Neocortex Enable Learning the Structure of the World [Hawkins J.]2017=
   Columns and Layers 是个通用结构,这意味着什么?
 - =Locations in the Neocortex - A Theory of Sensorimotor Object Recognition Using Cortical Grid Cells [Lewis M.]2019=
 - =A Framework for Intelligence and Cortical Function Based on Grid Cells in the Neocortex [Hawkins J.]2019=
   这篇文章提出了Location Based Framwork的思想.
-* The Origins of Orientation Maps in V1
+** The Origins of Orientation Maps in V1
 Neural tuning to visual stimulus orientation is one of the hall-marks of the primary visual cortex (V1) in mammals.
 The orientation map is a hallmark of primary visual cortex in higher mammals.
-** Retina - Thalamus - Cortex
+*** Retina - Thalamus - Cortex
 The Orientation map的形成机理,......
 A key assumption of the current model is that neighboring V1 neurons receive feedforward inputs from a similar population of nearby RGCs, as suggested by the statistical wiring model.
 见[Ringach D.]的2004，2007的文章。
@@ -319,9 +319,9 @@ A key assumption of the current model is that neighboring V1 neurons receive fee
    讨论出这样的观点：
    1) Firstly, seeded by forward afferents.
    2) Secondly, fine-tuned by various types of synaptic plasticity in feedfor-ward and recurrent circuits
-* Cognitive Map
-** Cognitive Map的概念
-*** Tolman et al.在上世纪上半页, 在研究Rats在Maze中的行为时,提出的一个抽象概念.
+** Cognitive Map
+*** Cognitive Map的概念
+**** Tolman et al.在上世纪上半页, 在研究Rats在Maze中的行为时,提出的一个抽象概念.
 "...referring to a rich internal model of the world that accounts for the relationships between events and predicts the consequences of actions."
 这个概念,首先在认知神经科学的"spatial behavior"中,产生了重大影响.
 引导了一系列的发现:
@@ -338,14 +338,14 @@ A key assumption of the current model is that neighboring V1 neurons receive fee
 这些神经活动或处理任务, 是和广义的认知图有关的.
 因此,这些类细胞在复杂的,高维的,非空间的认知图中,如何组织知识,是即将面临的挑战.
 一个抽象的认知图,如何能数学地描述呢?这些描述或表示,又如何编码进网络中,进行运算?
-** Learning set
+*** Learning set
 Harlow et al.在上世纪上半页,在研究" Discriminating a rewarding from two or more stimulus"学习行为时,
 发现了一些有趣的现象,学习者可能学到了一些抽象知识,因此,他猜测有"a learning set"的机制存在, 用以表示抽象知识.
 抽象知识的学习和表示,如何数学地描述?这一路线,我还没有基础知识面,待深入!
-** [Behrens T.E.J.;...]2018 - What Is a Cognitive Map
+*** [Behrens T.E.J.;...]2018 - What Is a Cognitive Map
 这篇文章提供了不错的概述!
 Cognitive Map 和 Leaning Set又能怎样地发生关系呢?
-* Semantic Pointer Architecture(SPA), Vector Symbolic Architecture and Spatial Semantic Pointer(SSP)
+** Semantic Pointer Architecture(SPA), Vector Symbolic Architecture and Spatial Semantic Pointer(SSP)
 认知科学, 科学地研究诸如"attention, language use, memory, perception, problem solving, creativity, and thinking"等心智过程(mental process).
 - “most cognitive scientists agree that knowledge in the human mind consists of mental representations”
 - “cognitive science asserts: that people have mental procedures that operate by means of mental representations for the implementation of thinking and action"
@@ -363,7 +363,7 @@ Cognitive Map 和 Leaning Set又能怎样地发生关系呢?
 
 近来,我看到很多有关表示或表征的文章,各有巨大差异,但似乎均有共同的猜想出处, 即 Cognitive Map.而且,似乎都在想攻克"Spatial Behavior"这个具体的认知领域, 以论证自己的设想的现实性.
 
-** Neural Engineering FrameWork(NEF)
+*** Neural Engineering FrameWork(NEF)
 The Neural Engineering Framework (NEF) provides a set of principles for performing computations with spiking neural networks.
 这是一套SNN的设计原则或方法学.
 - Neural representations are defined by the combination of nonlinear encoding (exemplified by neuron tuning curves) and weighted linear decoding.
@@ -371,7 +371,7 @@ The Neural Engineering Framework (NEF) provides a set of principles for performi
   Transformations are determined using an alternately weighted linear decoding,..
 - Neural dynamics are characterized by considering neural representations as control theoretic state variables.
   Thus, the dynamics of neurobiological systems can be analyzed using control theory.
-** SPA理论构想,在一本书"How to build a brain"系统地提出来.
+*** SPA理论构想,在一本书"How to build a brain"系统地提出来.
 概括说来, 语义指针(Semantic Pointer)假设认为:
 - Higher-level cognitive functions in biological systems are made possible by semantic pointers.
 - Semantic pointers are neural representations that carry partial semantic content.
@@ -384,7 +384,7 @@ The Neural Engineering Framework (NEF) provides a set of principles for performi
 Semantic Pointer Architecture (SPA; Eliasmith, 2013), which proposes a means of neurally implementing VSAs for explaining cognitive behaviour in biologically plausible spiking networks.
 也可参考: [Gosmann Jan]2018 - PhD_Thesis -  An Integrated Model of Context, Short-Term, and Long-Term Memory
 VSA是SPA的一个实例,易于在具有生物合理性的Spiking Neural Network中实现VSA,并可解释诸多认知行为!
-** Vector Symbolic Architecture (VSA)
+*** Vector Symbolic Architecture (VSA)
 Vector Symbolic Architecture(VSA)是离散表征的一支,在高维矢量空间建立某种代数结构,并用代数来编码这些离散的MR结构.
 ？Architecture指的是基于Vector Symbol构建Mental Representation的方法学
 VSAs have been used to characterize a variety of cognitive behaviours,......
@@ -396,7 +396,7 @@ Three types of operators are considered essential in a VSA.
 - A superposition operator: S
 - A binding operator(with an approximate inverse or unbinding operation ): B
 
-** Spatial Semantic Pointer
+*** Spatial Semantic Pointer
 目前,前述内容知道大概就行.
 - 令人奇怪的是, SPA中涌现出SSP,能够很好地描述Grid Cells的相关内容!
   三个层面: Vector Space + SPA + SSP
@@ -409,54 +409,54 @@ Three types of operators are considered essential in a VSA.
     SSP 在 [Komer Berent]2019 - A neural representation of continuous space using fractional binding 一文中提出.
 - SSP 在动力学方面的表现,值得关注!
   [Voelker A.R.]2021 - Simulating and Predicting Dynamical Systems With Spatial Semantic Pointers
-* Neural ODE这篇文章到底有什么可以高看的地方？
+** Neural ODE这篇文章到底有什么可以高看的地方？
 为什么“Mit的评审意见认为这是一个可以和Ian Goodfellow的GAN相媲美的‘a radical new design’”
 
-* Neural Geometry and Group-CNN
+** Neural Geometry and Group-CNN
 Neural Geometry源自对 Visual Cortex Columns结构作几何解释。
 Neural Geometry的主题在于Connection.
 但[Bekkers E.J.]2020 - B-Spline CNNs On Lie Group中的工作,
 将Neural Geometry与Geometric Deep Learning建立了联系.
-** [Sarti A.;Citti G.]2019 - NeuroGeometry of Perception - isotropic and anisotropic aspects
+*** [Sarti A.;Citti G.]2019 - NeuroGeometry of Perception - isotropic and anisotropic aspects
 这算是对Neural Geometry一个阶段的总结.
-** G-CNN
+*** G-CNN
 Group convolutional neural networks (G-CNNs) are a class of neural networks that are equipped with the geometry of groups.
 
-* Deep Implicit Layers
+** Deep Implicit Layers
 隐含层的概念， 有点类似隐函数的概念。
-** Neural ODEs
-** Deep Equilibrium Models
-** Differentiable optimization
-* Graph Neural Diffusion(Neural PDEs)
+*** Neural ODEs
+*** Deep Equilibrium Models
+*** Differentiable optimization
+** Graph Neural Diffusion(Neural PDEs)
 Beltrami Flow, Ricci Flow and So On!
-* Geometric deep learning
+** Geometric deep learning
 Michael M. Bronstein这个人,学习Klein Erlangen Programme的精神,搞了个纲领,叫做“Geometric Deep Learning”.
 参考[Bronstein M.M.]2021 - Geometric Deep Learning - Grids, Groups, Graphs, Geodesics, and Gauges
 
 
-** Geometric Priors
+*** Geometric Priors
 - Symmetry
 - Scale Separation
-** Geometric Domains
-** Geometric Deep Learning Models
-* FEP, VAE and EBM
+*** Geometric Domains
+*** Geometric Deep Learning Models
+** FEP, VAE and EBM
 我想还是以几篇Review来展开吧!
-** [Buckley C.L.]2017 - The free energy principle for action and perception: A mathematical review
-** [Clark A.]2013 - Whatever next? Predictive brains, situated agents, and the future of cognitive science
-** [Now]2019 - An Introduction to Variational Autoencoders
-* Self-Attention in transformers is not Attention!
-** [John K. Tsotsos]2023 - Self-attention in Vision Transformers Performs Perceptual Grouping, Not Attention
+*** [Buckley C.L.]2017 - The free energy principle for action and perception: A mathematical review
+*** [Clark A.]2013 - Whatever next? Predictive brains, situated agents, and the future of cognitive science
+*** [Now]2019 - An Introduction to Variational Autoencoders
+** Self-Attention in transformers is not Attention!
+*** [John K. Tsotsos]2023 - Self-attention in Vision Transformers Performs Perceptual Grouping, Not Attention
 没怎么读这篇文章.但Tsotsos出来发话,可能还是有不少意图的.
-* Mamba代表State Space Model(SSM)走入和Transformer竞争的行列!
-但前景如何?
-Hippo -> S4 -> H3 -> Mamba
+** Mamba代表State Space Model(SSM)走入和Transformer竞争的行列!
+但前景如何? 事实上,"An Attention Free Transformer"一文,开启一些新方向!(RWKV,GateLoop,HGRN等等)
+SSM -> Hippo -> S4 -> H3 -> Mamba
  - [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
  - [Gu A.;...]2021 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
  - [Dao T.]2023 - Hungry Hungry Hippos - Towards Language Modeling with State Space Models
  - [CMU]2023 - Mamba - Linear-Time Sequence Modeling with Selective State Spaces
-** Gu A.在他的博士论文里,对基本概念讲得更清楚!
+*** Gu A.在他的博士论文里,对基本概念讲得更清楚!
 Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问题,这是开窍点吗?
-* Modern Hopfield Network这条线路又意味者什么?
+** Modern Hopfield Network这条线路又意味者什么?
 Energy-Based-Model(EBM)的要点:
  - "Capture Dependencies through an energy function"
  - "but, the energy is used for inference, not for learning"
@@ -465,19 +465,19 @@ Energy-Based-Model(EBM)的要点:
    - "More flexibility in the choice of objective function for learning"
    - "From energy to probability: Gibbs-Boltzmann distribution"
 Hopfield网络是联想记忆,记忆Patterns就定义了能量地势,地势的梯度下降给出「回忆」的结果.
-** Modern Hopfield Network 开始于Binary States的Dense Associative Memory(DAM:[Krotov D.]2016 - Dense Associative Memory for Pattern Recognition.)
-** 继之以Continuous States的进展!([Demircigil, M;...]2017 -  On a model of associative memory with a huge storage capacity)
-** 发现Modern Hopfield Network和Transformers的关系!
+*** Modern Hopfield Network 开始于Binary States的Dense Associative Memory(DAM:[Krotov D.]2016 - Dense Associative Memory for Pattern Recognition.)
+*** 继之以Continuous States的进展!([Demircigil, M;...]2017 -  On a model of associative memory with a huge storage capacity)
+*** 发现Modern Hopfield Network和Transformers的关系!
 Attention is all you need! && Hopfield is all you need!
-** Krotov和Hopfield出来澄清一些事!!!([Krotov D.]2020 - Large Associative Memory Problem in Neurobiology and Machine Learning)
+*** Krotov和Hopfield出来澄清一些事!!!([Krotov D.]2020 - Large Associative Memory Problem in Neurobiology and Machine Learning)
 [Demircigil, M.;]定义的能量函数,不符合生理学或生物学道理!从微观生物学的角度,也可以给出新的能量函数,等等!
-** [Krotov D.]在IBM在搞名堂! Hiearchical Associative Memory && Energy Transformers
-*** [Krotov D.]2021 - Hierarchical Associative Memory
-*** [Krotov D.]2022 - Energy Transformers
-** 能量函数,是否在Associative Memory和Probabilistic Modeling之间建立了桥梁？（2024 - Bridging Associative Memory and Probabilistic Modeling）
+*** [Krotov D.]在IBM在搞名堂! Hiearchical Associative Memory && Energy Transformers
+**** [Krotov D.]2021 - Hierarchical Associative Memory
+**** [Krotov D.]2022 - Energy Transformers
+*** 能量函数,是否在Associative Memory和Probabilistic Modeling之间建立了桥梁？（2024 - Bridging Associative Memory and Probabilistic Modeling）
 人工智能的两个基础领域,是否有融通的可能？
-* E-Patient/Digital-Patient & E-Medicine/Digital-Medicine ~~> Computational Anatomy(计算解剖学) & Computational Physiology(计算生理学)
-** Computational Anatomy
+** E-Patient/Digital-Patient & E-Medicine/Digital-Medicine ~~> Computational Anatomy(计算解剖学) & Computational Physiology(计算生理学)
+*** Computational Anatomy
 The objective of Computational Anatomy (CA) is the modeling and analysis of biological variability of the human anatomy.
 Typical applications cover
 - the simulation of average anatomies and normal variations,
@@ -493,7 +493,7 @@ There is a classical stratification(分层) of the problems into the following 3
 - construction from medical images of anatomical manifolds of points, curves, surfaces and volumes;
 - assignment of a point to point correspondence between these manifolds using a specified class of transformations (e.g. rigid, affine, diffeomorphism);
 - generation of probability laws of anatomical variation from these correspondences.
-** Computational Physiology
+*** Computational Physiology
 The objective of Computational Physiology (CP) is to provide models of the major functions of the human body and numerical methods to simulate them.
 The main applications are in medicine and biology,
 where CP can be used,for instance,
@@ -511,69 +511,69 @@ There is a hierarchy of modeling levels for CP models of the human body:
 - a fourth level would be cognitive, modeling the higher functions of the human brain.
 
 这个分层,是从Visible Human 到Physioloical Human的分层!!
-** 从现在情况来看,深度学习神经网络在这些方面,有很多应用!
+*** 从现在情况来看,深度学习神经网络在这些方面,有很多应用!
 
-
-* FCN 中的FC是什么含义？
+* 工部
+** FCN 中的FC是什么含义？
 Fully Convolution意味着什么？
 FCN 一开始就和语义分割扯上关系，怎么回事？
-* Siamese and Triplet Net 在 Image Ebedding 中的作用
+** Siamese and Triplet Net 在 Image Ebedding 中的作用
 https://github.com/adambielski/siamese-triplet
 
-* FPN 的目的是什么？
+** FPN 的目的是什么？
 源自文章 "Feature pyramid networks for object detection"
 各种尺度的Feature Map的来源,及相互关系,利用方式! 那么下面的术语:
 - Featurized Image Pyramid: Image Pyramid 产生 Feature Map堆栈
 - Single/Top Feature map: 只利用DNN的顶层Fetaure Map
 - Pyramidical Feature Hierarchy: 独立利用DNN的各层Feature Map
 - Feature Pyramid Networks: 是种DNN范式。按我的理解,具有"生成"的味道?
-* Convolutional Activition Map 是个什么概念？
+** Convolutional Activition Map 是个什么概念？
 CAM: Learning Deep Features for Discriminative Localization
 Grad-cam: Visual explanations from deep networks via gradient-based localization
 各自说了什么事？
 
-* Wieland Brendel and Matthias Bethge 想说什么?
-** 文章ImageNet-Trained CNNs are biased towards texture; Increasing shape bias improves accuracy and robustness.
+** Wieland Brendel and Matthias Bethge 想说什么?
+*** 文章ImageNet-Trained CNNs are biased towards texture; Increasing shape bias improves accuracy and robustness.
 用标题将他的内容全部说出来了.
-** 文章BagNet
+*** 文章BagNet
 进一步将上面的事说明白了!
 但我将他们的代码从头实现一遍,总觉得:造做！
-* Fine Grained Image Analysis
-** 纲要
-*** Fine-grained image recognition
-**** Fine-grained recognition by localization-classification subnetworks
-***** Employing detection or segmentation techniques
-***** Utilizing deep filters / activations
-***** Leveraging attention mechanisms
-***** Other methods
-**** Fine-grained recognition by end-to-end feature encoding
-***** High-order feature interactions
-***** Specific loss functions
-***** Other methods
-**** Fine-grained recognition with external information
-***** Fine-grained recognition with web data
-***** Fine-grained recognition with multi-modality data
-***** Fine-grained recognition with humans in the loop
-*** Fine-grained image retrieval
-**** Content-based fine-grained image retrieval
-**** Sketch-based fine-grained image retrieval
-*** Fine-grained image generation
-**** Generating from fine-grained image distributions
-**** Generating from text descriptions
-*** Future directions of FGIA
-**** Fine-grained few shot learning
-**** Fine-grained hashing
-**** Fine-grained domain adaptation
-**** FGIA within more realistic settings
-** 论文阅读一：视觉对象的图表示及可解释性
+** Fine Grained Image Analysis
+*** 纲要
+**** Fine-grained image recognition
+***** Fine-grained recognition by localization-classification subnetworks
+****** Employing detection or segmentation techniques
+****** Utilizing deep filters / activations
+****** Leveraging attention mechanisms
+****** Other methods
+***** Fine-grained recognition by end-to-end feature encoding
+****** High-order feature interactions
+****** Specific loss functions
+****** Other methods
+***** Fine-grained recognition with external information
+****** Fine-grained recognition with web data
+****** Fine-grained recognition with multi-modality data
+****** Fine-grained recognition with humans in the loop
+**** Fine-grained image retrieval
+***** Content-based fine-grained image retrieval
+***** Sketch-based fine-grained image retrieval
+**** Fine-grained image generation
+***** Generating from fine-grained image distributions
+***** Generating from text descriptions
+**** Future directions of FGIA
+***** Fine-grained few shot learning
+***** Fine-grained hashing
+***** Fine-grained domain adaptation
+***** FGIA within more realistic settings
+*** 论文阅读一：视觉对象的图表示及可解释性
 2020 - Interpretable and Accurate Fine-grained Recognition via Region Grouping
 2018 - Beyond Grids: Learning Graph Representations for Visual Recognition
 2018年的文章应是这条路线的基础。基于Perceptual Grouping的观点，运用Graph Representation方法，去研究视觉对象的认知问题。
-* Anchor Free Object Detection
+** Anchor Free Object Detection
 这中间的理论问题是什么？最终追溯到“对象的表示”问题。
 边界框是目前最通用的，但它提供的信息实在是太粗旷了。
 什么叫合理或合适的对象表示？
-** Paper List
+*** Paper List
 - 2020
   - Any More?
   - AutoAssign: Differentiable Label Assignment for Dense Object Detection.(Rejected?)
@@ -607,43 +607,43 @@ Grad-cam: Visual explanations from deep networks via gradient-based localization
   - UnitBox: An Advanced Object Detection Network.
 - 2015
   - DenseBox: Unifying Landmark Localization with End to End Object Detection.
-** Arguments
+*** Arguments
 
-* CAM和Grad-CAM的涵义:
-* Graph Neural Network:
-** The Concept of GNN:
-** Graph Embeding
-** Graph Convolution:
+** CAM和Grad-CAM的涵义:
+** Graph Neural Network:
+*** The Concept of GNN:
+*** Graph Embeding
+*** Graph Convolution:
   - Spatial Convolution
   - Spectral Convolution
-* DETR 给Object Detection带来的新范式
+** DETR 给Object Detection带来的新范式
 Detection Transformer(DeTr): End-To-End by Transformers.
 Anchor Based --> Anchor Free --> End-to-End!!
-** How does DeTr do it?
-*** Transformer
-*** Learnable Object Queries
-*** Set-Prediction
+*** How does DeTr do it?
+**** Transformer
+**** Learnable Object Queries
+**** Set-Prediction
 
-** Some Rethinking
-*** Effective Transformer.
+*** Some Rethinking
+**** Effective Transformer.
 Deformable-DeTr(重点看看,打开DeTr的正确方式?),UP-DeTr等等
-**** What makes for an effective attention mechanisms?
-**** How to aggregate multi-scale features into attention mechanisms?
-**** How to train the transformer effectively?
+***** What makes for an effective attention mechanisms?
+***** How to aggregate multi-scale features into attention mechanisms?
+***** How to train the transformer effectively?
 这方面的研究,和在ViT上的很多研究是一致的.
-*** Deformable Convolution NetWork 和 Transformer之间的深沉关系.(?都在解决"long-range dependencies and adaptive spatial aggregation"问题?)
+**** Deformable Convolution NetWork 和 Transformer之间的深沉关系.(?都在解决"long-range dependencies and adaptive spatial aggregation"问题?)
 InternImage, 按照ViTs的架构,来设计基于DCN的架构, 居然也取得了SOTA.
-*** What makes for a sparse object detection methods.
+**** What makes for a sparse object detection methods.
 Sparse R-CNN等
-*** New label-assignment methods.
+**** New label-assignment methods.
 OTA等,
-**** Considering label assignment from a global view.
-*** What makes for a end-to-end object detection?
+***** Considering label assignment from a global view.
+**** What makes for a end-to-end object detection?
 OneNet等
 主要还是和label-assignment有关.具体的说,还要考虑什么因素?
-*** How to extends to segmentation task?
-**** SOLQ(Segmenting Object As Queries)等,还有对Box的考虑
-**** MaX-DeepLab则开启了基于Mask Transformer的端到端(全景)分割框架.(MaX指Mask XFormers).
+**** How to extends to segmentation task?
+***** SOLQ(Segmenting Object As Queries)等,还有对Box的考虑
+***** MaX-DeepLab则开启了基于Mask Transformer的端到端(全景)分割框架.(MaX指Mask XFormers).
 似乎有这样一条线索: *Box Based + Mask Classification --> *Box Free + *Mask Classification*
 MaX是mask xformer的缩写! 可以写成一个公式!  SoftMax(Features x ObjectQueries.T) [维度为 (HW, D) x (D, N) --> (HW, N)].想想!
 - MaX-DeepLab --> kMaX-DeepLab
@@ -660,17 +660,17 @@ MaX是mask xformer的缩写! 可以写成一个公式!  SoftMax(Features x Objec
 - DiNo (For object detetction) --> Mask DiNo (Can object detection and segmentation be unified)
   + 这是在找话题吗?还是真见地?
 
-*** How to apply for transfer learning or domain adaption task?
-** DINO家族(此DINO非彼DiNo,不道德的取名方式)
+**** How to apply for transfer learning or domain adaption task?
+*** DINO家族(此DINO非彼DiNo,不道德的取名方式)
 DINO means "Detr with Improved deNoising anchOr boxes"
 DAB-DeTr --> DN-DeTr --> DiNo --> Mask DiNo --> OpenSeeD
 
-* 关于Set-Prediction Problem 还可看看下述文章
+** 关于Set-Prediction Problem 还可看看下述文章
 Deep Sets
 Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks
 Generative Adversarial Set Transformers
 Conditional Set Generation with Transformers
-* DiNo 给ViT的带来的新范式
+** DiNo 给ViT的带来的新范式
 看来FaceBook或MetaAI在这个方向,有不错的努力.前面还有项工作,DeiT,也作了不少努力!
 文章2021 - DINO: Emerging Properties in Self-Supervised Vision Transformers
 文章2023 - DINOv2: Learning Robust Visual Features without Supervision (附加 文章2023 - Vision Transformers Need Registers)
@@ -679,50 +679,50 @@ DiNo means "self-Distillation with No labels"
 Dino是第一个在ViT架构上作自监督学习的!
 之前,都是在CNN架构的网络上作自监督学习的.
 关键问题:学习方法对ViT架构为什么有如此大的影响?导致自监督学习在目前是个研究热点!
-** 回顾一下Self-Supervised的历史
+*** 回顾一下Self-Supervised的历史
 (有必要的话,可以考虑一下KD(Knowledge Distillation), 和Self-Supervised之间的碰撞)
-*** Pretext Task : "Relative Location","Colorization","Context Encoder","Rotation Prediction"等主题文章.
+**** Pretext Task : "Relative Location","Colorization","Context Encoder","Rotation Prediction"等主题文章.
 "Pretext Task":所谓的"前置任务".
-*** Contrastive Learning :
-**** "MoCo(v1,v2,v3)":MoCo 这系列论文，将之前的对比学习,总结成字典查找的框架,再基于此提出 MoCo(Moment Contrast).
-**** "SimCLR":
-**** "BYOL(Boot your own latent)":
-**** "SwAV(Swapping Assignments between multiple Views )":
-**** "SimSiam": SimSiam 这篇论文则是对上述多篇论文进行了总结,并且化繁为简.
-**** "BarlowTwins":
-**** "DiNo": "self-supervised learning as a form of Mean Teacher self-distillation with no labels."
+**** Contrastive Learning :
+***** "MoCo(v1,v2,v3)":MoCo 这系列论文，将之前的对比学习,总结成字典查找的框架,再基于此提出 MoCo(Moment Contrast).
+***** "SimCLR":
+***** "BYOL(Boot your own latent)":
+***** "SwAV(Swapping Assignments between multiple Views )":
+***** "SimSiam": SimSiam 这篇论文则是对上述多篇论文进行了总结,并且化繁为简.
+***** "BarlowTwins":
+***** "DiNo": "self-supervised learning as a form of Mean Teacher self-distillation with no labels."
 这句话怎么理解?
 
-*** Masked Image(Data) Modeling:
+**** Masked Image(Data) Modeling:
 ViT, 为NLP中的掩码学习机制，应用到视觉学习中， 打开了一扇大门！
-**** BEiT(Bidirectional Encoder representation from Image Transformers):
-**** MAE(Masked Autoencoders):
-**** SimMIM:
-**** MaskFeat:
-** Dino
-*** 网络架构: Self Distillation Architecture
+***** BEiT(Bidirectional Encoder representation from Image Transformers):
+***** MAE(Masked Autoencoders):
+***** SimMIM:
+***** MaskFeat:
+*** Dino
+**** 网络架构: Self Distillation Architecture
 采用Momentum Tearcher模型.思想来自"Momentum Contrast for Unsupervised Visual Representation Learning".
 据说,可有效解决Mode Collapse 问题!
-*** 数据增强
+**** 数据增强
 DINO 中最核心的数据采样策略便是图像裁剪，这也是自监督学习领域应用非常广泛的主策略之一.
 一般来说，我们可以将裁剪后的图像分为两种:
 - Local views: 即局部视角，也称为 small crops，指的是抠图面积小于原始图像的 50%.
 - Global views: 即全局视角，也称为 large crops，指的是抠图面积大于原始图像的 50%.
 在 DINO 中，学生模型接收所有预处理过的crops图，而教师模型仅接收来自global views的crops图。
-*** Loss函数
+**** Loss函数
 教师和学生得分的Cross Entropy!
-*** Centering and Sharpening (可以研究一下,处理模式崩塌的技术)
+**** Centering and Sharpening (可以研究一下,处理模式崩塌的技术)
 在自监督学习中，mode collapse 是指网络的学习过程中出现了多样性减少的现象.
 具体来说，当网络学习到一组特征表示时，往往会出现多个输入数据映射到相同的特征表示的情况，这就是所谓的模式崩塌.
 
 这种现象通常是由于网络在优化过程中陷入了局部最优解.
 只能考虑到一部分数据的特征表示,而忽略了其它数据样本的模式和特征,从而导致了多样性缺失的现象,因此会对模型的鲁棒性产生很大的负面影响.
-** DinoV2(偏现有技术的灵活综合运用!)
+*** DinoV2(偏现有技术的灵活综合运用!)
 改善内容:
-*** 数据集处理:
+**** 数据集处理:
 去燥(不合格的数据),去重(参考:A self-supervised descriptor for image copy detection) 得到数据集LVD-142M.
-*** 方法
-**** Discriminative Self-Supervised Method: 可认为是下述(DINO, iBOT, SwAV)三种方法的综合/组合?
+**** 方法
+***** Discriminative Self-Supervised Method: 可认为是下述(DINO, iBOT, SwAV)三种方法的综合/组合?
 - DINO: <==> Image Level Objective
 - iBOT: <==> Patch Level Objective
 - Sinkhorn-Knopp centering(SwAV):这个方法的核心思想是通过正则化来使学生和教师网络在特征表示上更加接近.
@@ -733,12 +733,12 @@ DINO 中最核心的数据采样策略便是图像裁剪，这也是自监督学
 - Untying head weights between both image and patch objectives. DiNo易过拟合,iBot易欠拟合.
 - KoLeo regularizer:
 - Adapting the resolution:
-**** Efficient Implementation
+***** Efficient Implementation
 这得学习源代码了!
 
-* CSSP: Column Subset Selection Problem
+** CSSP: Column Subset Selection Problem
 文章Select to Better Learn: Fast and Accurate Deep Learning using Data Selection from Nonlinear Manifolds
-* Variants of Transformer
+** Variants of Transformer
 我认为这可能是个重要的话题.Transformer本身,毕竟不是高效的.
 [[file:./images/VariantsOfTransformer.jpg]]
 Sparse transformer, LongFormer, Switch Transformers :
@@ -752,9 +752,9 @@ Routing Transformer, Linformer, Big Bird:(其实还是稀疏路线)
 - *Linformer: Self-Attention with Linear Complexity*
 - *Big Bird: Transformers for Longer Sequences*
 
-* 理解大语言模型的一些文章
-** Sebastian Ruder这几年老作评论:
-*** 2018年, Sebastian Ruder做了一个回顾,比较权威.
+** 理解大语言模型的一些文章
+*** Sebastian Ruder这几年老作评论:
+**** 2018年, Sebastian Ruder做了一个回顾,比较权威.
 - 2001 - 神经语言模型
 - 2008 - 多任务学习
 - 2013 - 词嵌入
@@ -763,7 +763,7 @@ Routing Transformer, Linformer, Big Bird:(其实还是稀疏路线)
 - 2015 - 注意力机制
 - 2015 - 基于记忆的网络
 - 2018 - 预训练语言模型
-*** 2021年, Sebastian Ruder提到的NLP热点
+**** 2021年, Sebastian Ruder提到的NLP热点
 - Universal Models
 - Massive Multi-task Learning
 - Beyond the Transformer: (Perceiver..)
@@ -779,8 +779,8 @@ Routing Transformer, Linformer, Big Bird:(其实还是稀疏路线)
 - Temporal Adaptation
 - The Importance of Data
 - Meta-learning
-** NLP的10片主干文章
-*** 理解大语言模型的结构和任务
+*** NLP的10片主干文章
+**** 理解大语言模型的结构和任务
 - Neural Machine Translation by Jointly Learning to Align and Translate (2014)
   此文,引入了Attention Mechanisms,成为引入Transformer的动机!
 - Attention Is All You Need (2017)
@@ -793,22 +793,22 @@ Routing Transformer, Linformer, Big Bird:(其实还是稀疏路线)
 - Improving Language Understanding by Generative Pre-Training (2018) -- GPT
   GPT是基于解码器的模型结构!
 - BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension (2019)
-*** 规模法则和模型效率提升
+**** 规模法则和模型效率提升
 - Flash Attention: Fast and Memory-Efficient Exact Attention with IO-Awareness (2022)
 - Cramming: Training a Language Model on a Single GPU in One Day (2022)
 - Training Compute-Optimal Large Language Models (2022)
-*** 对齐——引导大语言模型完成训练目标
+**** 对齐——引导大语言模型完成训练目标
 - Training Language Models to Follow Instructions with Human Feedback (2022) -- InstructGPT!
 - Constitutional AI: Harmlessness from AI Feedback (2022)
-*** 关于人类反馈的强化学习(RLHF)
+**** 关于人类反馈的强化学习(RLHF)
 - Asynchronous Methods for Deep Reinforcement Learning (2016)
 - Proximal Policy Optimization Algorithms (2017)
 - Learning to Summarize from Human Feedback (2022)
-** NLP中在PTMs思想下的一般性的神经网络架构
+*** NLP中在PTMs思想下的一般性的神经网络架构
 Pre-trained Models for Natural Language Processing: A Survey(2020)
 See [[./images/NLP/Embedding.jpg]]
 应当说,这篇文章把PTM总结得比较好!
-** Prompting的花样年华
+*** Prompting的花样年华
 Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing(2021)
 四个NLP的范式,See: [[./images/NLP/prompting.jpeg]]
 这篇综述,让Prompting红得发紫.其实这篇文章,应当是个典范.一片综述,让一个模糊概念有了清楚的正式定义,并指明了这个领域的研究范畴.
@@ -822,9 +822,9 @@ Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natu
 - Answer Engineering
 - Expanding the Paradigm
 - Prompt-Based Training Strategies
-** Prompting 可能意味一些更深刻的思想内涵!
+*** Prompting 可能意味一些更深刻的思想内涵!
 !!!怎么说呢?
 
-* Deformable Convolution 和 Transformer的一个局部较量!
+** Deformable Convolution 和 Transformer的一个局部较量!
 商汤的2023 - InternImage: Exploring Large-Scale Vision Foundation Models with Deformable Convolutions.
 看来这篇文章将DCN推到一个可理论探索的地步!
