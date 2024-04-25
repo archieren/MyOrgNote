@@ -409,109 +409,7 @@ Three types of operators are considered essential in a VSA.
     SSP 在 [Komer Berent]2019 - A neural representation of continuous space using fractional binding 一文中提出.
 - SSP 在动力学方面的表现,值得关注!
   [Voelker A.R.]2021 - Simulating and Predicting Dynamical Systems With Spatial Semantic Pointers
-** Neural ODE这篇文章到底有什么可以高看的地方？
-为什么“Mit的评审意见认为这是一个可以和Ian Goodfellow的GAN相媲美的‘a radical new design’”
 
-** Neural Geometry and Group-CNN
-Neural Geometry源自对 Visual Cortex Columns结构作几何解释。
-Neural Geometry的主题在于Connection.
-但[Bekkers E.J.]2020 - B-Spline CNNs On Lie Group中的工作,
-将Neural Geometry与Geometric Deep Learning建立了联系.
-*** [Sarti A.;Citti G.]2019 - NeuroGeometry of Perception - isotropic and anisotropic aspects
-这算是对Neural Geometry一个阶段的总结.
-*** G-CNN
-Group convolutional neural networks (G-CNNs) are a class of neural networks that are equipped with the geometry of groups.
-
-** Deep Implicit Layers
-隐含层的概念， 有点类似隐函数的概念。
-*** Neural ODEs
-*** Deep Equilibrium Models
-*** Differentiable optimization
-** Graph Neural Diffusion(Neural PDEs)
-Beltrami Flow, Ricci Flow and So On!
-** Geometric deep learning
-Michael M. Bronstein这个人,学习Klein Erlangen Programme的精神,搞了个纲领,叫做“Geometric Deep Learning”.
-参考[Bronstein M.M.]2021 - Geometric Deep Learning - Grids, Groups, Graphs, Geodesics, and Gauges
-
-
-*** Geometric Priors
-- Symmetry
-- Scale Separation
-*** Geometric Domains
-*** Geometric Deep Learning Models
-** FEP, VAE and EBM
-我想还是以几篇Review来展开吧!
-*** [Buckley C.L.]2017 - The free energy principle for action and perception: A mathematical review
-*** [Clark A.]2013 - Whatever next? Predictive brains, situated agents, and the future of cognitive science
-*** [Now]2019 - An Introduction to Variational Autoencoders
-** Self-Attention in transformers is not Attention!
-*** [John K. Tsotsos]2023 - Self-attention in Vision Transformers Performs Perceptual Grouping, Not Attention
-没怎么读这篇文章.但Tsotsos出来发话,可能还是有不少意图的.
-** Mamba代表State Space Model(SSM)走入和Transformer竞争的行列!
-但前景如何? 事实上,"An Attention Free Transformer"一文,开启一些新方向!(RWKV,GateLoop,HGRN等等)
-SSM -> Hippo -> S4 -> H3 -> Mamba
- - [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
- - [Gu A.;...]2021 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
- - [Dao T.]2023 - Hungry Hungry Hippos - Towards Language Modeling with State Space Models
- - [CMU]2023 - Mamba - Linear-Time Sequence Modeling with Selective State Spaces
-*** Gu A.在他的博士论文里,对基本概念讲得更清楚!
-Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问题,这是开窍点吗?
-** Modern Hopfield Network这条线路又意味者什么?
-Energy-Based-Model(EBM)的要点:
- - "Capture Dependencies through an energy function"
- - "but, the energy is used for inference, not for learning"
- - "Probabilistic models are a special case of EBM.","but, EBM is more"
-   - "EBM gives more flexibility in the choice of the scoring function."
-   - "More flexibility in the choice of objective function for learning"
-   - "From energy to probability: Gibbs-Boltzmann distribution"
-Hopfield网络是联想记忆,记忆Patterns就定义了能量地势,地势的梯度下降给出「回忆」的结果.
-*** Modern Hopfield Network 开始于Binary States的Dense Associative Memory(DAM:[Krotov D.]2016 - Dense Associative Memory for Pattern Recognition.)
-*** 继之以Continuous States的进展!([Demircigil, M;...]2017 -  On a model of associative memory with a huge storage capacity)
-*** 发现Modern Hopfield Network和Transformers的关系!
-Attention is all you need! && Hopfield is all you need!
-*** Krotov和Hopfield出来澄清一些事!!!([Krotov D.]2020 - Large Associative Memory Problem in Neurobiology and Machine Learning)
-[Demircigil, M.;]定义的能量函数,不符合生理学或生物学道理!从微观生物学的角度,也可以给出新的能量函数,等等!
-*** [Krotov D.]在IBM在搞名堂! Hiearchical Associative Memory && Energy Transformers
-**** [Krotov D.]2021 - Hierarchical Associative Memory
-**** [Krotov D.]2022 - Energy Transformers
-*** 能量函数,是否在Associative Memory和Probabilistic Modeling之间建立了桥梁？（2024 - Bridging Associative Memory and Probabilistic Modeling）
-人工智能的两个基础领域,是否有融通的可能？
-** E-Patient/Digital-Patient & E-Medicine/Digital-Medicine ~~> Computational Anatomy(计算解剖学) & Computational Physiology(计算生理学)
-*** Computational Anatomy
-The objective of Computational Anatomy (CA) is the modeling and analysis of biological variability of the human anatomy.
-Typical applications cover
-- the simulation of average anatomies and normal variations,
-- the discovery of structural differences between healthy and diseased populations,
-- and the detection and classification of pathologies from structural anomalies.
-
-Studying the variability of biological shapes is an old problem (cf. the remarkable book “On Shape and Growth” by D’Arcy Thompson).
-Significant efforts have been made since that time to develop a theory for statistical shape analysis(统计形状分析).
-Despite all these efforts, there is a number of challenging mathematical issues which remain largely unsolved in general.
-A particular issue is the computation of statistics on manifolds which can be of infinite dimension (e.g the group of diffeomorphisms).
-
-There is a classical stratification(分层) of the problems into the following 3 levels:
-- construction from medical images of anatomical manifolds of points, curves, surfaces and volumes;
-- assignment of a point to point correspondence between these manifolds using a specified class of transformations (e.g. rigid, affine, diffeomorphism);
-- generation of probability laws of anatomical variation from these correspondences.
-*** Computational Physiology
-The objective of Computational Physiology (CP) is to provide models of the major functions of the human body and numerical methods to simulate them.
-The main applications are in medicine and biology,
-where CP can be used,for instance,
-- to better understand the basic processes leading to the apparition of a pathology,
-- to model its probable evolution
-- and to plan, simulate, and monitor its therapy.
-
-
-There is a hierarchy of modeling levels for CP models of the human body:
-- the ﬁrst level is mainly geometrical, and addresses the construction of a digital description of the anatomy, essentially acquired from medical imagery;
-- the second level is physical, involving mainly the biomechanical modeling of various tissues, organs, vessels, muscles or bone structures;
-- the third level is physiological, involving a modeling of the functions of the major biological systems
-  (e.g. cardiovascular, respiratory, digestive, central or peripheral nervous, muscular, reproductive, hormonal, etc.)
-  or some pathological metabolism (e.g. evolution of cancerous or inﬂammatory lesions, formation of vessel stenoses, etc.);
-- a fourth level would be cognitive, modeling the higher functions of the human brain.
-
-这个分层,是从Visible Human 到Physioloical Human的分层!!
-*** 从现在情况来看,深度学习神经网络在这些方面,有很多应用!
 
 * 工部
 ** FCN 中的FC是什么含义？
@@ -616,6 +514,98 @@ Grad-cam: Visual explanations from deep networks via gradient-based localization
 *** Graph Convolution:
   - Spatial Convolution
   - Spectral Convolution
+
+** Neural Geometry and Group-CNN
+Neural Geometry源自对 Visual Cortex Columns结构作几何解释。
+Neural Geometry的主题在于Connection.
+但[Bekkers E.J.]2020 - B-Spline CNNs On Lie Group中的工作,
+将Neural Geometry与Geometric Deep Learning建立了联系.
+*** [Sarti A.;Citti G.]2019 - NeuroGeometry of Perception - isotropic and anisotropic aspects
+这算是对Neural Geometry一个阶段的总结.
+*** G-CNN
+Group convolutional neural networks (G-CNNs) are a class of neural networks that are equipped with the geometry of groups.
+
+** Deep Implicit Layers
+隐含层的概念， 有点类似隐函数的概念。
+*** Neural ODEs
+*** Deep Equilibrium Models
+*** Differentiable optimization
+** Graph Neural Diffusion(Neural PDEs)
+Beltrami Flow, Ricci Flow and So On!
+** Geometric deep learning
+Michael M. Bronstein这个人,学习Klein Erlangen Programme的精神,搞了个纲领,叫做“Geometric Deep Learning”.
+参考[Bronstein M.M.]2021 - Geometric Deep Learning - Grids, Groups, Graphs, Geodesics, and Gauges
+
+
+*** Geometric Priors
+- Symmetry
+- Scale Separation
+*** Geometric Domains
+*** Geometric Deep Learning Models
+** FEP, VAE and EBM
+我想还是以几篇Review来展开吧!
+*** [Buckley C.L.]2017 - The free energy principle for action and perception: A mathematical review
+*** [Clark A.]2013 - Whatever next? Predictive brains, situated agents, and the future of cognitive science
+*** [Now]2019 - An Introduction to Variational Autoencoders
+** Self-Attention in transformers is not Attention!
+*** [John K. Tsotsos]2023 - Self-attention in Vision Transformers Performs Perceptual Grouping, Not Attention
+没怎么读这篇文章.但Tsotsos出来发话,可能还是有不少意图的.
+** Modern Hopfield Network这条线路又意味者什么?
+Energy-Based-Model(EBM)的要点:
+ - "Capture Dependencies through an energy function"
+ - "but, the energy is used for inference, not for learning"
+ - "Probabilistic models are a special case of EBM.","but, EBM is more"
+   - "EBM gives more flexibility in the choice of the scoring function."
+   - "More flexibility in the choice of objective function for learning"
+   - "From energy to probability: Gibbs-Boltzmann distribution"
+Hopfield网络是联想记忆,记忆Patterns就定义了能量地势,地势的梯度下降给出「回忆」的结果.
+*** Modern Hopfield Network 开始于Binary States的Dense Associative Memory(DAM:[Krotov D.]2016 - Dense Associative Memory for Pattern Recognition.)
+*** 继之以Continuous States的进展!([Demircigil, M;...]2017 -  On a model of associative memory with a huge storage capacity)
+*** 发现Modern Hopfield Network和Transformers的关系!
+Attention is all you need! && Hopfield is all you need!
+*** Krotov和Hopfield出来澄清一些事!!!([Krotov D.]2020 - Large Associative Memory Problem in Neurobiology and Machine Learning)
+[Demircigil, M.;]定义的能量函数,不符合生理学或生物学道理!从微观生物学的角度,也可以给出新的能量函数,等等!
+*** [Krotov D.]在IBM在搞名堂! Hiearchical Associative Memory && Energy Transformers
+**** [Krotov D.]2021 - Hierarchical Associative Memory
+**** [Krotov D.]2022 - Energy Transformers
+*** 能量函数,是否在Associative Memory和Probabilistic Modeling之间建立了桥梁？（2024 - Bridging Associative Memory and Probabilistic Modeling）
+人工智能的两个基础领域,是否有融通的可能？
+** E-Patient/Digital-Patient & E-Medicine/Digital-Medicine ~~> Computational Anatomy(计算解剖学) & Computational Physiology(计算生理学)
+*** Computational Anatomy
+The objective of Computational Anatomy (CA) is the modeling and analysis of biological variability of the human anatomy.
+Typical applications cover
+- the simulation of average anatomies and normal variations,
+- the discovery of structural differences between healthy and diseased populations,
+- and the detection and classification of pathologies from structural anomalies.
+
+Studying the variability of biological shapes is an old problem (cf. the remarkable book “On Shape and Growth” by D’Arcy Thompson).
+Significant efforts have been made since that time to develop a theory for statistical shape analysis(统计形状分析).
+Despite all these efforts, there is a number of challenging mathematical issues which remain largely unsolved in general.
+A particular issue is the computation of statistics on manifolds which can be of infinite dimension (e.g the group of diffeomorphisms).
+
+There is a classical stratification(分层) of the problems into the following 3 levels:
+- construction from medical images of anatomical manifolds of points, curves, surfaces and volumes;
+- assignment of a point to point correspondence between these manifolds using a specified class of transformations (e.g. rigid, affine, diffeomorphism);
+- generation of probability laws of anatomical variation from these correspondences.
+*** Computational Physiology
+The objective of Computational Physiology (CP) is to provide models of the major functions of the human body and numerical methods to simulate them.
+The main applications are in medicine and biology,
+where CP can be used,for instance,
+- to better understand the basic processes leading to the apparition of a pathology,
+- to model its probable evolution
+- and to plan, simulate, and monitor its therapy.
+
+
+There is a hierarchy of modeling levels for CP models of the human body:
+- the ﬁrst level is mainly geometrical, and addresses the construction of a digital description of the anatomy, essentially acquired from medical imagery;
+- the second level is physical, involving mainly the biomechanical modeling of various tissues, organs, vessels, muscles or bone structures;
+- the third level is physiological, involving a modeling of the functions of the major biological systems
+  (e.g. cardiovascular, respiratory, digestive, central or peripheral nervous, muscular, reproductive, hormonal, etc.)
+  or some pathological metabolism (e.g. evolution of cancerous or inﬂammatory lesions, formation of vessel stenoses, etc.);
+- a fourth level would be cognitive, modeling the higher functions of the human brain.
+
+这个分层,是从Visible Human 到Physioloical Human的分层!!
+*** 从现在情况来看,深度学习神经网络在这些方面,有很多应用!
 ** DETR 给Object Detection带来的新范式
 Detection Transformer(DeTr): End-To-End by Transformers.
 Anchor Based --> Anchor Free --> End-to-End!!
@@ -828,3 +818,15 @@ Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natu
 ** Deformable Convolution 和 Transformer的一个局部较量!
 商汤的2023 - InternImage: Exploring Large-Scale Vision Foundation Models with Deformable Convolutions.
 看来这篇文章将DCN推到一个可理论探索的地步!
+** Mamba代表State Space Model(SSM)走入和Transformer竞争的行列!这里面可能真有戏!
+但前景如何? 事实上,"An Attention Free Transformer"一文,开启一些新方向!(RWKV,GateLoop,HGRN等等)
+SSM -> Hippo -> LSSL -> S4 -> H3 -> Mamba
+ - [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
+ - [Gu A.;...]2021 - LSSL - Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers
+ - [Gu A.;...]2021 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
+ - [Dao T.]2023 - Hungry Hungry Hippos - Towards Language Modeling with State Space Models
+ - [CMU]2023 - Mamba - Linear-Time Sequence Modeling with Selective State Spaces
+*** Gu A.在他的博士论文里,对基本概念讲得更清楚!
+Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问题,这是开窍点吗?
+** Neural ODE这篇文章到底有什么可以高看的地方？
+为什么“Mit的评审意见认为这是一个可以和Ian Goodfellow的GAN相媲美的‘a radical new design’”
