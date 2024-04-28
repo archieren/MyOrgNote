@@ -730,7 +730,7 @@ DINO 中最核心的数据采样策略便是图像裁剪，这也是自监督学
 文章Select to Better Learn: Fast and Accurate Deep Learning using Data Selection from Nonlinear Manifolds
 ** Variants of Transformer
 我认为这可能是个重要的话题.Transformer本身,毕竟不是高效的.
-[[file:./images/VariantsOfTransformer.jpg]]
+[[file:images/VariantsOfTransformer.jpg][VariantsOfTransformer]]
 Sparse transformer, LongFormer, Switch Transformers :
 - *Explicit Sparse Transformer: : Concentrated Attention Through Explicit Selection*
 - *Longformer: The Long-Document Transformer*
@@ -821,6 +821,7 @@ Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natu
 ** Mamba代表State Space Model(SSM)走入和Transformer竞争的行列!这里面可能真有戏!
 但前景如何? 事实上,"An Attention Free Transformer"一文,开启一些新方向!(RWKV,GateLoop,HGRN等等)
 SSM -> Hippo -> LSSL -> S4 -> H3 -> Mamba
+[[[[file:images/ssm-hippo-s4-mamba.jpg][SSM-To-Mamba]]
  - [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
  - [Gu A.;...]2021 - LSSL - Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers
  - [Gu A.;...]2021 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
