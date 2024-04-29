@@ -821,10 +821,15 @@ Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natu
 ** Mamba代表State Space Model(SSM)走入和Transformer竞争的行列!这里面可能真有戏!
 但前景如何? 事实上,"An Attention Free Transformer"一文,开启一些新方向!(RWKV,GateLoop,HGRN等等)
 SSM -> Hippo -> LSSL -> S4 -> H3 -> Mamba
-[[[[file:images/ssm-hippo-s4-mamba.jpg][SSM-To-Mamba]]
+[[file:images/ssm-hippo-s4-mamba.jpg][SSM-To-Mamba]]
  - [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
+   这篇文章,解决了长期依赖的问题!
  - [Gu A.;...]2021 - LSSL - Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers
- - [Gu A.;...]2021 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
+   这是一篇过渡文章,将SSM的两个视角(As a recurrence Or As a convolution)作了统一!
+   "Kyrov Function", 可以探索一下!
+ - 另外DSS[2022 - DSS - Diagonal State Spaces are as Effective as Structured State Spaces]的工作,将对角矩阵的事搞清了,尽管S4认为...还差点!
+ - [Gu A.;...]2022 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
+   GSS[2022 - GSS - Long Range Language Modeling via Gated State Space]好像还是要和S4争一下.
  - [Dao T.]2023 - Hungry Hungry Hippos - Towards Language Modeling with State Space Models
  - [CMU]2023 - Mamba - Linear-Time Sequence Modeling with Selective State Spaces
 *** Gu A.在他的博士论文里,对基本概念讲得更清楚!
