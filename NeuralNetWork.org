@@ -823,12 +823,24 @@ Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natu
 SSM -> Hippo -> LSSL -> S4 -> H3 -> Mamba
 [[file:images/ssm-hippo-s4-mamba.jpg][SSM-To-Mamba]]
  - [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
-   这篇文章,解决了长期依赖的问题!
+   这篇文章,处理了长期依赖的问题( Addressing Long-Range Dependencies)!
  - [Gu A.;...]2021 - LSSL - Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers
+   之前: "Continuous State Space Model" -> "Discrete-time State Space Models: The recurrent representation"
+   而这个LSSL: => "Training SSMs: The Convolutional Representation"
    这是一篇过渡文章,将SSM的两个视角(As a recurrence Or As a convolution)作了统一!
-   "Kyrov Function", 可以探索一下!
- - 另外DSS[2022 - DSS - Diagonal State Spaces are as Effective as Structured State Spaces]的工作,将对角矩阵的事搞清了,尽管S4认为...还差点!
+   "SSM convolution kernel - SSK" or "Kyrov Function", 可以探索一下!
  - [Gu A.;...]2022 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
+   S4以所谓的结构化方法
+   - the continuous representation: Hippo Matrix的选择.
+   - the recurrent representation: 离散方法的选择,(选择跟随Bilinear Method).
+   - the convolutional representation: 可高效计算Kyrov Function(即那个SSK函数)的参数矩阵是对角化矩阵.
+     矩阵的共轭等价变化,可得到对角矩阵.
+     问题是,只有正规矩阵(Normal Matrix)可以对角化.而Hippo Matrix不满足条件!是否可将问题弱化呢?
+     S4认为,论文"2022 - GSS - Long Range Language Modeling via Gated State Space"没考虑好可对角化问题,尽管出发点是对的!
+     S4的贡献在于,将Diagonal Matrix 放宽到 DPLR Matrix(Diagonal Plus Low Rank Matrix).
+     并且,发现HIPPO Matrix中的HiPPO_LegS,HiPPO_LegT,HiPPO_LagT等等的矩阵,满足NPLR(Normal Plus Low Rank)条件.
+     NPLR和DPLR是共轭的!!!
+     看来,如果要深入,需要一些矩阵计算方法的背景了.
    GSS[2022 - GSS - Long Range Language Modeling via Gated State Space]好像还是要和S4争一下.
  - [Dao T.]2023 - Hungry Hungry Hippos - Towards Language Modeling with State Space Models
  - [CMU]2023 - Mamba - Linear-Time Sequence Modeling with Selective State Spaces
