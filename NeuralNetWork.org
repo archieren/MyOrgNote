@@ -828,9 +828,11 @@ SSM -> Hippo -> LSSL -> S4 -> H3 -> Mamba
    之前: "Continuous State Space Model" -> "Discrete-time State Space Models: The recurrent representation"
    而这个LSSL: => "Training SSMs: The Convolutional Representation"
    这是一篇过渡文章,将SSM的两个视角(As a recurrence Or As a convolution)作了统一!
+   - 训练时，采用卷积表示。
+   - 推理时，采用递归表示。
    "SSM convolution kernel - SSK" or "Kyrov Function", 可以探索一下!
  - [Gu A.;...]2022 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
-   S4以所谓的结构化方法
+   S4以所谓的结构化方法：
    - the continuous representation: Hippo Matrix的选择.
    - the recurrent representation: 离散方法的选择,(选择跟随Bilinear Method).
    - the convolutional representation: 可高效计算Kyrov Function(即那个SSK函数)的参数矩阵是对角化矩阵.
