@@ -820,32 +820,43 @@ Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natu
 看来这篇文章将DCN推到一个可理论探索的地步!
 ** Mamba代表State Space Model(SSM)走入和Transformer竞争的行列!这里面可能真有戏!
 但前景如何? 事实上,"An Attention Free Transformer"一文,开启一些新方向!(RWKV,GateLoop,HGRN等等)
-SSM -> Hippo -> LSSL -> S4 -> H3 -> Mamba
+SSM -> Hippo -> LSSL -> S4 -> Mamba
 [[file:images/ssm-hippo-s4-mamba.jpg][SSM-To-Mamba]]
  - [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
    这篇文章,处理了长期依赖的问题( Addressing Long-Range Dependencies)!
+   HiPPO是个关键,有一定的理论意义!!!
  - [Gu A.;...]2021 - LSSL - Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers
    之前: "Continuous State Space Model" -> "Discrete-time State Space Models: The recurrent representation"
    而这个LSSL: => "Training SSMs: The Convolutional Representation"
    这是一篇过渡文章,将SSM的两个视角(As a recurrence Or As a convolution)作了统一!
-   - 训练时，采用卷积表示。
-   - 推理时，采用递归表示。
    "SSM convolution kernel - SSK" or "Kyrov Function", 可以探索一下!
  - [Gu A.;...]2022 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
-   S4以所谓的结构化方法：
+   这篇文章的贡献,主要集中在计算方法的优化!!!
+   S4,所谓的结构化方法
    - the continuous representation: Hippo Matrix的选择.
    - the recurrent representation: 离散方法的选择,(选择跟随Bilinear Method).
    - the convolutional representation: 可高效计算Kyrov Function(即那个SSK函数)的参数矩阵是对角化矩阵.
      矩阵的共轭等价变化,可得到对角矩阵.
+     论文"2022 - DSS - Diagonal State Spaces are as Effective as Structured State Spaces"首先发现了这点!
      问题是,只有正规矩阵(Normal Matrix)可以对角化.而Hippo Matrix不满足条件!是否可将问题弱化呢?
-     S4认为,论文"2022 - GSS - Long Range Language Modeling via Gated State Space"没考虑好可对角化问题,尽管出发点是对的!
      S4的贡献在于,将Diagonal Matrix 放宽到 DPLR Matrix(Diagonal Plus Low Rank Matrix).
      并且,发现HIPPO Matrix中的HiPPO_LegS,HiPPO_LegT,HiPPO_LagT等等的矩阵,满足NPLR(Normal Plus Low Rank)条件.
      NPLR和DPLR是共轭的!!!
      看来,如果要深入,需要一些矩阵计算方法的背景了.
-   GSS[2022 - GSS - Long Range Language Modeling via Gated State Space]好像还是要和S4争一下.
- - [Dao T.]2023 - Hungry Hungry Hippos - Towards Language Modeling with State Space Models
  - [CMU]2023 - Mamba - Linear-Time Sequence Modeling with Selective State Spaces
+   - "We argue that a fundamental problem of sequence modeling is compressing context into a smaller state!!"
+     这是一个什么观点? "状态应当将上下文压缩进来!".
+     - S4的变种或衍生.
+       略.讨论了什么?
+     - 基于SSM的架构: To refer to deep neural network architectures incorporating one of the previous SSMs as a black box layer.
+       Linear Attention, GSS , Mega ,H3,Selective S4,RetNet,RWKV等等...?? 间接或直接都和SSM挂上了勾?
+     - 纯粹的LTI models,天生有什么短板?
+       "The Selective Copying task", "The Induction Heads task"等任务揭示了什么? LTI模型的状态,缺少"context"在其中!!!
+       In summary, the efficiency vs. effectiveness tradeoff of sequence models is characterized by how well they compress their state:
+        - efficient models must have a small state,
+        - while effective models must have a state that contains all necessary information from the context.
+   - 解决问题的方法之一,就是"Selection"
+   [Dao T.]2023 - Hungry Hungry Hippos - Towards Language Modeling with State Space Models
 *** Gu A.在他的博士论文里,对基本概念讲得更清楚!
 Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问题,这是开窍点吗?
 ** Neural ODE这篇文章到底有什么可以高看的地方？
