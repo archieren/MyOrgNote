@@ -822,7 +822,7 @@ Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natu
 ** Mamba代表State Space Model(SSM)走入和Transformer竞争的行列!这里面可能真有戏!
 但前景如何? 事实上,"An Attention Free Transformer"一文,开启一些新方向!(RWKV,GateLoop,HGRN等等)
 SSM -> Hippo -> LSSL -> S4 -> Mamba
-这里充满者大量的技术细节调整!有理论性的,首当HiPPO和Mamba, LSSI次之! S4,S4D,S5再次之!! 但S4biaoxian
+这里充满者大量的技术细节调整!有理论性的,首当HiPPO和Mamba, LSSI次之! S4,S4D,S5再次之!!
 [[file:images/ssm-hippo-s4-mamba.jpg][SSM-To-Mamba]]
  - [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
    这篇文章,处理了长期依赖的问题( Addressing Long-Range Dependencies)!
@@ -844,6 +844,7 @@ SSM -> Hippo -> LSSL -> S4 -> Mamba
      并且,发现HIPPO Matrix中的HiPPO_LegS,HiPPO_LegT,HiPPO_LagT等等的矩阵,满足NPLR(Normal Plus Low Rank)条件.
      NPLR和DPLR是共轭的!!!
      看来,如果要深入,需要一些矩阵计算方法的背景了.
+     看了一堆相关文章DSS,S4D等等,发现有点技术灌水的味道!!!(它们在互相引用!!!)
  - [CMU]2023 - Mamba - Linear-Time Sequence Modeling with Selective State Spaces
    - "We argue that a fundamental problem of sequence modeling is compressing context into a smaller state!!"
      这是一个什么观点? "状态应当将上下文压缩进来!".
@@ -853,7 +854,9 @@ SSM -> Hippo -> LSSL -> S4 -> Mamba
        - efficient models must have a small state,
        - while effective models must have a state that contains all necessary information from the context.
      - 解决问题的方法之一,就是"Selection". 但,什么是"Selection"?
-       - 但Selection,又打破了卷积视角!!!
+       - 但Selection,具体地说, selective scan,又破坏了S4中的卷积递归双面性!!!
+         This “Selective Scan” operation now, does not hold the dual property of convolution and recurrence.
+         Hence, Mamba relies on recurrence only.
 *** Gu A.在他的博士论文里,对基本概念讲得更清楚!
 Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问题,这是开窍点吗?
 ** Neural ODE这篇文章到底有什么可以高看的地方？
