@@ -829,8 +829,8 @@ SSM -> Hippo -> LSSL -> S4 -> Mamba
    HiPPO是个关键,有一定的理论意义!!!
  - [Gu A.;...]2021 - LSSL - Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers
    之前: "Continuous State Space Model" -> "Discrete-time SSMs(Inference SSMs): The recurrent representation"
-   而这个LSSL: => "Training SSMs: The Convolutional Representation"
-   这是一篇过渡文章,将SSM的两个视角(As a recurrence Or As a convolution)作了统一!
+   而这个LSSL,发现: => "Training SSMs: The Convolutional Representation"
+   _这是一篇过渡文章,形成了SSM的双视角!("the dual recurrent-convolutional forms")._
    "SSM convolution kernel - SSK" or "Kyrov Function", 可以探索一下!
  - [Gu A.;...]2022 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
    这篇文章的贡献,主要集中在计算方法的优化!!!
