@@ -548,9 +548,6 @@ Michael M. Bronstein这个人,学习Klein Erlangen Programme的精神,搞了个�
 *** [Buckley C.L.]2017 - The free energy principle for action and perception: A mathematical review
 *** [Clark A.]2013 - Whatever next? Predictive brains, situated agents, and the future of cognitive science
 *** [Now]2019 - An Introduction to Variational Autoencoders
-** Self-Attention in transformers is not Attention!
-*** [John K. Tsotsos]2023 - Self-attention in Vision Transformers Performs Perceptual Grouping, Not Attention
-没怎么读这篇文章.但Tsotsos出来发话,可能还是有不少意图的.
 ** Modern Hopfield Network这条线路又意味者什么?
 Energy-Based-Model(EBM)的要点:
  - "Capture Dependencies through an energy function"
@@ -857,7 +854,20 @@ SSM -> Hippo -> LSSL -> S4 -> Mamba
        - 但Selection,具体地说, selective scan,又破坏了S4中的卷积递归双面性!!!
          This “Selective Scan” operation now, does not hold the dual property of convolution and recurrence.
          Hence, Mamba relies on recurrence only.
+         不过此时,有并行算法存在!
 *** Gu A.在他的博士论文里,对基本概念讲得更清楚!
 Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问题,这是开窍点吗?
+*** 补充一些东西:
+**** RNN,LSTM,GRU还是要比较认识一下!
+[[file:images/Comparison-of-RNN-LSTM-and-GRU-neural-network-structures.png][图: RNN vs LSTM vs GRU]]
+[[file:images/Structure of the LSTM cell and equations.png][图: LSTM Cell]]
+[[file:images/Structure of the GRU cell and equations.png][图: GRU Cell]]
+** 从Perceptual Grouping角度看基础模型
+*** Self-Attention in transformers is not Attention!
+**** [John K. Tsotsos]2023 - Self-attention in Vision Transformers Performs Perceptual Grouping, Not Attention
+没怎么读这篇文章.但Tsotsos出来发话,可能还是有不少意图的.
+*** "Perceptual Group Token"一文是否该值的重视!
+**** 为什么作者认为"Image as set of points"里的工作,和自己的工作最相关!
+**** 一系列的Mamba/S4的灌水文章,似乎体现的都是这篇文章的思想!!!
 ** Neural ODE这篇文章到底有什么可以高看的地方？
 为什么“Mit的评审意见认为这是一个可以和Ian Goodfellow的GAN相媲美的‘a radical new design’”
