@@ -862,7 +862,12 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
 [[file:images/Comparison-of-RNN-LSTM-and-GRU-neural-network-structures.png][图: RNN vs LSTM vs GRU]]
 [[file:images/Structure of the LSTM cell and equations.png][图: LSTM Cell]]
 [[file:images/Structure of the GRU cell and equations.png][图: GRU Cell]]
-** 从Perceptual Grouping角度看基础模型
+** 从Perceptual Grouping角度看基础模型的其他路线
+*** "GroupViT: Semantic Segmentation Emerges from Text Supervision"
+还有一个常提起的Vit工作,叫Dynamic Transformers(DVT). 慢慢的将Group/Cluster等等思路给烘托出来.尽管不像Swin那么成功!!!
+*** "Image as set of points"的工作:卷积,注意力之外的另一条视觉表示路线!
+We introduce ~Context Cluster~, a novel feature extraction paradigm for visual representation.
+We hope our ~Context Cluster~ can be considered as a novel visual representation method ~in addition to~ convolution and attention.
 *** Self-Attention in transformers is not Attention!
 **** [John K. Tsotsos]2023 - Self-attention in Vision Transformers Performs Perceptual Grouping, Not Attention
 没怎么读这篇文章.但Tsotsos出来发话,可能还是有不少意图的.
