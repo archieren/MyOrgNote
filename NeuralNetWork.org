@@ -873,6 +873,10 @@ We hope our ~Context Cluster~ can be considered as a novel visual representation
 没怎么读这篇文章.但Tsotsos出来发话,可能还是有不少意图的.
 *** "Perceptual Group Token"一文是否该值的重视!
 **** 为什么作者认为"Image as set of points"里的工作,和自己的工作最相关!
+"Image as set of points"自称受到"PointMLP"的影响!
+而这个"PGT"自称又最受(或和......最相关)"Image as set of points"的影响!
+难道是Cluster启发了Perceptual Grouping??? 牵强!
+而Perceptual Grouping 本质上是在发现对象或是东西(Object discovery. The perceptual grouping is essentially performing “object and stuff” discovery in the pixel space.)
 **** 一系列的Mamba/S4的灌水文章,似乎体现的都是这篇文章的思想!!!
 ** Neural ODE这篇文章到底有什么可以高看的地方？
 为什么“Mit的评审意见认为这是一个可以和Ian Goodfellow的GAN相媲美的‘a radical new design’”
