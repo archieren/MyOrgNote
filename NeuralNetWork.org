@@ -863,14 +863,30 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
 [[file:images/Structure of the LSTM cell and equations.png][图: LSTM Cell]]
 [[file:images/Structure of the GRU cell and equations.png][图: GRU Cell]]
 ** 从Perceptual Grouping角度看基础模型的其他路线
+当将Transformer运用到2D,3D的数据上时,就会发现Space is sequences!
+这就面临一个问题,How to sequence the space!But, sequencing is triggered by grouping or selection with one by one!
+Set => Subsampled Or hiearchied Set(Clustering and Feature_Aggregating) => Grouping / Sequencing
 *** "GroupViT: Semantic Segmentation Emerges from Text Supervision"
-还有一个常提起的Vit工作,叫Dynamic Transformers(DVT). 慢慢的将Group/Cluster等等思路给烘托出来.尽管不像Swin那么成功!!!
+有点学CLIP,来grouping!(可以了解一下)
+*"DVT:Not All Images are Worth 16x16 Words - Dynamic transformers for Efficient Image Recognition"*
+这常被提及,但和Grouping的路线,还是不靠边!
 *** "Image as set of points"的工作:卷积,注意力之外的另一条视觉表示路线!
 We introduce ~Context Cluster~, a novel feature extraction paradigm for visual representation.
 We hope our ~Context Cluster~ can be considered as a novel visual representation method ~in addition to~ convolution and attention.
+这篇论文的意义,在于她的宣言!
+- "Image as set of points"说她受到PointMLP的影响(当然,两篇是同一作者!!!),那么PointMLP代表什么路线呢?
+  "PointNet -> PointNet++ -> PointMLP: 局部几何特征 + ~Set~. 估计可以这样说!!!"
 *** Self-Attention in transformers is not Attention!
 **** [John K. Tsotsos]2023 - Self-attention in Vision Transformers Performs Perceptual Grouping, Not Attention
 没怎么读这篇文章.但Tsotsos出来发话,可能还是有不少意图的.
+*** "Point Transformer v3",这篇可能要细看了!
+**** Scaling Principle:
+有些模糊理解.应当指"Uitilizing multi-dataset joint training stratgies"
+模型的性能中,有个"accuracy vs efficiency"的均衡问题.
+作者似乎认为大规模的多数聚集的联合训练,可以将简单高效的网络赋以高性能结果,
+而不像某些网络(比如可以看看作者所在的香港大学里的一系列工作),以复杂低效的网络设计来换取高精度!!!
+**** Breaking the curse of permutation invariance:
+这个可能更重要, ~Serialization-based method.~
 *** "Perceptual Group Token"一文是否该值的重视!
 **** 为什么作者认为"Image as set of points"里的工作,和自己的工作最相关!
 "Image as set of points"自称受到"PointMLP"的影响!
