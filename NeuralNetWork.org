@@ -876,6 +876,9 @@ We hope our ~Context Cluster~ can be considered as a novel visual representation
 这篇论文的意义,在于她的宣言!
 - "Image as set of points"说她受到PointMLP的影响(当然,两篇是同一作者!!!),那么PointMLP代表什么路线呢?
   "PointNet -> PointNet++ -> PointMLP: 局部几何特征 + ~Set~. 估计可以这样说!!!"
+- "Image as set of points" 真正的贡献,不在于聚类,而在于聚类后用"Aggregating -> Dispatching"操作,让类中的点交互!!
+  ~"Context Cluster -> Feature Aggregating -> Feature Dispatching" 这样一个聚散过程!!!~
+  "聚散"是不同于卷积和注意的特征提取操作!这才是她说的贡献.既一种新的特征表示的提取方法!
 *** Self-Attention in transformers is not Attention!
 **** [John K. Tsotsos]2023 - Self-attention in Vision Transformers Performs Perceptual Grouping, Not Attention
 没怎么读这篇文章.但Tsotsos出来发话,可能还是有不少意图的.
