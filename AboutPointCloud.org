@@ -53,6 +53,12 @@
 这是一个有意思的话题.应当从感知的角度,来看待此问题!
 ** MeshWalker
 ** CurveNet
-* "Image as Set of Points" 是不是提出了一个有前途的范式呢?
+* "Point Transformer v3",这篇可能要细看了!
+** 应当关注PointCept名下的一系列的工作!!!
+** Scaling Principle:
+有些模糊理解.应当指"Uitilizing multi-dataset joint training stratgies"
+模型的性能中,有个"accuracy vs efficiency"的权衡问题.
+** Breaking the curse of permutation invariance:
+这个可能更重要, ~Serialization-based method.~
 
 
