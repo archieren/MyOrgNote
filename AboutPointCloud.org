@@ -48,9 +48,10 @@
 - [Nico Engel]2021 - Point Transformer  --(1)
 - [Guo M.H.]2021 - PCT - Point Cloud Transformer  --(2)
 - [Zhao H.S.]2021 - Point Transformer  --(3)
-
+应当是有答案了,一直在往下作的,是HKU的团队,即(3)的作者们!!!
 * Space is sequences
 这是一个有意思的话题.应当从感知的角度,来看待此问题!
+背后的本质问题是集合的结构化的道路!既要反应局部,又要反应全局互通!!!
 ** MeshWalker
 ** CurveNet
 * "Point Transformer v3",这篇可能要细看了!
