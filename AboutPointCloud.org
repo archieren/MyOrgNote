@@ -14,7 +14,7 @@
 ** AC - Ambient Occlusion
 ** AGD - Average Geodesic Distance
 ** SuperPoint,尽管是Image上的工作,其基于Homograhic Adaption的Self-Supervised Learning是值得思考的.
-* PointNet &. PointNet++奠定了什么基础
+* PointNet &. PointNet++ & PointMLP: 怎么理解"Point Based Method" for Point Cloud Anylasis!
 ** PointNet
 针对Spatial Point Set的几个特性:
 - Unordered
@@ -27,7 +27,13 @@
   - To summarize a shape by a sparse set of critical point. 这倒是要理解一下.
 - Local And Global Information Aggregation
 - Joint Alignment Networks
-
+** PointNet++
+PointNet++认为PointNet缺少一种能力: 在不同尺度下,扑捉局部上下文(To capture local context at different scales!)
+How to capture local context?(略!)
+** PointMLP
+...we show case that even without the carefully designed operations for local geometry exploration,
+a pure deep hierarchical MLP architecture is able to exhibit gratifying performances and even better results...
+==> deep residual mlp for point cloud.
 * 基于深度学习的特征点学习
 ** 3DSmoothNet
 利用的基础技术
