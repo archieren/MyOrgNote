@@ -411,6 +411,10 @@ Three types of operators are considered essential in a VSA.
 - SSP 在动力学方面的表现,值得关注!
   [Voelker A.R.]2021 - Simulating and Predicting Dynamical Systems With Spatial Semantic Pointers
 
+** KAN,RPN,...还有谁？这是在思考什么？
+*** 2024 - Kan: Kolmogorov-arnold networks
+*** 2024 - KAN 2.0:Kolmogorov-Arnold Networks Meet Science
+*** 2024 - RPN - Reconciled Polynomial Network Towards Unifying PGMs - Kernel SVMs - MLP - KAN
 
 * 工部
 ** FCN 中的FC是什么含义？
