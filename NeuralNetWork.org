@@ -648,14 +648,16 @@ MaX是mask xformer的缩写! 可以写成一个公式!  SoftMax(Features x Objec
     MaX垫定了理论形式.
     MaskFormer应当是后继工作!
   + Mask Classification 理论上,可以将各种分割任务进行统一.
+  + Mask3D 是Mask Classification上的拓展.其他领域的扩展,可能要关注下.
+    [2023 - Mask3D for 3D Semantic Instance Segmentation]
 - SegFormer (For semantic segmentation)--> Panoptic SegFormer (For panoptic segmentation)
 - DiNo (For object detetction) --> Mask DiNo (Can object detection and segmentation be unified)
-  + 这是在找话题吗?还是真见地?
+  + 这是在找话题吗?还是真见地?最终,DiNo家族在往Mask Classification靠拢!
 
 **** How to apply for transfer learning or domain adaption task?
 *** DINO家族(此DINO非彼DiNo,不道德的取名方式)
 DINO means "Detr with Improved deNoising anchOr boxes"
-DAB-DeTr --> DN-DeTr --> DiNo --> Mask DiNo --> OpenSeeD
+DAB-DeTr --> DN-DeTr --> DiNo --> (Mask DiNo, MP-Former) --> OpenSeeD
 
 ** 关于Set-Prediction Problem 还可看看下述文章
 Deep Sets
