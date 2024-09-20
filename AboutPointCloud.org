@@ -69,3 +69,7 @@ a pure deep hierarchical MLP architecture is able to exhibit gratifying performa
 背后的本质问题是集合的结构化的道路!既要反应局部,又要反应全局互通!!!
 ** MeshWalker
 ** CurveNet
+* Learned Query in PointCloud
+[2022 - SPFormer - Superpoint Transformer for 3D Scene Instance Segmentation]
+[2023 - Mask3D - Mask3D for 3D Semantic Instance Segmentation]
+[2023 - OneFormer3D - One Transformer for Unified Point Cloud Segmentation]

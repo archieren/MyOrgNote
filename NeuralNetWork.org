@@ -895,3 +895,5 @@ We hope our ~Context Cluster~ can be considered as a novel visual representation
 **** 一系列的Mamba/S4的灌水文章,似乎体现的都是这篇文章的思想!!!
 ** Neural ODE这篇文章到底有什么可以高看的地方？
 为什么“Mit的评审意见认为这是一个可以和Ian Goodfellow的GAN相媲美的‘a radical new design’”
+** VitPose 和 TokenPose
+TokenPose是VitPose不出来之前的东西!估计如此!
