@@ -73,3 +73,6 @@ a pure deep hierarchical MLP architecture is able to exhibit gratifying performa
 [2022 - SPFormer - Superpoint Transformer for 3D Scene Instance Segmentation]
 [2023 - Mask3D - Mask3D for 3D Semantic Instance Segmentation]
 [2023 - OneFormer3D - One Transformer for Unified Point Cloud Segmentation]
+* KeyPoints or LandMark(or LandScape) or ##Pose in PointClouds
+事实上,这是一个困难的领域！
+** 先看看Image领域的!
