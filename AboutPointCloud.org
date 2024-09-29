@@ -76,3 +76,9 @@ a pure deep hierarchical MLP architecture is able to exhibit gratifying performa
 * KeyPoints or LandMark(or LandScape) or ##Pose in PointClouds
 事实上,这是一个困难的领域！
 ** 先看看Image领域的!
+[2024 - X-Pose - Detecting Any Keypoints]
+[2024 - XPose - eXplainable Human Pose Estimation]
+[2024 - Unsupervised Keypoints from Pretrained Diffusion Models]
+[2023 - Detecting Arbitrary Keypoints on Limbs and Skis with Sparse Partly Correct Segmentation Masks]
+还有老的,[TokenPose],[VitPose]等等,还是很多的！
+看到很多方法,从FeaturePoint这种孤立地观点,到Pose这种有内在结构关联的观点,怎么搞出比较好的"关键点"定义!
