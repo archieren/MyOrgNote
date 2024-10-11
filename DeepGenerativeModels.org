@@ -80,5 +80,9 @@ VAE(Variational AutoEncoder),ARM(AutoRegressive Models),GAN(Generative Adversari
 而且它们三者有着深刻得联系.
 ** DM(Diffusion Model): SBGM & SDE & DBM......
 还是cs236课程里,Stefano Ermon讲得比较清晰!
+** Score Function充当的角色?
+[Hyvärinen A.]2005 - Estimation of Non-Normalized Statistical Models By Score Matching
+[Vincent P.]2011 - A Connection Between Score Matching and Denoising Autoencoders
+[Welling M.;...]2011 - Bayesian Learning via Stochastic Gradient Langevin Dynamics
 
 
