@@ -80,10 +80,16 @@ a pure deep hierarchical MLP architecture is able to exhibit gratifying performa
 [2024 - XPose - eXplainable Human Pose Estimation]
 [2024 - Unsupervised Keypoints from Pretrained Diffusion Models]
 [2023 - Detecting Arbitrary Keypoints on Limbs and Skis with Sparse Partly Correct Segmentation Masks]
-还有老的,[TokenPose],[VitPose]等等,还是很多的！
+还有[TokenPose],[VitPose],[TransPose](这几个都是利用Transfomer得到Heatmap)等等,还是很多的！
 看到很多方法,从FeaturePoint这种孤立地观点,到Pose这种有内在结构关联的观点,怎么搞出比较好的"关键点"定义!
 ** 一个小问题, keypoint/featurepoint descriptor和keypoint/featurepoint detector的区别！
-有关descriptor的文章多,而detector的内容少![2019 - USIP: Unsupervised Stable Interest Point Detection from 3D Point Clouds]
+*** [2019 - USIP: Unsupervised Stable Interest Point Detection from 3D Point Clouds]
+USIP应当是个先锋,作为基于学习的3d关键点检测方法,远超传统方法.
+有关descriptor的文章多,而detector的内容少!
 由于容易获得GroundTruth(这和Registration Task相关),基于深度学习的descriptor,有比较好的发展!
-而detector就没有这样的便利处！
+而detector就没有这样的便利处！这是它基于SOM的缘由吗?
+*** keypoint detect 和 keypoint estimation 又有什么区别？
+** 用隐涵表示的学习
+[2023 - 3D Keypoint Estimation Using Implicit Representation Learning]
+[2022 - SNAKE - Shape-aware Neural 3D Keypoint Field]
 * Topology Data Analysis(TDA)和Geometric Data Analysis(GDA)
