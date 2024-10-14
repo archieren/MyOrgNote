@@ -88,7 +88,7 @@ USIP应当是个先锋,作为基于学习的3d关键点检测方法,远超传统
 有关descriptor的文章多,而detector的内容少!
 由于容易获得GroundTruth(这和Registration Task相关),基于深度学习的descriptor,有比较好的发展!
 而detector就没有这样的便利处！这是它基于SOM的缘由吗?
-*** keypoint detect 和 keypoint estimation 又有什么区别？
+*** keypoint detection 和 keypoint estimation 又有什么区别？
 ** 用隐涵表示的学习
 [2023 - 3D Keypoint Estimation Using Implicit Representation Learning]
 [2022 - SNAKE - Shape-aware Neural 3D Keypoint Field]
