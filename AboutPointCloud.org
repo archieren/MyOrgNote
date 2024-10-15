@@ -93,3 +93,5 @@ USIP应当是个先锋,作为基于学习的3d关键点检测方法,远超传统
 [2023 - 3D Keypoint Estimation Using Implicit Representation Learning]
 [2022 - SNAKE - Shape-aware Neural 3D Keypoint Field]
 * Topology Data Analysis(TDA)和Geometric Data Analysis(GDA)
+* 3D Representation Learning
+** [2024 - 3D Representation Method: A survey]可以看看.虽然新,但目前来看,总结得不到位,提供的资料也不全!
