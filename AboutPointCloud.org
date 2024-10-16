@@ -84,14 +84,19 @@ a pure deep hierarchical MLP architecture is able to exhibit gratifying performa
 看到很多方法,从FeaturePoint这种孤立地观点,到Pose这种有内在结构关联的观点,怎么搞出比较好的"关键点"定义!
 ** 一个小问题, keypoint/featurepoint descriptor和keypoint/featurepoint detector的区别！
 *** [2019 - USIP: Unsupervised Stable Interest Point Detection from 3D Point Clouds]
+前期工作, [2018 - SO-Net - Self-Organizing Network for Point Cloud Analysis]
 USIP应当是个先锋,作为基于学习的3d关键点检测方法,远超传统方法.
 有关descriptor的文章多,而detector的内容少!
 由于容易获得GroundTruth(这和Registration Task相关),基于深度学习的descriptor,有比较好的发展!
 而detector就没有这样的便利处！这是它基于SOM的缘由吗?
 *** keypoint detection 和 keypoint estimation 又有什么区别？
+文章[2023 - 3D Keypoint Estimation Using Implicit Representation Learning]作了一些澄清!
 ** 用隐涵表示的学习
-[2023 - 3D Keypoint Estimation Using Implicit Representation Learning]
-[2022 - SNAKE - Shape-aware Neural 3D Keypoint Field]
+- [2023 - 3DShape2VecSet - A 3D Shape Representation for Neural Fields and Generative Diffusion Models]
+  为了生成的目的,在Latent Space作SDF工作.
+- [2023 - 3D Keypoint Estimation Using Implicit Representation Learning]
+  构造了一个奇怪的SDF.文章中,“相关工作”一段的辨析,比较好!
+- [2022 - SNAKE - Shape-aware Neural 3D Keypoint Field]
 * Topology Data Analysis(TDA)和Geometric Data Analysis(GDA)
 * 3D Representation Learning
 ** [2024 - 3D Representation Method: A survey]可以看看.虽然新,但目前来看,总结得不到位,提供的资料也不全!
