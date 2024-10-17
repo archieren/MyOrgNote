@@ -91,6 +91,7 @@ USIP应当是个先锋,作为基于学习的3d关键点检测方法,远超传统
 而detector就没有这样的便利处！这是它基于SOM的缘由吗?
 *** keypoint detection 和 keypoint estimation 又有什么区别？
 文章[2023 - 3D Keypoint Estimation Using Implicit Representation Learning]作了一些澄清!
+点->小球面, 定义DeepSDF,学它,用Marching-Cube来估计!
 ** 用隐涵表示的学习
 - [2023 - 3DShape2VecSet - A 3D Shape Representation for Neural Fields and Generative Diffusion Models]
   为了生成的目的,在Latent Space作SDF工作.
