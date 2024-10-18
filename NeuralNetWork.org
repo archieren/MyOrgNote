@@ -643,7 +643,7 @@ MaX是mask xformer的缩写! 可以写成一个公式!  SoftMax(Features x Objec
   这样作的好处,我猜,在于Segmentation 不再是 Detection的后继步骤.如同Faster R-CNN 与 Mask R-CNN的关系!
   但其Loss函数还是依赖很多.
   kMaX-DeepLab在MaX-DeepLab的基础上,讨论了cross-attention和cluster之间的关系.
-- MaskFormer(For Semantic segmentation) --> Mask2Former (For panoptic segmentation) --> OneFormer (Universe image segmentation)
+- MaskFormer(For Semantic segmentation) --> Mask2Former (For panoptic segmentation) --> OneFormer (Universe image segmentation) --> OMG-Seg()
   + MaX(Mask XFormer)
     MaX垫定了理论形式.
     MaskFormer应当是后继工作!
@@ -897,8 +897,10 @@ We hope our ~Context Cluster~ can be considered as a novel visual representation
 为什么“Mit的评审意见认为这是一个可以和Ian Goodfellow的GAN相媲美的‘a radical new design’”
 ** VitPose 和 TokenPose
 TokenPose是VitPose不出来之前的东西!估计如此!
-** Perceiver
+** Perceiver:为何称之为General Perception?
 [Perceiver: General Perception with Iterative Attention]
+[Perceiver IO: A General Architecture for Structured Inputs & Outputs]
+[Perceiver AR: General-purpose, long-context autoregressive modeling with Perceiver AR]
 实质上,真还是忽略了他的意义!扯远点,Mask2former里,好像也看到某种类似的痕迹!
 Cross-Attention其实还是有深意的!谁Q,谁K,V,应当有思想!
 Perceiver应当是Latent-Space的构造器!

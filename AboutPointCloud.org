@@ -94,7 +94,7 @@ USIP应当是个先锋,作为基于学习的3d关键点检测方法,远超传统
 点->小球面, 定义DeepSDF,学它,用Marching-Cube来估计!
 ** 用隐涵表示的学习
 - [2023 - 3DShape2VecSet - A 3D Shape Representation for Neural Fields and Generative Diffusion Models]
-  为了生成的目的,在Latent Space作SDF工作.
+  为了生成的目的,在Latent Space作SDF工作.而且,我看到它的网络结构,很容易想起Perceiver!
 - [2023 - 3D Keypoint Estimation Using Implicit Representation Learning]
   构造了一个奇怪的SDF.文章中,“相关工作”一段的辨析,比较好!
 - [2022 - SNAKE - Shape-aware Neural 3D Keypoint Field]
