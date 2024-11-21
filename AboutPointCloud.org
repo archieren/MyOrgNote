@@ -84,21 +84,29 @@ a pure deep hierarchical MLP architecture is able to exhibit gratifying performa
 看到很多方法,从FeaturePoint这种孤立地观点,到Pose这种有内在结构关联的观点,怎么搞出比较好的"关键点"定义!
 ** 一个小问题, keypoint/featurepoint descriptor和keypoint/featurepoint detector的区别！
 *** [2019 - USIP: Unsupervised Stable Interest Point Detection from 3D Point Clouds]
-前期工作, [2018 - SO-Net - Self-Organizing Network for Point Cloud Analysis]
+作者的前期工作, [2018 - SO-Net - Self-Organizing Network for Point Cloud Analysis].
 USIP应当是个先锋,作为基于学习的3d关键点检测方法,远超传统方法.
 有关descriptor的文章多,而detector的内容少!
 由于容易获得GroundTruth(这和Registration Task相关),基于深度学习的descriptor,有比较好的发展!
-而detector就没有这样的便利处！这是它基于SOM的缘由吗?
+这篇文章的想法好像深刻,其实很原始!-学习变化不变量-.
 *** keypoint detection 和 keypoint estimation 又有什么区别？
 文章[2023 - 3D Keypoint Estimation Using Implicit Representation Learning]作了一些澄清!
 点->小球面, 定义DeepSDF,学它,用Marching-Cube来估计!
-** 用隐涵表示的学习
+** 点云的结构(Structure of Point Cloud)
+点集/点云/等,所代表的对象/空间的结构其实是个关键问题
+*** [2022 - PointSCNet: Point Cloud Structure and Correlation Learning Based on Space Filling Curve Guided Sampling]
+2022写的,2024才有正式的发表!
+比PTV3较早地利用SFC作结构性描述!
+** 基于点云隐涵表示的关键点检测或点云重构及生成!!
 - [2023 - 3DShape2VecSet - A 3D Shape Representation for Neural Fields and Generative Diffusion Models]
   为了生成的目的,在Latent Space作SDF工作.而且,我看到它的网络结构,很容易想起Perceiver!
+  本文要解决的问题是,在作者们的前期工作3DILG中,Latent Space对样本坐标空间的显示依赖!
+  注意,他是为了生成的目的.
 - [2023 - 3D Keypoint Estimation Using Implicit Representation Learning]
-  构造了一个奇怪的SDF.文章中,“相关工作”一段的辨析,比较好!
-
+  构造了一个奇怪的SDF,关键点用包含它的球面来估计,问题就变成学到这种隐涵的表示!.文章中,“相关工作”一段的辨析,比较好!
 - [2022 - SNAKE - Shape-aware Neural 3D Keypoint Field]
+  作者在探索一个问题:"Whether jointly reconstructing underlying 3D shapes helps 3D keypoint detection!"
+  
 * Topology Data Analysis(TDA)和Geometric Data Analysis(GDA)
 * 3D Representation Learning
 ** [2024 - 3D Representation Method: A survey]可以看看.虽然新,但目前来看,总结得不到位,提供的资料也不全!
