@@ -905,3 +905,5 @@ TokenPose是VitPose不出来之前的东西!估计如此!
 实质上,真还是忽略了他的意义!扯远点,Mask2former里,好像也看到某种类似的痕迹!
 Cross-Attention其实还是有深意的!谁Q,谁K,V,应当有思想!
 Perceiver应当是Latent-Space的构造器!
+** SAM Oneformer SegGPT SEEM这些并行工作意味着什么?
+综述:[2023 - A Comprehensive Survey on Segment Anything Model for Vision and Beyond - v2]
