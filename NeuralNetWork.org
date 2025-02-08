@@ -907,7 +907,7 @@ Cross-Attention其实还是有深意的!谁Q,谁K,V,应当有思想!
 Perceiver应当是Latent-Space的构造器!
 ** SAM Oneformer SegGPT SEEM这些并行工作意味着什么?
 综述:[2023 - A Comprehensive Survey on Segment Anything Model for Vision and Beyond - v2]
-** OpenAI的ChatGPT o1带来了什么?
+** OpenAI的ChatGPT o1带来了什么? DeepSeek又带来了什么?
 OpenAI发布了ChatGPT o1!其出色的推理(Reasoning)能力,让学术界在猜测,它是否“内置”了思维链!怎么“重现”?
 - UCL的汪军,"A tuturial on LLM Reasoning: Relevant methods behind ChatGPT o1"
 - Fudan的,"Scaling of Search and Learning - A Roadmap to Reproduce o1 from Reinforcement Learning Perspective"
