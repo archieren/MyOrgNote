@@ -415,7 +415,34 @@ Three types of operators are considered essential in a VSA.
 *** 2024 - Kan: Kolmogorov-arnold networks
 *** 2024 - KAN 2.0:Kolmogorov-Arnold Networks Meet Science
 *** 2024 - RPN - Reconciled Polynomial Network Towards Unifying PGMs - Kernel SVMs - MLP - KAN
-** ※Architectures (Backbone)※
+** World Models在讨论什么？
+[2023 - From Word Models to World Models]
+** ※※※※※※※※
+*** ※AI Mathematician / AI Scientist / Autoformalization※
+General
+2411 - Large language models surpass human experts in predicting neuroscience results
+2411 - Arithmetic Without Algorithms: Language Models Solve Math With a Bag of Heuristics
+2410 - Herald - A Natural Language Annotated Lean 4 Dataset
+2407 - LEAN-GitHub: Compiling GitHub LEAN repositories for a versatile LEAN prover
+2306 - From Word Models to World Models: Translating from Natural Language to the Probabilistic Language of Thought
+2406 - AI-Assisted Generation of Difficult Math Questions
+2405 - Metacognitive Capabilities of LLMs- An Exploration in Mathematical Problem Solving
+2405 - DeepSeek-Prover: Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data
+2404 - A Survey on Deep Learning for Theorem Proving
+2403 - Don’t Trust: Verify – Grounding LLM Quantitative Reasoning with Autoformalization
+2403 - Machine Learning and Information Theory Concepts Towards an AI Mathematician [Y. Bengio]
+2402 - REFACTOR: Learning to Extract Theorems from Proofs
+2312 - NeurIPS Tutorial on Machine Learning for Theorem Proving [Video]
+2310 - A New Approach Towards Autoformalization
+2212 - Solving Quantitative Reasoning Problems with Language Models
+2302 - Peano - Learning Formal Mathematical Reasoning
+2301 - Towards Autoformalization of Mathematics and Code Correctness: Experiments with Elementary Proofs
+2210 - Draft, Sketch, and Prove: Guiding Formal Theorem Provers with Informal Proofs
+2205 - Autoformalization with Large Language Models
+20xx - A Promising Path Towards Autoformalization and General Artificial Intelligence
+2009 - Generative Language Modeling for Automated Theorem
+2006 - Mathematical Reasoning via Self-supervised Skip-tree Training
+*** ※Architectures (Backbone)※
 General
 2501 - What’s Next for Mamba? Towards More Expressive Recurrent Update Rules
 2410 - FACTS- A Factored State-Space Framework For World Modelling
@@ -427,7 +454,7 @@ General
 2202 - GroupViT: Semantic Segmentation Emerges from Text Supervision
 2202 - MaskGIT: Masked Generative Image Transformer
 20xx - Theoretical Limitations of Self-Attention in Neural Sequence Models
-** ※Artificial Hippocampus & Spatial Intelligence※
+*** ※Artificial Hippocampus & Spatial Intelligence※
 General
 2501 - Computational Models of Hippocampal Cognitive Function - Chapter16 in [Oxford - The Hippocampus Book - 2nd - 2024]
 2501 - Key-Value Memory in the Brain
@@ -963,3 +990,8 @@ Scaling Law 的发现成为了LLM研究的大部分最新进展的催化剂. -- 
 -- 可以看看[陈巍：DeepSeek V3/R1的架构与训练技术2万字长文分析(上,下)].
 **** Scaling Law 之生
 **** Scaling Law 之死
+** LLM Agent的Planning！
+一般认为Autonomous agent具有完成三方面任务的能力:Perceiving,Planning,Excuting.
+而Planning又是一个复杂的由理解(Understanding)、推理(Reasonging)、决策(Decision-Making)等进程交织在一起的过程!
+*** [2025 - Understanding the planning of LLM agents: A Survey]
+总结了五类有关Planning的工作:
