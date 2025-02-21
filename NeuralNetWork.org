@@ -415,7 +415,47 @@ Three types of operators are considered essential in a VSA.
 *** 2024 - Kan: Kolmogorov-arnold networks
 *** 2024 - KAN 2.0:Kolmogorov-Arnold Networks Meet Science
 *** 2024 - RPN - Reconciled Polynomial Network Towards Unifying PGMs - Kernel SVMs - MLP - KAN
-
+** ※Architectures (Backbone)※
+General
+2501 - What’s Next for Mamba? Towards More Expressive Recurrent Update Rules
+2410 - FACTS- A Factored State-Space Framework For World Modelling
+2406 - Vision-LSTM: xLSTM as Generic Vision Backbone
+2405 - Aaren - Attention as an RNN
+2310 - Sparse Universal Transformer
+2212 - DiT - Scalable Diffusion Models with Transformers (Backbone Architecture of Sora)
+2207 - Neural Networks And The Chomsky Hierarchy
+2202 - GroupViT: Semantic Segmentation Emerges from Text Supervision
+2202 - MaskGIT: Masked Generative Image Transformer
+20xx - Theoretical Limitations of Self-Attention in Neural Sequence Models
+** ※Artificial Hippocampus & Spatial Intelligence※
+General
+2501 - Computational Models of Hippocampal Cognitive Function - Chapter16 in [Oxford - The Hippocampus Book - 2nd - 2024]
+2501 - Key-Value Memory in the Brain
+2412 - Learning Hierarchical Abstractions of Complex Dynamics using Active Predictive Coding Spatial
+2412 - Models of Human Hippocampal Specialization- a Look at the Electrophysiological Evidence
+2411 - A Tale of Two Algorithms - Structured Slots Explain Prefrontal Sequence Memory and Are Uniﬁed with Hippocampal Cognitive Maps
+2408 - Space as A Scaffold for Rotational Generalisation of Abstract Concepts
+2408 - Human hippocampal and entorhinal neurons encode the temporal structure of experience
+2408 - How the Human Brain Creates Cognitive Maps of Related Concepts
+2408 - Why Concepts Are (probably) Vectors
+2408 - Cognitive maps from predictive vision
+2408 - Abstract representations emerge in human hippocampal neurons during inference
+2407 - Space is a latent sequence: A theory of the hippocampus
+2407 - Automated construction of cognitive maps with visual predictive coding
+2407 - The Computational Foundations of Dynamic Coding in Working Memory
+2406 - A recurrent network model of planning explains hippocampal replay and human behavior
+2405 - Remapping revisited: how the hippocampus represents different spaces
+2401 - Learning Cognitive Maps from Transformer Representations for Efficient Planning in Partially Observed Environments
+2311 - The generative grammar of the brain: a critique of internally generated representations
+2308 - Cognitive graphs: Representational substrates for planning
+2302 - Replay and Compositional Computation
+2209 - How to build a cognitive map
+2112 - Relating Transformers to Models and Neural Representations of The Hippocampal Formation
+2106 - Geometry of abstract learned knowledge in the hippocampus
+2009 - Emergence of abstract rules in the primate brain
+1805 - Vector-Based Navigation Using Grid-Like Representations in Artificial Agents
+Spatial AI
+2412 - link iconThinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces
 * 工部
 ** FCN 中的FC是什么含义？
 Fully Convolution意味着什么？
@@ -918,3 +958,8 @@ OpenAI发布了ChatGPT o1!其出色的推理(Reasoning)能力,让学术界在猜
 汪军作了如下的推测:
 - 通过将“LLM的预测能力”与“强化学习”和“世界建模的策略”深度相结合,像o1这样的AI系统可以解决更复杂的问题和实现更复杂的决策过程.
 - 在推理和解码阶段实现类似于蒙特卡洛树搜索(MCTS)的基于模型的复杂策略。
+*** DeepSeek又带来了什么？
+Scaling Law 的发现成为了LLM研究的大部分最新进展的催化剂. -- [2020 - Scaling laws for autoregressive generative modeling]
+-- 可以看看[陈巍：DeepSeek V3/R1的架构与训练技术2万字长文分析(上,下)].
+**** Scaling Law 之生
+**** Scaling Law 之死
