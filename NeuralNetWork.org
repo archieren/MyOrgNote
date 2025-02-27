@@ -417,8 +417,8 @@ Three types of operators are considered essential in a VSA.
 *** 2024 - RPN - Reconciled Polynomial Network Towards Unifying PGMs - Kernel SVMs - MLP - KAN
 ** World Models在讨论什么？
 [2023 - From Word Models to World Models]
-** ※※※※※※※※
-*** ※AI Mathematician / AI Scientist / Autoformalization※
+* ※※※※※※※※
+** ※AI Mathematician / AI Scientist / Autoformalization※
 General
 2411 - Large language models surpass human experts in predicting neuroscience results
 2411 - Arithmetic Without Algorithms: Language Models Solve Math With a Bag of Heuristics
@@ -442,7 +442,7 @@ General
 20xx - A Promising Path Towards Autoformalization and General Artificial Intelligence
 2009 - Generative Language Modeling for Automated Theorem
 2006 - Mathematical Reasoning via Self-supervised Skip-tree Training
-*** ※Architectures (Backbone)※
+** ※Architectures (Backbone)※
 General
 2501 - What’s Next for Mamba? Towards More Expressive Recurrent Update Rules
 2410 - FACTS- A Factored State-Space Framework For World Modelling
@@ -454,7 +454,7 @@ General
 2202 - GroupViT: Semantic Segmentation Emerges from Text Supervision
 2202 - MaskGIT: Masked Generative Image Transformer
 20xx - Theoretical Limitations of Self-Attention in Neural Sequence Models
-*** ※Artificial Hippocampus & Spatial Intelligence※
+** ※Artificial Hippocampus & Spatial Intelligence※
 General
 2501 - Computational Models of Hippocampal Cognitive Function - Chapter16 in [Oxford - The Hippocampus Book - 2nd - 2024]
 2501 - Key-Value Memory in the Brain
