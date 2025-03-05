@@ -136,19 +136,21 @@ Navigation is the core!?
   - [Nau M.;Schröder T.N.;Bellmund J.L.S.;Doeller C.F.]2018 - Hexadirectional coding of visual space in human entorhinal cortex
 作了一个概述和总结。同时也坐实了他们在[Nathaniel J.K.;Michael J.J.;Elizabeth A.B.]2012 - A map of visual space in the primate entorhinal cortex中的猜想.
 Visual Exploration, Locomotion等广泛的生物行为都能对空间采样及编码,这意味着类似Grid Cell这样的结构,具有更基础的认知功能!
+*** Grid Cells的计算模型,形成理论,认知理论,等等!
 
-** [Stensola T.;Moser E.I.]2016 - Grid Cells and Spatial Maps in Entorhinal Cortex and Hippocampus
+**** [Stensola T.;Moser E.I.]2016 - Grid Cells and Spatial Maps in Entorhinal Cortex and Hippocampus
 It's a review!
-*** Place Cells and Grid Cells神经生理发现
+***** Place Cells and Grid Cells神经生理发现
 - Place Cells:  ... Tolmanian cognitive maps
 - Grid Cells: ...
-*** Grid-to-Place Transformation中的神经生理
+***** Grid-to-Place Transformation中的神经生理
 Grid Map的组织方式: 沿着 MEC 的 DorsalVentral Axis 的 Modular Organization. See "Discretization of the Entorhinal Grid Map"
-*** Computational Models Of Grid-to-Place Transformation
+***** Computational Models Of Grid-to-Place Transformation
 一堆的猜想，留待慢慢阅读吧？
-** [Sorscher B.]2019 - A unified theory for the origin of grid cells through the lens of pattern formations
+**** [Sorscher B.]2019 - A unified theory for the origin of grid cells through the lens of pattern formations
 这篇文章，可能会是一片重要的文章! - 最终,2022年,修改了一下后,在Neuron期刊上发表!
-而[Dumont N.S.Y.;...]2020 - Accurate representation for spatial cognition using grid cells 一文中,也据此来论证SSP的生物合理性.
+~"我们现在超越网格细胞的计算起源,转向理解这些细胞在训练神经网络中的机制起源."~
+[注:而[Dumont N.S.Y.;...]2020 - Accurate representation for spatial cognition using grid cells 一文中,也据此来论证SSP的生物合理性.]
 
 ** New approaches to Deep Networks
 这是一篇评论，议及四种网络
