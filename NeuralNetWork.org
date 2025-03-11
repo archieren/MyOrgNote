@@ -147,11 +147,23 @@ It's a review!
 Grid Map的组织方式: 沿着 MEC 的 DorsalVentral Axis 的 Modular Organization. See "Discretization of the Entorhinal Grid Map"
 ***** Computational Models Of Grid-to-Place Transformation
 一堆的猜想，留待慢慢阅读吧？
-**** [Sorscher B.]2019 - A unified theory for the origin of grid cells through the lens of pattern formations
-这篇文章，可能会是一片重要的文章! - 最终,2022年,修改了一下后,在Neuron期刊上发表!
+**** Sorscher B.的工作
+- [Sorscher B.]2019 - A unified theory for the origin of grid cells through the lens of pattern formations
+- [Sorscher B.]2022 - A unified theory for the computational and mechanistic origins of grid cells
+这两篇文章,其实是一篇,可能会是一片重要的文章! - 最终,2022年,修改了一下后,改名,在Neuron期刊上发表!
+......
 ~"我们现在超越网格细胞的计算起源,转向理解这些细胞在训练神经网络中的机制起源."~
 [注:而[Dumont N.S.Y.;...]2020 - Accurate representation for spatial cognition using grid cells 一文中,也据此来论证SSP的生物合理性.]
+......
+说来说去,两个核心贡献:
+- Pattern formation theory predicts structure of learned representation
+- 
 
+**** Whittington J.C.R这一脉的工作: ?!Disentanglement
+- [...;Whittington J.C.R]2022 - Actionable Neural Representations - Grid Cells from Minimal Constraints
+- [Whittington J.C.R.;...]2023 - Disentanglement with Biological Constraints - A Theory of Functional Cell Types
+这是两篇相伴的文章,内在的思想是一致的,只不过应用的领域不同!
+**** [Schaefer R.;...;Fiete I.R.]2023 - Self-Supervised Learning of Representations for Space Generates Multi-Modular Grid Cells
 ** New approaches to Deep Networks
 这是一篇评论，议及四种网络
 - CapsuleNet  (Hinton  @ ??)
