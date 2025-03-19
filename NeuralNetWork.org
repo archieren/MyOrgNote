@@ -157,7 +157,7 @@ Grid Map的组织方式: 沿着 MEC 的 DorsalVentral Axis 的 Modular Organizat
 ......
 说来说去,两个核心贡献:
 - Pattern formation theory predicts structure of learned representation
-- 
+- Non-negativity Constraints
 
 **** Whittington J.C.R这一脉的工作: ?!Disentanglement
 - [...;Whittington J.C.R]2022 - Actionable Neural Representations - Grid Cells from Minimal Constraints
