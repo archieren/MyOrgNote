@@ -911,6 +911,7 @@ SSM -> Hippo -> LSSL -> S4 -> Mamba
  - [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
    这篇文章,处理了长期依赖的问题( Addressing Long-Range Dependencies)!
    HiPPO是个关键,有一定的理论意义!!!
+   ~说句老实话,没看懂后期的工作,和他有什么真实的关系,而更多的是启发性的关系!即什么样的矩阵具有记忆能力!~
  - [Gu A.;...]2021 - LSSL - Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers
    之前: "Continuous State Space Model" -> "Discrete-time SSMs(Inference SSMs): The recurrent representation"
    而这个LSSL,发现: => "Training SSMs: The Convolutional Representation"
