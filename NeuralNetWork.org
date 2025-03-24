@@ -904,12 +904,14 @@ Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natu
 商汤的2023 - InternImage: Exploring Large-Scale Vision Foundation Models with Deformable Convolutions.
 看来这篇文章将DCN推到一个可理论探索的地步!
 ** Mamba代表State Space Model(SSM)走入和Transformer竞争的行列!这里面可能真有戏!
+*** Mamab的道路:
+**** Mamba
 但前景如何? 事实上,"An Attention Free Transformer"一文,开启一些新方向!(RWKV,GateLoop,HGRN等等)
 SSM -> Hippo -> LSSL -> S4 -> Mamba
 这里充满者大量的技术细节调整!有理论性的,首当HiPPO和Mamba, LSSI次之! S4,S4D,S5再次之!!
 [[file:images/ssm-hippo-s4-mamba.jpg][SSM-To-Mamba]]
  - [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
-   这篇文章,处理了长期依赖的问题( Addressing Long-Range Dependencies)!
+   这篇文章,处理了长期依赖的问题( Addressing Long-Range Dependencies)!应当说,还包括在线记忆(Online Memory)问题.
    HiPPO是个关键,有一定的理论意义!!!
    ~说句老实话,没看懂后期的工作,和他有什么真实的关系,而更多的是启发性的关系!即什么样的矩阵具有记忆能力!~
  - [Gu A.;...]2021 - LSSL - Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers
@@ -943,13 +945,19 @@ SSM -> Hippo -> LSSL -> S4 -> Mamba
          This “Selective Scan” operation now, does not hold the dual property of convolution and recurrence.
          Hence, Mamba relies on recurrence only.
          不过此时,有并行算法存在!
-*** Gu A.在他的博士论文里,对基本概念讲得更清楚!
+**** Gu A.在他的博士论文里,对基本概念讲得更清楚!
 Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问题,这是开窍点吗?
-*** 补充一些东西:
+*** Mamba的朋友们!或Transformer的竞争者门!
 **** RNN,LSTM,GRU还是要比较认识一下!
 [[file:images/Comparison-of-RNN-LSTM-and-GRU-neural-network-structures.png][图: RNN vs LSTM vs GRU]]
 [[file:images/Structure of the LSTM cell and equations.png][图: LSTM Cell]]
 [[file:images/Structure of the GRU cell and equations.png][图: GRU Cell]]
+**** Mamba的朋友们!Titans带来的进步和总结:
+...Linear Transformer, RWKV, DeltaNet...
+[2024 - TTT - Learning to (Learn at Test Time)]
+[[ΔΔ]2024 - DeltaNet - Parallelizing Linear Transformers with the Delta Rule over Sequence Length]
+[[ΣΔΔ;Google]2024 - Titans - Learning tor Memorize at Test Time]
+
 ** 从Perceptual Grouping角度看基础模型的其他路线
 当将Transformer运用到2D,3D的数据上时,就会发现Space is sequences!
 这就面临一个问题,How to sequence the space!But, sequencing is triggered by grouping or selection with one by one!
