@@ -1,0 +1,11 @@
+#+Title: 日常浏览线索
+
+* 吕明: 从Code中反向泛化推理链
+[CodeI/O:Condensing Reasoning Patterns via Code Input-Output Prediction]
+将数学、代码等抽象形式化推理泛化为“通用能力”的这一未来非常具有潜力的技术方向!
+
+* 吕明: 推理模型·RLM在「跨形式化体系中的知识迁移与推理泛化」技术内涵与未来趋势
+[From Informal to Formal – Incorporating and Evaluating LLMs on Natural Language Requirements to Verifiable Formal Proofs]
+
+* 吕明: 元强化微调（MRT）下的推理模型在探索与利用上的显/隐式动态平衡
+[MRT - Optimizing Test-Time Compute via Meta Reinforcement Fine-Tuning]
