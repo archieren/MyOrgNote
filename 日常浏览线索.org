@@ -9,3 +9,11 @@
 
 * 吕明: 元强化微调（MRT）下的推理模型在探索与利用上的显/隐式动态平衡
 [MRT - Optimizing Test-Time Compute via Meta Reinforcement Fine-Tuning]
+
+* 吕明:话题: Diffusion和Transformer、AutoRegressive的融合创新
+[MAR - Autoregressive Image Generation without Vector Quantization]
+[Diffusion Forcing:Next Token Predication Meets Full-Sequence Diffusion]
+[Transfusion - Predict the Next Token and Diffuse Images with One Multi-Modal Model]
+[Diddusion Mechanism in Residual Neural Network: Theory and Applications]
+* 吕明:更深刻的话题应当是“形式化仿生”,比如新出的论文,“TiTans”
+* 北方的狼: 革新语言模型预训练模式：Meta发布CoCoMix引领概念学习新时代
