@@ -1,5 +1,3 @@
-
-
 #+STARTUP: indent
 #+TITLE: NeuralNetwork 阅读纪要
 
