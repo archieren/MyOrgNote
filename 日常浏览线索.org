@@ -16,4 +16,13 @@
 [Transfusion - Predict the Next Token and Diffuse Images with One Multi-Modal Model]
 [Diddusion Mechanism in Residual Neural Network: Theory and Applications]
 * 吕明:更深刻的话题应当是“形式化仿生”,比如新出的论文,“TiTans”
-* 北方的狼: 革新语言模型预训练模式：Meta发布CoCoMix引领概念学习新时代
+* 北方的狼:革新语言模型预训练模式：Meta发布CoCoMix引领概念学习新时代
+* v_JULY_v:文生图中从扩散模型到流匹配的演变：从SDXL到Stable Diffusion3(含Flow Matching和Rectified Flow的详解)
+这条路线介绍的内容值的注意:
+Diffusion Model =>
+Stable Diffusion =>
+Consistency Models =>
+Latent Consistency Models =>
+SDXL(Stable Diffusion XL Turbo), SDXL-Lighting =>
+Stable Diffusion 3 =>
+Flow Matching and Rectified Flow
