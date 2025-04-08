@@ -906,11 +906,12 @@ Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natu
 **** Mamba
 但前景如何? 事实上,"An Attention Free Transformer"一文,开启一些新方向!(RWKV,GateLoop,HGRN等等)
 SSM -> Hippo -> LSSL -> S4 -> Mamba
-这里充满者大量的技术细节调整!有理论性的,首当HiPPO和Mamba, LSSI次之! S4,S4D,S5再次之!!
+这里充满者大量的技术细节调整!有理论性的,首当HiPPO和Mamba, LSSL次之! S4,S4D,S5再次之!!
 [[file:images/ssm-hippo-s4-mamba.jpg][SSM-To-Mamba]]
  - [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
    这篇文章,处理了长期依赖的问题( Addressing Long-Range Dependencies)!应当说,还包括在线记忆(Online Memory)问题.
    HiPPO是个关键,有一定的理论意义!!!
+   这篇文章的表达,实在不敢恭维!
    ~说句老实话,没看懂后期的工作,和他有什么真实的关系,而更多的是启发性的关系!即什么样的矩阵具有记忆能力!~
  - [Gu A.;...]2021 - LSSL - Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers
    之前: "Continuous State Space Model" -> "Discrete-time SSMs(Inference SSMs): The recurrent representation"
@@ -954,7 +955,7 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
 ...Linear Transformer, RWKV, DeltaNet...
 [2024 - TTT - Learning to (Learn at Test Time)]
 [[ΔΔ]2024 - DeltaNet - Parallelizing Linear Transformers with the Delta Rule over Sequence Length]
-[[ΣΔΔ;Google]2024 - Titans - Learning tor Memorize at Test Time]
+[[ΣΔΔ;Google]2024 - Titans - Learning to Memorize at Test Time]
 
 ** 从Perceptual Grouping角度看基础模型的其他路线
 当将Transformer运用到2D,3D的数据上时,就会发现Space is sequences!

@@ -86,6 +86,13 @@ VAE(Variational AutoEncoder),ARM(AutoRegressive Models),GAN(Generative Adversari
 [Vincent P.]2011 - A Connection Between Score Matching and Denoising Autoencoders
 [Welling M.;...]2011 - Bayesian Learning via Stochastic Gradient Langevin Dynamics
 ** FM(Flow Matching):
+概念上要区分一下:
+- FBM(Flow-based Model)是一种基于Normalizing Flows(NFs)的生成模型,它通过一系列概率密度函数的变量变换,将复杂的概率分布转换为简单的概率分布,并通过逆变换生成新的数据样本.
+- CNFs(Continuous Normalizing Flows)是Normalizing Flows的扩展,其概念首次出现在Neural ODE中!它使用常微分方程(ODE)来表示连续的变换过程,用于建模概率分布.
+- FM(Flow Matching)是一种训练CNFs(Continuous Normalizing Flows)的方法,它通过学习与概率路径相关的向量场(Vector Field)来训练模型，并使用ODE求解器来生成新样本.
+- DM(Diffusion Model)是FM(Flow Matching)的一个应用特例,使用FM可以提高其训练的稳定性.
+- 此外,使用最优传输(Optimal Transport)技术构建概率路径可以进一步加快训练速度.并提高模型的泛化能力.
+- 似乎可以某种观点将他们统一!
 [Kingma D.P.;Gao R.Q]2023 -  Understanding diffusion objectives as the elbo with simple data augmentation -v7
 [Albergo M.S.;...]2023 - Stochastic Interpolants - A Unifying Framework for Flows and Diffusions - v3
 [......]
