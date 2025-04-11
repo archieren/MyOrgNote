@@ -1,0 +1,10 @@
+#+STARTUP: indent
+#+TITLE: AGI_Application 有关一些AGI应用的笔记
+#+AUTHOR: Reader
+
+* RAG
+- [2023 - Large Language Models on Graphs: A Comprehensive Survey]
+   这篇文章修改了一年!2024年底还有修改!还是可以看看的。
+   有人还为这篇文章写了博客!评论道，。。。，知识图谱(KG)的发展趋势已经从早期的HippoRAG,GraphRAG通过知识图谱增强LLM准确性、减少幻觉转变为更加垂直化的应用，
+   聚焦于那些本来就适合知识图谱的行业，例如交通运动图、情报人物关系图谱、生物分子图和特定金融分析领域。
+   ？问题:那些是适合知识图谱的行业？
