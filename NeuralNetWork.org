@@ -1012,13 +1012,3 @@ Scaling Law 的发现成为了LLM研究的大部分最新进展的催化剂. -- 
 -- 可以看看[陈巍：DeepSeek V3/R1的架构与训练技术2万字长文分析(上,下)].
 **** Scaling Law 之生
 **** Scaling Law 之死
-** LLM Agent的Planning！
-一般认为Autonomous agent具有完成三方面任务的能力:Perceiving,Planning,Excuting.
-而Planning又是一个复杂的由理解(Understanding)、推理(Reasonging)、决策(Decision-Making)等进程交织在一起的过程!
-*** [2025 - Understanding the planning of LLM agents: A Survey]
-总结了五类有关Planning的工作:
-- Task Decomposition,
-- Multi-plan Selection,
-- External Planner-Aided Planning,
-- Reflection and Refinement,
-- Memory Augmented Planning

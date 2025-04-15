@@ -8,3 +8,20 @@
    有人还为这篇文章写了博客!评论道，。。。，知识图谱(KG)的发展趋势已经从早期的HippoRAG,GraphRAG通过知识图谱增强LLM准确性、减少幻觉转变为更加垂直化的应用，
    聚焦于那些本来就适合知识图谱的行业，例如交通运动图、情报人物关系图谱、生物分子图和特定金融分析领域。
    ？问题:那些是适合知识图谱的行业？
+* 基于LLM的Agent's Planning！
+一般认为Autonomous agent具有完成三方面任务的能力:Perceiving,Planning,Excuting.
+而Planning作为Agents的最关键的能力，是一个由理解(Understanding)、推理(Reasonging)、决策(Decision-Making)等过程交织在一起的进程!
+目前对LLM Based Agents的Planning Capability的研究,...(其实,对基于LLM的Agents的各方面研究,都很热闹,但能否达成期望的目标,似乎没人在意!)
+** [2025 - Understanding the planning of LLM agents: A Survey]
+文章的贡献在于对LLM Based Agents' Planning的研究工作作了分类,让我们了解这个坑是怎么回事?:
+- Task Decomposition,
+  代表工作:CoT [2022],ReAct [2022],HuggingGPT [2023]
+- Multi-plan Selection,
+  代表工作:ToT [2023],GoT[2023],CoT-SC[2022]
+- External Planner-Aided Planning,
+  代表工作:LLM+P [2023],LLM+PDDL[2023]
+- Reflection and Refinement,
+  代表工作:Reflexion [2023],CRITIC[2023],Self-Refine[2023]
+- Memory Augmented Planning,
+  代表工作:REMEMBER [2023],MemoryBank [2023]
+** Agentic Rag代表了什么进展？[2025 - Agentic Retrieval-Augmented Generation - A Survey on Agentic RAG - v1]
