@@ -24,4 +24,8 @@
   代表工作:Reflexion [2023],CRITIC[2023],Self-Refine[2023]
 - Memory Augmented Planning,
   代表工作:REMEMBER [2023],MemoryBank [2023]
+注:这一块的工作,不论是灌水还是投资,目前还是非常活跃!
+* RAG
 ** Agentic Rag代表了什么进展？[2025 - Agentic Retrieval-Augmented Generation - A Survey on Agentic RAG - v1]
+RAG->GraphRAG->KG?RAG
+** LLM之RAG最新进展 - 边思考边搜索的迭代式生成
