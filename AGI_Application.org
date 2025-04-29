@@ -29,3 +29,20 @@
 ** Agentic Rag代表了什么进展？[2025 - Agentic Retrieval-Augmented Generation - A Survey on Agentic RAG - v1]
 RAG->GraphRAG->KG?RAG
 ** LLM之RAG最新进展 - 边思考边搜索的迭代式生成
+* OpenAI的ChatGPT o1带来了什么? DeepSeek又带来了什么?
+OpenAI发布了ChatGPT o1!其出色的推理(Reasoning)能力,让学术界在猜测,它是否“内置”了思维链!怎么“重现”?
+- UCL的汪军,"A tuturial on LLM Reasoning: Relevant methods behind ChatGPT o1"
+- Fudan的,"Scaling of Search and Learning - A Roadmap to Reproduce o1 from Reinforcement Learning Perspective"
+讲的,都是这方面的事!感觉汪军把问题说得较清楚!
+一个新的方向:LLM原生思维链(LLM-Native Chain-Of-Thought/ Native-COT).这一步可能是迈向自我改进智能体(Self-Improving Agent)的重要一步!
+感觉-知觉-思维的话题被显示提及!
+传统自回归LLM面临的挑战:如何使系统超越其训练数据的界限并开发出新颖的可能更优的策略?
+汪军作了如下的推测:
+- 通过将“LLM的预测能力”与“强化学习”和“世界建模的策略”深度相结合,像o1这样的AI系统可以解决更复杂的问题和实现更复杂的决策过程.
+- 在推理和解码阶段实现类似于蒙特卡洛树搜索(MCTS)的基于模型的复杂策略。
+*** DeepSeek又带来了什么？
+Scaling Law 的发现成为了LLM研究的大部分最新进展的催化剂. -- [2020 - Scaling laws for autoregressive generative modeling]
+-- 可以看看[陈巍：DeepSeek V3/R1的架构与训练技术2万字长文分析(上,下)].
+**** Scaling Law 之生
+**** Scaling Law 之死
+*** Test-time compute 到 Test-time scaling,难道仅仅如此？
