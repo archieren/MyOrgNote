@@ -124,3 +124,16 @@ USIP应当是个先锋,作为基于学习的3d关键点检测方法,远超传统
 * Topology Data Analysis(TDA)和Geometric Data Analysis(GDA)
 * 3D Representation Learning
 ** [2024 - 3D Representation Method: A survey]可以看看.虽然新,但目前来看,总结得不到位,提供的资料也不全!
+* 3D Object Detection
+没怎么跟踪,现在从下面两篇文章开始!
+- [2024 - UniDet3D - Multi-dataset Indoor 3D Object Detection]
+  减法怎么被他完动了呢?
+- [2023 - V-DETR - DETR with Vertex Relative Position Encoding for 3D Object Detection]
+  接续的还有Uni3DeTr等等!!
+  在3D检测领域,让基于DeTr的模型的性能不再落后其他路线的模型！
+  这篇文章传达的信息:
+  - 3DV-RPE:位置编码体现了什么?
+  - 什么在影响最终的结果?
+    Voting Based Method
+    Expansion Based Method
+    Detr-Based Method
