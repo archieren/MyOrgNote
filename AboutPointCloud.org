@@ -62,8 +62,6 @@ a pure deep hierarchical MLP architecture is able to exhibit gratifying performa
 模型的性能中,有个"accuracy vs efficiency"的权衡问题.
 *** Breaking the curse of permutation invariance:
 这个可能更重要, ~Serialization-based method.~
-
-
 * Space is sequences
 这是一个有意思的话题.应当从感知的角度,来看待此问题!
 背后的本质问题是集合的结构化的道路!既要反应局部,又要反应全局互通!!!
@@ -121,19 +119,26 @@ USIP应当是个先锋,作为基于学习的3d关键点检测方法,远超传统
 - [2022 - SNAKE - Shape-aware Neural 3D Keypoint Field]
   作者在探索一个问题:"Whether jointly reconstructing underlying 3D shapes helps 3D keypoint detection!"
   
+** Points In/By Points
+实质上这里有很多自然"人性"的原因!总感觉,是想当然,是"点线面"的自然想法!?
+*** Points In Points
+Feature Point, KeyPoint, Superpoint
+*** Points By Points
+怎么说,以各种方式定义构建"最优"参考点,来获得"表示"!
 * Topology Data Analysis(TDA)和Geometric Data Analysis(GDA)
 * 3D Representation Learning
 ** [2024 - 3D Representation Method: A survey]可以看看.虽然新,但目前来看,总结得不到位,提供的资料也不全!
-* 3D Object Detection
-没怎么跟踪,现在从下面两篇文章开始!
+* 3D Object Detection with Detr-Base Method
+[...Voting Based Method,Expansion Based Method,Detr-Based Method...]
+Detr-Based Method没怎么跟踪,现在从下面几篇文章开始,了解一下现状!(Detr下的关键话题:Learnable Query,Hungarian Matching,Loss Formulation)
+- [2025 - DEST - State Space Model Meets Transformer - A New Paradigm for 3D Object Detection]
+  
 - [2024 - UniDet3D - Multi-dataset Indoor 3D Object Detection]
-  减法怎么被他完动了呢?
+  减法怎么被他玩动了呢?
+  Superpoint + Transformer Encoder!
 - [2023 - V-DETR - DETR with Vertex Relative Position Encoding for 3D Object Detection]
-  接续的还有Uni3DeTr等等!!
   在3D检测领域,让基于DeTr的模型的性能不再落后其他路线的模型！
+  应该是在3DETR的基础上作的!接续的还有Uni3DeTr等等!!
   这篇文章传达的信息:
-  - 3DV-RPE:位置编码体现了什么?
-  - 什么在影响最终的结果?
-    Voting Based Method
-    Expansion Based Method
-    Detr-Based Method
+  - 3DV-RPE:相对位置编码体现了什么??
+  - Decoder的Queries输入,该怎么构造,或初始化!
