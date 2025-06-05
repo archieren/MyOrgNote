@@ -131,14 +131,16 @@ Feature Point, KeyPoint, Superpoint
 * 3D Object Detection with Detr-Base Method
 [...Voting Based Method,Expansion Based Method,Detr-Based Method...]
 Detr-Based Method没怎么跟踪,现在从下面几篇文章开始,了解一下现状!(Detr下的关键话题:Learnable Query,Hungarian Matching,Loss Formulation)
+(怎么看, Detr-Based Method的基础模式有点类似 BackBone + Perceiver???!!!)
 - [2025 - DEST - State Space Model Meets Transformer - A New Paradigm for 3D Object Detection]
-  
-- [2024 - UniDet3D - Multi-dataset Indoor 3D Object Detection]
-  减法怎么被他玩动了呢?
-  Superpoint + Transformer Encoder!
+  奇怪的范式!
 - [2023 - V-DETR - DETR with Vertex Relative Position Encoding for 3D Object Detection]
-  在3D检测领域,让基于DeTr的模型的性能不再落后其他路线的模型！
-  应该是在3DETR的基础上作的!接续的还有Uni3DeTr等等!!
+  在3D检测领域,让基于DeTr的模型的性能不再落后其他路线的模型!
+  V-DeTr 和 GroupFree3D形成了这个方法系列的基线?!
+  应该是在GroupFree3D和3DETR的基础上作的!
   这篇文章传达的信息:
   - 3DV-RPE:相对位置编码体现了什么??
   - Decoder的Queries输入,该怎么构造,或初始化!
+- [2024 - UniDet3D - Multi-dataset Indoor 3D Object Detection]
+  减法怎么被他玩动了呢?实质上是偏离了DeTr-Based Method的基线(BaseLine)!
+  Superpoint + Transformer Encoder!
