@@ -14,7 +14,9 @@
 ** AC - Ambient Occlusion
 ** AGD - Average Geodesic Distance
 ** SuperPoint,尽管是Image上的工作,其基于Homograhic Adaption的Self-Supervised Learning是值得思考的.
-* PointNet &. PointNet++ & PointMLP: 怎么理解"Point Based Method" for Point Cloud Anylasis!
+* PointNet &. PointNet++ & PointMLP:
+** 怎么理解"Point Based Method" for Point Cloud Anylasis!
+没有转换成其他几何结构(如: Voxel等)!
 ** PointNet
 针对Spatial Point Set的几个特性:
 - Unordered
@@ -53,8 +55,9 @@ a pure deep hierarchical MLP architecture is able to exhibit gratifying performa
 这应当是微妙的话题!人们过多地关注了计算效率,并未分析"稀疏"的本质!
 - MinkowskiEngine
 - TorchSparse, Torchsparse++
-- SpConv
+- SpConv Spconv2
 * Position Embedding in PointCloud
+绞尽脑汁的玩意儿.很多是想当然的!
 * Point Cloud Transformer 哪家强?
 按时间次序,依次为:
 - [Nico Engel]2021 - Point Transformer  --(1)
@@ -139,6 +142,9 @@ Detr-Based Method没怎么跟踪,现在从下面几篇文章开始,了解一下�
 (怎么看, Detr-Based Method的基础模式有点类似 BackBone + Perceiver???!!!)
 - [2025 - DEST - State Space Model Meets Transformer - A New Paradigm for 3D Object Detection]
   奇怪的范式!
+- [2024 - UniDet3D - Multi-dataset Indoor 3D Object Detection]
+  减法怎么被他玩动了呢?实质上是偏离了DeTr-Based Method的基线(BaseLine)!
+  Superpoint + Transformer Encoder!
 - [2023 - V-DETR - DETR with Vertex Relative Position Encoding for 3D Object Detection]
   在3D检测领域,让基于DeTr的模型的性能不再落后其他路线的模型!
   V-DeTr 和 GroupFree3D形成了这个方法系列的基线?!
@@ -146,6 +152,3 @@ Detr-Based Method没怎么跟踪,现在从下面几篇文章开始,了解一下�
   这篇文章传达的信息:
   - 3DV-RPE:相对位置编码体现了什么??
   - Decoder的Queries输入,该怎么构造,或初始化!
-- [2024 - UniDet3D - Multi-dataset Indoor 3D Object Detection]
-  减法怎么被他玩动了呢?实质上是偏离了DeTr-Based Method的基线(BaseLine)!
-  Superpoint + Transformer Encoder!
