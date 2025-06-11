@@ -150,5 +150,5 @@ Detr-Based Method没怎么跟踪,现在从下面几篇文章开始,了解一下�
   V-DeTr 和 GroupFree3D形成了这个方法系列的基线?!
   应该是在GroupFree3D和3DETR的基础上作的!
   这篇文章传达的信息:
-  - 3DV-RPE:相对位置编码体现了什么??
+  - 3DV-RPE:相对位置编码体现了什么?这被认为本文的主要贡献！
   - Decoder的Queries输入,该怎么构造,或初始化!
