@@ -58,6 +58,14 @@ a pure deep hierarchical MLP architecture is able to exhibit gratifying performa
 - SpConv Spconv2
 * Position Embedding in PointCloud
 绞尽脑汁的玩意儿.很多是想当然的!
+位置信息(如果放到空间认知这个范畴来讨论的话),应当说,完全是个没有澄清的概念!
+- 绝对位置编码
+- 相对位置编码
+  在Point Cloud的领域,有很多RPE的工作!比如V-Detr里,3DV-RPE是其主要贡献!
+- 条件位置编码
+  [2021 - CPE - CPVT - Conditional Positional Encodings for Vision Transformers - v3]
+  这是ViT领域里的一项工作.但Point Cloud Transformer领域里,常有人借用其思想!
+  如PTv3一脉的工作,用SPCONV就得到了xCPE!
 * Point Cloud Transformer 哪家强?
 按时间次序,依次为:
 - [Nico Engel]2021 - Point Transformer  --(1)
@@ -138,7 +146,8 @@ Feature Point, KeyPoint, Superpoint, (Random) Sampled Points
 ** [2024 - 3D Representation Method: A survey]可以看看.虽然新,但目前来看,总结得不到位,提供的资料也不全!
 * 3D Object Detection with Detr-Base Method
 [...Voting Based Method,Expansion Based Method,Detr-Based Method...]
-Detr-Based Method没怎么跟踪,现在从下面几篇文章开始,了解一下现状!(Detr下的关键话题:Learnable Query,Hungarian Matching,Loss Formulation)
+Detr-Based Method没怎么跟踪,现在从下面几篇文章开始,了解一下现状!
+(Detr下的关键话题:Learnable Query,Hungarian Matching,Loss Formulation)
 (怎么看, Detr-Based Method的基础模式有点类似 BackBone + Perceiver???!!!)
 - [2025 - DEST - State Space Model Meets Transformer - A New Paradigm for 3D Object Detection]
   奇怪的范式!
