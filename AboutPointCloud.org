@@ -24,7 +24,7 @@
 - Invariant under transformation
 提出解决方案:
 - Symmetric Function For Unordered Points:
-  所谓的对称函数，采取了集合函数的形式。关键是他那个集合函数有什么性质？
+  所谓的对称函数，采取了集合函数的形式。关键是他那个集合函数有什么性质？(Point Set Abstraction By FPS and KNN?)
   - Universal approximate. 欧式空间幂集上的函数是对称函数,但要解决的理论问题是,在欧式空间幂集上如何定义度规?
   - To summarize a shape by a sparse set of critical point. 这倒是要理解一下.
 - Local And Global Information Aggregation
@@ -36,6 +36,7 @@ How to capture local context?(略!)
 ...we show case that even without the carefully designed operations for local geometry exploration,
 a pure deep hierarchical MLP architecture is able to exhibit gratifying performances and even better results...
 ==> deep residual mlp for point cloud.
+如何结束在局部"几何"的竞争?而转入全局探索的道路!但什么是全局关系?
 * 基于深度学习的特征点学习
 ** 3DSmoothNet
 利用的基础技术
@@ -57,11 +58,13 @@ a pure deep hierarchical MLP architecture is able to exhibit gratifying performa
 - TorchSparse, Torchsparse++
 - SpConv Spconv2
 * Position Embedding in PointCloud
-绞尽脑汁的玩意儿.很多是想当然的!
+绞尽脑汁的玩意儿.所谓的启发式,其实很多是想当然的!
 位置信息(如果放到空间认知这个范畴来讨论的话),应当说,完全是个没有澄清的概念!
 - 绝对位置编码
 - 相对位置编码
-  在Point Cloud的领域,有很多RPE的工作!比如V-Detr里,3DV-RPE是其主要贡献!
+  - 在Point Cloud的领域,有很多RPE的工作!比如V-Detr里,3DV-RPE是其主要贡献!
+  - 另有[MicroSoft]2021 - iRPE - Rethinking and Improving Relative Position Encoding for Vision Transformer的工作,
+    对早期的Point Transformer一线的工作有更多的影响!
 - 条件位置编码
   [2021 - CPE - CPVT - Conditional Positional Encodings for Vision Transformers - v3]
   这是ViT领域里的一项工作.但Point Cloud Transformer领域里,常有人借用其思想!
