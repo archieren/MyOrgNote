@@ -429,6 +429,7 @@ Three types of operators are considered essential in a VSA.
 *** 2024 - RPN - Reconciled Polynomial Network Towards Unifying PGMs - Kernel SVMs - MLP - KAN
 ** World Models在讨论什么？
 [2023 - From Word Models to World Models]
+** CTM(Continuous Thought Machine)和HRM(Hiearchi Reasoning Model)揭示了什么?
 * ※※※※※※※※
 ** ※AI Mathematician / AI Scientist / Autoformalization※
 General
@@ -956,7 +957,19 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
 [2024 - TTT - Learning to (Learn at Test Time)]
 [[ΔΔ]2024 - DeltaNet - Parallelizing Linear Transformers with the Delta Rule over Sequence Length]
 [[ΣΔΔ;Google]2024 - Titans - Learning to Memorize at Test Time]
+**** 在本身并不是一维的数据领域,运用Mamba之类的技术,需要将数据序列化!这背后隐藏着什么?
+***** Space Filling Curves
+***** Tree Topology
+- "古老的世界里,有这么一个传奇!"
+  Tree-Filtering [2013 - Tree Filtering: Efficient Structure-Preserving Smoothing With a Minimum Spanning Tree]
+- Tree-Topology [2025 - GrootVL: Tree Topology is All You Need in State Space Model]
+  思路还是挺好的!
 
+** H-Net,Albert Gu对Hiearchie的思考！
+*** [2025 - Dynamic Chunking for End-to-End Hierarchical Sequence Modeling - v2]
+Chunking Theory的涵义？
+*** Albert Gu的Blog [https://goombalab.github.io/blog/2025/hnet-past/]详细谈了这个过程,及背后的动机!
+什么是"Primtives"! "Hierarchy"如何可作为"Differentiable Primitives"?
 ** 从Perceptual Grouping角度看基础模型的其他路线
 当将Transformer运用到2D,3D的数据上时,就会发现Space is sequences!
 这就面临一个问题,How to sequence the space!But, sequencing is triggered by grouping or selection with one by one!
@@ -996,7 +1009,3 @@ Cross-Attention其实还是有深意的!谁Q,谁K,V,应当有思想!
 Perceiver应当是Latent-Space的构造器!
 ** SAM Oneformer SegGPT SEEM这些并行工作意味着什么?
 综述:[2023 - A Comprehensive Survey on Segment Anything Model for Vision and Beyond - v2]
-** H-Net,Albert Gu对Hiearchie的思考！
-*** [2025 - Dynamic Chunking for End-to-End Hierarchical Sequence Modeling - v2]
-Chunking Theory的涵义？
-*** Albert Gu的Blog [https://goombalab.github.io/blog/2025/hnet-past/]详细谈了这个过程,及背后的动机!
