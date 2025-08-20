@@ -430,6 +430,12 @@ Three types of operators are considered essential in a VSA.
 ** World Models在讨论什么？
 [2023 - From Word Models to World Models]
 ** CTM(Continuous Thought Machine)和HRM(Hiearchi Reasoning Model)揭示了什么?
+*** ARC-AGI,Sudoku,Maze等Benchmarks,引发了一系列的运动!
+*** CTM(Continuous Thought Machine)
+*** HRM(Hiearchi Reasoning Model)
+Medium上有片博客! [[https://medium.com/intuitionmachine/the-hierarchical-reasoning-model-through-the-lens-of-quaternion-process-theory-thinking-fast-and-1fc948dad97f][The Hierarchical Reasoning Model Through the Lens of Quaternion Process Theory:Thinking Fast and Slow, Empathetically and Fluently]]
+从'Quaternion Process Theory of Cognition'角度来讲HRM作的贡献!
+*** 附带地,来看看Albert Gu指导的论文(H-Net),或许应当另开话题!?
 * ※※※※※※※※
 ** ※AI Mathematician / AI Scientist / Autoformalization※
 General
