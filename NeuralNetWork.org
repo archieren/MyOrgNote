@@ -902,7 +902,7 @@ Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natu
 - Answer Engineering
 - Expanding the Paradigm
 - Prompt-Based Training Strategies
-*** Prompting 可能意味一些更深刻的思想内涵!
+*** Context Engineering的兴起!
 !!!怎么说呢?
 
 ** Deformable Convolution 和 Transformer的一个局部较量!
@@ -1007,6 +1007,7 @@ We hope our ~Context Cluster~ can be considered as a novel visual representation
 ** VitPose 和 TokenPose
 TokenPose是VitPose不出来之前的东西!估计如此!
 ** Perceiver:为何称之为General Perception?
+启发Perceiver的,有一项工作,Set Transformer[Set Transformer - A Framework for Attention-based Permutation-Invariant Neural Networks].
 [Perceiver: General Perception with Iterative Attention]
 [Perceiver IO: A General Architecture for Structured Inputs & Outputs]
 [Perceiver AR: General-purpose, long-context autoregressive modeling with Perceiver AR]
