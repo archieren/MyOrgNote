@@ -129,7 +129,15 @@ USIP应当是个先锋,作为基于学习的3d关键点检测方法,远超传统
 ......
 [2024 - Key-Grid - Unsupervised 3D Keypoints Detection using Grid Heatmap Features]
 这一系列的工作
-** 基于点云隐涵表示的关键点检测或点云重构及生成!!
+** Points In/By Points
+实质上这里有很多自然"人性"的原因!总感觉,是想当然,是"点线面"的自然想法!?
+*** Points In Points
+Feature Point, KeyPoint, Superpoint, (Random) Sampled Points
+*** Points By Points
+怎么说,以各种方式定义构建"最优"参考点,来获得"表示"!(相对位置编码可能也在此列!)
+* 连续性表示(如SDF)/或隐涵性表示,及相关的下游任务!!
+** SDF(Signed Distance Function)
+- [2025 - PartSDF - Part-Based Implicit Neural Representation for Composite 3D Shape Parametrization and Optimization]
 - [2023 - 3DShape2VecSet - A 3D Shape Representation for Neural Fields and Generative Diffusion Models]
   为了生成的目的,在Latent Space作SDF工作.而且,我看到它的网络结构,很容易想起Perceiver!
   本文要解决的问题是,在作者们的前期工作3DILG中,Latent Space对样本坐标空间的显示依赖!
@@ -138,12 +146,6 @@ USIP应当是个先锋,作为基于学习的3d关键点检测方法,远超传统
   构造了一个奇怪的SDF,关键点用包含它的球面来估计,问题就变成学到这种隐涵的表示!.文章中,“相关工作”一段的辨析,比较好!
 - [2022 - SNAKE - Shape-aware Neural 3D Keypoint Field]
   作者在探索一个问题:"Whether jointly reconstructing underlying 3D shapes helps 3D keypoint detection!"
-** Points In/By Points
-实质上这里有很多自然"人性"的原因!总感觉,是想当然,是"点线面"的自然想法!?
-*** Points In Points
-Feature Point, KeyPoint, Superpoint, (Random) Sampled Points
-*** Points By Points
-怎么说,以各种方式定义构建"最优"参考点,来获得"表示"!(相对位置编码可能也在此列!)
 * Topology Data Analysis(TDA)和Geometric Data Analysis(GDA)
 * 3D Representation Learning
 ** [2024 - 3D Representation Method: A survey]可以看看.虽然新,但目前来看,总结得不到位,提供的资料也不全!

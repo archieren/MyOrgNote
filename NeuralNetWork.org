@@ -433,10 +433,16 @@ Three types of operators are considered essential in a VSA.
 *** ARC-AGI,Sudoku,Maze等Benchmarks,引发了一系列的运动!
 *** CTM(Continuous Thought Machine)
 *** HRM(Hiearchi Reasoning Model)
-Medium上有片博客! [[https://medium.com/intuitionmachine/the-hierarchical-reasoning-model-through-the-lens-of-quaternion-process-theory-thinking-fast-and-1fc948dad97f][The Hierarchical Reasoning Model Through the Lens of Quaternion Process Theory:Thinking Fast and Slow, Empathetically and Fluently]]
-从'Quaternion Process Theory of Cognition'角度来讲HRM作的贡献!
+- Medium上有篇博客! [[https://medium.com/intuitionmachine/the-hierarchical-reasoning-model-through-the-lens-of-quaternion-process-theory-thinking-fast-and-1fc948dad97f][The Hierarchical Reasoning Model Through the Lens of Quaternion Process Theory:Thinking Fast and Slow, Empathetically and Fluently]]
+  从'Quaternion Process Theory of Cognition'角度来讲HRM作的贡献!
+- 论文受人脑中分层和多时间尺度处理等的启发,提出了分层推理模型(HRM)作为一种新颖的递归架构,其能够在保持训练稳定性和效率的同时实现显著的计算深度.
+- Latent Space Reasoning,即隐推理范式(即模型在内部隐藏状态空间进行推理,而不是依赖显示的语言步骤)可能是实现复杂任务推理的关键.
+  - 稍早点,和Chain Of Continuous Thought相关的工作.如(CoCoNut,CoCoMix)
+    ?语言与推理之间有着什么样内涵上的联系与本质上的差别?
+  - 
 *** 附带地,来看看Albert Gu指导的论文(H-Net),或许应当另开话题!?
 * ※※※※※※※※
+[[https://mlml.kaist.ac.kr/awesome#681e48cc-6b0c-4b1a-b602-32bc029572d6][Awesome X (Prof. Ahn’s Reading List)]]
 ** ※AI Mathematician / AI Scientist / Autoformalization※
 General
 2411 - Large language models surpass human experts in predicting neuroscience results
