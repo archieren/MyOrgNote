@@ -969,7 +969,8 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
 [2024 - TTT - Learning to (Learn at Test Time)]
 [[ΔΔ]2024 - DeltaNet - Parallelizing Linear Transformers with the Delta Rule over Sequence Length]
 [[ΣΔΔ;Google]2024 - Titans - Learning to Memorize at Test Time]
-**** 在本身并不是一维的数据领域,运用Mamba之类的技术,需要将数据序列化!这背后隐藏着什么?
+**** 在本身并不是一维的数据领域,运用Mamba之类的技术,需要将数据序列化!
+~高维数据,如何有一个好的序列化?~
 ***** Space Filling Curves
 ***** Tree Topology
 - "古老的世界里,有这么一个传奇!"
