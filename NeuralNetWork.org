@@ -964,9 +964,9 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
 [[file:images/Comparison-of-RNN-LSTM-and-GRU-neural-network-structures.png][图: RNN vs LSTM vs GRU]]
 [[file:images/Structure of the LSTM cell and equations.png][图: LSTM Cell]]
 [[file:images/Structure of the GRU cell and equations.png][图: GRU Cell]]
-**** Mamba的朋友们!Titans带来的进步和总结:
-...Linear Transformer, RWKV, DeltaNet...
-[2024 - TTT - Learning to (Learn at Test Time)]
+**** Mamba的朋友们!(也就是所谓的Transformers的后继们)!Titans带来的进步和总结:
+...Linear Transformer,RetNet,RWKV,DeltaNet...
+[[ΩΔΔ;MetaAI]2024 - TTT - Learning to (Learn at Test Time)]
 [[ΔΔ]2024 - DeltaNet - Parallelizing Linear Transformers with the Delta Rule over Sequence Length]
 [[ΣΔΔ;Google]2024 - Titans - Learning to Memorize at Test Time]
 **** 在本身并不是一维的数据领域,运用Mamba之类的技术,需要将数据序列化!
@@ -983,6 +983,11 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
 Chunking Theory的涵义？
 *** Albert Gu的Blog [https://goombalab.github.io/blog/2025/hnet-past/]详细谈了这个过程,及背后的动机!
 什么是"Primtives"! "Hierarchy"如何可作为"Differentiable Primitives"?
+** 有必要从一个理论的高度来看待近期的一些动向!
+[2025 - A Neuro-Inspired Computational Framework for AGI - Predictive Coding Active Inference and Free Energy Minimisation]
+这是一片好的理论建构文章.思想、理论和启发!
+- 很多话题,在下面展开!TiTans,HRM,CTM,H-Net等等文章的思想支撑,都应当和这篇文章代表的路线,进行比较研究!
+- 还有以前没搞懂的,如GFlowNet,BriLLM...
 ** 从Perceptual Grouping角度看基础模型的其他路线
 当将Transformer运用到2D,3D的数据上时,就会发现Space is sequences!
 这就面临一个问题,How to sequence the space!But, sequencing is triggered by grouping or selection with one by one!
