@@ -966,9 +966,14 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
 [[file:images/Structure of the GRU cell and equations.png][图: GRU Cell]]
 **** Mamba的朋友们!(也就是所谓的Transformers的后继们)!Titans带来的进步和总结:
 ...Linear Transformer,RetNet,RWKV,DeltaNet...
-[[ΩΔΔ;MetaAI]2024 - TTT - Learning to (Learn at Test Time)]
-[[ΔΔ]2024 - DeltaNet - Parallelizing Linear Transformers with the Delta Rule over Sequence Length]
-[[ΣΔΔ;Google]2024 - Titans - Learning to Memorize at Test Time]
+- [[ΩΔΔ;MetaAI]2024 - TTT - Learning to (Learn at Test Time) - RNNs with Expressive Hidden States]
+  什么是隐涵状态?隐涵状态是可表达的!隐涵状态时可更新的!
+- [[ΔΔ]2024 - DeltaNet - Parallelizing Linear Transformers with the Delta Rule over Sequence Length]
+- [[ΣΔΔ;Google]2024 - Titans - Learning to Memorize at Test Time]
+  ~在Titan的研究中,提到FWP(Fast Weight Controller/Programmer).忽然感受到古老思想背后的直觉,还是有深刻的洞察力的!~
+  FWP应当就是那位Transformer的失落者( Jürgen Schmidhuber)开辟的路线?!近期,他们的成果确实比较多!
+  [Fast weight programming and linear transformers: from machine learning to neurobiology]
+  FWP & DeltaRule & Linear Transformer ...
 **** 在本身并不是一维的数据领域,运用Mamba之类的技术,需要将数据序列化!
 ~高维数据,如何有一个好的序列化?~
 ***** Space Filling Curves
@@ -983,6 +988,7 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
 Chunking Theory的涵义？
 *** Albert Gu的Blog [https://goombalab.github.io/blog/2025/hnet-past/]详细谈了这个过程,及背后的动机!
 什么是"Primtives"! "Hierarchy"如何可作为"Differentiable Primitives"?
+~事实上,层次这个概念,至少在深度学习这个领域,被CNN的Pyramid Hierachie结构观,给带偏了.层次间的"互动",丢失了!~
 ** 有必要从一个理论的高度来看待近期的一些动向!
 [2025 - A Neuro-Inspired Computational Framework for AGI - Predictive Coding Active Inference and Free Energy Minimisation]
 这是一片好的理论建构文章.思想、理论和启发!
@@ -1023,7 +1029,7 @@ TokenPose是VitPose不出来之前的东西!估计如此!
 [Perceiver: General Perception with Iterative Attention]
 [Perceiver IO: A General Architecture for Structured Inputs & Outputs]
 [Perceiver AR: General-purpose, long-context autoregressive modeling with Perceiver AR]
-实质上,真还是忽略了他的意义!扯远点,Mask2former里,好像也看到某种类似的痕迹!
+实质上,真还是忽略了他的意义!扯远点,Mask2former里,好像也看到某种类似的痕迹!可以看看"Dyn-Perceiver"中的内容!
 Cross-Attention其实还是有深意的!谁Q,谁K,V,应当有思想!
 Perceiver应当是Latent-Space的构造器!
 ** SAM Oneformer SegGPT SEEM这些并行工作意味着什么?
