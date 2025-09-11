@@ -102,4 +102,4 @@ VAE(Variational AutoEncoder),ARM(AutoRegressive Models),GAN(Generative Adversari
 
 彻底思考:
 - Continuty Equation/Transport Equation 是否在底下支撑什么？
-
+** 不算是题外话.很多模型的起点,似乎都可以追述到对VAE的认知!为什么?
