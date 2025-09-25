@@ -90,7 +90,7 @@
 ** Place Cells/Grid Cells/Head Cells/Border Cells/Speed Cells/Trace Cells/Object Cells/Object vector Cells, and so on
 观看视频"Grid Cells, Object Representations, and Memory" & "Grid Cells and the Brain's Spatial Mapping System"
 Memory is a process reproduce/reconstruction!? (David Marr)
-Navigation is the core!?
+Navigation is the core!? Spatial Mapping --abstract--> Cognitive Map !?
 *** Brain Regions Involved in Spatial Cognition
 涉及空间认知的脑区域,下图示意.("Roddy M Grieves and Kate J Jeffery. The representation of space in the brain. Behavioural Processes, 135:113–131, 2017.")
 [[file:./images/GridCells/SpatialRecognition.jpg]]
@@ -161,7 +161,17 @@ Grid Map的组织方式: 沿着 MEC 的 DorsalVentral Axis 的 Modular Organizat
 - [...;Whittington J.C.R]2022 - Actionable Neural Representations - Grid Cells from Minimal Constraints
 - [Whittington J.C.R.;...]2023 - Disentanglement with Biological Constraints - A Theory of Functional Cell Types
 这是两篇相伴的文章,内在的思想是一致的,只不过应用的领域不同!
-**** [Schaefer R.;...;Fiete I.R.]2023 - Self-Supervised Learning of Representations for Space Generates Multi-Modular Grid Cells
+We formalise these ideas - ~actionable~, ~functional~, and ~biological~.
+Biological representations must be more than just actionable - they must be functional, encoding the world efficiently, and obey biological constraints.
+- ~Actionability~, using group and representation theory, we define it as the requirement that each action has a corresponding matrix that linearly updates the representation;
+- ~Functionally~, we want different points in space to be represented maximally differently, allowing inputs to be distinguished from one another.
+- ~Biologically~, we ensure all neurons have non-negative and bounded activity.
+**** Schaefer R. ... Fiete I.R. 这一脉的工作！
+~[ΔΔ;Fiete I.R.]2024 - Bridging Associative Memory and Probabilistic Modeling~
+[Schaefer R.;...;Fiete I.R.]2023 - Self-Supervised Learning of Representations for Space Generates Multi-Modular Grid Cells
+**** 基于Conformal Isometry Hypothesis的工作！
+[2025 - On Conformal Isometry of Grid Cells - Learning Distance-Preserving Position Embedding]
+
 ** New approaches to Deep Networks
 这是一篇评论，议及四种网络
 - CapsuleNet  (Hinton  @ ??)

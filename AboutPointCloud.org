@@ -166,5 +166,6 @@ Detr-Based Method没怎么跟踪,现在从下面几篇文章开始,了解一下�
   这篇文章传达的信息:
   - 3DV-RPE:相对位置编码体现了什么?这被认为本文的主要贡献！
   - Decoder的Queries输入,该怎么构造,或初始化!
-* 3DVG(也叫做3D instance reference)
+* 3DVG(也叫做3D instance reference),稀疏卷积是不是一个方向？
 [2025 - TSP3D - Text-guided Sparse Voxel Pruning for Efficient 3D Visual Grounding]
+首先要明白Instance Reference和Object Detection的区别与联系！
