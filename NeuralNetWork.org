@@ -438,7 +438,8 @@ Three types of operators are considered essential in a VSA.
 *** 2024 - KAN 2.0:Kolmogorov-Arnold Networks Meet Science
 *** 2024 - RPN - Reconciled Polynomial Network Towards Unifying PGMs - Kernel SVMs - MLP - KAN
 ** World Models在讨论什么？
-[2023 - From Word Models to World Models]
+- 思想者,总是前行者.[[;Jürgen Schmidhuber]2018 - World Models]
+- [2023 - From Word Models to World Models]
 ** CTM(Continuous Thought Machine)和HRM(Hiearchi Reasoning Model)揭示了什么?
 *** ARC-AGI,Sudoku,Maze等Benchmarks,引发了一系列的运动!
 *** CTM(Continuous Thought Machine)
@@ -975,13 +976,13 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
 [[file:images/Structure of the LSTM cell and equations.png][图: LSTM Cell]]
 [[file:images/Structure of the GRU cell and equations.png][图: GRU Cell]]
 **** Mamba的朋友们!(也就是所谓的Transformers的后继们)!Titans带来的进步和总结:
-...Linear Transformer,RetNet,RWKV,DeltaNet...
+...Linear Transformer,RetNet,RWKV,DeltaNet...,可以去看看,科学空间有篇文章,叫[线性注意力简史：从模仿、创新到反哺]
 - [[ΩΔΔ;MetaAI]2024 - TTT - Learning to (Learn at Test Time) - RNNs with Expressive Hidden States]
   什么是隐涵状态?隐涵状态是可表达的!隐涵状态时可更新的!
 - [[ΔΔ]2024 - DeltaNet - Parallelizing Linear Transformers with the Delta Rule over Sequence Length]
 - [[ΣΔΔ;Google]2024 - Titans - Learning to Memorize at Test Time]
   ~在Titan的研究中,提到FWP(Fast Weight Controller/Programmer).忽然感受到古老思想背后的直觉,还是有深刻的洞察力的!~
-  FWP应当就是那位Transformer的失落者( Jürgen Schmidhuber)开辟的路线?!近期,他们的成果确实比较多!
+  FWP应当就是那位Transformer的失落者(Jürgen Schmidhuber)开辟的路线?!近期,他们的成果确实比较多(比如,World Models!)!
   [Fast weight programming and linear transformers: from machine learning to neurobiology]
   FWP & DeltaRule & Linear Transformer ...
 **** 在本身并不是一维的数据领域,运用Mamba之类的技术,需要将数据序列化!
