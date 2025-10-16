@@ -976,15 +976,30 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
 [[file:images/Structure of the LSTM cell and equations.png][图: LSTM Cell]]
 [[file:images/Structure of the GRU cell and equations.png][图: GRU Cell]]
 **** Mamba的朋友们!(也就是所谓的Transformers的后继们)!Titans带来的进步和总结:
-...Linear Transformer,RetNet,RWKV,DeltaNet...,可以去看看,科学空间有篇文章,叫[线性注意力简史：从模仿、创新到反哺]
+- Linear RNN ~~> Linear Attention 等等,这里可能有些简单的分类问题,可以不必纠结?
+  ...,Linear Transformer,RetNet,RWKV,DeltaNet,...,可以去看看,科学空间的几篇文章,
+  - [线性注意力简史：从模仿、创新到反哺] -- 2025
+  - [Google新作试图“复活”RNN：RNN能否再次辉煌？] -- 2023
 - [[ΩΔΔ;MetaAI]2024 - TTT - Learning to (Learn at Test Time) - RNNs with Expressive Hidden States]
-  什么是隐涵状态?隐涵状态是可表达的!隐涵状态时可更新的!
+  - 线性Attention从最初的简单模仿Softmax Attention，到引入静态衰减因子乃至“data-dependent decay”，已经形成了自身的特色并在不少任务上发挥价值。
+    然而，这些进展多数是靠人工凭经验设计出来的,
+    ~我们不禁要问:有没有更上层的原则来指导线性Attention甚至是一般的序列模型(Token-Mixer)的设计?~
+  - 什么是隐涵状态?隐涵状态是可表达的!隐涵状态时可更新的!
 - [[ΔΔ]2024 - DeltaNet - Parallelizing Linear Transformers with the Delta Rule over Sequence Length]
 - [[ΣΔΔ;Google]2024 - Titans - Learning to Memorize at Test Time]
-  ~在Titan的研究中,提到FWP(Fast Weight Controller/Programmer).忽然感受到古老思想背后的直觉,还是有深刻的洞察力的!~
-  FWP应当就是那位Transformer的失落者(Jürgen Schmidhuber)开辟的路线?!近期,他们的成果确实比较多(比如,World Models!)!
-  [Fast weight programming and linear transformers: from machine learning to neurobiology]
-  FWP & DeltaRule & Linear Transformer ...
+  - ~在Titan的研究中,提到FWP(Fast Weight Controller/Programmer).忽然感受到古老思想背后的直觉,还是有深刻的洞察力的!~
+      FWP应当就是那位Transformer的失落者(Jürgen Schmidhuber)开辟的路线?!近期,他们的成果确实比较多(比如,World Models!)!
+      [Fast weight programming and linear transformers: from machine learning to neurobiology]
+      FWP & DeltaRule & Linear Transformer(Linear Attention) ...
+  - 在Titans这篇文章里,Attention,Linear Attention,Association Memory,Memory等等,进行了集中反思!
+  - ~同时Titans的这份研究~,似乎落入某个范式的转变:(Latent Reasonging???)
+    从"无状态的计算工具"向"有记忆的智能体"的范式转变!
+    绕开微调,在模型外围找解决方案,探索如何让AI系统真正具备持续学习和自我改进的能力!
+    Titans可能是名单的开头!
+    Training-Free GRPO
+    ReasoningBank
+    Agentic Context Engineering
+    ... Anything else?
 **** 在本身并不是一维的数据领域,运用Mamba之类的技术,需要将数据序列化!
 ~高维数据,如何有一个好的序列化?~
 ***** Space Filling Curves
