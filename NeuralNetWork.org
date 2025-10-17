@@ -984,6 +984,7 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
   - 线性Attention从最初的简单模仿Softmax Attention，到引入静态衰减因子乃至“data-dependent decay”，已经形成了自身的特色并在不少任务上发挥价值。
     然而，这些进展多数是靠人工凭经验设计出来的,
     ~我们不禁要问:有没有更上层的原则来指导线性Attention甚至是一般的序列模型(Token-Mixer)的设计?~
+    ?用Linear Attention来构建RNN?
   - 什么是隐涵状态?隐涵状态是可表达的!隐涵状态时可更新的!
 - [[ΔΔ]2024 - DeltaNet - Parallelizing Linear Transformers with the Delta Rule over Sequence Length]
 - [[ΣΔΔ;Google]2024 - Titans - Learning to Memorize at Test Time]
