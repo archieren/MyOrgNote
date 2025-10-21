@@ -440,6 +440,11 @@ Three types of operators are considered essential in a VSA.
 ** World Models在讨论什么？
 - 思想者,总是前行者.[[;Jürgen Schmidhuber]2018 - World Models]
 - [2023 - From Word Models to World Models]
+- [2025 - A Survey - Learning Embodied Intelligence from Physical Simulators and World Models]
+  "World models are generative AI models that understand the dynamics of the real world, including physics and spatial properties! --- NVIDIA's world foundation models"
+  - World Models as Neural Simulator!
+  - World Models as Dynamic Models!
+  - World Models as Reward Models!
 ** CTM(Continuous Thought Machine)和HRM(Hiearchi Reasoning Model)揭示了什么?
 *** ARC-AGI,Sudoku,Maze等Benchmarks,引发了一系列的运动!
 *** CTM(Continuous Thought Machine)
