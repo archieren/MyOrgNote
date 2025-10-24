@@ -948,8 +948,8 @@ SSM -> Hippo -> LSSL -> S4 -> Mamba
    _这是一篇过渡文章,形成了SSM的双视角!("the dual recurrent-convolutional forms")._
    "SSM convolution kernel - SSK" or "Kyrov Function", 可以探索一下!
  - [Gu A.;...]2022 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
-   这篇文章的贡献,主要集中在计算方法的优化!!!
-   S4,所谓的结构化方法
+   这篇文章的贡献,主要集中在计算方法的优化!!!“结构化”的矩阵易于优化,即所谓的HIPPO矩阵等等才是此类!!!
+   S4(Structured State Space sequence),所谓的结构化方法
    - the continuous representation: Hippo Matrix的选择.
    - the recurrent representation: 离散方法的选择,(选择跟随Bilinear Method).
    - the convolutional representation: 可高效计算Kyrov Function(即那个SSK函数)的参数矩阵是对角化矩阵.
@@ -961,6 +961,7 @@ SSM -> Hippo -> LSSL -> S4 -> Mamba
      看来,如果要深入,需要一些矩阵计算方法的背景了.
      看了一堆相关文章DSS,S4D等等,发现有点技术灌水的味道!!!(它们在互相引用!!!)
  - [CMU]2023 - Mamba - Linear-Time Sequence Modeling with Selective State Spaces
+   S6, Mamba的别称!
    - "We argue that a fundamental problem of sequence modeling is compressing context into a smaller state!!"
      这是一个什么观点? "状态应当将上下文压缩进来!".
      - 纯粹的LTI models,天生有什么短板?
@@ -972,7 +973,7 @@ SSM -> Hippo -> LSSL -> S4 -> Mamba
        - 但Selection,具体地说, selective scan,又破坏了S4中的卷积递归双面性!!!
          This “Selective Scan” operation now, does not hold the dual property of convolution and recurrence.
          Hence, Mamba relies on recurrence only.
-         不过此时,有并行算法存在!
+         不过此时,有并行算法存在!(Parallel scan(Parallel prefix sum))
 **** Gu A.在他的博士论文里,对基本概念讲得更清楚!
 Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问题,这是开窍点吗?
 *** Mamba的朋友们!或Transformer的竞争者门!
@@ -981,18 +982,20 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
 [[file:images/Structure of the LSTM cell and equations.png][图: LSTM Cell]]
 [[file:images/Structure of the GRU cell and equations.png][图: GRU Cell]]
 **** Mamba的朋友们!(也就是所谓的Transformers的后继们)!Titans带来的进步和总结:
-- Linear RNN ~~> Linear Attention 等等,这里可能有些简单的分类问题,可以不必纠结?
-  ...,Linear Transformer,RetNet,RWKV,DeltaNet,...,可以去看看,科学空间的几篇文章,
++ Linear RNN ~~> Linear Attention 等等,这里可能有些简单的分类问题,可以不必纠结?
+  ...,Linear Transformer,RetNet,RWKV,DeltaNet, [TTT,Mamba2,Gated Deltanet,], Titans...,可以去看看,科学空间的几篇文章,
   - [线性注意力简史：从模仿、创新到反哺] -- 2025
   - [Google新作试图“复活”RNN：RNN能否再次辉煌？] -- 2023
-- [[ΩΔΔ;MetaAI]2024 - TTT - Learning to (Learn at Test Time) - RNNs with Expressive Hidden States]
++ [[ΩΔΔ;MetaAI]2024 - TTT - Learning to (Learn at Test Time) - RNNs with Expressive Hidden States]
   - 线性Attention从最初的简单模仿Softmax Attention，到引入静态衰减因子乃至“data-dependent decay”，已经形成了自身的特色并在不少任务上发挥价值。
     然而，这些进展多数是靠人工凭经验设计出来的,
     ~我们不禁要问:有没有更上层的原则来指导线性Attention甚至是一般的序列模型(Token-Mixer)的设计?~
     ?用Linear Attention来构建RNN?
   - 什么是隐涵状态?隐涵状态是可表达的!隐涵状态时可更新的!
-- [[ΔΔ]2024 - DeltaNet - Parallelizing Linear Transformers with the Delta Rule over Sequence Length]
-- [[ΣΔΔ;Google]2024 - Titans - Learning to Memorize at Test Time]
++ [[ΔΔ]2024 - DeltaNet - Parallelizing Linear Transformers with the Delta Rule over Sequence Length]
+  [[ΔΔ]2024 - Gated Delta Networks - Improving Mamba2 with Delta Rule - v3]
+  -- QWen3-Next的混合注意力路线中就采用了Gated Delta Networks!
++ [[ΣΔΔ;Google]2024 - Titans - Learning to Memorize at Test Time]
   - ~在Titan的研究中,提到FWP(Fast Weight Controller/Programmer).忽然感受到古老思想背后的直觉,还是有深刻的洞察力的!~
       FWP应当就是那位Transformer的失落者(Jürgen Schmidhuber)开辟的路线?!近期,他们的成果确实比较多(比如,World Models!)!
       [Fast weight programming and linear transformers: from machine learning to neurobiology]
