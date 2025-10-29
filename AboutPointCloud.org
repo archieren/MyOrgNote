@@ -82,6 +82,10 @@ a pure deep hierarchical MLP architecture is able to exhibit gratifying performa
 模型的性能中,有个"accuracy vs efficiency"的权衡问题.
 *** Breaking the curse of permutation invariance:
 这个可能更重要, ~Serialization-based method.~
+** PTV3的后继工作"Sonata"
+有关"Zero/Few Short"式的点云预训练模型,为什么进展缓慢?
+"Sonata"的工作,揭示了在3D SSL领域中,存在"Geometric ShortCut"问题! -- 有意思!
+- 学到的"Features Representation",容易塌缩到"low-level spatial features"
 * Space is sequences
 这是一个有意思的话题.应当从感知的角度,来看待此问题!
 背后的本质问题是集合的结构化的道路!既要反应局部,又要反应全局互通!!!
