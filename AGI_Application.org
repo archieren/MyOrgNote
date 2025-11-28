@@ -8,6 +8,12 @@
 - 主题:Agentic RAG,Agentic RL,Agentic Deep Research等等
 - 范式:MultiAgent FrameWork
   - 例如:[OPPO]2025 - Chain-of-Agents - End-to-End Agent Foundation Models via Multi-Agent Distillation and Agentic RL
+* Memory怎么和Agent Evolve挂钩了？
+[G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems]
+[AgentEvolver: Towards Efficient Self-Evolving Agent System]
+[Reasoning Bank: Scaling Agent Self-Evolving with Reasoning Memory]
+...
+** 纵观上面一系列文章,“Memory Mechanism”承担一个关键作用!演化在于记忆的更迭!
 * RAG
 ** 关于GraphRag
 [2023 - Large Language Models on Graphs: A Comprehensive Survey]
