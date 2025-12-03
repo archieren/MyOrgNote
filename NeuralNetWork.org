@@ -446,6 +446,7 @@ Three types of operators are considered essential in a VSA.
   - World Models as Dynamic Models!
   - World Models as Reward Models!
 ** CTM(Continuous Thought Machine)和HRM(Hiearchi Reasoning Model)揭示了什么?
+目前来看,这类工作都被归到Latent Space Reasoning这个主题之下!
 *** ARC-AGI,Sudoku,Maze等Benchmarks,引发了一系列的运动!
 *** CTM(Continuous Thought Machine)
 *** HRM(Hiearchi Reasoning Model)
