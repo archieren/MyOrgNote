@@ -456,8 +456,10 @@ Three types of operators are considered essential in a VSA.
 - Latent Space Reasoning,即隐推理范式(即模型在内部隐藏状态空间进行推理,而不是依赖显示的语言步骤)可能是实现复杂任务推理的关键.
   - 稍早点,和Chain Of Continuous Thought相关的工作.如(CoCoNut,CoCoMix)
     ?语言与推理之间有着什么样内涵上的联系与本质上的差别?
-  - 
+  -
 *** 附带地,来看看Albert Gu指导的论文(H-Net),或许应当另开话题!?
+** Google好像又来一个三部曲！Titans -> Miras -> Nested Learning
+Sequence Modeling!
 * ※※※※※※※※
 [[https://mlml.kaist.ac.kr/awesome#681e48cc-6b0c-4b1a-b602-32bc029572d6][Awesome X (Prof. Ahn’s Reading List)]]
 ** ※AI Mathematician / AI Scientist / Autoformalization※
@@ -1018,7 +1020,6 @@ Seq-To-Seq是很重要的一个抽象理论模型,用SSM来解决Seq-To-Seq问�
   Tree-Filtering [2013 - Tree Filtering: Efficient Structure-Preserving Smoothing With a Minimum Spanning Tree]
 - Tree-Topology [2025 - GrootVL: Tree Topology is All You Need in State Space Model]
   思路还是挺好的!
-
 ** H-Net,Albert Gu对Hiearchie的思考！
 *** [2025 - Dynamic Chunking for End-to-End Hierarchical Sequence Modeling - v2]
 Chunking Theory的涵义？
