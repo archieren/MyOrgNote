@@ -15,11 +15,11 @@
   [AgentEvolver: Towards Efficient Self-Evolving Agent System]
   [Reasoning Bank: Scaling Agent Self-Evolving with Reasoning Memory]
   [G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems]
+  ...
 - (Structured) Dynamic Memory
   [Dynamic Cheatsheet: Test-Time Learning with Adaptive Memory]
   [Zep: A Temporal Knowledge Graph Architecture for Agent Memory]
-
-...
+  ...
 ** 纵观上面一系列文章,“Memory Mechanism”承担一个关键作用!演化在于记忆的更迭!
 * RAG
 ** 关于GraphRag
@@ -28,8 +28,13 @@
 有人还为这篇文章写了博客!评论道，。。。，知识图谱(KG)的发展趋势已经从早期的HippoRAG,GraphRAG通过知识图谱增强LLM准确性、减少幻觉转变为更加垂直化的应用，
 聚焦于那些本来就适合知识图谱的行业，例如交通运动图、情报人物关系图谱、生物分子图和特定金融分析领域。
 ？问题:那些是适合知识图谱的行业？
-** Agentic Rag代表了什么进展？[2025 - Agentic Retrieval-Augmented Generation - A Survey on Agentic RAG - v1]
+** Agentic Rag代表了什么进展？
+- [2025 - Agentic Retrieval-Augmented Generation - A Survey on Agentic RAG - v1]
+  总结了Agentic Rag的架构模式!
+- [2025 - Towards Agentic RAG with Deep Reasoning - A Survey of RAG-Reasoning Systems in LLMs - v2.pdf]
+  从RAG、Reasoning两者互增强到协同的角度进行了总结!
 RAG -> GraphRAG,KG?RAG,HiRAG,LeanRAG,... -> Agentic RAG(如 Search-o1等等)
+还有个话题,RAG和Memory的关系!
 *** LLM之RAG最新进展 - 边思考边搜索的迭代式生成
 [[https://zhuanlan.zhihu.com/p/31539909914][边思考边生成的迭代式生成]]
 [2025 - R1-Searcher:Incentivizing the Search Capability in LLMs via Reinforcement Learning]

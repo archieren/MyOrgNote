@@ -458,8 +458,8 @@ Three types of operators are considered essential in a VSA.
     ?语言与推理之间有着什么样内涵上的联系与本质上的差别?
   -
 *** 附带地,来看看Albert Gu指导的论文(H-Net),或许应当另开话题!?
-** Google好像又来一个三部曲！Titans -> Miras -> Nested Learning
-Sequence Modeling!
+** Google又来一个三部曲！Titans -> Miras -> Nested Learning
+Sequence Modeling 和 Association Memory联系了起来!
 * ※※※※※※※※
 [[https://mlml.kaist.ac.kr/awesome#681e48cc-6b0c-4b1a-b602-32bc029572d6][Awesome X (Prof. Ahn’s Reading List)]]
 ** ※AI Mathematician / AI Scientist / Autoformalization※
