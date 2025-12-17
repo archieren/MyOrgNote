@@ -4,6 +4,8 @@
 
 * 可能要区分一下概念AI agent(AI 代理) vs Agentic AI(代理式 AI)！
 ** 参看:[2025 - AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges]
+AI Agent在架构分类和实际部署中具有三大基础特征: 自主性(Autonomy)、任务专一性(Task Specification)以及反应性与适应性(Reactivity and Adaptivity).
+Agentic AI是一种新兴的智能架构，利用多个专业化(AI) Agent协作来实现复杂且高层次的目标。
 ** 那么在Agentic AI下,就有很多内容要讨论!
 - 主题:Agentic RAG,Agentic RL,Agentic Deep Research等等
 - 范式:MultiAgent FrameWork
@@ -21,6 +23,12 @@
   [Zep: A Temporal Knowledge Graph Architecture for Agent Memory]
   ...
 ** 纵观上面一系列文章,“Memory Mechanism”承担一个关键作用!演化在于记忆的更迭!
+*** 长文[2025 - Memory in the Age of AI Agents - A Survey]对Memory研究的划分,更具多样性和新颖性!
+**** 研究的视角: 通过形式、功能和动态(Forms, functions, and dynamics)的视角，提供当前研究的统一和全面的全景。
+  - Forms: 三种记忆实现(令牌级、参数级、潜在记忆)
+  - Functions: 三种记忆功能(事实记忆、经验记忆、工作记忆),这和以往的长短期记忆划分方式有明显的差异！
+  - Dynamics: 记忆如何在代理与环境互动的过程中形成、演变和检索.
+**** 作为2025年末出的总结,确实是一片好文,将这几年围绕Memory作了个非常好的总结?
 * RAG
 ** 关于GraphRag
 [2023 - Large Language Models on Graphs: A Comprehensive Survey]
