@@ -150,6 +150,15 @@ Feature Point, KeyPoint, Superpoint, (Random) Sampled Points
   构造了一个奇怪的SDF,关键点用包含它的球面来估计,问题就变成学到这种隐涵的表示!.文章中,“相关工作”一段的辨析,比较好!
 - [2022 - SNAKE - Shape-aware Neural 3D Keypoint Field]
   作者在探索一个问题:"Whether jointly reconstructing underlying 3D shapes helps 3D keypoint detection!"
+** VecSet/VoxSet在3D生成中,似乎很受器重!
+3D SDF可以由某Set来表示,这很神奇!
+- VecSet的简史
+  3DShape2vecset -> Dora-Vae CraftsMan3D-Vae -> COD-Vae
+- VoxSet的简史
+  XCube(Sparse Voxel Hierarchies)
+  -> Trellis(SLAT:Structured LATents)
+  -> Ultra3D(Part-Attention, Global VecSet & Local SLAT?, VecSet-based Sparse Voxel Generation?)
+  -> Lattice(VoxSet)
 * Topology Data Analysis(TDA)和Geometric Data Analysis(GDA)
 * 3D Representation Learning
 ** [2024 - 3D Representation Method: A survey]可以看看.虽然新,但目前来看,总结得不到位,提供的资料也不全!
