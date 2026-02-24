@@ -7,7 +7,7 @@
 AI Agent在架构分类和实际部署中具有三大基础特征: 自主性(Autonomy)、任务专一性(Task Specification)以及反应性与适应性(Reactivity and Adaptivity).
 Agentic AI是一种新兴的智能架构，利用多个专业化(AI) Agent协作来实现复杂且高层次的目标。
 ** 那么在Agentic AI下,就有很多内容要讨论!
-- 主题:Agentic RAG,Agentic RL,Agentic Deep Research等等
+- 主题:Agentic RAG, Agentic Memory, Agentic RL,Agentic Deep Research等等
 - 范式:MultiAgent FrameWork
   - 例如:[OPPO]2025 - Chain-of-Agents - End-to-End Agent Foundation Models via Multi-Agent Distillation and Agentic RL
 * Memory怎么和Agent Evolve挂钩了？
@@ -36,24 +36,31 @@ Agentic AI是一种新兴的智能架构，利用多个专业化(AI) Agent协作
 ** 关于GraphRag
 [2023 - Large Language Models on Graphs: A Comprehensive Survey]
 这篇文章修改了一年!2024年底还有修改!还是可以看看的。
-有人还为这篇文章写了博客!评论道，。。。，知识图谱(KG)的发展趋势已经从早期的HippoRAG,GraphRAG通过知识图谱增强LLM准确性、减少幻觉转变为更加垂直化的应用，
-聚焦于那些本来就适合知识图谱的行业，例如交通运动图、情报人物关系图谱、生物分子图和特定金融分析领域。
+有人还为这篇文章写了博客!评论道,...,知识图谱(KG)的发展趋势已经从早期的HippoRAG,GraphRAG通过知识图谱增强LLM准确性、减少幻觉转变为更加垂直化的应用,
+聚焦于那些本来就适合知识图谱的行业,例如交通运动图、情报人物关系图谱、生物分子图和特定金融分析领域.
 ？问题:那些是适合知识图谱的行业？
 ** Agentic Rag代表了什么进展？
 - [2025 - Agentic Retrieval-Augmented Generation - A Survey on Agentic RAG - v1]
-  总结了Agentic Rag的架构模式!
+  总结了Rag的架构模式!: Naïve RAG |> Advance Rag |> Modular Rag |> Graph Rag |> Agentic Rag
+  Agentic Rag 是建立在 Modular Rag 上的, 但克服了 Moduar Rag的一些内在问题!
 - [2025 - Towards Agentic RAG with Deep Reasoning - A Survey of RAG-Reasoning Systems in LLMs - v2.pdf]
   从RAG、Reasoning两者互增强到协同的角度进行了总结!
 RAG -> GraphRAG,KG?RAG,HiRAG,LeanRAG,... -> Agentic RAG(如 Search-o1等等)
-还有个话题,RAG和Memory的关系!
-*** LLM之RAG最新进展 - 边思考边搜索的迭代式生成
+*** ~Graphic Rag 和 Agentic Rag事实上,按我的理解,应当是关于知识、记忆的两个维度: Structure(Realation, Logical, Ontology...) and Dynamic(Context, Adaption, ?Learning, Evolution,)!~
+*** 还有个话题,RAG和Memory的关系!
+*** 但首先还是先了解Agentic Rag的基础 Agentic Intelligence!
+
+** LLM之RAG最新进展 - 边思考边搜索的迭代式生成
 [[https://zhuanlan.zhihu.com/p/31539909914][边思考边生成的迭代式生成]]
 [2025 - R1-Searcher:Incentivizing the Search Capability in LLMs via Reinforcement Learning]
 [2025 - Search-R1:Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning]
 ......
-*** LLM之RAG最新进展 - 使用Agentic RAG实现o1式长推理
+** LLM之RAG最新进展 - 使用Agentic RAG实现o1式长推理
 [[https://zhuanlan.zhihu.com/p/18015047061][使用Agentic RAG实现o1式长推理]]
 - [2025 - Search-o1: Agentic Search-Enhanced Large Reasoning Models]
+** LLM之RAG最新进展 - 检索从相似匹配变成动态学习?
+- [2025 - CLaRa - Bridging Retrieval and Generation with Continuous Latent Reasoning]
+  这条道路??? Latent Space到底可以承担多少大任?
 ** 有人在坚决地批判RAG,认为应当从Context来探索Agent的能力!
 那么首先要反思RAG的本质是什么?真不好回答!如何“利用和探索”已有的知识？！
 Retrieving 和 Planning,Reasoning,Learning等等之间构成了什么样的互动关系？
