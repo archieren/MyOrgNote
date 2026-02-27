@@ -2,14 +2,6 @@
 #+TITLE: AGI_Application 有关一些AGI应用的笔记
 #+AUTHOR: Reader
 
-* 可能要区分一下概念AI agent(AI 代理) vs Agentic AI(代理式 AI)！
-** 参看:[2025 - AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges]
-AI Agent在架构分类和实际部署中具有三大基础特征: 自主性(Autonomy)、任务专一性(Task Specification)以及反应性与适应性(Reactivity and Adaptivity).
-Agentic AI是一种新兴的智能架构，利用多个专业化(AI) Agent协作来实现复杂且高层次的目标。
-** 那么在Agentic AI下,就有很多内容要讨论!
-- 主题:Agentic RAG, Agentic Memory, Agentic RL,Agentic Deep Research等等
-- 范式:MultiAgent FrameWork
-  - 例如:[OPPO]2025 - Chain-of-Agents - End-to-End Agent Foundation Models via Multi-Agent Distillation and Agentic RL
 * Memory怎么和Agent Evolve挂钩了？
 ~Static -> Dynamic -> Evolutive~ :Memory 机制的N步曲!
 - Self-Evolving Memory
@@ -49,7 +41,14 @@ RAG -> GraphRAG,KG?RAG,HiRAG,LeanRAG,... -> Agentic RAG(如 Search-o1等等)
 *** ~Graphic Rag 和 Agentic Rag事实上,按我的理解,应当是关于知识、记忆的两个维度: Structure(Realation, Logical, Ontology...) and Dynamic(Context, Adaption, ?Learning, Evolution,)!~
 *** 还有个话题,RAG和Memory的关系!
 *** 但首先还是先了解Agentic Rag的基础 Agentic Intelligence!
-
+**** 可能要区分一下概念AI agent(AI 代理) vs Agentic AI(代理式 AI)！
+***** 参看:[2025 - AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges]
+AI Agent在架构分类和实际部署中具有三大基础特征: 自主性(Autonomy)、任务专一性(Task Specification)以及反应性与适应性(Reactivity and Adaptivity).
+Agentic AI是一种新兴的智能架构，利用多个专业化(AI) Agent协作来实现复杂且高层次的目标。
+***** 那么在Agentic AI下,就有很多内容要讨论!
+- 主题:Agentic RAG, Agentic Memory, Agentic RL,Agentic Deep Research等等
+- 范式:MultiAgent FrameWork
+  - 例如:[OPPO]2025 - Chain-of-Agents - End-to-End Agent Foundation Models via Multi-Agent Distillation and Agentic RL
 ** LLM之RAG最新进展 - 边思考边搜索的迭代式生成
 [[https://zhuanlan.zhihu.com/p/31539909914][边思考边生成的迭代式生成]]
 [2025 - R1-Searcher:Incentivizing the Search Capability in LLMs via Reinforcement Learning]
