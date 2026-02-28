@@ -39,12 +39,14 @@
   从RAG、Reasoning两者互增强到协同的角度进行了总结!
 RAG -> GraphRAG,KG?RAG,HiRAG,LeanRAG,... -> Agentic RAG(如 Search-o1等等)
 *** ~Graphic Rag 和 Agentic Rag事实上,按我的理解,应当是关于知识、记忆的两个维度: Structure(Realation, Logical, Ontology...) and Dynamic(Context, Adaption, ?Learning, Evolution,)!~
-*** 还有个话题,RAG和Memory的关系!
+*** 还有个话题,RAG和Memory的关系! - ~RAG目前大部分是放在Memory机制范畴下的~
 *** 但首先还是先了解Agentic Rag的基础 Agentic Intelligence!
 **** 可能要区分一下概念AI agent(AI 代理) vs Agentic AI(代理式 AI)！
 ***** 参看:[2025 - AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges]
 AI Agent在架构分类和实际部署中具有三大基础特征: 自主性(Autonomy)、任务专一性(Task Specification)以及反应性与适应性(Reactivity and Adaptivity).
-Agentic AI是一种新兴的智能架构，利用多个专业化(AI) Agent协作来实现复杂且高层次的目标。
+Agent的架构范式, 从抽象的 ~Agent = Perception + Reasoning + Action~ 到目前流行的OpenAI给出的较具体的 ~Agent = LLM + Planning + Memory + Tool Use~.
+Agentic AI是一种新兴的智能架构，利用(多个)专业化AI Agent(协作)驱动某类过程，实现复杂且高层次的目标。
+例如: ~用 Agent 的思维去驱动 RAG 过程，让检索变得更聪明，这就是所谓的Agentic RAG。~
 ***** 那么在Agentic AI下,就有很多内容要讨论!
 - 主题:Agentic RAG, Agentic Memory, Agentic RL,Agentic Deep Research等等
 - 范式:MultiAgent FrameWork
