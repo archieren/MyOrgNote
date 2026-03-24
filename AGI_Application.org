@@ -5,6 +5,7 @@
 * Memory怎么和Agent Evolve挂钩了？
 ~Static -> Dynamic -> Evolutive~ :Memory 机制的N步曲!
 - Self-Evolving Memory
+  [Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing]
   [Evo-Memory: Benchmarking LLM Agent Test-time Learning with Self-Evolving Memory]
   [AgentEvolver: Towards Efficient Self-Evolving Agent System]
   [Reasoning Bank: Scaling Agent Self-Evolving with Reasoning Memory]
