@@ -943,7 +943,10 @@ SSM -> Hippo -> LSSL -> S4 -> Mamba
 [[file:images/ssm-hippo-s4-mamba.jpg][SSM-To-Mamba]]
  - [Gu A.;...]2020 - HiPPO - Recurrent Memory with Optimal Polynomial Projections
    这篇文章,处理了长期依赖的问题( Addressing Long-Range Dependencies)!应当说,还包括在线记忆(Online Memory)问题.
-   HiPPO是个关键,有一定的理论意义!!!
+   - 通过“正交函数基”对“持续更新的函数”进行实时逼近，-- “这是有点聪明的地方:正交函数基的定义域是固定的，而持续更新的函数的定义域是持续更新的!”
+   - 其拟合的投影系数的动力学正好可以表示为一个线性ODE系统， -- ~这延伸一个问题,投影系数的动力系统,真的能解决“记忆问题”?~
+   - 并且对于特定的基底以及逼近方式，我们可以将线性系统的关键矩阵精确地算出来. -- 这个是要点功力的!
+   HiPPO是个关键,有一定的理论意义!!! 或者说,强行给“状态变迁矩阵”的设计添加一个说得过去的理由,这最终导致了后继工作中,“结构化”的启发!
    这篇文章的表达,实在不敢恭维!
    ~说句老实话,没看懂后期的工作,和他有什么真实的关系,而更多的是启发性的关系!即什么样的矩阵具有记忆能力!~
  - [Gu A.;...]2021 - LSSL - Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers
@@ -952,7 +955,10 @@ SSM -> Hippo -> LSSL -> S4 -> Mamba
    _这是一篇过渡文章,形成了SSM的双视角!("the dual recurrent-convolutional forms")._
    "SSM convolution kernel - SSK" or "Kyrov Function", 可以探索一下!
  - [Gu A.;...]2022 - S4 - Efficiently Modeling Long Sequences with Structured State Spaces
-   这篇文章的贡献,主要集中在计算方法的优化!!!“结构化”的矩阵易于优化,即所谓的HIPPO矩阵等等才是此类!!!
+   这篇文章的贡献:
+   - 主要集中在计算方法的优化!!!“结构化”的矩阵易于优化,即所谓的HIPPO矩阵等等才是此类!!!
+   - “结构化的涵义”
+
    S4(Structured State Space sequence),所谓的结构化方法
    - the continuous representation: Hippo Matrix的选择.
    - the recurrent representation: 离散方法的选择,(选择跟随Bilinear Method).
@@ -963,7 +969,9 @@ SSM -> Hippo -> LSSL -> S4 -> Mamba
      并且,发现HIPPO Matrix中的HiPPO_LegS,HiPPO_LegT,HiPPO_LagT等等的矩阵,满足NPLR(Normal Plus Low Rank)条件.
      NPLR和DPLR是共轭的!!!
      看来,如果要深入,需要一些矩阵计算方法的背景了.
-     看了一堆相关文章DSS,S4D等等,发现有点技术灌水的味道!!!(它们在互相引用!!!)
+
+   看了一堆相关文章DSS,S4D等等,发现有点技术灌水的味道!!!(它们在互相引用!!!)
+   - 事实上,S4之后,已经不讨论“结构化”矩阵问题,而是直接使用对角矩阵了！
  - [CMU]2023 - Mamba - Linear-Time Sequence Modeling with Selective State Spaces
    S6, Mamba的别称!
    - "We argue that a fundamental problem of sequence modeling is compressing context into a smaller state!!"
