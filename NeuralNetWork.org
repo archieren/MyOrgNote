@@ -150,13 +150,13 @@ Grid Map的组织方式: 沿着 MEC 的 DorsalVentral Axis 的 Modular Organizat
 - [Sorscher B.]2022 - A unified theory for the computational and mechanistic origins of grid cells
 这两篇文章,其实是一篇,可能会是一片重要的文章! - 最终,2022年,修改了一下后,改名,在Neuron期刊上发表!
 ......
-~"我们现在超越网格细胞的计算起源,转向理解这些细胞在训练神经网络中的机制起源."~
+~"我们现在超越网格细胞的计算起源,转向理解这些细胞在训练神经网络中的机制起源."~ -- ~“设定什么约束条件,必然得到这种网格编码?”~
 [注:而[Dumont N.S.Y.;...]2020 - Accurate representation for spatial cognition using grid cells 一文中,也据此来论证SSP的生物合理性.]
 ......
 说来说去,两个核心贡献:
 - Pattern formation theory predicts structure of learned representation
 - Non-negativity Constraints
-
+但要关注的是[Schaefer R.;...;Fiete I.R.]2023的工作,他们认为这些工作,设定的前提是有问题的, ~为什么要以位置细胞的数据作为监督目标?~
 **** Whittington J.C.R这一脉的工作: ?!Disentanglement
 - [...;Whittington J.C.R]2022 - Actionable Neural Representations - Grid Cells from Minimal Constraints
 - [Whittington J.C.R.;...]2023 - Disentanglement with Biological Constraints - A Theory of Functional Cell Types
@@ -169,8 +169,22 @@ Biological representations must be more than just actionable - they must be func
 **** Schaefer R. ... Fiete I.R. 这一脉的工作！
 ~[ΔΔ;Fiete I.R.]2024 - Bridging Associative Memory and Probabilistic Modeling~
 [Schaefer R.;...;Fiete I.R.]2023 - Self-Supervised Learning of Representations for Space Generates Multi-Modular Grid Cells
-**** 基于Conformal Isometry Hypothesis的工作！
+***** Fiete I.R.毕竟是这个领域的大牛,一上来就批判性讨论,
+- “为什么”和“怎么做”的问题,
+- 进一步剥离了人为的监督信号假设,证明了网格细胞并非为了“拟合位置细胞”而存在，
+- 而是作为一种高容量、高鲁棒性的编码方案，在大脑进行自我组织和路径积分的过程中自然涌现。
+作者提出了一种自监督学习框架，完全抛弃了位置标签，仅依靠速度输入和神经网络内部的约束来生成网格细胞。
+***** 方法论：SIC框架
+作者从编码理论、动力系统和优化理论中提取了四个核心原则，构建了名为 SIC 的损失函数组合：
+- Separation (分离原则)：要求神经网络中代表不同空间位置的状态在向量空间中要尽可能分得开。这保证了编码的区分度。
+- Invariance (不变性原则)：要求网络对“路径”具有不变性。即，无论动物走哪条路，只要终点相同，最终的神经状态应该是一样的。这是路径积分和连续吸引子动力学的核心特征。
+- Capacity (容量原则)：这是该论文的一大亮点。作者认为大脑倾向于用有限的神经元编码尽可能多的位置。在数学上，这通过让神经表示倾向于聚集在一个紧凑的流形上来实现。
+- Conformal Isometry (保角等距原则)：要求物理空间的小距离移动，对应神经空间的小距离变化，且变化大小与方向无关，只与距离有关。
+***** 基于Conformal Isometry Hypothesis的工作！
+我没想到,Wu Ying Nian也在搞这一块的工作!
 [2025 - On Conformal Isometry of Grid Cells - Learning Distance-Preserving Position Embedding]
+***** 奇文: [2025 - Spatial periodicity in grid cell firing is explained by a neural sequence code of 2-D trajectories]
+我不知该不该深入理解他一下,故称之为奇文!
 
 ** New approaches to Deep Networks
 这是一篇评论，议及四种网络
